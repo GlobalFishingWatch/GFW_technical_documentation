@@ -1,1 +1,0 @@
-These are templates for main queries of GFW data
