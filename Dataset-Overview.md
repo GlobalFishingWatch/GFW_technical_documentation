@@ -1,5 +1,3 @@
-# Dataset Overview
-
 This page outlines key BigQuery datasets
 
 ## `pipe_production_b`
