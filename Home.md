@@ -5,6 +5,6 @@ This wiki contains descriptions of the main GFW data products (e.g. fishing effo
 ## Data Products
 
 1. [Fishing effort](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-Effort) - Activity by the world's fishing vessels
-2. [Vessel identity]() - Database of vessel identity
-3. [Encounters & loitering]() - Encounters between two vessels and loitering events by potential transshipment vessels
-4. [Ports & voyages]() - Database of ports and vessel voyages between ports
+2. [Vessel info](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info) - Database of vessel identity
+3. [Encounters & loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters-and-loitering) - Encounters between two vessels and loitering events by potential transshipment vessels
+4. [Ports & voyages](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) - Database of ports and vessel voyages between ports
