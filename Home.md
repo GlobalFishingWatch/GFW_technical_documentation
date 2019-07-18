@@ -1,0 +1,1 @@
+This wiki contains descriptions of the main GFW data products (e.g. fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.
