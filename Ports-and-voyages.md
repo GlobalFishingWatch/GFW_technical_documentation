@@ -1,5 +1,3 @@
-# Ports and voyages
-
 GFW maintains a database of anchorages/ports and tracks when vessels enter/exit these ports. The trips in between these port visits are then grouped to track vessel voyages. 
 
 ## Key Tables
