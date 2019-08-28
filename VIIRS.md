@@ -1,0 +1,1 @@
+VIIRS, or Visible Infrared Imaging Radiometer Suite, is a method of boat detection via low light imaging data. NOAA’s Earth Observation Group produces a nightly global mapping of VIIRS boat detections, which are used by GFW.
