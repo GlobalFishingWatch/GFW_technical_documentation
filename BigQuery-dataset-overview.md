@@ -2,7 +2,7 @@ GFW data is stored as BigQuery tables and organized in a handful of key datasets
 
 ### `pipe_production_vYYYYMMDD`
 
-+ **Description:** This dataset includes AIS tables processed by the GFW fishing algorithms and derived event tables (e.g. encounters, loitering, port visits). All tables in `pipe_production_vYYYYMMDD` are automated and **should not be modified manually.**  
++ **Description:** This is the dataset for the AIS pipeline and includes tables processed by the GFW fishing algorithms and derived event tables (e.g. encounters, loitering, port visits). All tables in `pipe_production_vYYYYMMDD` are automated by the pipeline and **should not be modified manually.**  
 
 + **When to use:** The tables in the pipeline dataset contain the most up-to-date event data (encounters, port visits, port visits, etc.) and should also be used whenever access to the full AIS data is desired (e.g. every AIS position). 
 
