@@ -1,6 +1,6 @@
 # GFW BigQuery Documentation
 
-This wiki contains descriptions of the main GFW data products (e.g. fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.
+This wiki includes the primary documentation of Global Fishing Watch's data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g. fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.
 
 ## Data Products
 
