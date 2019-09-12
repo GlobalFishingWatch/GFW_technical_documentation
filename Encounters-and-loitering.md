@@ -10,4 +10,4 @@ Vessel meet up at sea for a variety of reasons, including transshipment (transfe
 
 When two vessels are both observed moving very slowly in close proximity for an extended period of time it is considered and **encounter**. If only one vessel is observed operating in this fashion, it is considered a **loitering event**. Loitering events are important because they may indicate that the vessel is encountering another vessel that is not broadcasting AIS.
 
-## Known Issues
+## Caveats & Known Issues
