@@ -38,3 +38,5 @@ _Note that while potentially unlikely it is possible for a vessel to visit a por
 ### Voyages:
 
 Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as will the time a vessel "spent" in starting or ending port. Note that this table has the same restrictions as the **Port Visits** and avoiding many false visits, but potentially missing a few events lacking port stops or port gaps. 
+
+## Caveats & Known Issues
