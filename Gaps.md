@@ -4,4 +4,4 @@ AIS devices are designed to continually broadcast a vessel's position every few 
 
 ## Data Description
 
-## Caveats
+## Caveats & Known Issues
