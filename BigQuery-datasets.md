@@ -1,5 +1,7 @@
 GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW's data pipeline (`pipe_production_vYYYYMMDD`), vessel identity information pulled from vessel registries (`vessel_database`), and streamlined versions of these tables and other derived data products relevant for research and analysis (`gfw_research`).    
 
+## Key Datasets
+
 ### `pipe_production_vYYYYMMDD`
 
 + **Description:** This is the dataset for the AIS pipeline and includes tables processed by the GFW fishing algorithms and derived event tables (e.g. encounters, loitering, port visits). All tables in `pipe_production_vYYYYMMDD` are automated by the pipeline and **should not be modified manually.**  
@@ -18,5 +20,5 @@ GFW data is stored as BigQuery tables and organized in a handful of key datasets
 
 + **When to use:** This dataset is the primary dataset to use for research and analysis. The streamlined AIS tables are smaller and cheaper to query than those in `pipe_production_vYYYYMMDD` and the vessel info tables include important activity data not available in `vessel_database`
 
-
+## Other Relevant Datasets
 
