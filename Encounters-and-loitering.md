@@ -1,9 +1,9 @@
 Vessel meet up at sea for a variety of reasons, including transshipment (transferring catch, crew, fuel, etc.), and these encounters between vessels are of interest for monitoring illegal behavior. 
 
 ## Key Tables
-+ `pipe_production_b.published_events_encounters` - 
-+ `pipe_production_b.encounter_events` -
-+ `pipe_production_b.encounters` -
++ `pipe_production_vYYYYMMDD.published_events_encounters` - 
++ `pipe_production_vYYYYMMDD.encounter_events` -
++ `pipe_production_vYYYYMMDD.encounters` -
 + `gfw_research.loitering_events_vYYYYMMDD` -
 
 ## Data Description
