@@ -4,7 +4,8 @@ GFW maintains a database of anchorages/ports and tracks when vessels enter/exit 
 
 The tables associated with ports and voyages include the following:
 
-+ `gfw_research.named_anchorages_vYYYYMMDD` - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats about visits to that port.
++ `anchorages.named_anchorages_vYYYYMMDD` - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats about visits to that port.
++ `gfw_research.named_anchorages` - View of most recent version of `anchorages.named_anchorages_vYYYYMMDD`
 + `pipe_production_vYYYYMMDD.port_events_` - Port events by vessels. Each port activity by a vessel (e.g. port entry, port exit) recorded in a single row. 
 + `pipe_production_vYYYYMMDD.port_visits_` - Port visits by vessels. All events in a port visit are included in the `events` array.  
 + `pipe_production_vYYYYMMDD.published_events_ports` - Port events by vessels with event id.
@@ -13,7 +14,7 @@ The tables associated with ports and voyages include the following:
 ## Data Description
 There are three primary forms of port activity data - events, visits, and voyages. They are described here briefly from the rawest to the most processed form.  
 
-Note that all data points involve `anchorage_points` and for visits to what more broadly be considered "ports" additional aggregation will be needed, likely by grouping using `named_anchorages`, specifically the `label` and `iso3` fields.   
+Note that all data points involve `anchorage_points` and for visits to what more broadly be considered "ports" additional aggregation will be needed, likely by grouping using `gfw_research.named_anchorages`, specifically the `label` and `iso3` fields.   
   
 ### Port Events:  
   
