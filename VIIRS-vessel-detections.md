@@ -24,7 +24,7 @@ GFW retains all VBD, including the following key fields:
 + `QF_Detect`: Integer quality flag for VBD pixel, yielding information about quality and type of detection.
   + `1`: Strong detection. Detection surpassed all VBD threshold tests
 
-## Caveats
+## Caveats & Known Issues
 
 The EEZ/FMZ/MPA values in the VBD data are not modified by GFW and may differ from the AIS/VMS data (**Verify this is the case**).
 
