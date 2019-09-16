@@ -21,3 +21,5 @@ The database may contain information that is out of date or incorrect due to wro
 ### Vessel Info Tables
 
 Building off of the vessel database, the vessel info tables provide summary information by MMSI that include AIS activity (positions, hours, fishing hours, etc.) and neural net outputs (vessel class, length, tonnage, etc.). This information can/is subsequently used for numerous purposes, including quickly summarizing fleet activity and identifying active fishing vessels and those vessels that are spoofing or offsetting their position.
+
+## Caveats & Known Issues
