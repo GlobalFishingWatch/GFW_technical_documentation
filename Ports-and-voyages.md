@@ -47,7 +47,7 @@ Voyages are a further processed dataset as they represent two port visits that b
 * These events use `vessel_id` as the vessel identifier and may need to be mapped to `SSVID` for broader use.  
 
 ### Port Visits:
-* These events may miss actual port visits if the AIS data does not show the vessel slowing to < 0.2 knots (sparse data or AIS turned off in port before stopping) and and situations where an in-port AIS gap is less than 4 hours. In such cases, use Port Events to identify missing entry/exits and manually verify these represent actual port entries (not transits near anchorages).  
+* As mentioned above, these events may miss actual port visits if the AIS data does not show the vessel slowing to < 0.2 knots (sparse data or AIS turned off in port before stopping) and and situations where an in-port AIS gap is less than 4 hours. In such cases, use Port Events to identify missing entry/exits and manually verify these represent actual port entries (not transits near anchorages).  
 * These events use `vessel_id` as vessel identifier and may need to be mapped to `SSVID` for broader use.  
 
 ### Voyages
