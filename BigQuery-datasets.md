@@ -16,9 +16,10 @@ GFW data is stored as BigQuery tables and organized in a handful of key datasets
 
 ### `gfw_research`
 
-+ **Description:**  This dataset includes streamlined versions of the AIS tables in `pipe_production_vYYYYMMDD`, as well as an additional AIS table subset to only include fishing vessels; vessel info tables that combine identity information from `vessel_database` with AIS activity information from `pipe_production_vYYYYMMDD`; derived data products (encounters, loitering, ports, etc.) that are not yet fully automated; and various reference tables important for analysis (e.g. EEZ info, flags of convenience, country codes, etc.). The versions of the pipeline AIS tables in `gfw_research` have been thinned (only 1 point per minute) and further processed to include additional info relevant for analysis (e.g. hours and regions). However, these tables are not currently automated by the pipeline and, as a result, may be a few days behind the tables in `pipe_production_vYYYYMMDD`. 
++ **Description:**  This dataset includes streamlined versions of the AIS tables in `pipe_production_vYYYYMMDD`, as well as an additional AIS table subset to only include fishing vessels; vessel info tables that combine identity information from `vessel_database` with AIS activity information from `pipe_production_vYYYYMMDD`; derived data products (encounters, loitering, ports, etc.) that are not yet fully automated; and various reference tables important for analysis (e.g. EEZ info, flags of convenience, country codes, etc.). The versions of the pipeline AIS tables in `gfw_research` have been thinned (only 1 point per minute) and further processed to include additional info relevant for analysis (e.g. hours and regions). 
 
 + **When to use:** This dataset is the primary dataset to use for research and analysis. The streamlined AIS tables are smaller and cheaper to query than those in `pipe_production_vYYYYMMDD` and the vessel info tables include important activity data not available in `vessel_database`
 
 ## Other Relevant Datasets
 
+### `anchorages`
