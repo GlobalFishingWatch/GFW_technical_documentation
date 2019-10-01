@@ -3,7 +3,7 @@ Fishing effort is the primary GFW data product and is a measure of the number of
 ## Key Tables
 
 + `pipe_production_vYYYYMMDD.messages_scored_` - this table contains the raw pipeline output with `nnet_score` but does not include hours
-+ `gfw_research.pipe_vYYYYMMDD` - this table is a copy of `pipe_production_v20190502.messages_scored_` but includes fields important for analysis, including `hours`. Fishing hours are calculated from this table by summing `hours` for positions where `nnet_score > 0.5`.
++ `gfw_research.pipe_vYYYYMMDD` - this table is a copy of `pipe_production_vYYYYMMDD.messages_scored_` but includes fields important for analysis, including `hours`. Fishing hours are calculated from this table by summing `hours` for positions where `nnet_score > 0.5`.
 + `gfw_research.pipe_vYYYYMMDD_fishing` - this table is identical to `gfw_research.pipe_vYYYYMMDD.` but filtered to only include likely fishing vessels. To lower cost of queries, use this table when calculating fishing effort.
 + `gfw_draft_data.fishing_effort_vYYYYMMDD` and `gfw_draft_data.fishing_effort_byvessel_vYYYYMMDD` - these tables contain aggregated fishing effort data from `gfw_research.pipe_vYYYYMMDD._fishing` that is gridded at 100th degree resolution by flag state and geartype, and at 10th degree resolution by MMSI, respectively. These tables are inexpensive ways to quickly map fishing effort.
 
