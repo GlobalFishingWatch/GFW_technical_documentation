@@ -4,8 +4,6 @@ The GFW "pipeline" refers to the automated processes by which GFW converts raw A
 
 ## Pipeline stages
 
-[INSERT HIGH LEVEL DESCRIPTION OF THE PIPELINE PROCESS]
-
 The GFW pipeline has the following process: `raw orbcomm/spire/vms` --segmenter--> `messages_segmented` --models--> `messages_scored`
 
 ## AIS pipeline
