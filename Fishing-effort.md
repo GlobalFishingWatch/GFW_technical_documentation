@@ -1,4 +1,4 @@
-Fishing effort is the primary GFW data product and is a measure of the number of hours during which a vessel is fishing as determined by the GFW fishing detection algorithm. Fishing effort is calculated directly from the AIS pipeline tables (e.g. `gfw_research.pipe_production_vYYYYMMDD`) and is subsequently aggregated into the public gridded fishing effort datasets. 
+Fishing effort is the primary GFW data product and is a measure of the number of hours during which a vessel is fishing as determined by the GFW fishing detection algorithm. Fishing effort is calculated directly from the AIS pipeline tables (e.g. `gfw_research.pipe_vYYYYMMDD`) and is subsequently aggregated into the public gridded fishing effort datasets. 
 
 ## Key Tables
 
