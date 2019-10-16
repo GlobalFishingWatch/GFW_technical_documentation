@@ -23,6 +23,19 @@ GFW retains all VBD, including the following key fields:
 + `MPA`: Marine Protected Area for VBD pixel
 + `QF_Detect`: Integer quality flag for VBD pixel, yielding information about quality and type of detection.
   + `1`: Strong detection. Detection surpassed all VBD threshold tests
+  + `2`: Weak detection. Detection did not pass SHI threshold test.
+  + `3`: Blurry detection. Detection did not pass SI threshold test.
+  + `4`: Gas flare. Detection has a concurrent Nightfire detection, or is in the location of a known gas flare.
+  + `5`: False detection: Detection is from high energy particles impacting the DNB sensor, usually due to the South Atlantic anomaly.
+  + `6`: False detection: Detection is from lunar glint.
+  + `7`: False detection: Detection is from atmospheric glow around bright sources.
+  + `8`: Recurring detection. Detection is in location where boats are known to recur.
+  + `9`: False detection: Detection is from sensor crosstalk around extremely bright sources, usually flares.
+  + `10`: Weak and blurry detection. Detection did not pass either the SHI or SI threshold tests.
+  + `11`: Offshore platform. Detection is in location of a known stable light.
+
+(See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/#csv_column) for description of all the columns.)
+
 
 ## Caveats & Known Issues
 
