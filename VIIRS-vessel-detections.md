@@ -34,7 +34,7 @@ GFW retains all VBD, including the following key fields:
   + `10`: Weak and blurry detection. Detection did not pass either the SHI or SI threshold tests.
   + `11`: Offshore platform. Detection is in location of a known stable light.
 
-(See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/#csv_column) for description of all the columns.)
+(See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx) for description of all the columns.)
 
 
 ## Caveats & Known Issues
