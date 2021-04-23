@@ -42,3 +42,7 @@ GFW retains all VBD, including the following key fields:
 The EEZ/FMZ/MPA values in the VBD data are not modified by GFW and may differ from the AIS/VMS data (**Verify this is the case**).
 
 The South Atlantic Anomaly (SAA) is an area where the Earth's inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such particle hit the sensors on board of the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection. To avoid false positives, vessel detections in this area are omitted from `pipe_viirs_production_vYYYYMMDD.raw_vbd_redacted`.
+
+## Example queries
+
+- VIIRS noise filter: eliminate VIIRS noise especially the South Atlantic Anomaly.
