@@ -46,3 +46,10 @@ The South Atlantic Anomaly (SAA) is an area where the Earth's inner Van Allen ra
 ## Example queries
 
 - VIIRS noise filter: eliminate VIIRS noise especially the South Atlantic Anomaly.
+
+
+## Related tables
+
+- VIIRS footprint
+- VIIRS-AIS matching
+- VIIRS cloud mask
