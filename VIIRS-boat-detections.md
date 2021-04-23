@@ -2,8 +2,8 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
 
 ## Key Tables
 
-+ `pipe_viirs_production_vYYYYMMDD.raw_vbd_global` - Global VBD dataset. 
-+ `pipe_viirs_production_vYYYYMMDD.raw_vbd_redacted` - VBD dataset without detections in the South Atlantic Anomaly (see (Caveats).
++ `pipe_viirs_production_v20180723.raw_vbd_global` - Global VBD dataset. 
++ `pipe_viirs_production_v20180723.raw_vbd_redacted` - VBD dataset without detections in the South Atlantic Anomaly (see (Caveats). Not updated since `2019-11-30`
 
 ## Data Description
 
