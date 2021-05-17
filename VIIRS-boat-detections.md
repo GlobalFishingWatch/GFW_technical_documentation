@@ -97,9 +97,9 @@ VIIRS satelite may scan the same area twice a night, thus VIIRS may double count
 
 ## Related tables
 
-- [VIIRS-AIS matching](VIIRS-AIS-matching)
-- VIIRS footprint
-- VIIRS-AIS matching
-- VIIRS cloud mask
+- [VIIRS AIS matching](VIIRS-AIS-matching)
+- [VIIRS cloud mask](VIIRS-cloud-mask)
+- [VIIRS footprint](VIIRS-footprint)
+
 
 
