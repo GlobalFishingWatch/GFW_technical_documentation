@@ -35,7 +35,7 @@ GFW retains all VBD, including the following key fields:
 + `EEZ`: Exclusive Economic Zone for VBD pixel.
 + `FMZ`: Fishery Management Zone for VBD pixel
 + `MPA`: Marine Protected Area for VBD pixel
-+ `RAD_DNB` : The brightness of the VBD pixel
++ `RAD_DNB` : The brightness (radiance) of the VBD pixel (Unit: nW/cm2/sr)
 + `QF_Detect`: Integer quality flag for VBD pixel, yielding information about quality and type of detection.
   + `1`: Strong detection. Detection surpassed all VBD threshold tests
   + `2`: Weak detection. Detection did not pass SHI threshold test.
@@ -49,7 +49,23 @@ GFW retains all VBD, including the following key fields:
   + `10`: Weak and blurry detection. Detection did not pass either the SHI or SI threshold tests.
   + `11`: Offshore platform. Detection is in location of a known stable light.
 
-(See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx) for description of all the columns.)
+  (See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx) for description of all the columns.)
+
+Other useful fields you can create from this table: 
+
+- `detect_id`
+    - unique id for each records (VIIRS detection).
+    - Using this key, you can join with [VIIRS-AIS matching table](VIIRS-AIS-matching).
+    - `concat(cast(Date_Mscan as string),concat(cast(Lat_DNB as string),cast(Lon_DNB as string))) as detect_id,`
+- `OrbitNumber`
+  - Single overpass of VIIRS satelite (from North to South at night) can be distinguishable by `OrbitNumber`.
+  - `CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,`
+- `GranuleID`
+  - This field can be used to join with [VIIRS footprint table](VIIRS-footprint).
+  - A + Year (2017) + Day_of_the_year(001 ~ 365) + hour (00~24) + minutes (00 ~ 60)
+  - Each `GranuleID` is corresponding to 6 minutes time window. for example `GranuleID = 'A2017001.0024'` contains VIIRS detection from `2017-01-01 00:24` to `2017-01-01 00:30`.
+  - `CONCAT("A", CAST(extract(YEAR from Date_Mscan) as STRING), LPAD(CAST(extract(DAYOFYEAR from Date_Mscan) as STRING), 3, "0"), ".", LPAD(CAST(extract(HOUR from Date_Mscan) as STRING), 2, "0"), LPAD(CAST(DIV(extract(MINUTE from Date_Mscan), 6)*6 as STRING), 2, "0") ) as GranuleID`
+
 
 
 ## Caveats & Known Issues
@@ -81,8 +97,9 @@ VIIRS satelite may scan the same area twice a night, thus VIIRS may double count
 
 ## Related tables
 
-these should be links to repo or wiki pages.
-
+- [VIIRS-AIS matching](VIIRS-AIS-matching)
 - VIIRS footprint
 - VIIRS-AIS matching
 - VIIRS cloud mask
+
+
