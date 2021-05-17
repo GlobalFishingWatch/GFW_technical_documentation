@@ -1,5 +1,7 @@
 
-This table contains the AIS or VMS vessel IDs corresponding to each VIIRS detection. Each row of this table is corresponding to VIIRS detection. And this table was created from the VIIRS detection after excluding the South American noise. Thus, **this table can also be used as noise-free VIIRS table**.
+This table contains the AIS/VMS vessel's IDs (`ssvid`) corresponding to each VIIRS detection. Each row of this table is corresponding to VIIRS detection.
+
+This table was created from the VIIRS detection after excluding the South American noise. Thus, **this table can also be used as noise-free VIIRS table**.
 
 
 # Repository
@@ -27,10 +29,13 @@ Older version
     - Using this key, you can join with VIIRS table (`pipe_viirs_production_v20180723.raw_vbd_global`).
     - `concat(cast(Date_Mscan as string),concat(cast(Lat_DNB as string),cast(Lon_DNB as string))) as detect_id,`
 - `detect_timestamp`
+    - timespamp of VIIRS detection in UTC.
     - Same as `Date_Mscan`
 - `detect_lat`
+    - latitude of VIIRS detection.
     - Same as `Lat_DNB`
 - `detect_lon`
+    - longitude of VIIRS detection.
     - Same as `Lon_DNB`
 - `QF_Detect`
     - Integer quality flag for VIIRS detection, yielding information about quality and type of detection
@@ -39,8 +44,8 @@ Older version
   - Single overpass of VIIRS satelite (from North to South at night) can be distinguishable by `OrbitNumber`.
   - `CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,`
 - `GranuleID`
-  - This field can be used to join with [VIIRS footprint table](VIIRS-footprint).
-  - A + Year (2017 ~ ) + Day_of_the_year(001 ~ 366) + hour (00~24) + minutes (00 ~ 60)
+  - This field can be used to join with [VIIRS footprint table](VIIRS-footprint) and [VIIRS-cloud-mask](VIIRS-cloud-mask).
+  - Format: `A` + Year (2017 ~ ) + Day_of_the_year(001 ~ 366) + hour (00~24) + minutes (00 ~ 60)
   - Each `GranuleID` is corresponding to 6 minutes time window. for example `GranuleID = 'A2017001.0024'` contains VIIRS detection from `2017-01-01 00:24` to `2017-01-01 00:30`.
   - `CONCAT("A", CAST(extract(YEAR from Date_Mscan) as STRING), LPAD(CAST(extract(DAYOFYEAR from Date_Mscan) as STRING), 3, "0"), ".", LPAD(CAST(extract(HOUR from Date_Mscan) as STRING), 2, "0"), LPAD(CAST(DIV(extract(MINUTE from Date_Mscan), 6)*6 as STRING), 2, "0") ) as GranuleID`
 + `RAD_DNB`
@@ -75,6 +80,7 @@ Older version
 # Related tables
 
 - [VIIRS boat detections](VIIRS-boat-detections)
-- VIIRS footprint
-- VIIRS cloud mask
+- [VIIRS footprint](VIIRS-footprint)
+- [VIIRS cloud mask](VIIRS-cloud-mask)
+
 
