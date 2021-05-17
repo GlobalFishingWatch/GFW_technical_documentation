@@ -1,3 +1,5 @@
+
+
 VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suomi National Polar-orbiting Partnership and NOAA-20 weather satellites. VIIRS collects imagery and radiometric measurements that, among other applications, are used to detect bright lights at night. VIIRS can be used to detect vessels at night and [NOAA’s Earth Observation Group](https://www.ngdc.noaa.gov/eog/index.html) produces a nightly VIIRS Boat Detection (VBD) dataset. The VBD reports the locations of boats detected based on lights and is directly used by GFW.
 
 ## Key Tables
@@ -8,7 +10,7 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
   - Global VBD dataset. 
 - `pipe_viirs_production_v20180723.raw_vbd_redacted`
   - VBD dataset without detections around the South America (see Caveats).
-  - **No need to use this table**. Use VIIRS noise filter to avoid false detection around South America. 
+  - **No need to use this table**. Use [VIIRS noise filter](VIIRS-noise-filter) to avoid false detection around South America. 
   - **Not updated since `2019-11-30`**
 
 
@@ -60,16 +62,20 @@ The EEZ/FMZ/MPA values in the VBD data are not modified by GFW and may differ fr
 
 The VIIRS contains a lot of false detection around the South America, which is caused by the South Atlantic Anomaly (SAA). The SAA is an area where the Earth's inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such particle hit the sensors on board of the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection.
 
-To avoid false positives due to the South Atlantic Anomaly, we developped a [VIIRS noise filter](viirs/VIIRS-noise-filter). 
+To avoid false positives due to the South Atlantic Anomaly, we developped a [VIIRS noise filter]( VIIRS-noise-filter). 
 
 To avoid false positives, vessel detections in this area are omitted from `pipe_viirs_production_vYYYYMMDD.raw_vbd_redacted`.
 
+### Overlapping detection
+
+VIIRS satelite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double counting, you can select single scan for each 0.1 degree grid for a night. [See example query](Excluding-overlapping-detection-of-VIIRS).
+
+
 ## Example queries
 
-these should be links to queries on the github.
-
-- VIIRS noise filter: eliminate VIIRS noise especially the South Atlantic Anomaly.
-- Eliminate overlapping detections
+- [VIIRS noise filter](VIIRS-noise-filter): eliminate VIIRS noise especially the South Atlantic Anomaly.
+- [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS): eliminate possible double counting
+- Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
 - Join with VIIRS-AIS matching
 
