@@ -8,7 +8,10 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
   - Global VBD dataset. 
 - `pipe_viirs_production_v20180723.raw_vbd_redacted`
   - VBD dataset without detections around the South America (see Caveats).
+  - **No need to use this table**. Use VIIRS noise filter to avoid false detection around South America. 
   - **Not updated since `2019-11-30`**
+
+
 
 ### older version
 
@@ -30,6 +33,7 @@ GFW retains all VBD, including the following key fields:
 + `EEZ`: Exclusive Economic Zone for VBD pixel.
 + `FMZ`: Fishery Management Zone for VBD pixel
 + `MPA`: Marine Protected Area for VBD pixel
++ `RAD_DNB` : The brightness of the VBD pixel
 + `QF_Detect`: Integer quality flag for VBD pixel, yielding information about quality and type of detection.
   + `1`: Strong detection. Detection surpassed all VBD threshold tests
   + `2`: Weak detection. Detection did not pass SHI threshold test.
@@ -48,9 +52,17 @@ GFW retains all VBD, including the following key fields:
 
 ## Caveats & Known Issues
 
+### EEZ/FMZ/MPA
+
 The EEZ/FMZ/MPA values in the VBD data are not modified by GFW and may differ from the AIS/VMS data (**Verify this is the case**).
 
-The South Atlantic Anomaly (SAA) is an area where the Earth's inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such particle hit the sensors on board of the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection. To avoid false positives, vessel detections in this area are omitted from `pipe_viirs_production_vYYYYMMDD.raw_vbd_redacted`.
+### The South Atlantic Anomaly
+
+The VIIRS contains a lot of false detection around the South America, which is caused by the South Atlantic Anomaly (SAA). The SAA is an area where the Earth's inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such particle hit the sensors on board of the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection.
+
+To avoid false positives due to the South Atlantic Anomaly, we developped a [VIIRS noise filter](VIIRS-noise-filter). 
+
+To avoid false positives, vessel detections in this area are omitted from `pipe_viirs_production_vYYYYMMDD.raw_vbd_redacted`.
 
 ## Example queries
 
