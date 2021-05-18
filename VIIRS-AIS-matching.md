@@ -70,7 +70,7 @@ VIIRS satelite may scan the same area twice a night, thus VIIRS may double count
 
 # Example queries
 
-- Join with VIIRS table
+- [Join with VIIRS table](Join-with-VIIRS-table)
 - [Excluding overlapping detection from VIIRS-AIS matching table](Excluding-overlapping-detection-from-VIIRS-AIS-matching-table): eliminate possible double-counting of VIIRS detection.
 - Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
