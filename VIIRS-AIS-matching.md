@@ -13,7 +13,7 @@ https://github.com/GlobalFishingWatch/prj-viirs-matching
 Current version
 
 - `gfw_research.matches_raw_vbd_global_3top_v20210514`
-    - *This table is based on the AIS pipeline version `v20201001`.* Thus if you want to join with other AIS information, you need to use the pipeline version.
+    - **This table is based on the AIS pipeline version `v20201001`.** Thus if you want to join with other AIS information, you need to use the pipeline version.
 
 Older version
 
