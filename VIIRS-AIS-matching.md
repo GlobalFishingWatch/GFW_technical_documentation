@@ -64,15 +64,14 @@ Older version
 
 # Caveats & Known Issues
 
-- Overlapping detections
-
+- Overlapping detection
+VIIRS satelite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double counting, you can select single scan for each 0.1 degree grid for a night. See example query.
 
 
 # Example queries
 
-
-- [VIIRS noise filter](VIIRS-noise-filter): eliminate VIIRS noise especially the South Atlantic Anomaly.
-- [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS): eliminate possible double counting
+- [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS): eliminate possible double-counting
+  - The example above uses VIIRS table but the same logic holds for VIIRS-AIS matching table
 - Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
 - Join with VIIRS-AIS matching
