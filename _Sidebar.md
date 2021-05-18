@@ -14,8 +14,7 @@
   - [VIIRS AIS matching](VIIRS-AIS-matching)
   - [VIIRS cloud mask](VIIRS-cloud-mask)
   - [VIIRS footprint](VIIRS-footprint)
-  - [VIIRS noise filter](VIIRS-noise-filter)
-  - [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS)
+
 
 
 
