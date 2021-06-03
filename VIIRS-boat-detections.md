@@ -61,7 +61,7 @@ Other useful fields you can create from this table:
   - Single overpass of VIIRS satelite (from North to South at night) can be distinguishable by `OrbitNumber`.
   - `CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,`
 - `GranuleID`
-  - This field can be used to join with [VIIRS footprint table](VIIRS-footprint).
+  - This field can be used to join with [VIIRS footprint table](VIIRS-footprint) and [VIIRS cloud mask](VIIRS-cloud-mask).
   - A + Year (2017) + Day_of_the_year(001 ~ 365) + hour (00~24) + minutes (00 ~ 60)
   - Each `GranuleID` is corresponding to 6 minutes time window. for example `GranuleID = 'A2017001.0024'` contains VIIRS detection from `2017-01-01 00:24` to `2017-01-01 00:30`.
   - `CONCAT("A", CAST(extract(YEAR from Date_Mscan) as STRING), LPAD(CAST(extract(DAYOFYEAR from Date_Mscan) as STRING), 3, "0"), ".", LPAD(CAST(extract(HOUR from Date_Mscan) as STRING), 2, "0"), LPAD(CAST(DIV(extract(MINUTE from Date_Mscan), 6)*6 as STRING), 2, "0") ) as GranuleID`
