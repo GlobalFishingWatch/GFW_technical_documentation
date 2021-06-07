@@ -11,3 +11,14 @@ Vessel meet up at sea for a variety of reasons, including transshipment (transfe
 When two vessels are both observed moving very slowly in close proximity for an extended period of time it is considered and **encounter**. If only one vessel is observed operating in this fashion, it is considered a **loitering event**. Loitering events are important because they may indicate that the vessel is encountering another vessel that is not broadcasting AIS.
 
 ## Caveats & Known Issues
+
+### Overlapping detection
+
+Due to the definition of encounter and loitering events, loitering events can overlap with encounter events.
+
+## Example queries
++ [encounters_1_ssvid_v20200921.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/encounters_1_ssvid_v20200921.sql)  
++ [encounters_2_carriers_v20200921.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/encounters_2_carriers_v20200921.sql) 
++ [encounters_3_carriers_vessel_info_v20200921.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/encounters_3_carriers_vessel_info_v20200921.sql) 
++ [loitering_v20200831.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_v20200831.sql) 
++ [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
