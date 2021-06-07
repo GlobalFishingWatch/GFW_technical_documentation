@@ -1,6 +1,7 @@
 Vessel meet up at sea for a variety of reasons, including transshipment (transferring catch, crew, fuel, etc.), and these encounters between vessels are of interest for monitoring illegal behavior. 
 
 ## Key Tables
+
 + `pipe_production_vYYYYMMDD.published_events_encounters` - 
 + `pipe_production_vYYYYMMDD.encounter_events` -
 + `pipe_production_vYYYYMMDD.encounters` -
@@ -8,7 +9,7 @@ Vessel meet up at sea for a variety of reasons, including transshipment (transfe
 
 ## Data Description
 
-When two vessels are both observed moving very slowly in close proximity for an extended period of time it is considered and **encounter**. If only one vessel is observed operating in this fashion, it is considered a **loitering event**. Loitering events are important because they may indicate that the vessel is encountering another vessel that is not broadcasting AIS.
+When two vessels are both observed moving very slowly in close proximity for an extended period of time it is considered and **encounter**. If only one vessel is observed operating in this fashion, it is considered a **loitering event**. Loitering events are important because they may indicate that the vessel is encountering another vessel that is not broadcasting AIS. For more information, see data training slides on encounter and loitering events [HERE](https://docs.google.com/presentation/d/17ZSpH0F5sW0R7sTiNoDAm_pyUhHJeSd4fyyBFDHiAtw/edit?usp=sharing).
 
 ## Caveats & Known Issues
 
