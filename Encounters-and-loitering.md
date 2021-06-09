@@ -26,7 +26,6 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 + Maintaining up to date identity changes of carrier and fishing vessels of interest 
 + Loitering table is for all vessels types with no constraints on distance from shore and duration - analyst needs to add restrictions
 + Loitering table is not automatically updated daily
-
 + Due to the definition of encounter and loitering events, loitering events can overlap with encounter events.
 
 ## Example queries
