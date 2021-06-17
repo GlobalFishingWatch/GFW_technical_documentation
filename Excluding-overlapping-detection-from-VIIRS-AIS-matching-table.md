@@ -19,10 +19,11 @@ WITH
 viirs_matching AS (
 
 SELECT  
-    *,
+    DATE(detect_timestamp) as date,
     # 1 degree grid bin
     CAST(round(detect_lat) as INT64) as lat_bin,
     CAST(round(detect_lon) as INT64) as lon_bin,
+    *,
 FROM
     `world-fishing-827.gfw_research.matches_raw_vbd_global_3top_v20210514`
 WHERE
