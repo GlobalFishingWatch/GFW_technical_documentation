@@ -23,9 +23,9 @@ SELECT
     Rad_DNB,
     QF_Detect,
     
-    # 0.1 degree grid bin
-    CAST(round(Lat_DNB*10) as INT64) as lat_bin,
-    CAST(round(Lon_DNB*10) as INT64) as lon_bin,
+    # 1 degree grid bin
+    CAST(round(Lat_DNB) as INT64) as lat_bin,
+    CAST(round(Lon_DNB) as INT64) as lon_bin,
     # OrbitNumber
     CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,
     # Satelite Zenith Angle
@@ -34,9 +34,7 @@ SELECT
 FROM
     `world-fishing-827.pipe_viirs_production_v20180723.raw_vbd_global`
 WHERE
-      QF_Detect IN (1,2,3,5,7,10)
-      AND DATE(_PARTITIONTIME) BETWEEN "2020-01-01" AND "2020-01-01"
-
+      DATE(_PARTITIONTIME) BETWEEN "2020-01-01" AND "2020-01-01"
 ),
 
 
@@ -88,5 +86,7 @@ from
   inner join
   smallest_zenith_orbit b
   using(date, OrbitNumber, lat_bin, lon_bin)
+where
+  QF_Detect IN (1,2,3,5,7,10)
 ```
 
