@@ -19,7 +19,10 @@ WITH
 viirs_matching AS (
 
 SELECT  
-    *
+    *,
+    # 1 degree grid bin
+    CAST(round(detect_lat) as INT64) as lat_bin,
+    CAST(round(detect_lon) as INT64) as lon_bin,
 FROM
     `world-fishing-827.gfw_research.matches_raw_vbd_global_3top_v20210514`
 WHERE
@@ -35,9 +38,9 @@ viirs AS (
 SELECT
     # date
     Date(Date_Mscan) as date,    
-    # 0.1 degree grid bin
-    CAST(round(Lat_DNB*10) as INT64) as lat_bin,
-    CAST(round(Lon_DNB*10) as INT64) as lon_bin,
+    # 1 degree grid bin
+    CAST(round(Lat_DNB) as INT64) as lat_bin,
+    CAST(round(Lon_DNB) as INT64) as lon_bin,
     # OrbitNumber
     CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,
     # Satelite Zenith Angle
@@ -46,8 +49,7 @@ SELECT
 FROM
     `world-fishing-827.pipe_viirs_production_v20180723.raw_vbd_global`
 WHERE
-      QF_Detect IN (1,2,3,5,7,10)
-      AND DATE(_PARTITIONTIME) BETWEEN start_date() AND end_date()
+    DATE(_PARTITIONTIME) BETWEEN start_date() AND end_date()
 
 ),
 
