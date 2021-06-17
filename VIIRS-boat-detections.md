@@ -48,7 +48,7 @@ GFW retains all VBD, including the following key fields:
   + `9`: False detection: Detection is from sensor crosstalk around extremely bright sources, usually flares.
   + `10`: Weak and blurry detection. Detection did not pass either the SHI or SI threshold tests.
   + `11`: Offshore platform. Detection is in location of a known stable light.
-
++ `SATZ_GDNBO` : Satelite Zenith Angle
   (See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx) for description of all the columns.)
 
 Other useful fields you can create from this table: 
