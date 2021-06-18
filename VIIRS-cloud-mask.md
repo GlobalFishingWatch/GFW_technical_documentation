@@ -1,7 +1,7 @@
 
-This table contains information on the Cloud presence/absence data derived from VIIRS satelite (Suomi-NPP). The data was obtained from [CLDMSK_L2_VIIRS_SNPP](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/CLDMSK_L2_VIIRS_SNPP/) . The table is aggregated into 0.1-degree grid (represented by `lat_bin`, `lon_bin`).
+This table contains information on the Cloud presence/absence data derived from VIIRS satellite (Suomi-NPP). The data was obtained from [CLDMSK_L2_VIIRS_SNPP](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/CLDMSK_L2_VIIRS_SNPP/). The table is aggregated into a 0.1-degree grid (represented by `lat_bin`, `lon_bin`).
 
-Each records of this table representing a grid cell of a granule (i.e. this table will be unique using fields `GranuleId`,`lat_bin`and `lon_bin`).
+Each record of this table represents a grid cell of a granule (i.e. this table will be unique using fields `GranuleId`, `lat_bin`and `lon_bin`).
 
 
 # Repository
