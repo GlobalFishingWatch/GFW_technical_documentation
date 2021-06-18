@@ -44,7 +44,7 @@ Each records of this table can be distinguished by `GranuleID` and single record
 - `GRingLatitude3` : Latitude of vertex_3 of this granule
 - `GRingLatitude4` : Latitude of vertex_4 of this granule
 
-The `wkt` was created by connecting vertices using great circle line.
+The `wkt` was created by connecting four GRing vertices using great circle line.
 
 
 
