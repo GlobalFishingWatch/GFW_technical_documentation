@@ -20,7 +20,7 @@ non
 
 # Data descriptions
 
-Each records of this table can be distinguished by `GranuleID` and single record (granule) represents 6 minutes time window of VIIRS scan. The shape of the granule is contained in the `wkt` column (Well Known Text format). The `DayNightFlag` contains the informaton on whether the granule was scaned at night (`N`), day (`D`) or day/night boundary (`B`), and VIIRS boat detection only present in `N` and `B`. 
+Each record of this table can be distinguished by `GranuleID` and a single record (granule) represents 6 minutes time window of VIIRS scan. The shape of the granule is contained in the `wkt` column (Well Known Text format). The `DayNightFlag` contains the information on whether the granule was scanned at night (`N`), day (`D`), or day/night boundary (`B`), and VIIRS boat detection only present in `N` and `B`. 
 
 
 - `GranuleID` : Unique id for each records (granules)
