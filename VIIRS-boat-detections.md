@@ -9,7 +9,7 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
 - `pipe_viirs_production_v20180723.raw_vbd_global`
   - Global VBD dataset. 
 - `pipe_viirs_production_v20180723.raw_vbd_redacted`
-  - VBD dataset without detections around the South America (see Caveats).
+  - VBD dataset without detections around South America (see Caveats).
   - **No need to use this table**. Use [VIIRS noise filter](VIIRS-noise-filter) to avoid false detection around South America. 
   - **Not updated since `2019-11-30`**
 
@@ -23,7 +23,7 @@ non
 
 The VBD dataset and underlying methods are outlined in the following publication:
 
-[Elvidge, C., Zhizhin, M., Baugh, K., & Hsu, F. C. (2015). Automatic boat identification system for VIIRS low light imaging data. Remote Sensing, 7(3), 3020-3036.](https://www.mdpi.com/2072-4292/7/3/3020). 
+[Elvidge, C., Zhizhin, M., Baugh, K., & Hsu, F. C. (2015). An automatic boat identification system for VIIRS low light imaging data. Remote Sensing, 7(3), 3020-3036.](https://www.mdpi.com/2072-4292/7/3/3020). 
 
 GFW retains all VBD, including the following key fields:
 
@@ -40,28 +40,28 @@ GFW retains all VBD, including the following key fields:
   + `1`: Strong detection. Detection surpassed all VBD threshold tests
   + `2`: Weak detection. Detection did not pass SHI threshold test.
   + `3`: Blurry detection. Detection did not pass SI threshold test.
-  + `4`: Gas flare. Detection has a concurrent Nightfire detection, or is in the location of a known gas flare.
-  + `5`: False detection: Detection is from high energy particles impacting the DNB sensor, usually due to the South Atlantic anomaly.
+  + `4`: Gas flare. Detection has a concurrent Nightfire detection or is in the location of a known gas flare.
+  + `5`: False detection: Detection is from high-energy particles impacting the DNB sensor, usually due to the South Atlantic anomaly.
   + `6`: False detection: Detection is from lunar glint.
   + `7`: False detection: Detection is from atmospheric glow around bright sources.
-  + `8`: Recurring detection. Detection is in location where boats are known to recur.
+  + `8`: Recurring detection. Detection is in locations where boats are known to recur.
   + `9`: False detection: Detection is from sensor crosstalk around extremely bright sources, usually flares.
   + `10`: Weak and blurry detection. Detection did not pass either the SHI or SI threshold tests.
-  + `11`: Offshore platform. Detection is in location of a known stable light.
+  + `11`: Offshore platform. Detection is in the location of a known stable light.
 + `SATZ_GDNBO` : Satelite Zenith Angle
-+ `SOLZ_GDNBO` : Sun Zenith Angle
-+ `LUNZ_GDNBO` : Moon Zenith Angle
++ `SOLZ_GDNBO`: Sun Zenith Angle
++ `LUNZ_GDNBO`: Moon Zenith Angle
 
-  (See [document on Colorado School of Mines : Earth Observation Group](https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx) for description of all the columns.)
+  (See [document on Colorado School of Mines: Earth Observation Group](https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx) for a description of all the columns.)
 
 Other useful fields you can create from this table: 
 
 - `detect_id`
-    - unique id for each records (VIIRS detection).
+    - unique id for each record (VIIRS detection).
     - Using this key, you can join with [VIIRS-AIS matching table](VIIRS-AIS-matching).
     - `concat(cast(Date_Mscan as string),concat(cast(Lat_DNB as string),cast(Lon_DNB as string))) as detect_id,`
 - `OrbitNumber`
-  - Single overpass of VIIRS satelite (from North to South at night) can be distinguishable by `OrbitNumber`.
+  - Single overpass of VIIRS satellite (from North to South at night) can be distinguishable by `OrbitNumber`.
   - `CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,`
 - `GranuleID`
   - This field can be used to join with [VIIRS footprint table](VIIRS-footprint) and [VIIRS cloud mask](VIIRS-cloud-mask).
@@ -79,21 +79,21 @@ The EEZ/FMZ/MPA values in the VBD data are not modified by GFW and may differ fr
 
 ### The South Atlantic Anomaly
 
-The VIIRS contains a lot of false detection around the South America, which is caused by the South Atlantic Anomaly (SAA). The SAA is an area where the Earth's inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such particle hit the sensors on board of the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection.
+The VIIRS contains a lot of false detection around South America, which is caused by the South Atlantic Anomaly (SAA). The SAA is an area where the Earth's inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such a particle hits the sensors on board the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection.
 
-To avoid false positives due to the South Atlantic Anomaly, we developped a [VIIRS noise filter]( VIIRS-noise-filter). 
+To avoid false positives due to the South Atlantic Anomaly, we've developed a [VIIRS noise filter]( VIIRS-noise-filter). 
 
-To avoid false positives, vessel detections in this area are omitted from `pipe_viirs_production_vYYYYMMDD.raw_vbd_redacted`.
+
 
 ### Overlapping detection
 
-VIIRS satelite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double counting, you can select single scan for each 0.1 degree grid for a night. [See example query](Excluding-overlapping-detection-of-VIIRS).
+VIIRS satellite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double-counting, you can select a single scan for each 0.1-degree grid for a night. [See example query](Excluding-overlapping-detection-of-VIIRS).
 
 
 ## Example queries
 
 - [VIIRS noise filter](VIIRS-noise-filter): eliminate VIIRS noise especially the South Atlantic Anomaly.
-- [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS): eliminate possible double counting
+- [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS): eliminate possible double-counting
 - Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
 - Join with VIIRS-AIS matching
