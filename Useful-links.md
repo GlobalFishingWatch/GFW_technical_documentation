@@ -2,6 +2,7 @@
 
 # Useful links to internal materials
 
+- [Code Meeting Recordings](https://drive.google.com/drive/u/1/folders/1zqqsaD85oIam3wPYYmfzhjlmQbbHDhGv)
 - [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
 
 
