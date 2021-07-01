@@ -2,6 +2,8 @@
 
 # Useful links to internal materials
 
+- [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
+
 
 # Useful links to external materials
 
