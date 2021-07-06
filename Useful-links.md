@@ -5,6 +5,7 @@
 - [Bi-weekly tech call](https://drive.google.com/drive/u/1/folders/1rkbdXsA7j-UmXWIsW8SIOAXMyzKQMfR8)
 - [Code Meeting Recordings](https://drive.google.com/drive/u/1/folders/1zqqsaD85oIam3wPYYmfzhjlmQbbHDhGv)
 - [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
+- [GFW Data Trainings](https://drive.google.com/drive/u/1/folders/0AIfysivHdyTgUk9PVA)
 
 
 # External materials
