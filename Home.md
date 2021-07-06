@@ -8,6 +8,8 @@ GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, 
 
 GFW data are grouped into the following general categories, or data products, that are used for various analyses.
 
+See [BigQuery Table Reference](https://docs.google.com/spreadsheets/d/1B8Q04rzWRdffty2gVBlHiBDS9DYZLdW8J-4B3xja5ws/edit#gid=0) for checking the latest pipeline version.
+
 1. [Fishing effort](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-Effort) - Activity by the world's fishing vessels
 2. [Vessel database and info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database-and-info-tables) - Database of vessel identity
 3. [Encounters & loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters-and-loitering) - Encounters between two vessels and loitering events by potential transshipment vessels
