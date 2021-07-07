@@ -12,6 +12,7 @@
 
 ## Quality Assurance
 
+- [Project Data QA folder](https://drive.google.com/drive/u/1/folders/0AP14SuBKoVxjUk9PVA)
 - [Naming conventions DRAFT](https://docs.google.com/document/d/15sXzwnDoz3WLNBx_w78QEmw8W4AlW77nYkrxRX2bOHE/edit#heading=h.qk8q7pey6jh)
 
 # External materials
