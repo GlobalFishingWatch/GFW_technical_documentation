@@ -6,7 +6,7 @@ Vessel meet up at sea for a variety of reasons, including transshipment (transfe
 
 + `pipe_production_v20201001.published_events_encounters` - 
 + `pipe_production_v20201001.encounters` - prior to creating published events encounters table, doesn’t have speed constraint
-+ `gfw_research.loitering_events_vYYYYMMDD` - loitering table is for all vessels types with no constraints on distance from shore and duration - analyst needs to add restrictions
++ `world-fishing-827.pipe_production_v20201001.loitering` - loitering table is for all vessels types with no constraints on distance from shore and duration - analyst needs to add restrictions
 
 ## Data Description
 
@@ -25,7 +25,6 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 + Point nature of events (if poor ais transmission average location can be inconsistent with full location of tracks during time period)
 + Maintaining up to date identity changes of carrier and fishing vessels of interest 
 + Loitering table is for all vessels types with no constraints on distance from shore and duration - analyst needs to add restrictions
-+ Loitering table is not automatically updated daily
 + Due to the definition of encounter and loitering events, loitering events can overlap with encounter events.
 
 ## Example queries
