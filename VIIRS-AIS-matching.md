@@ -6,7 +6,9 @@ This table was created from the VIIRS detection after excluding [the South Ameri
 
 # Repository
 
-https://github.com/GlobalFishingWatch/prj-viirs-matching
+Please look at README in the repository for how to update this table.
+
+- https://github.com/GlobalFishingWatch/prj-viirs-matching
 
 # Key tables
 
