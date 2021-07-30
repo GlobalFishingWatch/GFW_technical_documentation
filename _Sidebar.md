@@ -1,6 +1,7 @@
 
 # Data products
 
+- [Data updates](Data-updates)
 - [BigQuery datasets](BigQuery-datasets)
 - [Pipeline](Pipeline)
 - [Fishing effort](Fishing-effort)
