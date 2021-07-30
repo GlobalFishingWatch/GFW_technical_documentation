@@ -1,5 +1,35 @@
 GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW's data pipeline (`pipe_production_vYYYYMMDD`), vessel identity information pulled from vessel registries (`vessel_database`), and streamlined versions of these tables and other derived data products relevant for research and analysis (`gfw_research`).    
 
+## Staging Process (2021 Updates)
+
+**Description:** In an effort to delineate new versions of datasets with those that are used in production we are currently developing a new staging process.
+** 
+
+**Details:** The staging process includes the following:
+
+ 1. **Proof-of-Concept data**: Staging dataset for new research ideas
+ * Internal only and selected research partners
+ * One-off or manually updated tables
+ * Manual QA
+
+ 2. **Prototype data**: Staging dataset for new research ideas
+ * Intermediate and Prototype tables
+ * Automated data runs (updated daily)
+ * Semi-automated QA
+ * Prototype tables should use convention of ‘proto_’
+ * Can be used by researchers and analysts but proceed knowing that although QA'd all bugs may not have been solved
+ * Basic documentation will exist for these datasets
+
+ 3. **Production data**: Staging dataset for new research ideas
+ * Production level ready datasets
+ * Public/research partners
+ * Automated_QA
+ * When proto_ tables have been used and QA'd for a given period of time, have finalized documentation, and automated QA metrics they will 
+   move to 'production' data
+
+Note: This is an evolving process, but is noted in the wiki currently because we are releasing a series of updates to the AIS event datasets and some are considered 'proto type data' and therefore everyone should be aware that these tables may be used but are NOT considered 'production' level ready.
+ 
+
 ## Key Datasets
 
 ### `pipe_production_vYYYYMMDD`
