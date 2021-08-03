@@ -6,7 +6,7 @@
 - [Pipeline](Pipeline)
 - [Fishing effort](Fishing-effort)
 - [Vessel database and info tables](Vessel-database-and-info-tables)
-- [Encounters](Encounters-and-loitering)
+- [Encounters and loitering](Encounters-and-loitering)
 - [Loitering](Loitering)
 - [Ports and voyages](Ports-and-voyages)
 - [Gaps](Gaps)
