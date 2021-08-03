@@ -88,3 +88,9 @@ When the percentages are higher for lower confidence when looking at the whole d
 * These events use port visits and have similar caveats.  
 * There are three tables of voyages based on a minimum confidence value for the start or end port visits of a voyage. 
 * These tables were only created when there is at least a port visit confidence of 2
+
+## Example queries
+
++ [proto_voyages_and_anchorages_20210730.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_voyages_and_anchorages_20210730.sql) 
++ [proto_port_visits_and_events_example_20210730.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_port_visits_and_events_example_20210730.sql) 
++ [proto_voyages_merge_loitering_20210730.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_voyages_merge_loitering_20210730.sql) 
