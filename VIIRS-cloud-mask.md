@@ -6,7 +6,7 @@ Each record of this table represents a grid cell of a granule (i.e. this table w
 
 # Repository
 
-non
+Non but the codes exist in the VM instance `viirs-cloud-mask`.
 
 # Key tables
 
