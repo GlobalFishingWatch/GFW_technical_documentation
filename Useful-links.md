@@ -9,14 +9,17 @@
 - [GFW Data Training Folder](https://drive.google.com/drive/u/1/folders/0AIfysivHdyTgUk9PVA)
   - [Training Slide Decks](https://drive.google.com/drive/u/1/folders/117s4rmWngMdB3BqySBkrpdYA04MZk5lY)
   - [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
-  - [QGIS Guide ppt](https://docs.google.com/presentation/d/11OtMwmqSateALwrpN9CM4Q3Oq8ildCfupIMb5Olgcx4/edit?usp=sharing)
-  - [fishwatchr documentation](https://github.com/GlobalFishingWatch/fishwatchr)
-  - [gfw bubble plot tool](https://observablehq.com/@jhjanicki/gfw-clustered-bubble-chart-template)
+  - [QGIS Data Training](https://drive.google.com/drive/folders/1hP9gyEV1un0K1CzofHMH2P2xvMkqhzdt)
 
 ## Quality Assurance
 
 - [Project Data QA folder](https://drive.google.com/drive/u/1/folders/0AP14SuBKoVxjUk9PVA)
 - [Naming conventions DRAFT](https://docs.google.com/document/d/15sXzwnDoz3WLNBx_w78QEmw8W4AlW77nYkrxRX2bOHE/edit#heading=h.qk8q7pey6jh)
+
+## GFW tools
+
+- [fishwatchr documentation](https://github.com/GlobalFishingWatch/fishwatchr)
+- [gfw bubble plot tool](https://observablehq.com/@jhjanicki/gfw-clustered-bubble-chart-template)
 
 # External materials
 
@@ -31,3 +34,5 @@
 
 - [BigQuery Geo Viz](https://bigquerygeoviz.appspot.com/) - to see how shapefiles in BQ look on a map
 - [Bounding Box](https://boundingbox.klokantech.com/) - to identify coordinates around area of interest
+
+## QGIS
