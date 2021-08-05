@@ -5,7 +5,7 @@
 - [BigQuery datasets](BigQuery-datasets)
 - [Pipeline](Pipeline)
 - [Fishing effort](Fishing-effort)
-- [Fishing events (in development)](Fishing-events(in-development))
+- [Fishing events (in development)](Fishing-events-(in-development))
 - [Vessel database and info tables](Vessel-database-and-info-tables)
 - [Encounters(Soon to be Updated)](Encounters-(Soon-to-be-Updated))
 - [Loitering](Loitering)
