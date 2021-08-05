@@ -9,6 +9,9 @@
 - [GFW Data Training Folder](https://drive.google.com/drive/u/1/folders/0AIfysivHdyTgUk9PVA)
   - [Training Slide Decks](https://drive.google.com/drive/u/1/folders/117s4rmWngMdB3BqySBkrpdYA04MZk5lY)
   - [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
+  - [QGIS Guide ppt](https://docs.google.com/presentation/d/11OtMwmqSateALwrpN9CM4Q3Oq8ildCfupIMb5Olgcx4/edit?usp=sharing.p)
+  - [fishwatchr documentation] (https://github.com/GlobalFishingWatch/fishwatchr.p)
+  - [gfw bubble plot tool] (https://observablehq.com/@jhjanicki/gfw-clustered-bubble-chart-template)
 
 ## Quality Assurance
 
@@ -19,6 +22,12 @@
 
 ## R
 
+- [RStudio Cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
 - [Hands-On Programming with R](https://rstudio-education.github.io/hopr/)
 - [R for Data Science](https://r4ds.had.co.nz/)
 - [Spatial Data Science with applications in R](https://keen-swartz-3146c4.netlify.app/index.html)
+
+## BigQuery
+
+- [BigQuery Geo Viz] (https://bigquerygeoviz.appspot.com/) - to see how shapefiles in BQ look on a map
+- [Bounding Box] (https://boundingbox.klokantech.com/) - to identify coordinates around area of interest
