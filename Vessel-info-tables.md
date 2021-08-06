@@ -1,4 +1,4 @@
-Vessel information such as identity (shipname, callsign, IMO number, flag), gear type, authorizations, and activity (e.g. fishing hours) are another primary GFW data product. These data are compiled from a combination of AIS data, vessel registries, and neural net inference. 
+Building on the vessel database, the vessel info tables provide summary information by MMSI that combine AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.). A key purpose of the vessel info tables is to evaluate these multiple and potentially conflicting sources of information to determine the "best" values for various fields (e.g. vessel class, flag, dimensions) to be used by GFW. The vessel info tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.
 
 ## Key Tables
 
@@ -17,9 +17,5 @@ The Global Fishing Watch vessel database contains information about vessels that
 The vessel database uses a multi-step process to match identity information from AIS data with identity information from vessel registries. Vessels are matched according to shipname, callsign, IMO number, and MMSI. These matches are then summarized by MMSI to show all identities associated with each MMSI. For more detailed information on the identity matching process, see this document `https://docs.google.com/document/d/1esbAWgfIEcT-F2C35vKkdVa4NeGzSh9MV8dDGH1OCFI/edit`.
 
 The database may contain information that is out of date or incorrect due to wrong information available in one or multiple registries on which the database relies. Users may want to double-check the validity of information found in the database. In case of any questions or suggestions, please contact jaeyoon@globalfishingwatch.org 
-
-### Vessel Info Tables
-
-Building off of the vessel database, the vessel info tables provide summary information by MMSI that include AIS activity (positions, hours, fishing hours, etc.) and neural net outputs (vessel class, length, tonnage, etc.). This information can/is subsequently used for numerous purposes, including quickly summarizing fleet activity and identifying active fishing vessels and those vessels that are spoofing or offsetting their position.
 
 ## Caveats & Known Issues
