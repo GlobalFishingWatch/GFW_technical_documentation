@@ -6,7 +6,7 @@
 - [Pipeline](Pipeline)
 - [Fishing effort](Fishing-effort)
 - [Fishing events](Fishing-events)
-- [Vessel database table](Vessel-database-table)
+- [Vessel database table](Vessel-database)
 - [Vessel info tables](Vessel-info-tables)
 - [Encounters(Soon to be Updated)](Encounters-(Soon-to-be-Updated))
 - [Loitering](Loitering)
