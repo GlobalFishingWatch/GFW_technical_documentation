@@ -7,6 +7,7 @@
 - [Fishing effort](Fishing-effort)
 - [Fishing events](Fishing-events)
 - [Vessel database and info tables](Vessel-database-and-info-tables)
+- [Vessel info tables](Vessel-info-tables)
 - [Encounters(Soon to be Updated)](Encounters-(Soon-to-be-Updated))
 - [Loitering](Loitering)
 - [Ports and voyages](Ports-and-voyages)
