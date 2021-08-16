@@ -18,8 +18,8 @@ A critical field is the `country_name_gfw` field which represents the GFW approv
 Just a note that naming is very important and care should be taken with labeling vessels or regions with flag State. In nearly all cases, use `country_name_gfw` when providing longer flag State names.
 
 
-## Example Querie
+## Example Query
 
-Update EEZ and vessel flag with GFW approved country names [Query](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/adding_country_code_names.sql)
+[adding_country_code_names.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/adding_country_code_names.sql)
 
 
