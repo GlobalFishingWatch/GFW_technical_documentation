@@ -8,12 +8,13 @@ Previously (pipeline versions prior to 20201001), fishing events were based on a
 
 Current version
 + `world-fishing-827.pipe_production_v20201001.proto_events_fishing` - new logic
-+ `world-fishing-827.pipe_production_v20201001.published_events_fishing` - new logic
+
 
 Previous version 
 + `world-fishing-827.pipe_production_v20190502.published_events_fishing` - old logic
 + `world-fishing-827.pipe_production_v20200203.published_events_fishing` - old logic
 + `world-fishing-827.pipe_production_v20200805.published_events_fishing` - old logic
++ `world-fishing-827.pipe_production_v20201001.published_events_fishing` - old logic
 
 ## Source Tables
 
