@@ -39,7 +39,7 @@ The tables associated with ports and voyages include the following:
 
 **Original data tables still available**
 + `pipe_production_vYYYYMMDD.port_visits_` - Previously used port_visits table, which can still be used now if you do not want to shift to the 'proto_' data. This data includes port visits with a confidence of 4 only. 
-+ `pipe_production_vYYYYMMDD.port_visits_` - Previously used voyages table, which can still be used now. Creates voyages from `pipe_production_vYYYYMMDD.port_visits_`. 
++ `pipe_production_vYYYYMMDD.voyages` - Previously used voyages table, which can still be used now. Creates voyages from `pipe_production_vYYYYMMDD.port_visits_`. 
 
 
 ## Data Description
