@@ -46,6 +46,8 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 
 + [loitering_carrier_basic.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_carrier_basic.sql) 
 + [loitering_carrier_tracks.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_carrier_tracks.sql) 
++ [loitering_overlap_encounters_r_v20210816.Rmd](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_r_v20210816.Rmd) 
++ [loitering_overlap_encounters_v20210813.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_v20210813.sql) 
 + [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
 
 ## Related Content
