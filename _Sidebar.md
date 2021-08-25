@@ -4,7 +4,7 @@
 - [Data updates](Data-updates)
 - [BigQuery datasets](BigQuery-datasets)
 - [Pipeline](Pipeline)
-- [Fishing effort](Fishing-effort)
+- [Fishing effort and vessel presence](Fishing-effort-and-vessel-presence)
 - [Fishing events](Fishing-events)
 - [Vessel database table](Vessel-database)
 - [Vessel info tables](Vessel-info-tables)
