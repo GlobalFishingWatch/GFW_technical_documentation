@@ -3,7 +3,7 @@ VIIRS footprint table contains information on the area observed by the VIIRS sat
 
 # Repository
 
-non
+https://github.com/GlobalFishingWatch/viirs-footprint
 
 # Key tables
 
