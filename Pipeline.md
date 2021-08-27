@@ -11,9 +11,7 @@ The AIS pipeline is GFW's primary pipeline and includes the following processes:
 3. Predict which positions are likely fishing positions
 4. Identify various event types (e.g. transshipment, port visits, fishing, AIS gaps, etc.) 
 
-[AIS data tables](#AIS-data-tables) and [AIS event tables](#AIS-event-tables) produced by a given version of the AIS pipeline are stored within a BigQuery dataset named `pipe_production_vYYYYMMDD`, where the `YYYYMMDD` refers to the date the pipeline was created. Additionally, [AIS research tables](#AIS-research-tables), which are designed for research and analysis, are stored in `gfw_research`, with each table including the AIS pipeline version (`YYYYMMDD`) in its name (e.g. `pipe_vYYYYMMDD`).  
-
-Many AIS data and event tables are *date sharded*. This means they are actually a collection of tables, one for each date of data, and the data for a given date is stored in its own table (e.g. `messages_scored_20180101`). When looking in BigQuery, you will see the table name followed by a number in parentheses (e.g. `messages_scored_(3248)`), which indicates that there are 3,248 days of data in the `messages_scored_` table. Similarly, many AIS research tables are *date partitioned*, which are single tables where data is instead stored in date-specific partitions. Date sharded and date partitioned tables behave in similar ways but, crucially, require different filtering syntax to limit query size. 
+[AIS data tables](#AIS-data-tables) and [AIS event tables](#AIS-event-tables) produced by a given version of the AIS pipeline are stored within a BigQuery dataset named `pipe_production_vYYYYMMDD`, where the `YYYYMMDD` refers to the date the pipeline was created. Additionally, [AIS research tables](#AIS-research-tables), which are designed for research and analysis, are stored in `gfw_research`, with each table including the AIS pipeline version (`YYYYMMDD`) in its name (e.g. `pipe_vYYYYMMDD`).   
 
 ### AIS data tables
 
