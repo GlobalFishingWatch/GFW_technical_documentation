@@ -1,3 +1,7 @@
+
+[Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
+
+
 GFW maintains a database of anchorages/ports and tracks when vessels enter/exit these ports. The trips in between these port visits are then grouped to track vessel voyages. 
 
 “Port events” are the single events that occur within a port, including:
