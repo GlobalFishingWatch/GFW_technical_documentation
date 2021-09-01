@@ -10,6 +10,7 @@
   - [Training Slide Decks](https://drive.google.com/drive/u/1/folders/117s4rmWngMdB3BqySBkrpdYA04MZk5lY)
   - [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
   - [QGIS Data Training](https://drive.google.com/drive/folders/1hP9gyEV1un0K1CzofHMH2P2xvMkqhzdt)
+- [BQ Practice Queries](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/tree/master/queries/examples/current)
 
 ## Quality Assurance
 
