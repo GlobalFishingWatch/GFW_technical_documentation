@@ -1,4 +1,4 @@
-Fishing Events is a GFW data product which groups AIS fishing positions together into events. The Fishing Events table has a set of minimally restrictive rules applied to remove fishing events considered to be likely noise. See data description for more details. 
+Fishing Events is a GFW data product which groups AIS fishing positions together into events. The Fishing Events table has a set of minimally restrictive rules applied to remove fishing positions considered to be likely noise. See data description for more details. 
 
 The fishing events table was updated to its current logic during the 20201001 pipe update and is currently visualized in the GFW public map. 
 
@@ -22,19 +22,14 @@ The current fishing events are calculated from the `gfw_reasearch.pipe_vYYYYMMDD
 
 ## Data Description
 
-New logic used to create Events
+Fishing events are constructed through the following steps:
 
-+ **Groups consecutive fishing positions in the same seg_id.** Night_loitering score is used in place of neural net score for squid jigger vessels.
-+ **Separates long events** defined as consecutive fishing positions separated by more than 10 km OR 2 hours apart. 
-+ **Joins close events** defined as fishing events within 1 hour AND 2 km of another fishing event
-+ **Filters out short and fast moving vessel events**
->> a. Short events: 
-> > * events shorter than 20 minutes
-> > * OR with 5 or fewer ais positions
-> > * OR with event distance of less than 0.5 km (50 meters for squid)
-
->> b. Fast vessel events:
-> > * events with average vessel speed of 10 knots per hour or greater
+1. **After applying standard noise filter** e.g. `good_segment AS (SELECT seg_id FROM world-fishing-827.gfw_research.pipe_v20201001_segs WHERE good_seg AND positions > 10 AND NOT overlapping_and_short)`
+2. **Groups consecutive fishing positions in the same seg_id.** Night_loitering score is used in place of neural net score for squid jigger vessels.
+3. **Separates long events** defined as consecutive fishing positions separated by more than 10 km OR 2 hours apart in the same seg_id. 
+4. **Joins close events** defined as fishing events separated by non-fishing positions but within 1 hour AND 2 km of another fishing event
+5. **Filters out short and fast moving vessel events** defined as events shorter than 20 minutes _OR_ with 5 or fewer ais positions _OR_ with event distance of less than 0.5 km (50 meters for squid)
+6. **Filters out fast moving vessel events** defined as events with average vessel speed of 10 knots per hour or greater
 
 
 ## Caveats & Known Issues
