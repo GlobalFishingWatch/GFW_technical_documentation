@@ -1,6 +1,6 @@
-Fishing Events is a GFW data product which groups AIS fishing positions together into events. The Fishing Events table has a set of minimally restrictive rules applied to remove fishing positions considered to be likely noise. See data description for more details. 
+Fishing Events is a GFW data product which groups AIS fishing positions together into events. The Fishing Events table has a set of minimally restrictive rules applied to remove fishing positions considered to be likely noise. See data description for more details.
 
-The fishing events table was updated to its current logic during the 20201001 pipe update and is currently visualized in the GFW public map. 
+The fishing events table was updated to its current logic during the 20201001 pipe update and is currently visualized in the GFW public map.
 
 Previously (pipeline versions prior to 20201001), fishing events were based on a simpler logic and were utilized in a limited capacity. In the old version fishing events were defined by if there were consecutive AIS points considered ‘fishing’ by the neural net, or they were only separated in time by a short duration (e.g., 10 minutes) they were grouped into a single fishing event by a vessel.
 
@@ -24,7 +24,7 @@ The current fishing events are calculated from the `gfw_reasearch.pipe_vYYYYMMDD
 
 Fishing events are constructed through the following steps:
 
-1. **After applying standard noise filter** e.g. `good_segment AS (SELECT seg_id FROM world-fishing-827.gfw_research.pipe_v20201001_segs WHERE good_seg AND positions > 10 AND NOT overlapping_and_short)`
+1. **Applies standard noise filter** e.g. `good_segment AS (SELECT seg_id FROM world-fishing-827.gfw_research.pipe_v20201001_segs WHERE good_seg AND positions > 10 AND NOT overlapping_and_short)`
 2. **Groups consecutive fishing positions in the same seg_id.** Night_loitering score is used in place of neural net score for squid jigger vessels.
 3. **Separates long events** defined as consecutive fishing positions separated by more than 10 km OR 2 hours apart in the same seg_id. 
 4. **Joins close events** defined as fishing events separated by non-fishing positions but within 1 hour AND 2 km of another fishing event
@@ -33,6 +33,8 @@ Fishing events are constructed through the following steps:
 
 
 ## Caveats & Known Issues
+
+Point nature of events (if poor ais transmission average location can be inconsistent with full location of tracks during time period)
 
 Fishing events and fishing effort (see slide deck [HERE](https://docs.google.com/presentation/d/17brGIUs1gsRMKMmaFEqi_dd_TPMapVoE9_9PQH8esrM/edit?usp=sharing********)) do not follow the same restrictions. See Fishing Event Tech Call slide deck in supplementary materials for a comparison of fishing events and pipefishing (eg fishing effort). In future pipeline versions and updates to the public map effort may be made to make fishing events and fishing effort data align.
 
