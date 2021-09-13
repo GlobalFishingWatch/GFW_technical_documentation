@@ -21,6 +21,6 @@ GFW data are grouped into the following general categories, or data products, th
 3. [Vessel database and info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database-and-info-tables) - Database of vessel identity
 4. [Encounters & loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters-and-loitering) - Encounters between two vessels and loitering events by potential transshipment vessels
 5. [Ports & voyages](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) - Database of ports and vessel voyages between ports
-6. [Country VMS]() - Country-specific VMS data
+6. [Country VMS](VMS) - Country-specific VMS data
 7. [SAR Detections](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/SAR-Detections) - Vessel detections from Sentinel-1 SAR imagery
 8. [AIS Gaps](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps) - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.
