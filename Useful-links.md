@@ -21,6 +21,7 @@
 
 - [fishwatchr documentation](https://github.com/GlobalFishingWatch/fishwatchr)
 - [gfw bubble plot tool](https://observablehq.com/@jhjanicki/gfw-clustered-bubble-chart-template)
+- [gfw shiny-tools](https://github.com/GlobalFishingWatch/shiny-tools)
 
 # External materials
 
