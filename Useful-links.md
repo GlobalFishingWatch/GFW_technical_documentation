@@ -22,7 +22,7 @@
 - [fishwatchr documentation](https://github.com/GlobalFishingWatch/fishwatchr)
 - [gfw bubble plot tool](https://observablehq.com/@jhjanicki/gfw-clustered-bubble-chart-template)
 - [gfw shiny-tools](https://github.com/GlobalFishingWatch/shiny-tools)
-
+- [EEZ analysis template](https://github.com/GlobalFishingWatch/analysis/tree/master/EEZ%20analysis%20template)
 # External materials
 
 ## R
