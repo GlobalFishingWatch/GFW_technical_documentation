@@ -6,8 +6,6 @@ Information is organized in the following topics:
 + Query syntax and best practices
 + User defined functions (UDFs)
 
-__TOC__
-
 ## Naming conventions
 
 ### General guidelines
@@ -64,6 +62,11 @@ Date sharded and date partitioned tables behave in similar ways but, crucially, 
 #### Casting
 
 ### Spatial BigQuery 
+
+
+## User Difined Functions
+
+We have a collection of UDFs in a dataset named `udf`.
 
 ## Query syntax and best practices
 
