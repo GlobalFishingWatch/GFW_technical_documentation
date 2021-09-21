@@ -6,6 +6,8 @@ Information is organized in the following topics:
 + Query syntax and best practices
 + User defined functions (UDFs)
 
+__TOC__
+
 ## Naming conventions
 
 ### General guidelines
