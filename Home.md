@@ -18,7 +18,7 @@ GFW data are grouped into the following general categories, or data products, th
 
 1. [Fishing effort and vessel presences](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-effort-and-vessel-presence) - Activity and fishing activity for all vessels
 2. [Fishing events](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-events) - Activity by the world's fishing vessels grouped into events
-3. [Vessel database and info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database-and-info-tables) - Database of vessel identity
+3. [Vessel database](Vessel-database) and [Vessel info tables](Vessel-info-tables) - Database of vessel identity
 4. [Encounters & loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters-and-loitering) - Encounters between two vessels and loitering events by potential transshipment vessels
 5. [Ports & voyages](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) - Database of ports and vessel voyages between ports
 6. [Country VMS](VMS) - Country-specific VMS data
