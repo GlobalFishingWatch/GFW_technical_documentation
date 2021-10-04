@@ -6,10 +6,10 @@ Vessels meet at sea for a variety of reasons, including transshipment (transferr
 + `pipe_production_v20201001.encounters` - Source table for published events encounters table. This is not filtered by speed and has one row per encounter.
 
 ### Source Tables
- `world-fishing-827:pipe_production_v20201001.raw_encounters_*`
- `world-fishing-827:pipe_static.spatial_measures_20200311`
- `world-fishing-827:pipe_production_v20201001.segment_info`
- `world-fishing-827:pipe_production_v20201001.position_messages_`
+ * `world-fishing-827:pipe_production_v20201001.raw_encounters_*`
+ * `world-fishing-827:pipe_static.spatial_measures_20200311`
+ * `world-fishing-827:pipe_production_v20201001.segment_info`
+ * `world-fishing-827:pipe_production_v20201001.position_messages_`
 
 ##Updates in 2021
 
@@ -49,7 +49,8 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 [loitering_overlap_encounters_r_v20210816.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_r_v20210816.sql) 
 +
 [loitering_overlap_encounters_v20210813.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_v20210813.sql) 
-+ [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
++ 
+[analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
 
 ## Related Content
 + [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) 
