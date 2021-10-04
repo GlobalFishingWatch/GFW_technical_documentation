@@ -24,9 +24,9 @@ All port events were used to create port visits, and these port visits have ‘c
 3 -> port entry or exit + stop/gap
 4 -> port entry and exit + stop/gap.
 	
-An example of a port visit that has a confidence of 2 is shown here: In this instance the vessel turns AIS off, then it transmits only in port, it turns off again and it appears on the high seas. In the database this only shows up as a PORT_STOP with NO Entry or Exit. 
+An example of a port visit that has a confidence of 2 is shown in the Training Slide Deck referenced at the top of the page: In this instance the vessel turns AIS off, then it transmits only in port, it turns off again and it appears on the high seas. In the database this only shows up as a PORT_STOP with NO Entry or Exit. 
  
-An example of a port visit that has a confidence of 3 is shown here: In this instance the vessel went to port but changed IDs in port, so under this ID we only see a PORT_ENTRY and PORT_STOP.
+An example of a port visit that has a confidence of 3 is shown the Training Slide Deck referenced at the top of the page: In this instance the vessel went to port but changed IDs in port, so under this ID we only see a PORT_ENTRY and PORT_STOP.
 
 **Key Tables**
 
