@@ -8,7 +8,7 @@
 - [Fishing events](Fishing-events)
 - [Vessel database table](Vessel-database)
 - [Vessel info tables](Vessel-info-tables)
-- [Encounters(Soon to be Updated)](Encounters-(Soon-to-be-Updated))
+- [Encounters](Encounters)
 - [Loitering](Loitering)
 - [Ports and voyages](Ports-and-voyages)
 - [Gaps](Gaps)
