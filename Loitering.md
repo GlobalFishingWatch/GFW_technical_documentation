@@ -3,7 +3,7 @@ Vessels meet up at sea for a variety of reasons, including transshipment (transf
 ## Key Tables
 
 + `world-fishing-827.pipe_production_v20201001.loitering` - loitering table is for all vessels types with no constraints on distance from shore and duration, and has not been filtered to good seg or overlapping and short. - analysts need to add restrictions. 
-+ `world-fishing-827.pipe_production_v20201001.published_events_loitering` - Same as the loitering table, however the schema is modified to be consistent with the other `published_events_` tables, largely used in products APIs
++ `world-fishing-827.pipe_production_v20201001.published_events_loitering` - Similar to loitering table, however the schema is modified to be consistent with the other `published_events_` tables AND the data is restricted to avg_distance_from_shore_nm>=20 and segments must be good_seg AND NOT overlapping_and_short , largely used in products APIs
 
 
 ## Source Tables
@@ -46,6 +46,7 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 
 + [loitering_carrier_basic.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_carrier_basic.sql) 
 + [loitering_carrier_tracks.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_carrier_tracks.sql) 
++ [loitering_ex_carrier_list_20211004.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_ex_carrier_list_20211004.sql) 
 + [loitering_overlap_encounters_r_v20210816.Rmd](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_r_v20210816.Rmd) 
 + [loitering_overlap_encounters_v20210813.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_v20210813.sql) 
 + [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
