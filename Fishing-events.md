@@ -43,3 +43,5 @@ Fishing events and fishing effort (see slide deck [HERE](https://docs.google.com
 ## Supplementary Materials & Practice Queries 
 
 + Fishing Event Tech Call Slide Deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
++ [proto_fishing_events_and_pipe_fishing_comparison_20211005.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_and_pipe_fishing_comparison_20211005.sql) 
++ [proto_fishing_events_in_polygon_w_vessel_info_20211005.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_in_polygon_w_vessel_info_20211005.sql) 
