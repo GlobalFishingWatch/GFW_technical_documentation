@@ -2,6 +2,13 @@
 
 Do not forget to update the version of the tables in the [BigQuery Table Reference](https://docs.google.com/spreadsheets/d/1B8Q04rzWRdffty2gVBlHiBDS9DYZLdW8J-4B3xja5ws/edit#gid=0).
 
+**October 13, 2021 Updates**
+
+Flags of convenience have been moved to a versioned system. The original table is `gfw_research.flags_of_convenience`. This remains unchanged, reflecting the ITF list of FOCs from 2019, and will be kept for the next 30 days to give time for people to switch over their code. If you need to use this historical list of FOCs, you can reference `gfw_research.flags_of_convenience_v20190110`. For all other cases, you should now use `gfw_research.flags_of_convenience_v20211013`. FOC flags as reported by ITF are pulled from https://www.itfseafarers.org/en/focs/current-registries-listed-as-focs. We continue to remove the French and German International Ship Registries as they do not have their own unique flag State and ISO3 code. The changes between the `20190110` and `20211013` versions are as follows:
+* Added Cameroon (CMR), Cook Islands (COK), Palau (PLW), Sierra Leone (SLE), St Kitts and Nevis (KNA), Tanzania (TZA), and Togo (TGO
+* Removed the Netherlands Antilles (ANT)
+* Overall increase from 34 to 40 flag states in the dataset
+
 **October 4, 2021 Updates**:
 * Updated wiki page on encounters dataset with BQ example code. Note the internal logic has been adjusted (using segment id). See page for details.
 * The pipe_production_v20201001.published_events_loitering table has been adjusted to include the restrictions: avg_distance_from_shore_nm>=20, and segments must be good_seg and NOT Overlapping_and_short
