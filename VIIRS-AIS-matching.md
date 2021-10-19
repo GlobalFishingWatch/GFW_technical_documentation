@@ -1,7 +1,7 @@
 
-This table contains the AIS/VMS vessel's IDs (`ssvid`) corresponding to each VIIRS detection. Each row of this table is corresponding to VIIRS detection.
+Each row of this table is corresponding to VIIRS detection and this table also contains the AIS/VMS vessel's IDs (`ssvid`) corresponding to each VIIRS detection. 
 
-This table was created from the VIIRS detection after excluding [the South American noise](VIIRS-noise-filter). Thus, **this table can also be used as noise-free VIIRS table**.
+This table was created from the VIIRS table after excluding [the South American noise](VIIRS-noise-filter). Thus, **this table can also be used as noise-free VIIRS table**.
 
 
 # Repository
