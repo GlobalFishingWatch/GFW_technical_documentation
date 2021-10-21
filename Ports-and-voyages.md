@@ -4,25 +4,29 @@
 
 GFW maintains a database of anchorages/ports and tracks when vessels enter/exit these ports. The trips in between these port visits are then grouped to track vessel voyages. 
 
-“Port events” are the single events that occur within a port, including:
-PORT ENTRY: vessel that was not in port gets within 3km of anchorage point
-PORT STOP: begin: speed < 0.2 knots; end: speed > 0.5 knots
-PORT GAP: AIS gap  > 4 hours; start is recorded 4 hours after the last message before the gap; end at next message after gap.
-PORT_EXIT: vessel that was in port moves more than 4km from anchorage point
-
-“Port visits” are when more than one single port events are grouped into a ‘visit’ 
-
-“Voyage” is the end of one port visit until the beginning of the next port visits aka the trip of the vessel between port visits
-
-
+“Port events” are the single events that occur within a port, including:  
+  
+* PORT ENTRY: vessel that was not in port gets within 3km of anchorage point  
+* PORT STOP: begin: speed < 0.2 knots; end: speed > 0.5 knots  
+* PORT GAP: AIS gap  > 4 hours; start is recorded 4 hours after the last message before the gap; end at next message after gap.  
+* PORT_EXIT: vessel that was in port moves more than 4km from anchorage point  
+  
+“Port visits” are when more than one single port events are grouped into a ‘visit’   
+  
+“Voyage” is the end of one port visit until the beginning of the next port visits aka the trip of the vessel between port visits  
+  
+  
 **Updates in 2021**
 
-The seg_id is now used rather than vessel_id to estimate port events. By waiting to join the segments together until the visits table, we are able to remove noisy segments from visits. This is possible because the visits table is regenerated every day so we can use the most up to date noisy segment data when generating the table.  Removing the noise segments reduces the number of times when visits are skipped, ended prematurely, or inappropriately merged because of a noisy segment. Noisey segments were removed from the estimation (overlapping_and_short = FALSE)
-All port events were used to create port visits, and these port visits have ‘confidence’ levels based on the events within the visit. A confidence value ranging from 1-4 is now assigned to port visits.  In the past, all port visits needed to have a confidence of 4, but now we have a range of confidences. These are defined as : 
-1 -> no stop/gap
-2 -> only stop / gap
-3 -> port entry or exit + stop/gap
-4 -> port entry and exit + stop/gap.
+The seg_id is now used rather than vessel_id to estimate port events. By waiting to join the segments together until the visits table, we are able to remove noisy segments from visits. This is possible because the visits table is regenerated every day so we can use the most up to date noisy segment data when generating the table.  Removing the noise segments reduces the number of times when visits are skipped, ended prematurely, or inappropriately merged because of a noisy segment. Noisy segments were removed from the estimation (overlapping_and_short = FALSE)  
+  
+All port events were used to create port visits, and these port visits have ‘confidence’ levels based on the events within the visit. A confidence value ranging from 1-4 is now assigned to port visits.  In the past, all port visits needed to have a confidence of 4, but now we have a range of confidences.  
+  
+These are defined as :  
+* 1 -> no stop/gap  
+* 2 -> only stop / gap  
+* 3 -> port entry or exit + stop/gap  
+* 4 -> port entry and exit + stop/gap.  
 	
 An example of a port visit that has a confidence of 2 is shown in the Training Slide Deck referenced at the top of the page: In this instance the vessel turns AIS off, then it transmits only in port, it turns off again and it appears on the high seas. In the database this only shows up as a PORT_STOP with NO Entry or Exit. 
  
