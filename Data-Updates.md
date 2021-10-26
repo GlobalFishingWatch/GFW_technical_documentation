@@ -2,6 +2,12 @@
 
 Do not forget to update the version of the tables in the [BigQuery Table Reference](https://docs.google.com/spreadsheets/d/1B8Q04rzWRdffty2gVBlHiBDS9DYZLdW8J-4B3xja5ws/edit#gid=0).
 
+**October 26, 2021 Updates**
+
+- The VIIRS-AIS matching table is now automatically updated on a daily basis. The data itself is identical.
+ - previous table (manually updated): `gfw_research.matches_raw_vbd_global_3top_v20210514`
+ - new table (automatically updated): `pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`
+ 
 **October 13, 2021 Updates**
 
 Flags of convenience have been moved to a versioned system. The original table is `gfw_research.flags_of_convenience`. This remains unchanged, reflecting the ITF list of FOCs from 2019, and will be kept for the next 30 days to give time for people to switch over their code. If you need to use this historical list of FOCs, you can reference `gfw_research.flags_of_convenience_v20190110`. For all other cases, you should now use `gfw_research.flags_of_convenience_v20211013`. FOC flags as reported by ITF are pulled from https://www.itfseafarers.org/en/focs/current-registries-listed-as-focs. We continue to remove the French and German International Ship Registries as they do not have their own unique flag State and ISO3 code. The changes between the `20190110` and `20211013` versions are as follows:
