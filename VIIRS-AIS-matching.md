@@ -14,6 +14,10 @@ Please look at README in the repository for how to update this table.
 
 Current version
 
+- `pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`
+
+Old version
+
 - `gfw_research.matches_raw_vbd_global_3top_v20210514`
     - **This table is based on the AIS pipeline version `v20201001`.** Thus if you want to join with other AIS information, you need to use the pipeline version.
 
