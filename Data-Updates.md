@@ -5,8 +5,8 @@ Do not forget to update the version of the tables in the [BigQuery Table Referen
 **October 26, 2021 Updates**
 
 - The VIIRS-AIS matching table is now automatically updated on a daily basis. The data itself is identical.
- - previous table (manually updated): `gfw_research.matches_raw_vbd_global_3top_v20210514`
- - new table (automatically updated): `pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`
+  - previous table (manually updated): `gfw_research.matches_raw_vbd_global_3top_v20210514`
+  - new table (automatically updated): `pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`
  
 **October 13, 2021 Updates**
 
