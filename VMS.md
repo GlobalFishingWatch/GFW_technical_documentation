@@ -58,17 +58,17 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 ## Brazil 
 
-+ **Data description:** The Brazil VMS data is...
-  + **Date range**: 
-  + **Message frequency**:
-  + **Vessel classes**: 
++ **Data description:** The Brazil VMS data is provided by two vms providers Onixsat and Ariasat companies...
+  + **Date range**: `2016-01-01` - present
+  + **Message frequency**: two ping rates, 20 minutes for tuna longliners and one hour for the others
+  + **Vessel classes**: Trawlers (bottom, single net, doble rig net, pair trawl), gillnet (bottom and surface), line (surface longline, bottom longline, handline), purse seine, pots and traps (lobster, octopus and red snapper) 
   + **Identity information**: 
 + **BigQuery dataset:** `pipe_brazil_production_v20210910`
-  + **Vessel identity table(s)**:  
+  + **Vessel identity table(s)**:  `world-fishing-827.VMS_Brazil.brazil_registry_2021_09_09`
   + **Identity information**:
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Claudino (`@Claudino`; claudino@globalfishingwatch.org)
-+ **Caveats & known issues:**
++ **Caveats & known issues**: Ariasat data source has no speed and course information, need to calculate. and also ariasat has no historical information.
 
 ## Costa Rica 
 
