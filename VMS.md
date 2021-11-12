@@ -80,7 +80,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
 + **BigQuery dataset:** `pipe_costarica_production_v20210830`
   + **Vessel identity table(s)**: 
 + **Data redacted from GFW map (if applicable)**:  
-+ **GFW lead**: 
++ **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
 + **Caveats & known issues:**
 
 ## Ecuador 
@@ -93,7 +93,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
 + **BigQuery dataset:** `pipe_ecuador_production_v20210811`
   + **Vessel identity table(s)**: 
 + **Data redacted from GFW map (if applicable)**:  
-+ **GFW lead**: 
++ **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
 + **Caveats & known issues:**
 
 ## Mexico 
