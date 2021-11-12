@@ -1,8 +1,10 @@
+# Data reference
+- [Data updates](Data-updates)
+- [BigQuery dataset overview](BigQuery-datasets)
+- [BigQuery table reference](BigQuery-Table-Reference)
 
 # Data products
 
-- [Data updates](Data-updates)
-- [BigQuery datasets](BigQuery-datasets)
 - [Pipeline](Pipeline)
 - [Fishing effort and vessel presence](Fishing-effort-and-vessel-presence)
 - [Fishing events](Fishing-events)
