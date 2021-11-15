@@ -2,7 +2,7 @@
 [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
 
 
-GFW maintains a database of anchorages/ports and tracks when vessels enter/exit these ports. The trips in between these port visits are then grouped to track vessel voyages. 
+GFW maintains a database of anchorages/ports and identifies when vessels enter/exit these ports. The trips in between these port visits are then grouped to track vessel voyages. 
 
 “Port events” are the single events that occur within a port, including:  
   
@@ -23,8 +23,8 @@ The `seg_id` is now used rather than `vessel_id` to estimate port events. By wai
 All port events were used to create port visits, and these port visits have ‘confidence’ levels based on the events within the visit. A confidence value ranging from 1-4 is now assigned to port visits.  In the past, all port visits needed to have a confidence of 4, but now we have a range of confidences.  
   
 These are defined as :  
-* 1 -> no stop/gap  
-* 2 -> only stop / gap  
+* 1 -> port entry or exit, but no stop/gap  
+* 2 -> only stop / gap, but no port entry/exit  
 * 3 -> port entry or exit + stop/gap  
 * 4 -> port entry and exit + stop/gap.  
 	
@@ -73,7 +73,7 @@ Port visits represents a second dataset built on the **Port Events**. **Port Vis
 
 ### Voyages:
 
-Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel "spent" in starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you restricted port visits to. For instance, if you set port visit confidence >= 2, then you should use the pipe_production_vYYYYMMDD.proto_voyages_c2 table that shows voyages where both the start and end port visit had a confidence of >=2.
+Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel "spent" in starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you restricted port visits to. For instance, if you set port visit `confidence >= 2`, then you should use the `pipe_production_vYYYYMMDD.proto_voyages_c2` table that shows voyages where both the start and end port visit had a confidence of >=2.
 
 ## Caveats & Known Issues
 
