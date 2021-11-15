@@ -47,6 +47,6 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 + Fishing Event Tech Call Slide Deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 
 ## Updates
-updated as of **August 24th, 2021**
+Last updated on **August 24th, 2021**
 
 In the previous version for fishing events (prior to `world-fishing-827.pipe_production_v20201001.proto_events_fishing`) fishing events were more simply defined. Events were created if consecutive AIS points were considered ‘fishing’ by the neural net, and fishing events were grouped if they were only separated in time by a short duration (e.g., 10 minutes). There were no restrictions to remove likely noise nor to separate events made of AIS positions in different seg_id's.
