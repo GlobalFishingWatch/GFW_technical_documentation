@@ -34,7 +34,7 @@ The current Fishing Events are constructed through the following steps. Step 1 a
 
 ## Caveats & Known Issues
 
-Point nature of events (if poor ais transmission average location can be inconsistent with full location of tracks during time period)
+Point nature of events: if poor there is ais transmission, average location of fishing event can be inconsistent with full location of tracks during time period
 
 On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https://docs.google.com/presentation/d/17brGIUs1gsRMKMmaFEqi_dd_TPMapVoE9_9PQH8esrM/edit?usp=sharing********)) do not follow the same restrictions. Fishing effort is not as restrictive and does not have filters to remove false/noisy fishing positions. Given Fishing Events and Fishing Efforts both appear in the GFW Map, this may lead to discrepancies on the public map on occasion (eg Fishing effort cells appearing on GFW map but no fishing events). See Fishing Event Tech Call slide deck in supplementary materials for a comparison of fishing events and pipefishing (eg fishing effort). In future pipeline versions and updates to the public map effort may be made to make fishing events and fishing effort data align.
 
