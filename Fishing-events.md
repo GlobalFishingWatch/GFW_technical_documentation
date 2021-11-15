@@ -2,8 +2,6 @@ Fishing Events is a GFW data product which groups AIS fishing positions together
 
 The current fishing events table was implemented in the 20201001 pipe as a proto table (`world-fishing-827.pipe_production_v20201001.proto_events_fishing`). The proto_events_fishing is currently visualized in the GFW public map.
 
-In the previous version, fishing events were more simply defined. Events were created if consecutive AIS points were considered ‘fishing’ by the neural net, and fishing events were grouped if they were only separated in time by a short duration (e.g., 10 minutes). There were no restrictions to remove likely noise nor to separate events made of AIS positions in different seg_id's.
-
 ## Key Tables
 
 Current version
@@ -12,8 +10,6 @@ Current version
 
 Previous versions 
 + `world-fishing-827.pipe_production_v20190502.published_events_fishing` - old logic
-+ `world-fishing-827.pipe_production_v20200203.published_events_fishing` - old logic
-+ `world-fishing-827.pipe_production_v20200805.published_events_fishing` - old logic
 + `world-fishing-827.pipe_production_v20201001.published_events_fishing` - old logic
 
 ## Source Tables
@@ -32,7 +28,7 @@ The current Fishing Events are constructed through the following steps. Step 1 a
 6. **Filters out fast moving vessel events** defined as events with average vessel speed of 10 knots per hour or greater
 
 
-## Caveats & Known Issues
+## Caveats and Known Issues
 
 Point nature of events: 
 + if there is poor AIS transmission, average location of fishing event can be inconsistent with full location of tracks during time period.
@@ -41,8 +37,15 @@ Point nature of events:
 
 On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https://docs.google.com/presentation/d/17brGIUs1gsRMKMmaFEqi_dd_TPMapVoE9_9PQH8esrM/edit?usp=sharing********)) do not follow the same restrictions. Fishing effort is not as restrictive and does not have filters to remove false/noisy fishing positions. Given Fishing Events and Fishing Efforts both appear in the GFW Map, this may lead to discrepancies on the public map on occasion (eg Fishing effort cells appearing on GFW map but no fishing events). See Fishing Event Tech Call slide deck in supplementary materials for a comparison of fishing events and pipefishing (eg fishing effort). In future pipeline versions and updates to the public map effort may be made to make fishing events and fishing effort data align.
 
-## Supplementary Materials & Practice Queries 
+## Example Queries
 
-+ Fishing Event Tech Call Slide Deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 + [proto_fishing_events_and_pipe_comparison_20211005.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_and_pipe_comparison_20211005.sql) 
 + [proto_fishing_events_in_polygon_w_vessel_info_20211005.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_in_polygon_w_vessel_info_20211005.sql) 
+
+## Links
+
++ Fishing Event Tech Call Slide Deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
+
+## Updates
+
+In the previous version for fishing events (prior to `world-fishing-827.pipe_production_v20201001.proto_events_fishing`), fishing events were more simply defined. Events were created if consecutive AIS points were considered ‘fishing’ by the neural net, and fishing events were grouped if they were only separated in time by a short duration (e.g., 10 minutes). There were no restrictions to remove likely noise nor to separate events made of AIS positions in different seg_id's.
