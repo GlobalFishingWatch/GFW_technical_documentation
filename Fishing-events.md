@@ -44,7 +44,8 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 
 ## Links
 
-+ Fishing Event Tech Call Slide Deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
++ Fishing Effort and Events training slide deck link [HERE](https://docs.google.com/presentation/d/17brGIUs1gsRMKMmaFEqi_dd_TPMapVoE9_9PQH8esrM/edit#slide=id.g101ceedbfaa_0_66_) 
++ Fishing Event Tech Call slide deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 
 ## Updates
 Last updated on **August 24th, 2021**
