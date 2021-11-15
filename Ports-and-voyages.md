@@ -18,7 +18,7 @@ GFW maintains a database of anchorages/ports and tracks when vessels enter/exit 
   
 **Updates in 2021**
 
-The seg_id is now used rather than vessel_id to estimate port events. By waiting to join the segments together until the visits table, we are able to remove noisy segments from visits. This is possible because the visits table is regenerated every day so we can use the most up to date noisy segment data when generating the table.  Removing the noise segments reduces the number of times when visits are skipped, ended prematurely, or inappropriately merged because of a noisy segment. Noisy segments were removed from the estimation (overlapping_and_short = FALSE)  
+The `seg_id` is now used rather than `vessel_id` to estimate port events. By waiting to join the segments together until the visits table, we are able to remove noisy segments from visits. This is possible because the visits table is regenerated every day so we can use the most up to date noisy segment data when generating the table.  Removing the noise segments reduces the number of times when visits are skipped, ended prematurely, or inappropriately merged because of a noisy segment. Noisy segments were removed from the estimation (`overlapping_and_short = FALSE`)  
   
 All port events were used to create port visits, and these port visits have ‘confidence’ levels based on the events within the visit. A confidence value ranging from 1-4 is now assigned to port visits.  In the past, all port visits needed to have a confidence of 4, but now we have a range of confidences.  
   
