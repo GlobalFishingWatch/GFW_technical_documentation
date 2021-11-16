@@ -58,7 +58,7 @@ Note that all data points involve `anchorage_points` for visits and to convert t
   
 Port events data are stored in `pipe_production_vYYYYMMDD.proto_raw_port_events_*`. There are four different types of port events: `PORT_ENTRY`, `PORT_STOP`, `PORT_GAP`, `PORT_EXIT`. 
 
-A `PORT_ENTRY` event occurs when a vessel gets within 3 km of an anchorage point and a `PORT_EXIT` event occurs when it exceeds 4 km. These points can be considered changes in state, between "out of port" and "in port". The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.   
+A `PORT_ENTRY` event occurs when a vessel gets within 3 km of an anchorage point and a `PORT_EXIT` event occurs when it exceeds 4 km. These points can be considered changes in state, between "AT SEA" and "IN PORT". The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.   
 
 Nested between a `PORT_ENTRY` and a `PORT_EXIT`, a vessel may have a `PORT_STOP` or `PORT_GAP` or both (these events require a state = "in port"), though these events don't necessarily occur. A `PORT_STOP_BEGIN` occurs when the vessel is "in port" and the vessel's speed drops under 0.2 knots and `PORT_STOP_END` occurs when the speed climbs over 0.5 (thus `PORT_STOP`s may a start and an end.  
 
