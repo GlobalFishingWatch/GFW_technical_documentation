@@ -13,7 +13,7 @@
    - [Vessel info tables](Vessel-info-tables)
 - [Encounters](Encounters)
 - [Loitering](Loitering)
-- [Ports and voyages](Ports-and-voyages)
+- [Anchorages and voyages](Anchorages-and-voyages)
 - [Gaps](Gaps)
 - [SAR vessel detections](SAR-vessel-detections)
 - [VMS](VMS)
