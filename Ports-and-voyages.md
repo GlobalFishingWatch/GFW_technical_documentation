@@ -2,19 +2,16 @@
 [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
 
 
-GFW maintains a database of anchorages/ports and identifies when vessels enter/exit these ports. The trips in between these port visits are then grouped to track vessel voyages. 
+GFW maintains a database of `anchorages` and identifies when vessels enter/exit these locations (`port visits`). By connecting a vessel's port EXIT and next port ENTRY it is also possible to identify vessel `voyages`. 
 
-“Port events” are the single events that occur within a port, including:  
-  
-* PORT ENTRY: vessel that was not in port gets within 3km of anchorage point  
-* PORT STOP: begin: speed < 0.2 knots; end: speed > 0.5 knots  
-* PORT GAP: AIS gap  > 4 hours; start is recorded 4 hours after the last message before the gap; end at next message after gap.  
-* PORT_EXIT: vessel that was in port moves more than 4km from anchorage point  
-  
-“Port visits” are when more than one single port events are grouped into a ‘visit’   
-  
-“Voyage” is the end of one port visit until the beginning of the next port visits aka the trip of the vessel between port visits  
-  
+`Port events` serve as the fundamental units used to create `port visits` or `voyages`. There are four types of port events:  
+
+`PORT ENTRY`: occurs when vessel that was not in port travels within 3km of an anchorage point  
+`PORT STOP`: begin: speed < 0.2 knots; end: speed > 0.5 knots  
+`PORT GAP`: AIS gap > 4 hours; start is recorded 4 hours after the last message before the gap; end at next message after gap.  
+`PORT_EXIT`: occurs when vessel that was in port travels more than 4km from an anchorage point  
+  <br> 
+   
   
 **Updates in 2021**
 
@@ -23,21 +20,23 @@ The `seg_id` is now used rather than `vessel_id` to estimate port events. By wai
 All port events were used to create port visits, and these port visits have ‘confidence’ levels based on the events within the visit. A confidence value ranging from 1-4 is now assigned to port visits.  In the past, all port visits needed to have a confidence of 4, but now we have a range of confidences.  
   
 These are defined as :  
-* 1 -> port entry or exit, but no stop/gap  
-* 2 -> only stop / gap, but no port entry/exit  
-* 3 -> port entry or exit + stop/gap  
-* 4 -> port entry and exit + stop/gap.  
+* 1 -->  port entry AND/OR exit, but no stop OR gap  
+* 2 -->  only stop AND/OR gap, but no port entry OR exit  
+* 3 --> port entry OR exit + stop AND/OR gap  
+* 4 --> port entry AND exit + stop AND/OR gap.  
 	
-An example of a port visit that has a confidence of 2 is shown in the Training Slide Deck referenced at the top of the page: In this instance the vessel turns AIS off, then it transmits only in port, it turns off again and it appears on the high seas. In the database this only shows up as a PORT_STOP with NO Entry or Exit. 
+An example of a port visit that has a confidence of 2 is shown in the [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0): In this instance the vessel turns AIS off, then it transmits only in port, it turns AIS off again and appears on the high seas. In the database this only shows up as a `PORT_STOP` with NO Entry or Exit. 
  
-An example of a port visit that has a confidence of 3 is shown the Training Slide Deck referenced at the top of the page: In this instance the vessel went to port but changed IDs in port, so under this ID we only see a PORT_ENTRY and PORT_STOP.
-
+An example of a port visit that has a confidence of 3 is shown the [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0): In this instance the vessel went to port but changed IDs in port, so under this ID we only see a PORT_ENTRY and PORT_STOP.
+  
+ <br>
+ 
 **Key Tables**
 
 The tables associated with ports and voyages include the following:
 
-+ `anchorages.named_anchorages_vYYYYMMDD` - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats about visits to that port.
-+ `gfw_research.named_anchorages` - View of most recent version of `anchorages.named_anchorages_vYYYYMMDD`
++ `anchorages.named_anchorages_vYYYYMMDD` - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats regarding anchorage at the time of creation.
++ `gfw_research.named_anchorages` - View of most the recent version of `anchorages.named_anchorages_vYYYYMMDD`
 + `pipe_production_vYYYYMMDD.proto_raw_port_events_*` - Port events by seg_id. Each port activity by a vessel (e.g. port entry, port exit) recorded in a single row. 
 + `pipe_production_vYYYYMMDD.proto_port_visits` - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the `events` array. 
 + `pipe_production_vYYYYMMDD.published_events_port_visits` - Proto_port_visits table version, limited to confidence >=2, that is used in API (different scheme than original proto_port_visits table). Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.
@@ -61,9 +60,9 @@ Port events data are stored in `pipe_production_vYYYYMMDD.proto_raw_port_events_
 
 A `PORT_ENTRY` event occurs when a vessel gets within 3 km of an anchorage point and a `PORT_EXIT` event occurs when it exceeds 4 km. These points can be considered changes in state, between "out of port" and "in port". The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.   
 
-Nested between a `PORT_ENTRY` and a `PORT_EXIT`, a vessel may have a `PORT_STOP` or `PORT_GAP` (these events require a state = "in port"), though these events don't necessarily occur. A `PORT_STOP` occurs when the vessel is "in port" and the vessel's speed drops under 0.2 knots and `PORT_STOP` ends when the speed climbs over 0.5 (thus `PORT_STOP`s have a start and an end.  
+Nested between a `PORT_ENTRY` and a `PORT_EXIT`, a vessel may have a `PORT_STOP` or `PORT_GAP` or both (these events require a state = "in port"), though these events don't necessarily occur. A `PORT_STOP_BEGIN` occurs when the vessel is "in port" and the vessel's speed drops under 0.2 knots and `PORT_STOP_END` occurs when the speed climbs over 0.5 (thus `PORT_STOP`s may a start and an end.  
 
-A `GAP_EVENT` occurs when a vessel is in "in_port" and has a >4 hour AIS gap.  The start of the gap is recorded at 4 hours after the last message before the gap and the end is recorded at the time of the message that ends the gap.
+A `GAP_EVENT` occurs when a vessel is in "in_port" and has a >4 hour AIS gap.  The start (`GAP_EVENT_BEGIN`) of the gap is recorded at 4 hours after the last message before the gap and the end (`GAP_EVENT_END`) is recorded at the time of the message that ends the gap.
 
 As stated previously, not every `PORT_ENTRY`/`PORT_EXIT` pair will exhibit a `PORT_GAP` or a `PORT_STOP`. These events may not occur if an AIS signal is not seen in port (the AIS may be turned off such that we cannot detect a `PORT_STOP` or an AIS gap in port may be less than 4 hours).  
 
@@ -73,7 +72,7 @@ Port visits represents a second dataset built on the **Port Events**. **Port Vis
 
 ### Voyages:
 
-Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel "spent" in starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you restricted port visits to. For instance, if you set port visit `confidence >= 2`, then you should use the `pipe_production_vYYYYMMDD.proto_voyages_c2` table that shows voyages where both the start and end port visit had a confidence of >=2.
+Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit `confidence >= 2`, then you should use the `pipe_production_vYYYYMMDD.proto_voyages_c2` table that shows voyages where both the start and end port visit had a confidence of `>=2`.
 
 ## Caveats & Known Issues
 
@@ -83,19 +82,25 @@ Voyages are a further processed dataset as they represent two port visits that b
 ### Port Visits:
 * Port visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. 
 *Generally confidence of 4 will capture most port visits (see notes below)
- looking across all port visits with confidence >= 2::
-13.4% have confidence 2, 8.6% confidence 3, and 78% confidence of 4
-when looking at all port visits to Abidjan in last 3 years by carrier/fishing vessels with confidence >= 2:
-.02% - confidence 2
-.05% confidence 3
-rest confidence 4
-When the percentages are higher for lower confidence when looking at the whole data, that is because a lot of the 'noisey' vessels start to overpower the results, but when you are filtering on specific fishing/carrier lists you get less 'noise'. However, those small percentages can provide key insight into voyage history
+
+	Looking at all confidence `>=2`port visits:  
+	13.4% - confidence 2  
+	8.6% - confidence 3   
+	78.0% - confidence 4  
+	
+	Examining all confidence `>=2` ports visits by carrier/fishing vessels within the last 3 years to Abidjan, Côte d'Ivoire:  
+	0.02% - confidence 2  
+	0.05% - confidence 3  
+	99.3% - confidence 4  
+	
+	There are more low confidence visits when looking at all data, because 'noisy' vessels dominate the results, but when filtering to a tidier vessel list there is considerably less 'noise'. However, even small percentages can provide key insight into voyage history.  
+
 * These events use `vessel_id` as vessel identifier and may need to be mapped to `SSVID` for broader use.  
 
 ### Voyages
 * These events use port visits and have similar caveats.  
 * There are three tables of voyages based on a minimum confidence value for the start or end port visits of a voyage. 
-* These tables were only created when there is at least a port visit confidence of 2
+* These tables require a minimum port visit confidence of 2
 
 ## Example queries
 
