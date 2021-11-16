@@ -15,7 +15,7 @@ Last update:
 | [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual fishing vessel list | `gfw_research` | `fishing_vessels_ssvid_v20210913` | 2.5 | Tyler |
 | [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual carrier vessel list | `vessel_database` | `carrier_vessels_byyear_v20211001` | 2.5 | Jaeyoon |
 | [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events | `pipe_production_v20201001` | `published_events_encounters` | 2.5 | Nate |
-| [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering) | Loitering events by carrier vessels | `pipe_production_v20201001` | `loitering` `2loitering` | 2.5 | Pete |
+| [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering) | Loitering events by carrier vessels | `pipe_production_v20201001` | * `loitering` * `2loitering` | 2.5 | Pete |
 | [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Anchorage locations | `anchorages` | `named_anchorages_v20211026` | 2.5 | Nate |
 | [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Individual port events (entry, start, gap, stop, exit) | `pipe_production_v20201001` | `port_events_` | 2.5 | Nate | 
 | [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Port visits (grouped port events) | `pipe_production_v20201001` | `port_visits_` | 2.5 | Nate |  
