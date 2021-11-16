@@ -49,7 +49,7 @@ Key details of the research tables include the following:
 ### AIS event tables
 
 Lastly, the AIS pipeline includes a series of algorithms that identify certain vessel behaviors, referred to as events:
-+ [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters-(Soon-to-be-Updated))
++ [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters)
 + [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering)
 + [Port visits and voyages](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages)
 + [Fishing events](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-events)  
