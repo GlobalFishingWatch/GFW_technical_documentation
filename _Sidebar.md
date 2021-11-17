@@ -11,6 +11,7 @@
 - [Vessel identity](Vessel-identity)
    - [Vessel database](Vessel-database)
    - [Vessel info tables](Vessel-info-tables)
+   - [Annual carrier vessel list](Annual carrier vessel list)
 - [Encounters](Encounters)
 - [Loitering](Loitering)
 - [Anchorages and voyages](Anchorages-and-voyages)
