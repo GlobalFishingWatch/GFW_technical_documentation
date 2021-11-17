@@ -20,12 +20,12 @@ When two vessels are both observed moving very slowly in close proximity for an 
 In summary, the loitering query groups data by hour by vessel. It gets the average speed of an hour block of time, and then identifies consecutive hour blocks where the average implied speed is < 2 knots. 
 A loitering pipeline was developed to create and automate a daily updated loitering dataset. 
 The dataset starts in 2012 and is updated up to 3 days prior to the current day (in order to aggregate multiday loitering events).
-It is no longer filtered on any of the following to allow the analyst the flexibility to choose the desired parameters. 
-vessel type
-distance from shore
-good segs or overlapping and short
-minimum loitering time.
-It is partition on the loitering_start_timetamp field, and clustering by ssvid 
+It is no longer filtered on any of the following to allow the analyst the flexibility to choose the desired parameters:
+* vessel type
+* distance from shore
+* good segs or overlapping and short
+* minimum loitering time
+It is partition on the loitering_start_timetamp field, and clustering by ssvid.
 
 
 #### definitions used in RFMO Transshipment Reports 
