@@ -17,7 +17,7 @@ When two vessels are both observed moving very slowly in close proximity for an 
 
 **Updates in 2021**
 
-In summary, the loitering query groups data by hour by vessel. It gets the average speed of an hour block of time, and then identifies consecutive hour blocks where the average implied speed is < 2 knots. 
+In summary, the loitering query groups data by hour by vessel. It gets the average speed of an hour block of time, and then identifies consecutive hour blocks where the average implied speed is < 2 knots. Points that fall within these periods of time are aggregated and classified as loitering events. 
 A loitering pipeline was developed to create and automate a daily updated loitering dataset. 
 The dataset starts in 2012 and is updated up to 3 days prior to the current day (in order to aggregate multiday loitering events).
 It is no longer filtered on any of the following to allow the analyst the flexibility to choose the desired parameters:
