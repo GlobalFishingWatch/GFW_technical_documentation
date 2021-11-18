@@ -1,6 +1,6 @@
 **Running list of updates to note in regard to Global Fishing Watch data and data changes**
 
-Do not forget to update the version of the tables in the [BigQuery Table Reference](https://docs.google.com/spreadsheets/d/1B8Q04rzWRdffty2gVBlHiBDS9DYZLdW8J-4B3xja5ws/edit#gid=0).
+Do not forget to update the version of the tables in the [BigQuery Table Reference](BigQuery-Table-Reference).
 
 **October 26, 2021 Updates**
 
