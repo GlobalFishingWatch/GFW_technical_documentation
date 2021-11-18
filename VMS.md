@@ -21,7 +21,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 + **Data description:** The Peru VMS data is provided by...
   + **Date range**: `2012-01-01` - present
-  + **Message frequency**:
+  + **Message frequency**: two ping rates, 20 minutes for artisanal vessels and 10 minutos for industrial vessels
   + **Vessel classes**:  
   + **Identity information**:
 + **BigQuery dataset:** `pipe_peru_production_20181001`
