@@ -87,7 +87,7 @@ To avoid false positives due to the South Atlantic Anomaly, we've developed a [V
 
 ### Overlapping detection
 
-VIIRS satellite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double-counting, you can select a single scan for each 0.1-degree grid for a night. [See example query](Excluding-overlapping-detection-of-VIIRS).
+VIIRS satellite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double-counting, you can select a single scan for each 1-degree grid for a night. [See example query](Excluding-overlapping-detection-of-VIIRS).
 
 
 ## Example queries
