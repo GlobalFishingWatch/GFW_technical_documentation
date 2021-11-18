@@ -24,7 +24,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: two ping rates, 20 minutes for artisanal vessels and 10 minutos for industrial vessels
   + **Vessel classes**: (fish_factory, tanker ) and (trawlers, purse_seines, set_gillnets, squid_jigger, set_longlines, pots_and_traps, bottom_longlines, longline_handline, drifting_longlines) 
   + **Identity information**: Shipname and PLATE
-+ **BigQuery dataset:** `pipe_peru_production_20181001`
++ **BigQuery dataset:** `pipe_peru_production_v20200324`
   + **Vessel identity table(s)**: `vessel_info`
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Eloy (`@Eloy Aroni`; eloy@globalfishingwatch.org)
