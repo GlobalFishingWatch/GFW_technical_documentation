@@ -23,12 +23,12 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Date range**: `2012-01-01` - present
   + **Message frequency**: two ping rates, 20 minutes for artisanal vessels and 10 minutos for industrial vessels
   + **Vessel classes**: (fish_factory, tanker ) and (trawlers, purse_seines, set_gillnets, squid_jigger, set_longlines, pots_and_traps, bottom_longlines, longline_handline, drifting_longlines) 
-  + **Identity information**:
+  + **Identity information**: Shipname and PLATE
 + **BigQuery dataset:** `pipe_peru_production_20181001`
   + **Vessel identity table(s)**: `vessel_info`
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Eloy (`@Eloy Aroni`; eloy@globalfishingwatch.org)
-+ **Caveats & known issues:**
++ **Caveats & known issues**: The fishing model is not working good for artisanal fleets (squid_jigger and longline_handline)
 
 ## Chile
 
