@@ -74,12 +74,12 @@ As part of our Transparency Initiative, select countries have agreed to share th
 ## Costa Rica 
 
 + **Data description:** The Costa Rica VMS data is providade by INCOPESCA
-  + **Date range**:
-  + **Message frequency**:
-  + **Vessel classes**: 
-  + **Identity information**: 
+  + **Date range**: 2021-04-08 to present
+  + **Message frequency**: 1 - 2 hours
+  + **Vessel classes**: Sardineros, Avanzados, atuneros 
+  + **Identity information**: NA
 + **BigQuery dataset:** `pipe_costarica_production_v20210830`
-  + **Vessel identity table(s)**: 
+  + **Vessel identity table(s)**: NA
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
 + **Caveats & known issues:**
