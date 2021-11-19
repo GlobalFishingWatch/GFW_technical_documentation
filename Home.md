@@ -1,4 +1,4 @@
-# GFW BigQuery Documentation
+# GFW Data Documentation
 
 This wiki includes the primary documentation of Global Fishing Watch's data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g. fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.
 
@@ -7,10 +7,10 @@ GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, 
 ## Data Updates
 Check the [Data updates](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Data-updates) for new changes to GFW data.
 
-See the [BigQuery Table Reference](https://docs.google.com/spreadsheets/d/1B8Q04rzWRdffty2gVBlHiBDS9DYZLdW8J-4B3xja5ws/edit#gid=0) for checking the latest version of key tables to use.
+See the [BigQuery Table Reference](#Bigquery-table-reference) for checking the latest version of key tables to use.
 
-## Key Concepts
-Read the [Key concepts page](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Key-concepts) for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.
+## BigQuery Key Concepts
+Read the [BigQuery Key Concepts page](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Key-concepts) for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.
 
 ## Data Products
 
