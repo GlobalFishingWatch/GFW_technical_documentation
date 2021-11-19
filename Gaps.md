@@ -76,7 +76,9 @@ The number of satellites over the horizon at different places on earth varies co
 
 ## Example Queries
 
-+ [ais_disabling_events_v20211119.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/ais_disabling_events_v20211119.sql)
++ [ais_disabling_events_v20211119.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/ais_disabling_events_v20211119.sql): Get all suspected AIS disabling events.
+
++ [ais_disabling_events_reception_v20211119.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/ais_disabling_events_reception_v20211119.sql): Get all suspected AIS disabling events, filtering out events from low reception areas.
 
 ## Links
 
