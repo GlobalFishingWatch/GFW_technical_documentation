@@ -2,6 +2,7 @@
 - [Data updates](Data-updates)
 - [BigQuery dataset overview](BigQuery-datasets)
 - [BigQuery table reference](BigQuery-Table-Reference)
+- [BigQuery in products (APIs)](BigQuery-in-Products-(APIs))
 
 # Data products
 
