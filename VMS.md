@@ -6,16 +6,17 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 ## Indonesia
 
-+ **Data description:** The Indonesian VMS data is provided by the KKP and includes data for all Indonesian flagged vessels and vessels authorized to fish in Indonesia's EEZ. Messages are received in 5 minute intervals.
-  + **Date range**: `2014-01-01` - present
-  + **Message frequency**:
-  + **Vessel classes**: 
-  + **Identity information**: 
++ **Data description:** The Indonesian VMS data is provided by the KKP and includes data for all Indonesian flagged vessels and vessels authorized to fish in Indonesia's EEZ.
+  + **Date range**: `2014-01-01` - `2020-07-03`
+  + **Message frequency**: Messages are received in 5 - 60 minute intervals
+  + **Vessel classes**: Anchored gillnet, Basic longline, Cast nets, Fish net/dragnet, Handline, Handline tuna, Lampara seine nets, Longline tuna, Oceanic gillnet, Pole and line, Pots, Purse seine small pelagics, Purse seine big pelagics with one boat, Purse seine group (2 boat) big pelagics, purse seine group (2 boat) small pelagics, Shrimp net, Squid hooking, Stick held lift net, Transporter
+  + **Identity information**: transmitter_no (ssvid) and shipname
 + **BigQuery dataset:** `pipe_indonesia_production_v20200320`
   + **Vessel identity table(s)**: `vessel_info`
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Wildan (`@wildan`; wildan@globalfishingwatch.org) / Liva (`@liva`; liva@globalfishingwatch.org)
-+ **Caveats & known issues:**
++ **Caveats & known issues:** Due to the data license agreement, the Indonesian VMS data cannot be used without the approval of the KKP as the data owner, at this time the data has been stopped and is in the process of extending the cooperation.
+
 
 ## Peru
 
