@@ -73,8 +73,8 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 ## Costa Rica 
 
-+ **Data description:** The Costa Rica VMS data is...
-  + **Date range**: 
++ **Data description:** The Costa Rica VMS data is providade by INCOPESCA
+  + **Date range**:
   + **Message frequency**:
   + **Vessel classes**: 
   + **Identity information**: 
@@ -86,16 +86,20 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 ## Ecuador 
 
-+ **Data description:** The Ecuador VMS data is...
-  + **Date range**: 
-  + **Message frequency**:
-  + **Vessel classes**: 
++ **Data description:** The Ecuador VMS data is provided by DIRNEA
+  + **Date range**:  2020-08-14 to present
+  + **Message frequency**: one hour according regulations
+  + **Vessel classes**: Industrial
   + **Identity information**: 
-+ **BigQuery dataset:** `pipe_ecuador_production_v20210811`
-  + **Vessel identity table(s)**: 
++ **BigQuery dataset:** `pipe_ecuador_production_v20210612`
+  + **Vessel identity table(s)**: `world-fishing-827.VMS_Ecuador.manual_registry_list_q32020` static information from 2020
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
-+ **Caveats & known issues:**
++ **Caveats & known issues:** 
+  + data show some positions with wrong timestamp
+  + after march 2021 part of wrong timestamps gone and start appears gaps
+  + there are ~4000 artisanal vessels and only 400 regularly broadcasting. Due low ping rates artisanal are not show in map 3.0
+  + vessel categories are created based on matricula pattern, there are 14 different categories including non-fishing vessels
 
 ## Mexico 
 
