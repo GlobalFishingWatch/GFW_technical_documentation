@@ -6,6 +6,7 @@ The purpose of GFW products broadly is to create and publicly share knowledge ab
 The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. Updated with new data monthly, it synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. 
 
 **Data in the Portal**
+<br>V0 API
 + Encounters are limited to those between carriers and fishing vessels and support and fishing vessels
 + Loitering events are limited to those by carrier vessels with a minimum duration of 1 hour. 
 + Port visits are limited to Confidence 4 visits. 
@@ -31,6 +32,7 @@ The encounters, loitering, and port visit data included in the CVP can be found 
 The Global Fishing Watch Map...
 
 **Data in the Portal**
+<br>V1 API
 
 **Updates**
 
@@ -42,6 +44,7 @@ The Global Fishing Watch Map...
 The Marine Manager Portal....MPA Managers
 
 **Data in the Portal**
+<br>V1 API
 
 **Updates**
 
