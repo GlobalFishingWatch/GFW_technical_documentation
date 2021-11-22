@@ -22,6 +22,10 @@ The encounters, loitering, and port visit data included in the CVP can be found 
 + The CVP will show data on 3 day lag?
 
 **Resources**
++ [CVP FAQs](https://globalfishingwatch.org/help-faqs/)
++ [CVP Disclaimers](https://globalfishingwatch.org/carrier-vessel-portal-disclaimers/)
++ [CVP Tutorials](https://globalfishingwatch.org/tutorials/)
++ [Authorization Records](https://globalfishingwatch.org/authorization-records/)
 
 ### [GFW Map](https://globalfishingwatch.org/map/) 
 The Global Fishing Watch Map...
