@@ -44,6 +44,7 @@ The Global Fishing Watch Map...
 **Upcoming/Future Plans**
 
 **Resources**
++ [Map 3.0 GFW Internal Slide Deck](https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing) - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map.
 + [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
 
 ### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
