@@ -53,7 +53,7 @@ The Global Fishing Watch map is the first open-access online tool for visualizat
 <br>
 
 ### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
-The Marine Manager Portal....MPA Managers
+Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager, a new technology portal that will help improve insight into marine protected areas. Dona Bertarelli’s vision in creating Global Fishing Watch Marine Manager was to ensure robust and science-based management to fully realize the vital contribution of protected areas, and with time, monitor the quality, efficiency and impact of those protections on the long term. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.
 
 **Data in the Portal**
 <br>V1 API
