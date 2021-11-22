@@ -19,22 +19,29 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 + The CVP will shift to using the V1 API?
 + The CVP will show data on 3 day lag?
 
+**Resources**
 
 ### [GFW Map](https://globalfishingwatch.org/map/) 
+The Global Fishing Watch Map...
 
 **Data in the Portal**
 
 **Updates**
 
 **Upcoming/Future Plans**
+
+**Resources**
 
 ### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
+The Marine Manager Portal....
 
 **Data in the Portal**
 
 **Updates**
 
 **Upcoming/Future Plans**
+
+**Resources**
 
 ### Vessel Viewer (Coming soon...)
 The Vessel Viewer is currently in development and accessible for prototype testing
@@ -57,9 +64,9 @@ The queries used to curate date for the V1 API can be found here:
 
 Within the queries are the BQ source datasets.
 
+**Upcoming/Future Plans**
++ A wrapper in R is being developed so that GFW API’s can be easily used in R in the future. When tools like these are created we will be able to help partners and interested individuals of the public be able to directly query data included on our public portals.
+
 **APIs Resources**
 + [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
-+ [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs
-
-**Upcoming/Future Plans**
-+ A wrapper in R is being developed so that GFW API’s can be easily used in R in the future. When tools like these are created we will be able to help partners and interested individuals of the public be able to directly query data included on our public portals. 
++ [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
