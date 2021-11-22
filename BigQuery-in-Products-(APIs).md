@@ -6,10 +6,12 @@ The purpose of GFW products broadly is to create and publicly share knowledge ab
 The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. Updated with new data monthly, it synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. 
 
 **Data in the Portal**
++ Encounters are limited to those between carriers and fishing vessels and support and fishing vessels
++ Loitering events are limited to those by carrier vessels with a minimum duration of 1 hour. 
++ Port visits are limited to Confidence 4 visits. 
++ Information on vessel authorization on one month lag 
 
-+ `world-fishing-827.proj_carrier_portal_pew.carrier_portal_published_events_encounters_vYYYYMMDD`: Encounter events included in the CVP
-+ `world-fishing-827.proj_carrier_portal_pew.carrier_portal_published_events_loitering_vYYYYMMDD`: Loitering events included in the CVP
-+ `world-fishing-827.proj_carrier_portal_pew.carrier_portal_published_events_ports_vYYYYMMDD`: Port visits included in the CVP
+The encounters, loitering, and port visit data included in the CVP can be found in BigQuery under the bin name `proj_carrier_portal_pew`
 
 **Updates**
 + **Nov 2021:** v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
