@@ -14,6 +14,10 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 
 The encounters, loitering, and port visit data included in the CVP can be found in BigQuery under the bin name `proj_carrier_portal_pew`
 
+**Unique Features (compared to GFW Map)**
++ Authorization Data
++ Port visits
+
 **Updates**
 + **Nov 2021:** v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
 
@@ -45,6 +49,9 @@ The Marine Manager Portal....MPA Managers
 
 **Data in the Portal**
 <br>V1 API
+
+**Unique Features (compared to GFW Map)**
++ Environmental data layers
 
 **Updates**
 
