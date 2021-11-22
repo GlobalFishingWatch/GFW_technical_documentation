@@ -18,34 +18,39 @@ The encounters, loitering, and port visit data included in the CVP can be found 
 + Authorization Data
 + Port visits
 
-**Updates**
-+ **Nov 2021:** v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
-
-**Upcoming/Future Plans**
-+ Encounters code currently being updated to use published_events_encounters and carrier, support, and fishing by_year tables. CVP with updated encounters code likely in next ~month. 
-+ The CVP will shift to using the V1 API?
-+ The CVP will show data on 3 day lag?
-
 **Resources**
 + [CVP FAQs](https://globalfishingwatch.org/help-faqs/)
 + [CVP Disclaimers](https://globalfishingwatch.org/carrier-vessel-portal-disclaimers/)
 + [Authorization Records](https://globalfishingwatch.org/authorization-records/)
++ [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
+
+**Upcoming/Future Plans**
++ Encounters code currently being updated to use published_events_encounters and carrier, support, and fishing by_year tables. CVP with updated encounters code likely in next ~month. 
++ If the CVP is maintained as a standalone product, then queries will be updated and V1 API will be used
++ Currently there is a 2 month lag on the CVP. If CVP transitions to V1 API, the end Portal will be on 3 day delay
+
+**Updates**
++ Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
+<br>
 
 ### [GFW Map](https://globalfishingwatch.org/map/) 
-The Global Fishing Watch Map...
+The Global Fishing Watch map is the first open-access online tool for visualization and analysis of vessel-based human activity at sea. Powered by satellite technology and machine learning, the map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. Anyone with an internet connection can access the map to monitor global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view. We call these “workspaces”. Free and easy-to-use features offer unprecedented opportunities to increase transparency across the world’s ocean and support the fair and sustainable use of marine resources.
 
 **Data in the Portal**
 <br>V1 API
 
-**Updates**
-+ **Oct 18 2021:** GFW legacy map officially removed from GFW website
-+ **July 15 2021:** GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map
-
-**Upcoming/Future Plans**
-
 **Resources**
 + [Map 3.0 GFW Internal Slide Deck](https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing) - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map.
 + [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
++ [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
+
+**Upcoming/Future Plans**
++ TBD
+
+**Updates**
++ Oct 18 2021: GFW legacy map officially removed from GFW website
++ July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map
+<br>
 
 ### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
 The Marine Manager Portal....MPA Managers
@@ -56,13 +61,15 @@ The Marine Manager Portal....MPA Managers
 **Unique Features (compared to GFW Map)**
 + Environmental data layers
 
-**Updates**
-+ None yet :)
+**Resources**
++ [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
-+ **Dec 2021:** Marine Manager "v1.5" [planned release](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
++ Dec 2021: Marine Manager "v1.5" [planned release](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
 
-**Resources**
+**Updates**
++ None yet :)
+<br>
 
 ### Vessel Viewer
 The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App's objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.
@@ -72,12 +79,15 @@ At this time the Vessel Viewer is currently in development and available to GFW 
 **Data in the Portal**
 <br>V1 API
 
-**Updates**
+**Resources**
++ TBD
 
 **Upcoming/Future Plans**
++ TBD
 
-**Resources**
- 
+**Updates**
++ TBD
+<br> 
 
 ## APIs
 
@@ -96,14 +106,10 @@ The queries used to curate date for the V1 API can be found here:
 
 Within the queries are the BQ source datasets.
 
-**Upcoming/Future Plans**
-+ A wrapper in R is being developed so that GFW API’s can be easily used in R in the future. When tools like these are created we will be able to help partners and interested individuals of the public be able to directly query data included on our public portals.
-
 **APIs Resources**
 + [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
 + [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
 
-## General 
+**Upcoming/Future Plans**
++ A wrapper in R is being developed so that GFW API’s can be easily used in R in the future. When tools like these are created we will be able to help partners and interested individuals of the public be able to directly query data included on our public portals.
 
-### General Resources 
-+ [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
