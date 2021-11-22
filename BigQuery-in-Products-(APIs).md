@@ -35,7 +35,7 @@ The Global Fishing Watch Map...
 **Resources**
 
 ### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
-The Marine Manager Portal....
+The Marine Manager Portal....MPA Managers
 
 **Data in the Portal**
 
@@ -46,7 +46,7 @@ The Marine Manager Portal....
 **Resources**
 
 ### Vessel Viewer (Coming soon...)
-The Vessel Viewer is currently in development and accessible for prototype testing
+The Vessel Viewer is currently in development and accessible for prototype testing... port inspectors
  
 
 ## APIs
