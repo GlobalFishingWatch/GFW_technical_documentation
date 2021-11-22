@@ -49,13 +49,13 @@ As part of our Transparency Initiative, select countries have agreed to share th
 + **Data description:** The Panama VMS data is provided by NAF messages, it is a way they had to export it from CLS Themesis Systems.
   + **Date range**: `2012-01-01` - present
   + **Message frequency**: 1 hours
-  + **Vessel classes**: 
+  + **Vessel classes**: drifting_longlines, set_longline, purse_seines, supply_vessel, tanker, reefer
   + **Identity information**: IMO and Callsign
-+ **BigQuery dataset:** `pipe_panama_production_v20190517`
++ **BigQuery dataset:** `pipe_panama_production_v20200331`
   + **Vessel identity table(s)**: `vessel_info`  
-+ **Data redacted from GFW map (if applicable)**:  
-+ **GFW lead**: 
-+ **Caveats & known issues:**
++ **Data redacted from GFW map (if applicable)**: vessel info is not displayed on the public workspace 
++ **GFW lead**: Eloy (`@Eloy Aroni`; eloy@globalfishingwatch.org)
++ **Caveats & known issues:** 
 
 ## Brazil 
 
