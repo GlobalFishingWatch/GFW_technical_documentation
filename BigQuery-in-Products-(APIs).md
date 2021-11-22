@@ -29,7 +29,6 @@ The encounters, loitering, and port visit data included in the CVP can be found 
 **Resources**
 + [CVP FAQs](https://globalfishingwatch.org/help-faqs/)
 + [CVP Disclaimers](https://globalfishingwatch.org/carrier-vessel-portal-disclaimers/)
-+ [CVP Tutorials](https://globalfishingwatch.org/tutorials/)
 + [Authorization Records](https://globalfishingwatch.org/authorization-records/)
 
 ### [GFW Map](https://globalfishingwatch.org/map/) 
@@ -39,10 +38,13 @@ The Global Fishing Watch Map...
 <br>V1 API
 
 **Updates**
++ **Oct 18 2021:** GFW legacy map officially removed from GFW website
++ **July 15 2021:** GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map
 
 **Upcoming/Future Plans**
 
 **Resources**
++ [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
 
 ### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
 The Marine Manager Portal....MPA Managers
@@ -54,8 +56,10 @@ The Marine Manager Portal....MPA Managers
 + Environmental data layers
 
 **Updates**
++ None yet :)
 
 **Upcoming/Future Plans**
++ **Dec 2021:** Marine Manager "v1.5" [planned release](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
 
 **Resources**
 
@@ -97,3 +101,8 @@ Within the queries are the BQ source datasets.
 **APIs Resources**
 + [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
 + [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
+
+## General 
+
+### General Resources 
++ [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
