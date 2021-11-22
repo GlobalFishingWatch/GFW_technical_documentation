@@ -20,7 +20,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 ## Peru
 
-+ **Data description:** The Peru VMS data is provided by...
++ **Data description:** The Peru VMS data is provided by API
   + **Date range**: `2012-01-01` - present
   + **Message frequency**: two ping rates, 20 minutes for artisanal vessels and 10 minutos for industrial vessels
   + **Vessel classes**: (fish_factory, tanker ) and (trawlers, purse_seines, set_gillnets, squid_jigger, set_longlines, pots_and_traps, bottom_longlines, longline_handline, drifting_longlines) 
