@@ -52,10 +52,19 @@ The Marine Manager Portal....MPA Managers
 
 **Resources**
 
-### Vessel Viewer (Coming soon...)
+### Vessel Viewer
 The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App's objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.
 
 At this time the Vessel Viewer is currently in development and available to GFW staff for internal use. 
+
+**Data in the Portal**
+<br>V1 API
+
+**Updates**
+
+**Upcoming/Future Plans**
+
+**Resources**
  
 
 ## APIs
