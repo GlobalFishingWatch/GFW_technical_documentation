@@ -48,7 +48,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 + **Data description:** The Panama VMS data is provided by NAF messages, it is a way they had to export it from CLS Themesis Systems.
   + **Date range**: `2012-01-01` - present
-  + **Message frequency**:
+  + **Message frequency**: 1 hour
   + **Vessel classes**: 
   + **Identity information**: 
 + **BigQuery dataset:** `pipe_panama_production_v20190517`
