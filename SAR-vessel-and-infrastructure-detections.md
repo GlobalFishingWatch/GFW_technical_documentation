@@ -7,18 +7,18 @@ Synthetic Aperture Radar (SAR) object detection consists of vessels and offshore
 
 ## Key Fields
 
-- `scene_id`
-- `detect_id`
-- `detect_lon`
-- `detect_lat`
-- `detect_timestamp`
-- `ssvid`
-- `match_score`
-- `match_confidence`
-- `inferred_length_m`
-- `inferred_presence`
-- `repeat_id`
-- `uncertainty`
+- `scene_id` - scene ID from where detection was extracted
+- `detect_id` - unique ID for the detection as `scene_id;lon;lat`
+- `detect_lon` - longitude coordinate
+- `detect_lat` - latitude coordinate
+- `detect_timestamp` - time the image was taken
+- `ssvid` - vessel identifier if the detection matches to AIS/VMS
+- `match_score` - score cutoff used to match the detection
+- `match_confidence` - confidence cutoff used to match the detection
+- `inferred_length_m` - length estimated with a Neural Network
+- `inferred_presence` - probability of vessel vs. noise from a Neural Network
+- `repeat_id` - if repeated object, link to offshore infrastructure table
+- `uncertainty` - metric of overall confidence for detection
 
 ## Data Description
 
