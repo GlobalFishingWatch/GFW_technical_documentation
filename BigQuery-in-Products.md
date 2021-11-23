@@ -8,16 +8,14 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 
 **Data in the Portal**
 <br>V0 API | [Current CVP queries](https://github.com/GlobalFishingWatch/pipe-carrier-portal/tree/master/assets/bigquery)
-+ Encounters are limited to those between carriers and fishing vessels and support and fishing vessels
-+ Loitering events are limited to those by carrier vessels with a minimum duration of 1 hour. 
-+ Port visits are limited to Confidence 4 visits. 
-+ Information on vessel authorization on one month lag 
++ **Encounters** are limited to those between carriers and fishing vessels and support and fishing vessels
++ **Loitering events** are limited to those by carrier vessels with a minimum duration of 1 hour. 
++ **Port visits** are limited to Confidence 4 visits. 
++ Information on **vessel authorization** is updated on two month lag 
 
 The encounters, loitering, and port visit data included in the CVP can be found in BigQuery under the bin name `proj_carrier_portal_pew`
 
-**Unique Features (compared to GFW Map)**
-+ Authorization Data
-+ Port visits
+**Unique Features (compared to GFW Map):** Authorization Data, Port visits
 
 **Resources**
 + [CVP FAQs](https://globalfishingwatch.org/help-faqs/)
@@ -46,7 +44,7 @@ The Global Fishing Watch map is the first open-access online tool for visualizat
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
-+ TBD
++ **Port visits** will be added to the GFW map (date TBD)
 
 **Updates**
 + Oct 18 2021: GFW legacy map officially removed from GFW website
@@ -59,8 +57,7 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 **Data in the Portal**
 <br>V1 API
 
-**Unique Features (compared to GFW Map)**
-+ Environmental data layers
+**Unique Features (compared to GFW Map):** Environmental data layers
 
 **Resources**
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
