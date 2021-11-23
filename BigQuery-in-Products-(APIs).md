@@ -1,6 +1,8 @@
 ## Products
 The purpose of GFW products broadly is to create and publicly share knowledge about human activity at sea to enable fair and sustainable use of our ocean.
 
+
+
 ### [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/)
 
 The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. Updated with new data monthly, it synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. 
