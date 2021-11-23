@@ -92,8 +92,9 @@ VIIRS satellite may scan the same area twice a night, thus VIIRS may double coun
 
 ## Example queries
 
-- [VIIRS noise filter](VIIRS-noise-filter): eliminate VIIRS noise especially the South Atlantic Anomaly.
-- [Excluding overlapping detection of VIIRS](Excluding-overlapping-detection-of-VIIRS): eliminate possible double-counting
+- [How to extract VBDs from specific dates and areas?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/viirs_get_points_date_area.sql)
+- [How to remove noise from VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/viirs_get_daily_count_without_noise.sql)
+- [How to eliminate double-counting from VIIRS?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/viirs_get_daily_count_without_double_counting.sql)
 - Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
 - Join with VIIRS-AIS matching
@@ -103,6 +104,7 @@ VIIRS satellite may scan the same area twice a night, thus VIIRS may double coun
 - [VIIRS AIS matching](VIIRS-AIS-matching)
 - [VIIRS cloud mask](VIIRS-cloud-mask)
 - [VIIRS footprint](VIIRS-footprint)
+- [Logic of VIIRS noise filter](VIIRS-noise-filter): eliminate VIIRS noise especially the South Atlantic Anomaly.
 
 
 
