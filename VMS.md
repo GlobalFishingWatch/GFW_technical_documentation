@@ -35,14 +35,14 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 + **Data description:** The Chile VMS data is provided by NAF messages, it is a way they had to export it from CLS Themesis Systems.
   + **Date range**: `2019-02-01` - present
-  + **Message frequency**:
-  + **Vessel classes**: 
-  + **Identity information**: 
-+ **BigQuery dataset:** `pipe_chile_production_v20190618`
+  + **Message frequency**: By law fishing, transport and aquaculture vessels every 15 min (BQ - Artisanal: 19min, Industrial: 10min, Aquaculture: 17min, Transport: 16min). Purse Seine fishing vessels every 8 min (BQ: 17min)
+  + **Vessel classes**: Artisanal, Industrial, Transport, Aquaculture
+  + **Identity information**: shipname, ssvid, callsign, vessel_id
++ **BigQuery dataset:** `pipe_chile_production_v20200331`
   + **Vessel identity table(s)**: `vessel_info`
-+ **Data redacted from GFW map (if applicable)**:  
-+ **GFW lead**: 
-+ **Caveats & known issues:**
++ **Data redacted from GFW map (if applicable)**: Public Map only shows industrial and artisanal vessels. Private one also includes aquaculture and transport vessels. Both spaces don’t have any identifying info for each vessel, only flag, first and last transmission, and fleet.
++ **GFW lead**: Esteban Arenas (`@Esteban`; esteban@globalfishingwatch.org)
++ **Caveats & known issues**: Slight inconsistencies between BQ and public map tracks for certain vessels. Some ssvids have multiple callsigns associated. Sometimes all are the same vessel and others they are different vessels (often times with the same ship name). No unique vessel identifier found to distinguish these cases. Noted pipe_chile_production_v20211110 is available (created at a newer date, but with no 2021 data. Have asked engineering about it).
 
 ## Panama 
 
