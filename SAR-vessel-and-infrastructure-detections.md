@@ -29,3 +29,4 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - Sentinel-1 does not sample over the open ocean, mostly along shorelines
 - spatial coverage is not homogeneous, European waters are imaged more frequently
 - sea ice, in high latitudes, is known to cause false positives
+- images prior 2018 are of lower quality, introducing potential false positives
