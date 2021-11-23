@@ -1,9 +1,24 @@
-SAR (synthetic aperture radar) vessel detections are vessel detection data products derived from two ESA satellites: S1A and S1B of Sentinel-1 mission. 
+Synthetic Aperture Radar (SAR) object detection consists of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from images taken by ESA's Sentinel-1 radar mission. 
 
 ## Key Tables
 
-- `gfw-research.sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190306`: contains majority of SAR detections. Generally faster revisit time, all 10m imagery.
-- `gfw-research.sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190703`: contains everything not in `sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190306`. Much sparser coverage and fewer total image count, but adds new acquisitions across oceans (even some high seas) not found in `sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190306`.
+- `table_name_to_be_determined_vessels_`
+- `table_name_to_be_determened_infrastructure_`
+
+## Key Fields
+
+- `scene_id`
+- `detect_id`
+- `detect_lon`
+- `detect_lat`
+- `detect_timestamp`
+- `ssvid`
+- `match_score`
+- `match_confidence`
+- `inferred_length_m`
+- `inferred_presence`
+- `repeat_id`
+- `uncertainty`
 
 ## Data Description
 
