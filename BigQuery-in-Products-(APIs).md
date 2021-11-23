@@ -1,9 +1,8 @@
-## Products
 The purpose of GFW products broadly is to create and publicly share knowledge about human activity at sea to enable fair and sustainable use of our ocean.
 
 
 
-### [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/)
+## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/)
 
 The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. Updated with new data monthly, it synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. 
 
@@ -35,7 +34,7 @@ The encounters, loitering, and port visit data included in the CVP can be found 
 + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
 <br>
 
-### [GFW Map](https://globalfishingwatch.org/map/) 
+## [GFW Map](https://globalfishingwatch.org/map/) 
 The Global Fishing Watch map is the first open-access online tool for visualization and analysis of vessel-based human activity at sea. Powered by satellite technology and machine learning, the map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. Anyone with an internet connection can access the map to monitor global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view. We call these “workspaces”. Free and easy-to-use features offer unprecedented opportunities to increase transparency across the world’s ocean and support the fair and sustainable use of marine resources.
 
 **Data in the Portal**
@@ -54,7 +53,7 @@ The Global Fishing Watch map is the first open-access online tool for visualizat
 + July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map
 <br>
 
-### [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
+## [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
 Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager, a new technology portal that will help improve insight into marine protected areas. Dona Bertarelli’s vision in creating Global Fishing Watch Marine Manager was to ensure robust and science-based management to fully realize the vital contribution of protected areas, and with time, monitor the quality, efficiency and impact of those protections on the long term. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.
 
 **Data in the Portal**
@@ -73,7 +72,7 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 + None yet :)
 <br>
 
-### [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer)
+## [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer)
 The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App's objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.
 
 At this time the Vessel Viewer is currently in development and available to GFW staff for internal use. 
