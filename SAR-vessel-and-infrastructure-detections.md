@@ -18,7 +18,7 @@ Synthetic Aperture Radar (SAR) object detection consists of vessels and offshore
 - `inferred_length_m` - length estimated with a Neural Network
 - `inferred_presence` - probability of vessel vs. noise from a Neural Network
 - `repeat_id` - if repeated object, link to offshore infrastructure table
-- `uncertainty` - metric of overall confidence for detection
+- `uncertainty` - metric of overall quality of detection
 
 ## Data Description
 
