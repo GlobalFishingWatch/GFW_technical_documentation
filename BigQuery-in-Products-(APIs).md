@@ -73,7 +73,7 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 + None yet :)
 <br>
 
-### Vessel Viewer
+### [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer)
 The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App's objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.
 
 At this time the Vessel Viewer is currently in development and available to GFW staff for internal use. 
