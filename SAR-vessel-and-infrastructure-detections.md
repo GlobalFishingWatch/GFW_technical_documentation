@@ -30,3 +30,9 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - spatial coverage is not homogeneous, European waters are imaged more frequently
 - sea ice, in high latitudes, is known to cause false positives
 - images prior 2018 are of lower quality, introducing potential false positives
+
+## Links
+
+- [Training Slides](https://docs.google.com/presentation/d/1Rzsz6roQU-QfEdGTq33fApBTkZwsBelzKBHBKWrSALM/edit?usp=sharing)
+- [Detection Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/detection)
+- [Neural Net Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/classification)
