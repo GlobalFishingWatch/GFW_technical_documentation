@@ -17,7 +17,7 @@
 - [Loitering](Loitering)
 - [Anchorages and voyages](Anchorages-and-voyages)
 - [Gaps](Gaps)
-- [SAR vessel detections](SAR-vessel-detections)
+- [SAR object detections](SAR-object-detections)
 - [VMS](VMS)
 - [VIIRS boat detections](VIIRS-boat-detections)
   - [VIIRS AIS matching](VIIRS-AIS-matching)
