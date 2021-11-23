@@ -1,4 +1,4 @@
-Synthetic Aperture Radar (SAR) object detection consists of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from images taken by ESA's Sentinel-1 radar mission. 
+Synthetic Aperture Radar (SAR) object detection consists of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from satellite images taken by ESA's Sentinel-1 radar mission. 
 
 ## Key Tables
 
@@ -22,15 +22,10 @@ Synthetic Aperture Radar (SAR) object detection consists of vessels and offshore
 
 ## Data Description
 
-Detections are from ~2014-10-01 - present, updated intermittently. Imagery availability increases along data acquisition timeframe, especially from mid-2016 on. Various types of SAR imagery captured with differing resolution, beam mode, orbit pass, polarizations, etc. Majority are scene filenames starting with `S1A_IW_GRDH_1SDV` or `S1B_IW_GRDH_1SDV` (naming conventions detailed [here](https://sentinel.esa.int/web/sentinel/user-guides/sentinel-1-sar/naming-conventions)) which are stored in `sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190306`. The remaining detections are stored in `sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190703`.
-
-(OUTDATED: DAVID TO UPDATE) Each dataset has 3 tables:
-1. `objs`: use `lon` and `lat` for detection location. `start_time` for timestamp.
-2. `exts`: full scene footprint including ocean and land pixels.
-3. `masked_exts`: scene footprint including only ocean pixels.
+The data tables contain all detections from 2017-01-01 to present, updated intermittently. Imagery availability increases along data acquisition timeframe, especially from mid-2016 on. Vessels are extracted from individual scenes while fixed infrastructure is extracted from 6-month median composites, constructed every month with a moving window. Detection was performed on Google Earth Engine with a Constant False Alarm Rate (CFAR) algorithm using the GRD product, Interferometric Wide Mode, VH band. Classification (to identify noise) and regression (to estimate length) was performed with a Convolutional Neural Network using both the VH and VV bands.
 
 ## Caveats & Known Issues:
-- use `id` field to join detections from `objs` with associated footprints from `exts` or `masked_exts`
-- currently higher confidence in detections from `sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190306`
-- only 1 full run on `sentinel_ds3_fmean250_e10_d70_s20_8xmean_ns_v20190703` so far. Appears noisier. Improvements TBD.
-- sea ice is known false positive issue for both datasets
+
+- Sentinel-1 does not sample over the open ocean, mostly along shorelines
+- spatial coverage is not homogeneous, European waters are imaged more frequently
+- sea ice, in high latitudes, is known to cause false positives
