@@ -13,7 +13,7 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 **Data Restrictions in Portal**
 + **Encounters** are limited to those between carriers and fishing vessels and support and fishing vessels
 + **Loitering events** are limited to those by carrier vessels with a minimum duration of 1 hour. 
-+ **Port visits** are limited to Confidence 4 visits. 
++ **Port visits** are limited to Confidence 4 visits. For more information see [Anchorages and Voyages](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Anchorages-and-voyages) wiki 
 + Information on **vessel authorization** is updated on two month lag 
 
 **Unique Features (compared to GFW Map):** Authorization Data, Port visits
