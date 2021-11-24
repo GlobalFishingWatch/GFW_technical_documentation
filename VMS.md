@@ -103,16 +103,16 @@ As part of our Transparency Initiative, select countries have agreed to share th
 
 ## Mexico 
 
-+ **Data description:** The Mexico VMS data is...
-  + **Date range**: 
-  + **Message frequency**:
-  + **Vessel classes**: 
-  + **Identity information**: 
-+ **BigQuery dataset:** `pipe_mexico_oceana_production_v20210830`
-  + **Vessel identity table(s)**: 
-+ **Data redacted from GFW map (if applicable)**:  
-+ **GFW lead**: Esteban (@Esteban; esteban@globalfishingwatch.org)
-+ **Caveats & known issues:**
++ **Data description:** The Mexico VMS data provider is Orbcomm and Conapesca monitors data and alerts through a system called SISMEP. We currently don’t have an agreement signed and don’t receive data directly from Conapesca. However, we have two sets of data. One was requested by Oceana early 2021 and made public as a csv. The other is from downloading csv files directly from the Conapesca website. In march of 2021 Conapesca decided to publish and make all VMS data public through their open data portal.
+  + **Date range**: Oceana data: `2013-01-01 - 2020-12-31` Conapesca data: `2011-01-01 - 2021-02-28`
+  + **Message frequency**: By law pings should be every hour. BQ for Oceana data: 107min. BQ for Conapesca data: 76min
+  + **Vessel classes**: None given. But primarily industrial fishing vessels. VMS required for vessels with > 80HP and length > 10.5 meters
+  + **Identity information**: RNP/ssvid, NOMBRE/shipname,vessel_id
++ **BigQuery dataset:** Oceana: `pipe_mexico_oceana_production_v20210811` Conapesca: `VMS_Mexico.raw_mexican_open_data_partitioned`
+  + **Vessel identity table(s)**: None yet. Messages scored or original data sets could be used
++ **Data redacted from GFW map (if applicable)**: Not currently on the public map. Oceana data is displayed in the private workspace
++ **GFW lead**: Esteban Arenas (`@Esteban`; esteban@globalfishingwatch.org)
++ **Caveats & known issues**: Previously identified and currently testing for speed discrepancies/unknown units. Conapesca data has several issues with timestamps being incomplete or in inconsistent format. However, it has a lot more positions than data given to Oceana. BQ tables and private workspace based on Oceana data, shows significant inaccuracies in non-fishing activity being scored as fishing
 
 ## Namibia
 
