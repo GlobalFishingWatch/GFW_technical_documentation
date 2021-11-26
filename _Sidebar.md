@@ -2,7 +2,7 @@
 - [Data updates](Data-updates)
 - [BigQuery dataset overview](BigQuery-datasets)
 - [BigQuery table reference](BigQuery-Table-Reference)
-- [BigQuery key concepts](BigQuery-key-concepts)
+- [BigQuery key concepts](Key-concepts)
 - BigQuery in products (coming soon)
 
 # Data products
