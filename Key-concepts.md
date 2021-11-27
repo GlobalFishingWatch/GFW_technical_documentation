@@ -8,11 +8,6 @@ Information is organized in the following topics:
 + Versioning
 + Table formats
 + Key concepts
-  + Subqueries
-  + `STRUCTS` and `ARRAYS`
-  + Spatial BigQuery
-  + User defined functions
-  + Data definition language (DDL)
 + Best practices
 
 ## BigQuery access and billing
@@ -38,6 +33,10 @@ Working in BigQuery requires two forms of access:
 BigQuery costs are incurred in two ways - storing and querying data. 
     + Queries cost $5 per terabyte of data scanned
     + Queries are "free" for GFW staff, but we need to be careful
+
+#### The BigQuery validator
+
+The BigQuery validator is a built-in query debugger that also estimates query cost. The validator will turn green when a query is valid and be red otherwise. *Always use the validator to check the cost of a query before running it!*
 
 ## GFW datasets
 
@@ -135,19 +134,37 @@ BigQuery tables can be [clustered](https://cloud.google.com/bigquery/docs/cluste
 
 ## Key concepts
 
+BigQuery is powerful but complex tool and understanding certain key concepts can help get the most out of BigQuery.
+
 ### User Defined Functions
+
+User-defined functions (UDF) are functions created using another SQL expression or JavaScript. These functions accept columns of input, perform actions, and return a value. UDFs can be defined directly at the top of a query or stored as functions in a special type of dataset. GFW maintains a collection of helpful UDFs in the `udfs` dataset in `world-fishing-827`. These queries can be called in any query using the `udfs.function()` syntax.
 
 ### `STRUCTS` and `ARRAYS`
 
+Two key BigQuery data types used by GFW are `ARRAYS` and `STRUCTS`, which allow for nesting and/or repeating data.
+
+An `ARRAY` is an ordered list of zero or more elements of non-ARRAY values (e.g. `STRING`, `INT64`). An `ARRAY` is listed as having a `REPEATED` mode. GFW uses arrays to store multiple types of information, such as the list of identities (e.g. callsigns) broadcast by each MMSI over AIS.
+
+A `STRUCT` is a container of ordered fields each with a type (required) and field name (optional). A `STRUCT` is listed as having a `RECORD` type. Fields are nested within a STRUCT - e.g. `struct_field.nested_field`. In general, GFW uses `STRUCT`s to group together information from different sources. For example, the vessel info tables use organize vessel identities from AIS and registries in separate `STRUCT`s.
+
 ### Spatial BigQuery 
 
+BigQuery now supports a suite of [powerful spatial analysis tools](https://cloud.google.com/bigquery/docs/reference/standard-sql/geography_functions). These functions use the `GEOGRAPHY` data type, which represents a pointset (points, lines, polygons) on WGS84. Single points can be described by a (longitude, latitude) pair. For describing more complex geographies (lines, polygons), BigQuery supports GeoJSON, Well-known text (WKT), and well-known binary (WKB) data formats in the `GEOGRAPHY` column. GFW uses `GEOGRAPHY` data types to represent several data types, including the location of “events” (e.g. encounters, port visits, fishing).
 
+### Data definition language
 
-### Using subqueries
+BigQuery supports the use of [data definition language (DDL)](https://cloud.google.com/bigquery/docs/reference/standard-sql/data-definition-language), which allow you to create, alter, and delete tables directly in your query statement. This is a particularly helpful way to create partitioned and clustered tables.
 
-### Commenting 
+## Best Practices
 
-### Query development and troubleshooting strategies
-
-#### The BigQuery validator
-
++ Always use standard SQL - first line of your query should be `#standardSQL`
++ Write subqueries using `WITH` statement -- avoid overly nested queries
++ Comment between queries to give space visually. 
++ Put all tables referenced at the top of the query.
++ When using UDFs, try to use SQL based instead of JavaScript
++ For numerical parameters that will be used in multiple places, you can use a UDF at the top of the query that returns the value
++ To limit costs when developing or debugging queries:
+  + Restrict the date range or partitioned or sharded tables
+  + Use a `LIMIT 1000` clause at the end of a query. Comment this out when running for real
++ For complex queries, consider including a (commented out)  test query that does a sanity check
