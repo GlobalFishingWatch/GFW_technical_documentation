@@ -6,10 +6,9 @@ Information is organized in the following topics:
 + Projects and datasets
 + Naming conventions
 + Versioning
-+ Table formats and data types
++ Table formats
 + Key concepts
   + Subqueries
-  + Partitioned vs sharded tables
   + `STRUCTS` and `ARRAYS`
   + Spatial BigQuery
   + User defined functions
@@ -83,29 +82,66 @@ The following prefixes are used to organize datasets into groups:
 
 ## Versioning
 
-`_v[YYYYMMDD]`: version of the dataset as indicated by the creation date
+GFW receives new data every day and is constantly working to improve our algorithms and models. As a result, there can be multiple versions of a data product in BigQuery at the same time (e.g. the vessel database). To differentiate versions, GFW uses the `_v[YYYYMMDD]` naming convention for the suffix of a dataset or table, where the `YYYYMMDD` indicates the date the table was created. When multiple tables have the same name but end in different date strings, BigQuery will "stack" them together with the table name followed by a number in parentheses (e.g. `vi_ssvid_v(13)`). 
 
-## Table formats and data types
+**When a dataset or table ends in `_v` followed by a date string (`_v20201001`), the date refers to the version of the table**. 
 
-### Date partitioned and date sharded tables
+## Table formats
 
-Many GFW tables are *date sharded*. This means they are actually a collection of tables, one for each date of data, and the data for a given date is stored in its own table (e.g. `messages_scored_20180101`). When looking in BigQuery, you will see the table name followed by a number in parentheses (e.g. `messages_scored_(3248)`), which indicates that there are 3,248 days of data in the `messages_scored_` table. Similarly, many AIS research tables are *date partitioned*, which are single tables where data is instead stored in date-specific partitions. 
+BigQuery tables can have several important formats that are used to organize data and minimize query cost and execution time. In particular, GFW creates tables that may be *date sharded* or *date partitioned*. Additionally, tables may be *clustered* on certain fields. Date sharded and date partitioned tables behave in similar ways but, crucially, require different filtering syntax to limit query size. Therefore, understanding how to recognize if a table is date sharded, partitioned, and/or clustered, and how to query them properly, is critical.
 
-Date sharded tables must end in `_YYYYMMDD`. If there is more than one date of data, the date will not appear in the resulting table name, rather the table name will end in an underscore followed by brackets containing the number of dates included in the sharded table. If the date refers to the creation date of the table and not the date of the data within the file, add a `v` to the beginning of the date to signify version (`_vYYYYMMDD`)
+### Date sharded tables
 
-Date sharded and date partitioned tables behave in similar ways but, crucially, require different filtering syntax to limit query size.
+Date sharded tables are actually a collection of tables, one for each date, where the data for a given date is stored in its own table where the table name ends in a date string (e.g. `messages_scored_20180101`). When there is data for more than one date, the table name will be followed by a number in parentheses, with the number indicating how many days of data are in the sharded table (e.g. `messages_scored_(3248)`). 
 
-### Data types
+There are two main ways to restrict queries of date sharded tables depending on whether you’re querying one or multiple dates:
 
-#### Working with structs and arrays
+For a single date, you can specify the table directly using the full table name:
+
+```
+SELECT *
+FROM pipe_production_v20201001.messages_scored_20180101
+```
+
+When querying multiple dates, you use a wildcard character (`*`) in the table name and then use the `_TABLE_SUFFIX` argument in the `WHERE` statement to specify the date range:
+
+```
+SELECT * 
+FROM `world-fishing-827.pipe_production_v20201001.messages_scored_*` 
+WHERE _TABLE_SUFFIX BETWEEN '20180101' AND '20180102'
+```
+
+*Note*: When using the `*` wildcard you must surround the table name in backticks.
+
+### Date partitioned tables
+
+Similar to date sharded tables, many GFW tables are date partitioned. These are single tables where data is stored in invisible partitions. If a table is partitioned, you will see `This is a partitioned table` when viewing the table's info in BigQuery. Tables can be partitioned on an actual field in the table (e.g. `date`) or on the `_partitiontime` field, which is a "psuedo colum" that is not actually in the table. You can check the partitioning specification by viewing the table's details.
+
+Queries against date partitioned tables can filter on the partitioned column using a `WHERE` statement, limiting the amount of data scanned and thus the cost. 
+
+```
+SELECT *
+FROM gfw_research.pipe_v20201001
+WHERE _partitiontime = "2019-01-01"
+```
+
+*Note*: Unlike date sharded tables, use the `YYYY-MM-DD` format when filtering date partitioned tables.
+
+### Clustered tables
+
+BigQuery tables can be [clustered](https://cloud.google.com/bigquery/docs/clustered-tables) on certain fields. Similar to partitioning, clustering allows table data to be grouped together based on one or more table fields and improve query performance and cost when filtering on the clustered fields. You can check the clustering specification by viewing the table's details.
+
+*Note*: Queries that filter on a clustered field may be cheaper than what is estimated by the BigQuery validator. 
+
+## Key concepts
+
+### User Defined Functions
+
+### `STRUCTS` and `ARRAYS`
 
 ### Spatial BigQuery 
 
-## User Defined Functions
 
-We have a collection of UDFs in a dataset named `udf`.
-
-## Query syntax and best practices
 
 ### Using subqueries
 
