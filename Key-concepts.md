@@ -1,53 +1,93 @@
-This page provides an overview of some key concepts to understand when working with GFW data in BigQuery. 
+This page provides an overview and key concepts for working with GFW data in BigQuery, Google's serverless, highly scalable enterprise data warehouse. 
 
 Information is organized in the following topics:
-+ Naming conventions
-+ Table formats and data types
-+ Query syntax and best practices
-+ User defined functions (UDFs)
 
++ BigQuery access and billing
++ Projects and datasets
++ Naming conventions
++ Versioning
++ Table formats and data types
++ Key concepts
+  + Subqueries
+  + Partitioned vs sharded tables
+  + `STRUCTS` and `ARRAYS`
+  + Spatial BigQuery
+  + User defined functions
+  + Data definition language (DDL)
++ Best practices
+
+## BigQuery access and billing
+
+### Access 
+
+Working in BigQuery requires two forms of access:
+
+1. [Google Cloud billing project](https://cloud.google.com/billing/docs/concepts#projects): Using BigQuery incurs costs and BigQuery requires users be connected to a GCP billing project before running queries.
+   + The enabled billing project will be listed in the top menu bar of the BigQuery console
+   + The billing project for GFW staff is `gfw-google` 
+   + Research partners cannot be added to `gfw-google` and must create their own GCP billing project. GFW can help with this process and partners can generally receive ~$5,000 in free Google Credits through the Google for Good program. Contact Tyler (tyler@globalfishingwatch.org) for details
+
+2. **[BigQuery project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)**: Data in BigQuery is organized in projects, which in turn contain datasets and tables. To access GFW data, users must be granted access to the GFW BigQuery project.
+    + GFW data lives in two primary BigQuery projects:
+      + `world-fishing-827`: Primary GFW project containing all internal GFW datasets  
+      + `global-fishing-watch`: Contains GFW public fishing effort tables
+    + The project will appear in the left menu bar of the BigQuery console and clicking on the project name will expand to show the list of datasets the user can access. 
+      + If you don't see a BigQuery project in your console: Click on `ADD DATA` -> `Pin a project` -> `Enter project name` -> type `world-fishing-827` -> select `PIN`    
+
+### Billing
+
+BigQuery costs are incurred in two ways - storing and querying data. 
+    + Queries cost $5 per terabyte of data scanned
+    + Queries are "free" for GFW staff, but we need to be careful
+
+## GFW datasets
+
+Within a BigQuery project, data is stored in tables and organized in datasets. There are many datasets in the `world-fishing-827` project, but the following are the primary datasets for research and analysis:  
+
+   + `pipe_production_vYYYYMMDD`: AIS pipeline dataset  
+     + `pipe_[country]_production_vYYYYMMDD`: Country-specific VMS pipeline datasets
+       > + VMS data can only be used by partners with written permission from the relevant national authorities (see [VMS](#VMS) for more info).
+   + `gfw_research`: Contains a variety of static tables useful for analysis and early versions of new research concepts
+   + `vessel_database`: Contains tables related to vessel registry information 
+   + `anchorages`: Contains the GFW anchorages dataset 
+
+If you don't see at least the `pipe_production_vYYYYMMDD`, `gfw_research`, `vessel_database`, and `anchorages` dataset let Tyler or Enrique know.
+ 
 ## Naming conventions
 
+Many datasets and tables in the `world-fishing-827` project follow several key naming conventions. Abiding by these conventions will help make it easier for everyone to navigate the large amount of data in `world-fishing-827`. It is beyond the scope of this document and unnecessary to prescribe naming conventions for every table. However, tables within a dataset should use clear and self-explanatory names. 
+
 ### General guidelines
+
 + Underscores not dashes
 + Lowercase
 + Be clear, concise, and consistent
 + Set a “time to live” (TTL) on all scratch_ datasets. TTL’s should be used with other datasets and tables when appropriate (see BigQuery docs).
 
 ### Dataset names
+
 Datasets are the top level containers of our data in BigQuery. They should have standardized names that are easy to understand and navigate. Before creating a new dataset, consider whether the tables could be placed in an existing dataset.
 
 #### Prefixes
-The following prefixes should be used to organize datasets into groups:
-+ `pipe`: These datasets contain automated tables that are consumed or produced by the pipeline. Do not manually add tables to these datasets
-+ `VMS`: These datasets contain raw national VMS data. 
+
+The following prefixes are used to organize datasets into groups:
++ `pipe_`: These datasets contain automated tables that are consumed or produced by a GFW pipeline.
++ `gfw_`: Datasets related to GFW's research work and public data 
++ `proj_`: Project-specific datasets. Each project should receive its own dataset clearly named with the project topic and/or client (e.g. `proj_[topic]_[client]`)
++ `scratch_`: These datasets are for preliminary tables generated during early development and should be user specific (e.g. `scratch_tyler`)
++ `VMS`: Datasets containing raw national VMS data. 
   + When processed by the GFW VMS pipeline, data is saved in a `pipe_[country]` dataset 
-+ `vessel`: These datasets contain vessel registries and other inputs and outputs to the vessel database 
-+ `machine_learning`: These datasets contain inputs/outputs of our machine learning models
-+ `proj`: These datasets are for specific projects. Each project should receive its own dataset clearly named with the project topic and/or client (e.g. `proj_[topic]_[client]`)
-+ `scratch`: These datasets are for preliminary tables generated during the early development and should be user specific (e.g. `scratch_tyler`)
++ `machine_learning_`: These datasets contain inputs/outputs of our machine learning models
 
-##### Flags
-The following flags may be included after the dataset prefix to symbolize additional information about the dataset when appropriate
+**Note**: Some datasets may end with the suffix `_ttl_[days]`. This indicates that the dataset has a "time to live" (TTL) set and tables in the dataset will be automatically deleted after the set period.
 
-`_[staging/production/published/archived]`
-  + `_dev` (intermediate location outside of scratch_ for tables not yet ready for automation, e.g. `machine_learning_dev`)
-  + `_staging` (automated precursor tables used only for automatic generation of tables in the corresponding `_production` dataset)
-  + `_production` (tables that are automated by the pipeline)
-  + `_published` (tables that contain data published on GFW portals and/or download portal)
-  + `_archived` (old versions)
-
-**NOTE: the naming for `_staging` and `_published` may change with the new dataset staging process**
+## Versioning
 
 `_v[YYYYMMDD]`: version of the dataset as indicated by the creation date
-`_ttl_[days]`: default TTL for dataset tables (e.g. ttl_100)
-
-### Table names
-It is beyond the scope of this document and unnecessary to prescribe naming conventions for every table. However, tables within a dataset should use clear and self-explanatory names. Try to avoid redundancy by not using a table prefix that matches the dataset prefix (e.g. research_dev.pipe_production not research.research_pipe_production).
 
 ## Table formats and data types
 
-### Date sharded and date partitioned tables
+### Date partitioned and date sharded tables
 
 Many GFW tables are *date sharded*. This means they are actually a collection of tables, one for each date of data, and the data for a given date is stored in its own table (e.g. `messages_scored_20180101`). When looking in BigQuery, you will see the table name followed by a number in parentheses (e.g. `messages_scored_(3248)`), which indicates that there are 3,248 days of data in the `messages_scored_` table. Similarly, many AIS research tables are *date partitioned*, which are single tables where data is instead stored in date-specific partitions. 
 
@@ -59,12 +99,9 @@ Date sharded and date partitioned tables behave in similar ways but, crucially, 
 
 #### Working with structs and arrays
 
-#### Casting
-
 ### Spatial BigQuery 
 
-
-## User Difined Functions
+## User Defined Functions
 
 We have a collection of UDFs in a dataset named `udf`.
 
@@ -78,4 +115,3 @@ We have a collection of UDFs in a dataset named `udf`.
 
 #### The BigQuery validator
 
-#### Using a test subset
