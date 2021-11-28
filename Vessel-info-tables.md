@@ -56,4 +56,20 @@ The `on_fishing_list_best` field in the vessel info tables indicates whether GFW
 
 ## Caveats & Known Issues
 
-+ `fishing_hours` are calculated solely from `nnet_score` and are therefore incorrect for `squid_jiggers`, which should be calculated using `night_loitering` 
+### Fishing hours incorrect for squid jiggers
+
+Currently, the vessel info table summarizes `fishing_hours` from the `pipe_v20201001_segs_daily` table. Fishing hours in this table are calculated solely from `nnet_score` and are therefore incorrect for `squid_jiggers`, which should be calculated using `night_loitering`. 
+
+## Example Queries
+
++ [vessel_info_examples_1_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/vessel_info_examples_1_v20211128.sql)
+
++ [vessel_info_examples_2_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/vessel_info_examples_2_v20211128.sql)
+
+## Links
+
++ [Vessel info training slides](https://docs.google.com/presentation/d/1Eu3vVM2w2bhnbDYRgdNqV6fEMcC5AWX_5nnm6YRWqDw/edit?usp=sharing)
+
++ [Vessel class definitions](https://docs.google.com/document/d/1HCQbP_gU79CYjSL1qpSkS5q-W0Guw0W40q6rUL39GoQ/edit?usp=sharing)
+
+## Updates
