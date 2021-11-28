@@ -57,6 +57,12 @@ For various technical reasons, not every AIS message that is broadcast is record
 
 ## Example Queries
 
++ [fishing_hours_by_position_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/fishing_hours_by_position_v20211128.sql): Basic query to pull AIS positions for fishing vessels and calculate fishing hours.
+
++ [fishing_hours_gridded_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/fishing_hours_gridded_v20211128.sql): Query to create a raster of fishing hours, including fishing hours per square kilometer.
+
++ [fishing_hours_by_eez_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/fishing_hours_by_eez_v20211128.sql): Query to quickly calculate fishing hours per EEZ over a specific date range using the daily segments research table (`pipe_v20201001_segs_daily`)
+
 ## Links
 
 + [Fishing effort training slides](https://docs.google.com/presentation/d/1Jmms1OOd5aBo0UocRMzrO6zh3UmLHqPYQABJH1-Cnvo/edit?usp=sharing)
