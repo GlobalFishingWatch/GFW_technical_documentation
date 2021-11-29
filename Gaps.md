@@ -38,8 +38,9 @@ For several reasons, not all AIS signals that are broadcast are received by sate
 To identify AIS transmission gaps that are most likely due to intentional disabling rather than technical issues, GFW developed a classification model based on the following rules, which are explained in more detail in the [Caveats and Known Issues](#Caveats-and-known-issues) section:
 
 1. `gap_hours >= 12`: The gap event must be at least 12 hours.
-2. `gap_start_distance_from_shore_m > 50 AND gap_start_distance_from_shore_m > 50`: The gap must start and end at least 50 nautical miles from shore. 
-3. The vessel must have averaged at least 20 satellite positions per 12 hours during the 48 hours prior to the gap event. This `gap_score` is not included in the table and must be calculated from the `positions_12_hours_before_sat` field. This is because the metric is still in development and subject to change.
+2. `is_closed`: The gap event has ended and is complete.
+3. `gap_start_distance_from_shore_m > 50 * 1852 AND gap_start_distance_from_shore_m > 50 * 1852`: The gap must start and end at least 50 nautical miles from shore. 
+4. The vessel must have averaged at least 20 satellite positions per 12 hours during the 48 hours prior to the gap event. This `gap_score` is not included in the table and must be calculated from the `positions_12_hours_before_sat` field. This is because the metric is still in development and subject to change.
 
 ```
 positions_12_hours_before_sat * if(gap_hours > 12*4, 12*4, gap_hours)/12 as gap_score
@@ -68,7 +69,7 @@ Satellite AIS reception generally decreases closer to shore as high vessel densi
 
 ### The `gap_score` used in production differs from the peer-reviewed method
 
-Our paper on AIS gaps identifies suspected disabling events based on a metric of how many AIS positions a vessel had in the _t_ hours prior to the AIS gap event, where _t_ is equal to the duration of the gap event. In production, however, we want to determine in near real-time if an AIS gap event is due to suspected disabling, even if the AIS gap event has not yet ended (e.g. `is_closed = FALSE`). As a result, we developed a modified metric 
+Our paper on AIS gaps identifies suspected disabling events based on a metric of how many AIS positions a vessel had in the _t_ hours prior to the AIS gap event, where _t_ is equal to the duration of the gap event. In production, however, we want to determine in near real-time if an AIS gap event is due to suspected disabling, even if the AIS gap event has not yet ended (e.g. `is_closed = FALSE`). As a result, we developed a modified metric that uses the number of positions in the 12 hours prior to the start of the gap and multiplies it by a certain factor to estimate the original metric. This factor is the current length of the gap, _t_, (this changes for open gaps over time, but is stable for closed gaps) divided by 12, essentially scaling the number of positions in the previous 12 hours to estimate how many we would have expected to see in the previous _t_ hours. In addition, this is capped at a gap length of 48 hours (or a maximum multiplying factor of 4). This cap came from testing of caps from 12 to 72 hours and comparing the response curve to that of the original _t_ hours model. The response curve of the model with a 48 hours cap most closely resembled the original model.
 
 ### Satellite coverage varies considerably for periods less than 12 hours
 
