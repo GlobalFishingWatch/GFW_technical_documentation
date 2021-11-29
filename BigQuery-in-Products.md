@@ -37,7 +37,9 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 The Global Fishing Watch map is the first open-access online tool for visualization and analysis of vessel-based human activity at sea. Powered by satellite technology and machine learning, the map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. Anyone with an internet connection can access the map to monitor global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view. We call these “workspaces”. Free and easy-to-use features offer unprecedented opportunities to increase transparency across the world’s ocean and support the fair and sustainable use of marine resources.
 
 **Data in the Portal**
-<br>V1 API
++ V1 API | [V1 API Queries](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). 
++ Within the V1 API Queries are the BQ source datasets.
+
 
 **Resources**
 + [Map 3.0 GFW Internal Slide Deck](https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing) - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map.
@@ -56,7 +58,8 @@ The Global Fishing Watch map is the first open-access online tool for visualizat
 Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager, a new technology portal that will help improve insight into marine protected areas. Dona Bertarelli’s vision in creating Global Fishing Watch Marine Manager was to ensure robust and science-based management to fully realize the vital contribution of protected areas, and with time, monitor the quality, efficiency and impact of those protections on the long term. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.
 
 **Data in the Portal**
-<br>V1 API
++ V1 API | [V1 API Queries](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). 
++ Within the V1 API Queries are the BQ source datasets.
 
 **Unique Features (compared to GFW Map):** Environmental data layers
 
@@ -67,7 +70,7 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 + Dec 2021: Marine Manager "v1.5" [planned release](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
 
 **Updates**
-+ None yet :)
++ None
 <br>
 
 ## [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer)
@@ -76,7 +79,8 @@ The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspe
 At this time the Vessel Viewer is currently in development and available to GFW staff for internal use. 
 
 **Data in the Portal**
-<br>V1 API
++ V1 API | [V1 API Queries](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). 
++ Within the V1 API Queries are the BQ source datasets.
 
 **Resources**
 + TBD
@@ -98,12 +102,7 @@ At this time the use of GFW API’s is limited to GFW products, although GFW’s
 The Version 0 API is used exclusively in the CVP and has been updated to mimic the Version 1 API (using the same datasets as the Version 1 API and similar data restrictions). It is still to be decided if the CVP will remain a stand alone product, or be merged into the GFW Map or into another product. If the CVP remains a stand alone product, future efforts will be made to update the portal to support the Version 1 API. 
 
 ### Version 1 
-The Version 1 API is used in the GFW Map and Marine Manager. In the future all GFW products will use this API.
-
-The queries used to curate date for the V1 API can be found here: 
-+ https://datasets.globalfishingwatch.org/  (Username: datasets | Password: gfw_doc). 
-
-Within the queries are the BQ source datasets.
+The Version 1 API is used in the GFW Map, Marine Manager, and Vessel Viewer. In the future all GFW products will use this API. The queries used to curate date for the V1 API can be found [here](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). Within the queries are the BQ source datasets.
 
 **APIs Resources**
 + [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
