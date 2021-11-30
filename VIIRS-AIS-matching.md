@@ -56,7 +56,7 @@ Old version
 - `seg_id`
     - `seg_id` of the vessel that matched with the VIIRS
 - `score`
-    - Matching score. Higher value indicates good matching (`score > 0.01` is a tentative threshold for good matching.)
+    - Matching score between VIIRS and AIS/VMS. Higher value indicates good matching (`score > 0.01` is a tentative threshold for good matching.)
 
 
 
