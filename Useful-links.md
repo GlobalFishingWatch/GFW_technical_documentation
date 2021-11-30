@@ -11,6 +11,7 @@
   - [Shapefiles in BigQuery](https://docs.google.com/presentation/d/1P22qaZBTR5Y6SxZoDMq3jPORQ7CdJggoJh6J_7quRgg/edit#slide=id.p)
   - [QGIS Data Training](https://drive.google.com/drive/folders/1hP9gyEV1un0K1CzofHMH2P2xvMkqhzdt)
 - [BQ Practice Queries](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/tree/master/queries/examples/current)
+- [2021 Fall Training Agenda with Presentation Links](https://docs.google.com/document/d/1IXMvXLqNFFBQ9xu0jbT8rzUu-68MXuY6rIiK_avEEAk/edit?usp=sharing)
 
 ## Quality Assurance
 
