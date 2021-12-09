@@ -1,5 +1,3 @@
-The purpose of GFW products broadly is to create and publicly share knowledge about human activity at sea to enable fair and sustainable use of our ocean.
-
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/)
 
 The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. Updated with new data monthly, it synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. 
@@ -23,16 +21,16 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
++ Next update of CVP will involve data being updated on a 3 day lag rather than monthly update
 + Encounters code currently being updated to use published_events_encounters and carrier, support, and fishing by_year tables. CVP with updated encounters code likely in next ~month. 
 + If the CVP is maintained as a standalone product, then queries will be updated and V1 API will be used
-+ Currently there is a 2 month lag on the CVP. If CVP transitions to V1 API, the end Portal will be on 3 day delay
 
 **Updates**
 + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
 <br>
 
 ## [GFW Map](https://globalfishingwatch.org/map/) 
-The Global Fishing Watch map is the first open-access online tool for visualization and analysis of vessel-based human activity at sea. Powered by satellite technology and machine learning, the map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. Anyone with an internet connection can access the map to monitor global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view. We call these “workspaces”. Free and easy-to-use features offer unprecedented opportunities to increase transparency across the world’s ocean and support the fair and sustainable use of marine resources.
+The Global Fishing Watch map is the "main" GFW product. The map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. The map includes global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view.
 
 **Data in the Portal**
 + V1 API | [V1 API Queries](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). 
@@ -45,6 +43,7 @@ The Global Fishing Watch map is the first open-access online tool for visualizat
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
++ Upload point files
 + **Port visits** will be added to the GFW map (date TBD)
 
 **Updates**
@@ -53,7 +52,7 @@ The Global Fishing Watch map is the first open-access online tool for visualizat
 <br>
 
 ## [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/)
-Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager, a new technology portal that will help improve insight into marine protected areas. Dona Bertarelli’s vision in creating Global Fishing Watch Marine Manager was to ensure robust and science-based management to fully realize the vital contribution of protected areas, and with time, monitor the quality, efficiency and impact of those protections on the long term. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.
+Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.
 
 **Data in the Portal**
 + V1 API | [V1 API Queries](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). 
@@ -65,7 +64,7 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
-+ Dec 2021: Marine Manager "v1.5" [planned release](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
++ Dec 9 2021: Marine Manager "v1.5" [release summary](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
 
 **Updates**
 + None
