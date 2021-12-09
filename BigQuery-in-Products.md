@@ -1,6 +1,6 @@
 The purpose of GFW products broadly is to create and publicly share knowledge about human activity at sea to enable fair and sustainable use of our ocean.
 
-
+![sdfsdf](https://doc-0g-28-docs.googleusercontent.com/docs/securesc/50gmq2fs6amq0r6iqvcmkr47ehl6gkcb/l0m35qk2u8kviek8ofi84a4gnbtgg9c4/1639080000000/06197535725946213433/17945964201058184831/1Dyfb6w1KJ9rbr_7gJ2PiBr3e1rUzQHpL?e=view&authuser=0)
 
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/)
 
