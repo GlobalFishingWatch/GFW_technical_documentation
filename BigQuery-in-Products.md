@@ -1,4 +1,4 @@
-![GFW Product Map](https://github.com/willabrooksGFW/gfw_photos/blob/main/GFW%20Products.png)
+![GFW Product Map](https://github.com/willabrooksGFW/gfw_photos/blob/main/GFW%20Products2.png)
 
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/)
 
