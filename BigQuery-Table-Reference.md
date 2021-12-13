@@ -29,14 +29,14 @@ Last update:
 | [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | VIIRS vessel detections | `pipe_viirs_production_v20180723` | `raw_vbd_global` |  | Masaki | 
 | [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | [VIIRS vessel detections that matched/unmatched with AIS/VMS](VIIRS-AIS-matching) | `pipe_production_v20201001` | `proto_matches_raw_vbd_global_3top_v20210514` | 2.5 | Masaki | 
 | [AIS gaps](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps) | AIS gaps and suspected disabling events | `pipe_production_v20201001` | `proto_ais_gap_events` | 2.5 | Tyler |
-| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Peru VMS | `pipe_peru_production_v20200324` | | 2.5 | Andres |
-| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Panama VMS | `pipe_panama_production_v20200331` | | 2.5 | Andres |
-| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Chile VMS | `pipe_chile_production_v20200331` | | 2.5 | Andres |
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Peru VMS | `pipe_peru_production_v20211126` | | 2.5 | Andres |
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Panama VMS | `pipe_panama_production_v20211126` | | 2.5 | Andres |
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Chile VMS | `pipe_chile_production_v20211126` | | 2.5 | Andres |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Indonesia VMS | `pipe_indonesia_production_v20200320` | | 2.5 | Andres |
-| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Brazil VMS | `pipe_brazil_production_v20210910` | | 2.5 | Claudino |
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Brazil VMS | `pipe_brazil_production_v20211126` | | 2.5 | Claudino |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Mexico VMS | `pipe_mexico_oceana_production_v20210811` | | 2.5 | Andres |
-| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Costa Rica VMS | `pipe_costarica_production_v20210830` | | 2.5 | Andres |
-| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Ecuador VMS | `pipe_ecuador_production_v20210612` | | 2.5 | Andres |
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Costa Rica VMS | `pipe_costarica_production_v20211126` | | 2.5 | Andres |
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Ecuador VMS | `pipe_ecuador_production_v20211126` | | 2.5 | Andres |
 
 
 
