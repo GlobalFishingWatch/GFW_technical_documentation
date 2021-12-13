@@ -66,10 +66,10 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
-+ Dec 9 2021: Marine Manager "v1.5" [release summary](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
++ N/A
 
 **Updates**
-+ None
++ Dec 9 2021: Marine Manager "v1.5" [release summary](https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit)
 <br>
 
 ## [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer)
