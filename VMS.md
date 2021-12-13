@@ -25,7 +25,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: two ping rates, 20 minutes for artisanal vessels and 10 minutos for industrial vessels
   + **Vessel classes**: (fish_factory, tanker ) and (trawlers, purse_seines, set_gillnets, squid_jigger, set_longlines, pots_and_traps, bottom_longlines, longline_handline, drifting_longlines) 
   + **Identity information**: Shipname and PLATE
-+ **BigQuery dataset:** `pipe_peru_production_v20200324`
++ **BigQuery dataset:** `pipe_peru_production_v20211126`
   + **Vessel identity table(s)**: `vessel_info`
 + **Data redacted from GFW map (if applicable)**: vessel info (name,plate,length,gear, fishery type) is publish same in both private and public workspace
 + **GFW lead**: Eloy (`@Eloy Aroni`; eloy@globalfishingwatch.org)
@@ -38,7 +38,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: By law fishing, transport and aquaculture vessels every 15 min (BQ - Artisanal: 19min, Industrial: 10min, Aquaculture: 17min, Transport: 16min). Purse Seine fishing vessels every 8 min (BQ: 17min)
   + **Vessel classes**: Artisanal, Industrial, Transport, Aquaculture
   + **Identity information**: shipname, ssvid, callsign, vessel_id
-+ **BigQuery dataset:** `pipe_chile_production_v20200331`
++ **BigQuery dataset:** `pipe_chile_production_v20211126`
   + **Vessel identity table(s)**: `vessel_info`
 + **Data redacted from GFW map (if applicable)**: Public Map only shows industrial and artisanal vessels. Private one also includes aquaculture and transport vessels. Both spaces don’t have any identifying info for each vessel, only flag, first and last transmission, and fleet.
 + **GFW lead**: Esteban Arenas (`@Esteban`; esteban@globalfishingwatch.org)
@@ -51,7 +51,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: 1 hours
   + **Vessel classes**: drifting_longlines, set_longline, purse_seines, supply_vessel, tanker, reefer
   + **Identity information**: IMO and Callsign
-+ **BigQuery dataset:** `pipe_panama_production_v20200331`
++ **BigQuery dataset:** `pipe_panama_production_v20211126`
   + **Vessel identity table(s)**: `vessel_info`  
 + **Data redacted from GFW map (if applicable)**: vessel info is not displayed on the public workspace 
 + **GFW lead**: Eloy (`@Eloy Aroni`; eloy@globalfishingwatch.org)
@@ -64,7 +64,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: two ping rates, 20 minutes for tuna longliners and one hour for the others
   + **Vessel classes**: Trawlers (bottom, single net, doble rig net, pair trawl), gillnet (bottom and surface), line (surface longline, bottom longline, handline), purse seine, pots and traps (lobster, octopus and red snapper) 
   + **Identity information**: 
-+ **BigQuery dataset:** `pipe_brazil_production_v20210910`
++ **BigQuery dataset:** `pipe_brazil_production_v20211126`
   + **Vessel identity table(s)**:  `world-fishing-827.VMS_Brazil.brazil_registry_2021_09_09`
   + **Identity information**:
 + **Data redacted from GFW map (if applicable)**:  
@@ -78,7 +78,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: 1 - 2 hours
   + **Vessel classes**: Sardineros, Avanzados, atuneros 
   + **Identity information**: NA
-+ **BigQuery dataset:** `pipe_costarica_production_v20210830`
++ **BigQuery dataset:** `pipe_costarica_production_v20211126`
   + **Vessel identity table(s)**: NA
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
@@ -91,7 +91,7 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + **Message frequency**: one hour according regulations
   + **Vessel classes**: Industrial
   + **Identity information**: 
-+ **BigQuery dataset:** `pipe_ecuador_production_v20210612`
++ **BigQuery dataset:** `pipe_ecuador_production_v20211126`
   + **Vessel identity table(s)**: `world-fishing-827.VMS_Ecuador.manual_registry_list_q32020` static information from 2020
 + **Data redacted from GFW map (if applicable)**:  
 + **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
