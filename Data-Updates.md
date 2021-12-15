@@ -3,7 +3,7 @@
 Do not forget to update the version of the tables in the [BigQuery Table Reference](BigQuery-Table-Reference).
 
 **December 14, 2021 Updates**
-VMS datasets, including Peru, Panama, Chile, Brazil, Costa Rica, and Ecuador have all been updated. See the VMS page and the Big Query Table Reference page for the new table versions. These tables have been updated to use new engineering architecture
+VMS datasets, including Peru, Panama, Chile, Brazil, Costa Rica, and Ecuador have all been updated. See the VMS page and the Big Query Table Reference page for the new table versions. 
 
 **October 26, 2021 Updates**
 
