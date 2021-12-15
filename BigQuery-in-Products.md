@@ -83,7 +83,9 @@ At this time the Vessel Viewer is currently in development and available to GFW 
 + Within the V1 API Queries are the BQ source datasets.
 
 **Resources**
-+ TBD
++ Vessel Viewer FAQ in [English](https://drive.google.com/file/d/1N4YRJ_yxAObEIWbaYM8l-YDPHS0bKe2N/view) and [French](https://drive.google.com/file/d/195mbtLoHaY7iltFUbogiEX1cZNBpFg4E/view)
++ Vessel Viewer How-To Guide in [English](https://drive.google.com/file/d/1q2veC-EEUHWPg_eCplERJzlo8PL3OFZS/view) and [French](https://drive.google.com/file/d/1QaO3XKaXSnerAtcgw_a9EJpUEtM3WHN2/view)
++ [Vessel Viewer basic video overview](https://drive.google.com/file/d/18yenS9pva3kF2YGKZcSqdHy8avzRinBP/view) (audio in English with French subtitles)
 
 **Upcoming/Future Plans**
 + TBD
