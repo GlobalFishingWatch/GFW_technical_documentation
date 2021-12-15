@@ -3,7 +3,7 @@
 - [BigQuery dataset overview](BigQuery-datasets)
 - [BigQuery table reference](BigQuery-Table-Reference)
 - [BigQuery key concepts](Key-concepts)
-- BigQuery in products (coming soon)
+- [BigQuery in products](BigQuery-in-Products)
 
 # Data products
 
