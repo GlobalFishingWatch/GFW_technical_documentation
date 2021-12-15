@@ -45,10 +45,10 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
 **Upcoming/Future Plans**
-+ Upload point files
 + **Port visits** will be added to the GFW map (date TBD)
 
 **Updates**
++ Dec 2021: Upload point files as reference layer functionality added
 + Oct 18 2021: GFW legacy map officially removed from GFW website
 + July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map
 <br>
