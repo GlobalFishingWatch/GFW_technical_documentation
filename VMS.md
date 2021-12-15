@@ -114,9 +114,9 @@ As part of our Transparency Initiative, select countries have agreed to share th
 + **GFW lead**: Esteban Arenas (`@Esteban`; esteban@globalfishingwatch.org)
 + **Caveats & known issues**: Previously identified and currently testing for speed discrepancies/unknown units. Conapesca data has several issues with timestamps being incomplete or in inconsistent format. However, it has a lot more positions than data given to Oceana. BQ tables and private workspace based on Oceana data, shows significant inaccuracies in non-fishing activity being scored as fishing
 
-## Namibia
+## Namibia NOT STABLE. CONTACT ENGINEER TEAM BEFORE USE.
 
-+ **Data description:** The Namibian data is provided by Google Drive and it is not a good system because they do a lot of manual work on their side. NOT STABLE. CONTACT ENGINEER TEAM BEFORE USE.
++ **Data description:** The Namibian data is provided by Google Drive and it is not a good system because they do a lot of manual work on their side. 
   + **Date range**: `2014-01-01` - present
   + **Message frequency**:
   + **Vessel classes**: 
