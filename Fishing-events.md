@@ -41,6 +41,7 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 
 + [proto_fishing_events_and_pipe_comparison_20211005.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_and_pipe_comparison_20211005.sql) 
 + [proto_fishing_events_in_polygon_w_vessel_info_20211005.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_in_polygon_w_vessel_info_20211005.sql) 
++ [proto_fishing_events_by_position_in_polygon_v20211201.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_fishing_events_by_position_in_polygon_v20211201.sql)
 
 ## Links
 
