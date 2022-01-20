@@ -1,7 +1,7 @@
 This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis. 
 
 Last update:
-   * Date: `2021-11-11`
+   * Date: `2022-01-20`
    * By: `Tyler Clavelle`
 
 
@@ -10,10 +10,10 @@ Last update:
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_production_v20201001` | | 2.5 | Andres |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) | `pipe_production_v20201001` | `messages_scored_` | 2.5 | Andres |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `gfw_research` | `pipe_v20201001` | 2.5 | Tyler |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel registry database](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database) | `vessel_database` | `all_vessels_v20211001` | 2.5 | Jaeyoon |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables) | `gfw_research` | `vi_ssvid_[byyear]_v20210913` | 2.5 | Tyler |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual fishing vessel list | `gfw_research` | `fishing_vessels_ssvid_v20210913` | 2.5 | Tyler |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual carrier vessel list | `vessel_database` | `carrier_vessels_byyear_v20211001` | 2.5 | Jaeyoon |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel registry database](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database) | `vessel_database` | `all_vessels_v20211201` | 2.5 | Jaeyoon |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables) | `gfw_research` | `vi_ssvid_[byyear]_v20211201` | 2.5 | Tyler |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual fishing vessel list | `gfw_research` | `fishing_vessels_ssvid_v20211201` | 2.5 | Tyler |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual carrier vessel list | `vessel_database` | `carrier_vessels_byyear_v20211201` | 2.5 | Jaeyoon |
 | [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events no speed restrictions | `pipe_production_v20201001` | `encounters` | 2.5 | Nate |
 | [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events in Published format for Products | `pipe_production_v20201001` | `published_events_encounters` | 2.5 | Nate |
 | [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering) | Loitering events | `pipe_production_v20201001` | `loitering` `published_events_loitering` | 2.5 | Pete |
