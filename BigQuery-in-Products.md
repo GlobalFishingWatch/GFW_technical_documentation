@@ -65,6 +65,9 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 + [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
 
+**Internal Features (GFW Staff Only)**
++ Use BQ in the Map
+
 **Upcoming/Future Plans**
 + **Port visits** will be added to the GFW map (date TBD)
 
