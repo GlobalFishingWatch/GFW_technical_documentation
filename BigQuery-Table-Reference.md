@@ -26,7 +26,7 @@ Last update:
 | [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Previous version of Port visits version (grouped port events) | `pipe_production_v20201001` | `port_visits_`| 2.5 | Tim H | 
 | [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Vessel voyages between anchorages | `pipe_production_v20201001` | `proto_voyages_c2` `proto_voyages_c3` `proto_voyages_c4` | 2.5 | Tim H |
 | [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Previous version of Vessel voyages between anchorages | `pipe_production_v20201001` | `voyages` | 2.5 | Tim H |
-| [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | VIIRS vessel detections | `pipe_viirs_production_v20180723` | `raw_vbd_global` |  | Masaki | 
+| [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | VIIRS vessel detections | `pipe_viirs_production_v20220112` | `raw_vbd_global` `raw_vbd_global_without_noise` |  | Masaki | 
 | [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | [VIIRS vessel detections that matched/unmatched with AIS/VMS](VIIRS-AIS-matching) | `pipe_production_v20201001` | `proto_matches_raw_vbd_global_3top_v20210514` | 2.5 | Masaki | 
 | [AIS gaps](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps) | AIS gaps and suspected disabling events | `pipe_production_v20201001` | `proto_ais_gap_events` | 2.5 | Tyler |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Peru VMS | `pipe_peru_production_v20211126` | | 2.5 | Andres |
