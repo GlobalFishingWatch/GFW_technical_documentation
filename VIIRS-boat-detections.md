@@ -66,6 +66,7 @@ Other useful fields you can create from this table:
     - `concat(cast(Date_Mscan as string),concat(cast(Lat_DNB as string),cast(Lon_DNB as string))) as detect_id,`
 - `OrbitNumber`
   - Single overpass of VIIRS satellite (from North to South at night) can be distinguishable by `OrbitNumber`.
+  - This field can be used to eliminate overlap between successive orbits.
   - `CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,`
 - `GranuleID`
   - This field can be used to join with [VIIRS footprint table](VIIRS-footprint) and [VIIRS cloud mask](VIIRS-cloud-mask).
