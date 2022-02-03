@@ -6,18 +6,24 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
 
 ### current version
 
+- `pipe_viirs_production_v20220112.raw_vbd_global`
+  - Global VBD dataset
+  - This table contains all the VBDs including non-vessel detections.
+  - partitioned by `Date_Mscan`
+- `pipe_viirs_production_v20220112.raw_vbd_global_without_noise`
+  - Global VBD dataset
+  - This table contains **only true vessel detections**.
+  - partitioned by `Date_Mscan`
+  - This table has a subset of columns from the `raw_vbd_global` table and some additional columns for the convenience of analysts. If you want a column that is not in this table, you can join it with `raw_vbd_global` table using `id_Key` field. 
+
+### older version
+
 - `pipe_viirs_production_v20180723.raw_vbd_global`
   - Global VBD dataset. 
 - `pipe_viirs_production_v20180723.raw_vbd_redacted`
   - VBD dataset without detections around South America (see Caveats).
   - **No need to use this table**. Use [VIIRS noise filter](VIIRS-noise-filter) to avoid false detection around South America. 
   - **Not updated since `2019-11-30`**
-
-
-
-### older version
-
-non
 
 ## Data Description
 
@@ -27,10 +33,10 @@ The VBD dataset and underlying methods are outlined in the following publication
 
 GFW retains all VBD, including the following key fields:
 
++ `Date_Mscan`: VBD pixel date-time at mid-point of DNB scan reported in Universal Time.
 + `id_Key`: Unique VBD ID.
 + `Lat_DNB`: VBD pixel latitude from VIIRS DNB geolocation file.
 + `Lon_DNB`: VBD pixel longitude from VIIRS DNB geolocation file.
-+ `Date_Mscan`: VBD pixel date-time at mid-point of DNB scan reported in Universal Time.
 + `Date_LTZ`: VBD pixel date-time at mid-point of DNB scan adjusted to standard time in the local time zone (LTZ). No adjustments for Daylight Savings Time (DST) are made.
 + `EEZ`: Exclusive Economic Zone for VBD pixel.
 + `FMZ`: Fishery Management Zone for VBD pixel
