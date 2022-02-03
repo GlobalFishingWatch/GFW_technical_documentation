@@ -111,5 +111,9 @@ VIIRS satellite may scan the same area twice a night, thus VIIRS may double coun
 - [VIIRS footprint](VIIRS-footprint)
 - [Logic of VIIRS noise filter](VIIRS-noise-filter): eliminate VIIRS noise especially the South Atlantic Anomaly.
 
+## Updates
 
-
+- `pipe_viirs_production_v20220112.raw_vbd_global`
+  - Missing VBD issue in the previous version is solved for the dates after `2020-01-07`. There may be still issues before the date. 
+- `pipe_viirs_production_v20180723.raw_vbd_global`
+  - It turns out that this table is missing some detections in the Asian region for some period.
