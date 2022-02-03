@@ -12,7 +12,7 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
   - partitioned by `Date_Mscan`
 - `pipe_viirs_production_v20220112.raw_vbd_global_without_noise`
   - Global VBD dataset
-  - This table contains **only true vessel detections**.
+  - This table contains **only true vessel detections**. The noise removal query [can be found here](https://github.com/GlobalFishingWatch/pipe-viirs/blob/main/assets/load-vbd-without-noise.sql.j2#L51).
   - partitioned by `Date_Mscan`
   - This table has a subset of columns from the `raw_vbd_global` table and some additional columns for the convenience of analysts. If you want a column that is not in this table, you can join it with `raw_vbd_global` table using `id_Key` field. 
 
