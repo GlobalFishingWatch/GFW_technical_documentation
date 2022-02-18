@@ -64,7 +64,7 @@ Old version
 # Caveats & Known Issues
 
 - Overlapping detection
-VIIRS satelite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double counting, you can select single scan for each 0.1 degree grid for a night. See example query.
+VIIRS satelite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double counting, you can select single scan for each 1 degree grid for a night. See example query.
 
 
 # Example queries
