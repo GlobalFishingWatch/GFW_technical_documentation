@@ -37,7 +37,7 @@ Last update:
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Mexico VMS | `pipe_mexico_oceana_production_v20210811` | | 2.5 | Andres |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Costa Rica VMS | `pipe_costarica_production_v20211126` | | 2.5 | Andres |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Ecuador VMS | `pipe_ecuador_production_v20211126` | | 2.5 | Andres |
-
+| [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Belize VMS | `pipe_belize_production_v20220304` | | 2.5 | Matias |
 
 
 
