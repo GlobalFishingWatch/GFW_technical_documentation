@@ -1,8 +1,8 @@
 This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis. 
 
 Last update:
-   * Date: `2022-02-03`
-   * By: `Masaki Tsuda`
+   * Date: `2022-03-07`
+   * By: `Matias Piano`
 
 
 | Subject | Description | BQ Dataset | BQ Table | Pipeline version | Owner |
