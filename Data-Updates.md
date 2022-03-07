@@ -2,6 +2,14 @@
 
 Do not forget to update the version of the tables in the [BigQuery Table Reference](BigQuery-Table-Reference).
 
+**March 7, 2021 Updates***
+New vessel info tables added to gfw_research:
+vi_ssvid_v20220101
+vi_ssvid_byyear_v20220101
+vi_stats_v20220101
+fishing_vessels_ssvid_v20220101
+These versions use the corresponding version of the vessel database (v20220101) and therefore contain data through 2021-12-31. There are otherwise no improvements/updates to the table other than new data.
+
 **December 14, 2021 Updates**
 VMS datasets, including Peru, Panama, Chile, Brazil, Costa Rica, and Ecuador have all been updated. See the VMS page and the Big Query Table Reference page for the new table versions. 
 
