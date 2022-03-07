@@ -5,7 +5,7 @@
 
 GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications. Currently GFW has two API’s used in products. The earliest version (version 0) used in the Carrier Vessel Portal (CVP), and then the current version (version 1) used in all other GFW products (GFW Map and Marine Manager).
 
-At this time the use of GFW API’s is limited to GFW products, although GFW’s API’s make it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). 
+At this time the use of GFW API’s is limited to GFW products, although GFW’s API’s make it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal, which will make GFW data publicly accessible through API is tentatively set to launch in July of 2022. 
 
 ### Version 0
 The Version 0 API is used exclusively in the CVP and has been updated to mimic the Version 1 API (using the same datasets as the Version 1 API and similar data restrictions). It is still to be decided if the CVP will remain a stand alone product, or be merged into the GFW Map or into another product. If the CVP remains a stand alone product, future efforts will be made to update the portal to support the Version 1 API. 
@@ -18,6 +18,7 @@ The Version 1 API is used in the GFW Map, Marine Manager, and Vessel Viewer. In 
 + [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
 
 **Upcoming/Future Plans**
++ API Portal has a tentative release date for July 2022
 + A wrapper in R is being developed so that GFW API’s can be easily used in R in the future. When tools like these are created we will be able to help partners and interested individuals of the public be able to directly query data included on our public portals.
 <br>
 
@@ -63,14 +64,16 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 + [Map 3.0 GFW Internal Slide Deck](https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing) - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map.
 + [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
++ [Load BigQuery data directly into GFW Map](https://www.loom.com/share/99594dec8de24887917ce02cae95629c)
 
 **Internal Features (GFW Staff Only)**
-+ Use BQ in the Map
++ Load BigQuery data directly into Map - when logged into GFW Map with GFW email press 'b' 7 times to get to interface to run BigQuery
 
 **Upcoming/Future Plans**
 + **Port visits** will be added to the GFW map (date TBD)
 
 **Updates**
++ [internal only] Dec 23 2021: Functionality to load bigquery data directly into GFW map added
 + Dec 2021: Upload point files as reference layer functionality added
 + Oct 18 2021: GFW legacy map officially removed from GFW website
 + July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map
@@ -96,7 +99,6 @@ Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishin
 <br>
 
 ## [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer) | v1 API
-![](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_viewer_screenshot.png)
 The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App's objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.
 
 At this time the Vessel Viewer is currently in development and available to GFW staff for internal use. 
