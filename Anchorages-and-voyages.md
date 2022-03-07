@@ -11,7 +11,8 @@ GFW maintains a database of `anchorages` and identifies when vessels enter/exit 
 `PORT GAP`: AIS gap > 4 hours; start is recorded 4 hours after the last message before the gap; end at next message after gap.  
 `PORT_EXIT`: occurs when vessel that was in port travels more than 4km from an anchorage point  
   <br> 
-   
+
+All distances are from an anchorage point. If a "port" is made up of many anchorage points the vessel "enters" the port when it is within 3 km of any anchorage point (the first one it is within 3 km of). And when the vessel leaves it simple leaves from the last anchorage point it is within 4km of. These may be different anchorage points.
   
 **Updates in 2021**
 
