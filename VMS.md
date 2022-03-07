@@ -101,6 +101,19 @@ As part of our Transparency Initiative, select countries have agreed to share th
   + there are ~4000 artisanal vessels and only 400 regularly broadcasting. Due low ping rates artisanal are not show in map 3.0
   + vessel categories are created based on matricula pattern, there are 14 different categories including non-fishing vessels
 
+## Belize 
+
++ **Data description:** The Belize VMS data is provided by PoleStar
+  + **Date range**:  2021-08-01 to present
+  + **Message frequency**: TBD
+  + **Vessel classes**: TBD
+  + **Identity information**: 
++ **BigQuery dataset:** `pipe_belize_production_v20220304`
+  + **Vessel identity table(s)**: TBD
++ **Data redacted from GFW map (if applicable)**:  
++ **GFW lead**: Claudino (@Claudino; claudino@globalfishingwatch.org)
++ **Caveats & known issues:** TBD
+
 ## Mexico - NOT STABLE. CONTACT ENGINEER TEAM BEFORE USE.
 
 + **Data description:** The Mexico VMS data provider is Orbcomm and Conapesca monitors data and alerts through a system called SISMEP. We currently don’t have an agreement signed and don’t receive data directly from Conapesca. However, we have two sets of data. One was requested by Oceana early 2021 and made public as a csv. The other is from downloading csv files directly from the Conapesca website. In march of 2021 Conapesca decided to publish and make all VMS data public through their open data portal.
