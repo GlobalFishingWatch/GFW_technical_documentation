@@ -64,10 +64,9 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 + [Map 3.0 GFW Internal Slide Deck](https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing) - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map.
 + [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
-+ [Load BigQuery data directly into GFW Map](https://www.loom.com/share/99594dec8de24887917ce02cae95629c)
 
 **Internal Features (GFW Staff Only)**
-+ Load BigQuery data directly into Map - when logged into GFW Map with GFW email press 'b' 7 times to get to interface to run BigQuery
++ [Load BigQuery data directly into GFW Map](https://www.loom.com/share/99594dec8de24887917ce02cae95629c) - when logged into GFW Map with GFW email press 'b' 7 times to get to interface to run BigQuery
 
 **Upcoming/Future Plans**
 + **Port visits** will be added to the GFW map (date TBD)
