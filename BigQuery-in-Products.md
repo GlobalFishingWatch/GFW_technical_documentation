@@ -102,6 +102,8 @@ The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspe
 
 At this time the Vessel Viewer is currently in development and available to GFW staff for internal use. 
 
+Vessel Viewer is part of GFWs broader effort to develop a suite of vessel intelligence tools to support (1) port inspection, (2) patrol planning, (3) insurance underwriting and (4) supply chain management to mitigate IUU risk.
+
 **Data in the Portal**
 + V1 API | [V1 API Queries](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). 
 + Within the V1 API Queries are the BQ source datasets.
@@ -112,7 +114,7 @@ At this time the Vessel Viewer is currently in development and available to GFW 
 + [Vessel Viewer basic video overview](https://drive.google.com/file/d/18yenS9pva3kF2YGKZcSqdHy8avzRinBP/view) (audio in English with French subtitles)
 
 **Upcoming/Future Plans**
-+ TBD
++ Add gaps to vessel viewer
 
 **Updates**
 + TBD
