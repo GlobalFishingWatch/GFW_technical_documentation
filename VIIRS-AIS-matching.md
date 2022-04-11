@@ -15,7 +15,9 @@ Please look at README in the repository for how to update this table.
 Current version
 
 - `pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`
-
+  - VIIRS matches to AIS and VMS
+- `pipe_production_v20201001.proto_viirs_match_ais_matches`
+  - VIIRS matches to only AIS
 Old version
 
 - None
