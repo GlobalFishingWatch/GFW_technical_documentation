@@ -18,9 +18,6 @@ Current version
   - VIIRS matches to AIS and VMS
 - `pipe_production_v20201001.proto_viirs_match_ais_matches`
   - VIIRS matches to only AIS
-Old version
-
-- None
 
 
 # Data descriptions
