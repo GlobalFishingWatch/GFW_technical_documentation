@@ -45,6 +45,8 @@ The tables associated with ports and voyages include the following:
 + `pipe_production_vYYYYMMDD.proto_voyages_c3` - Voyages by vessels with a port visit confidence of >=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
 + `pipe_production_vYYYYMMDD.proto_voyages_c4` - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
 
+
+
 **Original data tables still available**
 + `pipe_production_vYYYYMMDD.port_visits_` - Previously used port_visits table, which can still be used now if you do not want to shift to the 'proto_' data. This data includes port visits with a confidence of 4 only. 
 + `pipe_production_vYYYYMMDD.voyages` - Previously used voyages table, which can still be used now. Creates voyages from `pipe_production_vYYYYMMDD.port_visits_`. 
