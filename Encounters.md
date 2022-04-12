@@ -5,6 +5,8 @@ Vessels meet at sea for a variety of reasons, including transshipment (transferr
 + `pipe_production_v20201001.published_events_encounters` - same as the encounters table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). 
 + `pipe_production_v20201001.encounters` - Source table for published events encounters table. This is not filtered by speed and has one row per encounter.
 
+Note: Always use the `published_events_x` view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_encounters` then use that view table rather than `pipe_production_v20201001.published_events_encounters_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+
 ### Source Tables
  * `world-fishing-827:pipe_production_v20201001.raw_encounters_*`
  * `world-fishing-827:pipe_static.spatial_measures_20200311`
