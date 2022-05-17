@@ -2,7 +2,7 @@
 
 Do not forget to update the version of the tables in the [BigQuery Table Reference](BigQuery-Table-Reference).
 
-**March 7, 2021 Updates***
+**March 7, 2022 Updates***
 New vessel info tables added to gfw_research:
 vi_ssvid_v20220101
 vi_ssvid_byyear_v20220101
