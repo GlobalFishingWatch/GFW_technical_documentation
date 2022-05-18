@@ -11,6 +11,10 @@ Key things to know regarding this preliminary release:
 - Detections are separated/classified as matched and unmatched
 - Detection footprints (area of the ocean scanned) is also provided
 
+[Link to Map]
+
+[Link to Data]
+
 ## Key Tables
 
 - `table_name_to_be_determined_vessels_`
