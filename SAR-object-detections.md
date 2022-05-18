@@ -11,9 +11,9 @@ Key things to know regarding this preliminary release:
 - Detections are classified and separated as matched and unmatched
 - Detection footprints (area of the ocean scanned) are also provided
 
-[Link to Map]
+[Link to Map](https://#)
 
-[Link to Data]
+[Link to Data](https://#)
 
 ## Key Tables
 
