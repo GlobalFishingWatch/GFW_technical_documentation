@@ -17,8 +17,12 @@ Key things to know regarding this preliminary release:
 
 ## Key Tables
 
-- `table_name_to_be_determined_vessels_`
-- `table_name_to_be_determened_infrastructure_`
+BQ: `world-fishing-827.proj_sentinel1_v20210924`
+
+- `detect_scene_raw_*` - id/lon/lat/time from Earth Engine detections
+- `detect_foot_raw_*` - id/time/wkt-polygons from Earth Engine scene footprints
+- `detect_scene_pred_*` - id/presence/length from machine learning prediction
+- `detect_scene_match` - id/matching-info/vessel-info from matching algorithm
 
 ## Key Fields
 
@@ -34,6 +38,7 @@ Key things to know regarding this preliminary release:
 - `inferred_presence` - probability of vessel vs. noise from a Neural Network
 - `repeat_id` - if repeated object, link to offshore infrastructure table
 - `uncertainty` - metric of overall quality of detection
+
 
 ## Data Description
 
