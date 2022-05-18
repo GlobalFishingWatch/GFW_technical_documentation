@@ -44,7 +44,7 @@ BQ: `world-fishing-827.proj_sentinel1_v20210924`
 Data output from Earth Engine used to produce the BQ Tables:
 
 Detections: `gs://gfw-production-sentinel1-detection-gee/v20210924/<date>`  
-Footprints: `gs://gfw-production-sentinel1-footprints-thumbnails/v20210924/<date>`  
+Footprints: `gs://gfw-production-sentinel1-detection-footprints/v20210924/<date>`  
 Thumbnails: `gs://gfw-production-sentinel1-detection-thumbnails/v20210924/<date>`   
 
 ## Data Description
