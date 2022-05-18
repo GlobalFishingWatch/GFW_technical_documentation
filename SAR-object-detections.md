@@ -58,7 +58,11 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - sea ice, in high latitudes, is known to introduce false positives
 - images prior 2018 are of lower quality, introducing potential false positives
 
-## Links
+## Example Queries
+
+...
+
+## Additional Information
 
 - [Training Slides](https://docs.google.com/presentation/d/1Rzsz6roQU-QfEdGTq33fApBTkZwsBelzKBHBKWrSALM/edit?usp=sharing)
 - [Tech Video](https://#)
