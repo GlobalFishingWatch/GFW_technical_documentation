@@ -41,7 +41,9 @@ BQ: `world-fishing-827.proj_sentinel1_v20210924`
 
 ## Key Buckets
 
-GCS: ...
+GEE Detections: `gs://gfw-production-sentinel1-detection-gee/v20210924/<date>`
+
+...
 
 
 ## Data Description
