@@ -8,8 +8,8 @@ Key things to know regarding this preliminary release:
 - Detections refer, for the most part, to fishing and non-fishing vessels
 - Large areas with significant sea ice and icebergs have been excluded
 - Detections have been matched to available AIS
-- Detections are separated/classified as matched and unmatched
-- Detection footprints (area of the ocean scanned) is also provided
+- Detections are classified and separated as matched and unmatched
+- Detection footprints (area of the ocean scanned) are also provided
 
 [Link to Map]
 
@@ -26,19 +26,18 @@ BQ: `world-fishing-827.proj_sentinel1_v20210924`
 
 ## Key Fields
 
-- `scene_id` - scene ID from where detection was extracted
-- `detect_id` - unique ID for the detection as `scene_id;lon;lat`
+- `scene_id` - ID of Sentinel-1 scene from where detections were extracted
+- `detect_id` - ID unique to every detection, composed as `scene_id;lon;lat`
 - `detect_lon` - longitude coordinate
 - `detect_lat` - latitude coordinate
 - `detect_timestamp` - time the image was taken
 - `ssvid` - vessel identifier if the detection matches to AIS/VMS
-- `match_score` - score cutoff used to match the detection
-- `match_confidence` - confidence cutoff used to match the detection
-- `inferred_length_m` - length estimated with a Neural Network
-- `inferred_presence` - probability of vessel vs. noise from a Neural Network
-- `repeat_id` - if repeated object, link to offshore infrastructure table
-- `uncertainty` - metric of overall quality of detection
-
+- `score` - score cutoff used to match the detection
+- `confidence` - confidence cutoff used to match the detection
+- `presence` - probability of vessel presence from a Conv Neural Net
+- `length_m` - length estimated with a Conv Neural Net
+- `footprint_wkt` - WKT multipolygon of image area used for detection
+- `var1/var2` - vessel info before and after the SAR image used for matching
 
 ## Data Description
 
