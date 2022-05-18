@@ -39,6 +39,11 @@ BQ: `world-fishing-827.proj_sentinel1_v20210924`
 - `footprint_wkt` - WKT multipolygon of image area used for detection
 - `var1/var2` - vessel info before and after the SAR image used for matching
 
+## Key Buckets
+
+GCS: ...
+
+
 ## Data Description
 
 The data tables contain all detections from 2017-01-01 to present, updated intermittently. Imagery availability increases along data acquisition timeframe, especially from mid-2016 on. Vessels are extracted from single scenes while fixed infrastructure is extracted from 6-month median composites, constructed every month with a moving window. Detection was performed on Google Earth Engine with a Constant False Alarm Rate (CFAR) algorithm using the GRD product, Interferometric Wide Mode, VH band at 20 m resolution. Classification (to identify noise) and regression (to estimate length) was performed with a Convolutional Neural Network using both the VH and VV bands.
