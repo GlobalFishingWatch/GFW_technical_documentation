@@ -1,4 +1,15 @@
-Synthetic Aperture Radar (SAR) object detections consist of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from satellite images taken by ESA's Sentinel-1 radar mission. 
+Synthetic Aperture Radar (SAR) object detections consist of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from satellite radar images taken by ESA's Sentinel-1 mission. 
+
+## Release #1 (DATE)
+
+Key things to know regarding this preliminary release:
+
+- Fixed objects like infrastructure have been removed, so only vessels
+- Detections refer, for the most part, to fishing and non-fishing vessels
+- Large areas with significant sea ice and icebergs have been excluded
+- Detections have been matched to available AIS
+- Detections are separated/classified as matched and unmatched
+- Detection footprints (area of the ocean scanned) is also provided
 
 ## Key Tables
 
