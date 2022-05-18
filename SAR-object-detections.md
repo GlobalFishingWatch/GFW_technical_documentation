@@ -35,5 +35,5 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 
 - [Training Slides](https://docs.google.com/presentation/d/1Rzsz6roQU-QfEdGTq33fApBTkZwsBelzKBHBKWrSALM/edit?usp=sharing)
 - [Tech Video](https://#)
-- [Detection Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/detection)
-- [Neural Net Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/classification)
+- [Detection GEE Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/detection)
+- [Machine Learning Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/classification)
