@@ -19,9 +19,9 @@ Key things to know regarding this preliminary release:
 
 BQ: `world-fishing-827.proj_sentinel1_v20210924`
 
-- `detect_scene_raw_*` - id/lon/lat/time from Earth Engine detections
-- `detect_foot_raw_*` - id/time/wkt-polygons from Earth Engine scene footprints
-- `detect_scene_pred_*` - id/presence/length from machine learning prediction
+- `detect_scene_raw_YYYYMMDD` - id/lon/lat/time from Earth Engine detections
+- `detect_foot_raw_YYYYMMDD` - id/time/wkt-polygons from Earth Engine scene footprints
+- `detect_scene_pred_YYYYMMDD` - id/presence/length from machine learning prediction
 - `detect_scene_match` - id/matching-info/vessel-info from matching algorithm
 
 ## Key Fields
