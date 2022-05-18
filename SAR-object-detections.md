@@ -1,14 +1,15 @@
 Synthetic Aperture Radar (SAR) object detections consist of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from satellite radar images taken by ESA's Sentinel-1 mission. 
 
-## Release #1 (DATE)
+## 1st Release (2022-05-25)
 
-Key things to know regarding this preliminary release:
+What to know regarding this preliminary release:
 
 - Fixed objects like infrastructure have been removed, so only vessels
 - Detections refer, for the most part, to fishing and non-fishing vessels
 - Large areas with significant sea ice and icebergs have been excluded
-- Detections have been matched to available AIS
+- Detections have been matched to available vessels with AIS
 - Detections are classified and separated as matched and unmatched
+- Detections are computed with a delay of 72 hours, and tables updated daily
 - Detection footprints (area of the ocean scanned) are also provided
 
 [Link to Map](https://#)
