@@ -41,10 +41,11 @@ BQ: `world-fishing-827.proj_sentinel1_v20210924`
 
 ## Key Buckets
 
-GEE Detections: `gs://gfw-production-sentinel1-detection-gee/v20210924/<date>`
+Detections and thumbnails extracted from Earth Engine to produce the BQ Tables:
 
-...
-
+Detections: `gs://gfw-production-sentinel1-detection-gee/v20210924/<date>`
+Footprints: `gs://gfw-production-sentinel1-footprints-thumbnails/v20210924/<date>`
+Thumbnails: `gs://gfw-production-sentinel1-detection-thumbnails/v20210924/<date>`
 
 ## Data Description
 
