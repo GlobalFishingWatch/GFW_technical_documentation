@@ -10,10 +10,10 @@ What to know regarding this preliminary release:
 - Detections have been matched to available vessels with AIS
 - Detections are classified and separated as matched and unmatched
 - Detections are computed with a delay of 72 hours, and tables updated daily
-- Detections are available globally from January 1st 2022 onward <sup>*</sup>
+- Detections are available globally from January 1st 2022 onward <sup>1</sup>
 - Detection footprints (area of the ocean scanned) are also provided
 
-<sup>*</sup> Future releases will include detections from 2015/2017 onward
+<sup>1</sup> Future releases will include detections from 2015/2017 onward
 
 [Link to Map](https://#)
 
