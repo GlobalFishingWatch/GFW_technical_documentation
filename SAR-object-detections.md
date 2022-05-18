@@ -64,8 +64,8 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 
 ## Additional Information
 
-- [Tech Slides](https://docs.google.com/presentation/d/1Rzsz6roQU-QfEdGTq33fApBTkZwsBelzKBHBKWrSALM/edit?usp=sharing)
-- [Tech Video](https://#)
+- [SAR Detection Slides](https://docs.google.com/presentation/d/1Rzsz6roQU-QfEdGTq33fApBTkZwsBelzKBHBKWrSALM/edit?usp=sharing)
+- [Technology Video](https://#)
 - [Detection GEE Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/detection)
 - [Machine Learning Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/classification)
 - [Matching Algorithm code](https://#)
