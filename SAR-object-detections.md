@@ -46,7 +46,7 @@ BQ: `world-fishing-827.proj_sentinel1_v20210924`
 
 ## Key Buckets
 
-Data output from Earth Engine used to produce the BQ Tables:
+GCS: Data output from Earth Engine used to produce the BQ Tables:
 
 Detections: `gs://gfw-production-sentinel1-detection-gee/v20210924/<date>`  
 Footprints: `gs://gfw-production-sentinel1-detection-footprints/v20210924/<date>`  
