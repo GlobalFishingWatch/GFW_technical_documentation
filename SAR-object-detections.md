@@ -6,7 +6,7 @@ What to know regarding this preliminary release:
 
 - Fixed objects like infrastructure have been removed, so only vessels <sup>1</sup>
 - Detections refer, for the most part, to fishing and non-fishing vessels
-- Large areas with significant sea ice and icebergs have been excluded (high latitude)
+- Large areas with significant sea ice and icebergs have been excluded (high latitudes)
 - False positives (noise) have been filtered out with ML (this is not perfect)
 - Detections have been matched to available vessels with AIS
 - Detections are classified and separated as matched and unmatched
