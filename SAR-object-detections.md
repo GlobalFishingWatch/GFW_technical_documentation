@@ -82,4 +82,4 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - [Technology Video](https://#)
 - [Detection GEE Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/detection)
 - [Machine Learning Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/classification)
-- [Matching Algorithm code](https://#)
+- [Matching Algorithm Code](https://#)
