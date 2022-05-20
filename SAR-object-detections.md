@@ -23,18 +23,18 @@ What to know regarding this preliminary release:
 
 ## Key Concepts
 
-- Data point: individual detection of maritime object (from single SAR scene)
-- Polygon: outline of the (valid) area within the scene used for detection
+- Data point: individual detection of maritime object from single SAR scene
+- Polygon: outline of the valid area within the SAR scene used for detection
 - Matched: individual detection has been paired with a specific AIS message
 
 ## Key Tables
 
 BQ: `world-fishing-827.proj_sentinel1_v20210924`
 
-- `detect_scene_raw_YYYYMMDD` - id/lon/lat/time from Earth Engine detections
-- `detect_foot_raw_YYYYMMDD` - id/time/wkt-polygon from Earth Engine scene footprints
-- `detect_scene_pred_YYYYMMDD` - id/presence/length from machine learning prediction
-- `detect_scene_match` - id/matching-info/vessel-info from matching algorithm
+- `detect_scene_raw_YYYYMMDD` - id, lon, lat, time from Earth Engine detections
+- `detect_foot_raw_YYYYMMDD` - id, time, wkt-polygon from Earth Engine scene footprints
+- `detect_scene_pred_YYYYMMDD` - id, presence, length from machine learning prediction
+- `detect_scene_match` - id, matching-info, vessel-info from matching algorithm
 
 ## Key Fields
 
