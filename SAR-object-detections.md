@@ -23,9 +23,9 @@ What to know regarding this preliminary release:
 
 ## Key Concepts
 
-- Data points: individual detections of maritime objects (from single SAR scenes)
-- Grid cells: aggregate of detections in space and time (from several SAR scenes)
-- Polygons: outline of the (valid) area within the scenes used for detection
+- Data point: individual detection of maritime object (from single SAR scene)
+- Polygon: outline of the (valid) area within the scene used for detection
+- Matched: individual detection has been paired with a specific AIS message
 
 ## Key Tables
 
