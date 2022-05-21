@@ -23,7 +23,7 @@ What to know regarding this preliminary release:
 
 ## Key Concepts
 
-- Data point: individual detection of maritime object from single SAR scene
+- Data point: individual detection of maritime object from a single SAR scene
 - Polygon: outline of the valid area within the SAR scene used for detection
 - Matched: individual detection has been paired with a specific AIS message
 
