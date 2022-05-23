@@ -61,7 +61,7 @@ Thumbnails: `gs://gfw-production-sentinel1-detection-thumbnails/v20210924/<date>
 
 ## Data Description
 
-The data tables contain all detections from 2017-01-01 to present, updated intermittently. Imagery availability increases along data acquisition timeframe, especially from mid-2016 on. Vessels are extracted from single scenes while fixed infrastructure is extracted from 6-month median composites, constructed every month with a moving window. Detection was performed on Google Earth Engine with a Constant False Alarm Rate (CFAR) algorithm using the GRD product, Interferometric Wide Mode, VH band at 20 m resolution. Classification (to identify noise) and regression (to estimate length) was performed with a Convolutional Neural Network using both the VH and VV bands.
+The data tables contain all detections from 2017-01-01 to present, updated intermittently. Imagery availability increases along data acquisition timeframe, especially from mid-2016 on. Vessels are extracted from single scenes while fixed infrastructure is extracted from 6-month median composites, constructed every month with a moving window. Detection was performed on Google Earth Engine with a Constant False Alarm Rate (CFAR) algorithm using the GRD product, Interferometric Wide Mode, VH band at 20 m resolution. Vessel classification to identify noise and regression to estimate length was performed with a Convolutional Neural Network using both the VH and VV bands.
 
 ## Caveats & Known Issues:
 
@@ -73,6 +73,7 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - images prior 2018 are of lower quality, introducing potential false positives
 
 ## Example Queries
+
 + [SAR_dark_vessel_locations.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/SAR_dark_vessel_locations.sql)
 + [SAR_dark_vessels_eezs.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/SAR_dark_vessels_eezs.sql) 
 + [SAR_matched_vessels.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/SAR_matched_vessels.sql)
@@ -84,3 +85,4 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - [Detection GEE Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/detection)
 - [Machine Learning Code](https://github.com/GlobalFishingWatch/sentinel-1-ee/tree/develop/classification)
 - [Matching Algorithm Code](https://#)
+- [Matching Algorithm paper](https://#)
