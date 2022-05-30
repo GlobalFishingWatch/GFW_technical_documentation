@@ -68,6 +68,7 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 - Sentinel-1 does not take images over the open ocean, mostly near coastal waters
 - spatial coverage is not homogeneous, e.g. European waters are imaged more frequently
 - temporal coverage is not homogenous, e.g. 2017 has less area covered than 2021
+- some missing days, e.g. in 2016, is due to no images available over the ocean
 - Sentinel-1B stopped operating on 2021-12-23, reducing daily images from ~400 to ~250
 - sea ice and icebergs, at high latitudes, are known to introduce false positives
 - images prior 2018 are of lower quality, introducing potential false positives
