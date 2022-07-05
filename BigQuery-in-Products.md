@@ -62,6 +62,7 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 
 
 **Resources**
++ [LATEST demo of map - July 2022](https://www.loom.com/share/dd1daa446295450aa5bdc0bba9e124ba)
 + [Map 3.0 GFW Internal Slide Deck](https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing) - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map.
 + [GFW Map Launch Materials](https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit)
 + [GFW Product Tutorials](https://globalfishingwatch.org/tutorials/)
