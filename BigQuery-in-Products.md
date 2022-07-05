@@ -1,31 +1,13 @@
 ![GFW Product Map](https://github.com/willabrooksGFW/gfw_photos/blob/main/GFW%20Products3.png)[GFW Product Map](https://whimsical.com/gfw-products-7WiWeFz5KVMxndC8gaD7DS)
 
 
-## APIs
+## Product Overview
 
-GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications. Currently GFW has two API’s used in products and an API Portal which will launch on July 19th 2022, making select GFW data available to the public through API. The earliest version (version 0) used in the Carrier Vessel Portal (CVP), and then the current version (version 1) used in all other GFW products (GFW Map, Marine Manager, vessel viewer).
-
-### Version 0
+### Version 0 API
 The Version 0 API is used exclusively in the CVP and has been updated to mimic the Version 1 API (using the same datasets as the Version 1 API and similar data restrictions). It is still to be decided if the CVP will remain a stand alone product, or be merged into the GFW Map or into another product. If the CVP remains a stand alone product, future efforts will be made to update the portal to support the Version 1 API. 
 
-### Version 1 
+### Version 1 API
 The Version 1 API is used in the GFW Map, Marine Manager, and Vessel Viewer. In the future all GFW products will use this API. The queries used to curate date for the V1 API can be found [here](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). Within the queries are the BQ source datasets.
-
-### [API Portal](https://globalfishingwatch.org/ocean-engine/tokens/signup)
-GFW’s API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal, which will make GFW data publicly accessible through API is set to launch in July of 2022. 
-
-**APIs Resources**
-+ [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
-+ [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
-
-**Upcoming/Future Plans**
-+ API Portal has a release date for **July 19th 2022**
-+ R package to access API Portal: A [wrapper in R](https://github.com/GlobalFishingWatch/gfwr) has been developed so that GFW's API Portal data can be easily used in R. The package named `gfwr` can now be accessed and tested internally. When `gfwr` is released publicly it will allow for the data in GFWs API portal to be directly accessed and called in R. [Slack thread.](https://globalfishingwatch.slack.com/archives/C026FKDJGMT/p1654885678794689)
-<br>
-
-**Updates**
-+ TBD
-<br>
 
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) | v0 API
 
@@ -56,6 +38,26 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 + Feb 15, 2022: CVP data updated on a 3 day lag rather than monthly update. CVP encounters code now pulls encounters from published_events_encounters and identified carrier, support, and fishing vessel  by_year tables.
 + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
 <br>
+
+## [API Portal](https://globalfishingwatch.org/ocean-engine/tokens/signup) | v1 API (public release on July 19 2022)
+
+GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications. Currently GFW has two API’s used in products and an API Portal which will launch on July 19th 2022, making select GFW data available to the public through API. The earliest version (version 0) used in the Carrier Vessel Portal (CVP), and then the current version (version 1) used in all other GFW products (GFW Map, Marine Manager, vessel viewer).
+
+GFW’s API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal, which will make GFW data publicly accessible through API is set to launch in July of 2022. 
+
+**APIs Resources**
++ [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
++ [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
+
+**Upcoming/Future Plans**
++ API Portal has a release date for **July 19th 2022**
++ R package to access API Portal: A [wrapper in R](https://github.com/GlobalFishingWatch/gfwr) has been developed so that GFW's API Portal data can be easily used in R. The package named `gfwr` can now be accessed and tested internally. When `gfwr` is released publicly it will allow for the data in GFWs API portal to be directly accessed and called in R. [Slack thread.](https://globalfishingwatch.slack.com/archives/C026FKDJGMT/p1654885678794689)
+<br>
+
+**Updates**
++ TBD
+<br>
+
 
 ## [GFW Map](https://globalfishingwatch.org/map/) | v1 API
 The Global Fishing Watch map is the "main" GFW product. The map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. The map includes global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view.
