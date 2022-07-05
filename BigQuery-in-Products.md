@@ -11,7 +11,7 @@ The Version 0 API is used exclusively in the CVP and has been updated to mimic t
 ### Version 1 
 The Version 1 API is used in the GFW Map, Marine Manager, and Vessel Viewer. In the future all GFW products will use this API. The queries used to curate date for the V1 API can be found [here](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). Within the queries are the BQ source datasets.
 
-### API Portal
+### [API Portal](https://globalfishingwatch.org/ocean-engine/tokens/signup)
 GFW’s API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal, which will make GFW data publicly accessible through API is set to launch in July of 2022. 
 
 **APIs Resources**
