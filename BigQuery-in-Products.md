@@ -78,7 +78,7 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 
 **Upcoming/Future Plans**
 + Sept 2022: Vessel groups (public access)
-+ TBD: layer on map with all Ports
++ TBD: [layer on map with all Ports](https://docs.google.com/presentation/d/1NFLXiET5w6QYrPiQfAviJEMt0rqI8TR-_fRPDYyIDNo/edit?usp=sharing)
 
 **Updates**
 + [internal only] July 2022: Vessel groups
