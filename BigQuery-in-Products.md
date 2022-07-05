@@ -3,9 +3,7 @@
 
 ## APIs
 
-GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications. Currently GFW has two API’s used in products. The earliest version (version 0) used in the Carrier Vessel Portal (CVP), and then the current version (version 1) used in all other GFW products (GFW Map and Marine Manager).
-
-At this time the use of GFW API’s is limited to GFW products, although GFW’s API’s make it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal, which will make GFW data publicly accessible through API is tentatively set to launch in July of 2022. 
+GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications. Currently GFW has two API’s used in products and an API Portal which will launch on July 19th 2022, making select GFW data available to the public through API. The earliest version (version 0) used in the Carrier Vessel Portal (CVP), and then the current version (version 1) used in all other GFW products (GFW Map, Marine Manager, vessel viewer).
 
 ### Version 0
 The Version 0 API is used exclusively in the CVP and has been updated to mimic the Version 1 API (using the same datasets as the Version 1 API and similar data restrictions). It is still to be decided if the CVP will remain a stand alone product, or be merged into the GFW Map or into another product. If the CVP remains a stand alone product, future efforts will be made to update the portal to support the Version 1 API. 
@@ -13,13 +11,16 @@ The Version 0 API is used exclusively in the CVP and has been updated to mimic t
 ### Version 1 
 The Version 1 API is used in the GFW Map, Marine Manager, and Vessel Viewer. In the future all GFW products will use this API. The queries used to curate date for the V1 API can be found [here](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). Within the queries are the BQ source datasets.
 
+### API Portal
+GFW’s API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal, which will make GFW data publicly accessible through API is set to launch in July of 2022. 
+
 **APIs Resources**
 + [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
 + [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
 
 **Upcoming/Future Plans**
-+ API Portal has a tentative release date for July 2022
-+ A wrapper in R is being developed so that GFW API’s can be easily used in R in the future. When tools like these are created we will be able to help partners and interested individuals of the public be able to directly query data included on our public portals.
++ API Portal has a release date for **July 19th 2022**
++ R package to access API Portal: A [wrapper in R](https://github.com/GlobalFishingWatch/gfwr) has been developed so that GFW's API Portal data can be easily used in R. The package named `gfwr` can now be accessed and tested internally. When `gfwr` is released publicly it will allow for the data in GFWs API portal to be directly accessed and called in R. [Slack thread.](https://globalfishingwatch.slack.com/archives/C026FKDJGMT/p1654885678794689)
 <br>
 
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) | v0 API
