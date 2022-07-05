@@ -70,9 +70,11 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 + [Load BigQuery data directly into GFW Map](https://www.loom.com/share/99594dec8de24887917ce02cae95629c) - when logged into GFW Map with GFW email press 'b' 7 times to get to interface to run BigQuery
 
 **Upcoming/Future Plans**
-+ **Port visits** will be added to the GFW map (date TBD)
++ Sept 2022: Vessel groups (public access)
 
 **Updates**
++ [internal only] July 2022: Vessel groups
++ June 8th 2022: SAR layer launched on Map. [Slack thread.](https://globalfishingwatch.slack.com/archives/G8V3UUFK8/p1654781549803069)
 + [internal only] Dec 23 2021: Functionality to load bigquery data directly into GFW map added
 + Dec 2021: Upload point files as reference layer functionality added
 + Oct 18 2021: GFW legacy map officially removed from GFW website
