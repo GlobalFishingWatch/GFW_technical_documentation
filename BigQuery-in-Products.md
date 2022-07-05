@@ -29,7 +29,7 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 
 **Data in the Portal**
 + V0 API | [Current CVP queries](https://github.com/GlobalFishingWatch/pipe-carrier-portal/tree/master/assets/bigquery)
-+ The output of the current CVP queries can be found in BigQuery under the bin name `proj_carrier_portal_pew`
++ The output of the current CVP queries can be found in BigQuery under the bin name `pipe_carrier_portal_production_v20220124`
 
 **Data Restrictions in Portal**
 + **Encounters** are limited to those between carriers and fishing vessels and support and fishing vessels
