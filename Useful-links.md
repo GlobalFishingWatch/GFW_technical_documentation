@@ -20,6 +20,7 @@
 
 ## GFW tools
 
+- [gfwr documentation](https://github.com/GlobalFishingWatch/gfwr) - r package to pull data from GFW's API Portal; planned to be publicly released alongside API Portal, July 19 2022  
 - [fishwatchr documentation](https://github.com/GlobalFishingWatch/fishwatchr)
 - [gfw bubble plot tool](https://observablehq.com/@jhjanicki/gfw-clustered-bubble-chart-template)
 - [gfw shiny-tools](https://github.com/GlobalFishingWatch/shiny-tools)
