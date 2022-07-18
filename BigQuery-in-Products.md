@@ -3,15 +3,11 @@
 
 ## Product Overview
 
-### Version 0 API
-The Version 0 API is used exclusively in the CVP and has been updated to mimic the Version 1 API (using the same datasets as the Version 1 API and similar data restrictions). It is still to be decided if the CVP will remain a stand alone product, or be merged into the GFW Map or into another product. If the CVP remains a stand alone product, future efforts will be made to update the portal to support the Version 1 API. 
-
-### Version 1 API
-The Version 1 API is used in the GFW Map, Marine Manager, and Vessel Viewer. In the future all GFW products will use this API. The queries used to curate date for the V1 API can be found [here](https://datasets.globalfishingwatch.org/)  (Username: datasets | Password: gfw_doc). Within the queries are the BQ source datasets.
+This page highlights the data included in products; bigquery source tables, API code, and data restrictions applied to the data. Additionally, updates to data in products, such as changes in source data tables or changes in restrictions to the data are outlined. Resources on how to use and interact with products are linked. 
 
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) | v0 API
 
-The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. It synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. 
+The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. It synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. The CVP is the only Product using the v0 API, although, in the future, the Product and Engineering team will look to transition the CVP to using the same API as the other Products.
 
 **Data in the Portal**
 + V0 API | [Current CVP queries](https://github.com/GlobalFishingWatch/pipe-carrier-portal/tree/master/assets/bigquery)
