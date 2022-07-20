@@ -35,23 +35,23 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query 
 <br>
 
-## [API Portal](https://globalfishingwatch.org/ocean-engine/tokens/signup) | v1 API (public release on July 19 2022)
+## [API Portal](https://globalfishingwatch.org/ocean-engine/tokens/signup) | v1 API 
 
 GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications. 
 
-The GFW API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal is set to launch July 19th, 2022. A wrapper package in R, named `gfwr`, will launch alongside the API Portal, and allow individuals to call data from the API Portal directly into R.   
+The GFW API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal launched on July 19th, 2022. A wrapper package in R, named `gfwr`, also launched alongside the API Portal, and allows individuals to call data from the API Portal directly into R.   
 
 **APIs Resources**
 + [Intro APIs](https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing) - slide deck for introduction to API’s <br>
 + [GFW Ocean-Engine: APIs and Blueprints, June 2021](https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092) - introduction to GFW’s APIs 
++ R package to access API Portal: A [wrapper in R](https://github.com/GlobalFishingWatch/gfwr) has been developed so that GFW's API Portal data can be easily used in R. The package named `gfwr` can now be accessed. [Slack thread.](https://globalfishingwatch.slack.com/archives/C026FKDJGMT/p1654885678794689)
 
 **Upcoming/Future Plans**
-+ API Portal has a release date for **July 19th 2022**
-+ R package to access API Portal: A [wrapper in R](https://github.com/GlobalFishingWatch/gfwr) has been developed so that GFW's API Portal data can be easily used in R. The package named `gfwr` can now be accessed and tested internally. When `gfwr` is released publicly it will allow for the data in GFWs API portal to be directly accessed and called in R. [Slack thread.](https://globalfishingwatch.slack.com/archives/C026FKDJGMT/p1654885678794689)
++ TBD
 <br>
 
 **Updates**
-+ TBD
++ July 19, 2022: API Portal Launch! gfwr R package release
 <br>
 
 
