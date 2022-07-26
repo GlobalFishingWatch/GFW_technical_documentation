@@ -73,7 +73,7 @@ The Global Fishing Watch map is the "main" GFW product. The map merges multiple 
 + [Load BigQuery data directly into GFW Map](https://www.loom.com/share/99594dec8de24887917ce02cae95629c) - when logged into GFW Map with GFW email press 'b' 7 times to get to interface to run BigQuery
 
 **Upcoming/Future Plans**
-+ Sept 2022: Vessel groups (public access)
++ Sept 2022: Vessel groups (public access); vessel gaps
 + TBD: [layer on map with all Ports](https://docs.google.com/presentation/d/1NFLXiET5w6QYrPiQfAviJEMt0rqI8TR-_fRPDYyIDNo/edit?usp=sharing)
 
 **Updates**
