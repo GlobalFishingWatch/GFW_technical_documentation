@@ -69,11 +69,11 @@ For various technical reasons, not every AIS message that is broadcast is record
 
 ## Example Queries
 
-+ [fishing_hours_by_position_v20220721.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/fishing_hours_by_position_v202220721.sql): Basic query to pull AIS positions for fishing vessels and calculate fishing hours.
++ [fishing_hours_by_position.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/fishing_hours_by_position.sql): Basic query to pull AIS positions for fishing vessels and calculate fishing hours.
 
-+ [fishing_hours_gridded_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/fishing_hours_gridded_v20211128.sql): Query to create a raster of fishing hours, including fishing hours per square kilometer.
++ [fishing_hours_gridded.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/fishing_hours_gridded.sql): Query to create a raster of fishing hours, including fishing hours per square kilometer.
 
-+ [fishing_hours_by_eez_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/fishing_hours_by_eez_v20211128.sql): Query to quickly calculate fishing hours per EEZ over a specific date range using the daily segments research table (`research_segs_daily`)
++ [fishing_hours_by_eez.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/fishing_hours_by_eez.sql): Query to quickly calculate fishing hours per EEZ over a specific date range using the daily segments research table (`research_segs_daily`)
 
 ## Links
 
