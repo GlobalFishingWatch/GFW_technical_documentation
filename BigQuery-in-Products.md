@@ -1,7 +1,7 @@
 ![GFW Product Map](https://github.com/willabrooksGFW/gfw_photos/blob/main/GFW%20Products3.png)[GFW Product Map](https://whimsical.com/gfw-products-7WiWeFz5KVMxndC8gaD7DS)
 
 
-## Product Overview
+## [Product Overview](https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit)
 
 This page highlights the data included in products; bigquery source tables, API code, and data restrictions applied to the data. Additionally, updates to data in products, such as changes in source data tables or changes in restrictions to the data are outlined. Resources on how to use and interact with products are linked. 
 
