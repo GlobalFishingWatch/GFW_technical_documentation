@@ -14,7 +14,7 @@ viirs_matching AS (
 SELECT  
     *
 FROM
-    `world-fishing-827.gfw_research.matches_raw_vbd_global_3top_v20210514`
+    `world-fishing-827.pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`
 WHERE
       DATE(_PARTITIONTIME) BETWEEN start_date() AND end_date()
 
@@ -30,10 +30,10 @@ SELECT
     *
 
 FROM
-    `world-fishing-827.pipe_viirs_production_v20180723.raw_vbd_global`
+    `world-fishing-827.pipe_viirs_production_v20220112.raw_vbd_global`
 WHERE
       QF_Detect IN (1,2,3,5,7,10)
-      AND DATE(_PARTITIONTIME) BETWEEN start_date() AND end_date()
+      AND DATE(Date_Mscan) BETWEEN start_date() AND end_date()
 
 )
 
