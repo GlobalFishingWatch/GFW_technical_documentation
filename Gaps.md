@@ -55,9 +55,12 @@ The number of satellites over the horizon at different places on earth varies co
 
 ## Example Queries
 
-+ [ais_disabling_events.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/ais_disabling_events_v20211119.sql): Get all suspected AIS disabling events.
++ [ais_disabling_published_events.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/ais_disabling_published_events.sql): Get all (completed) likely AIS disabling events during a certain period.
 
-+ [ais_disabling_events_reception_v20211119.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/ais_disabling_events_reception_v20211119.sql): Get all suspected AIS disabling events, filtering out events from low reception areas.
++ [ais_disabling_published_events_fishing_vessels.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/ais_disabling_published_events_fishing_vessels.sql): Get all (completed) likely AIS disabling events by fishing vessels during a certain period.
+
++ [ais_disabling_ongoing_events.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/ais_disabling_ongoing_events.sql): Get all likely AIS disabling events that are currently ongoing (e.g. `is_closed = false`). This query demonstrates how to combine naive gap events with reception quality
+to identify likely disabling events in a way similar to how the `intentional_disabling` field is added to the `published_events_ais_gaps` table.
 
 ## Links
 
