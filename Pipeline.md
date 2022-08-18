@@ -39,12 +39,12 @@ A key feature of the AIS data tables is `vessel_id`, which is intended as a uniq
 
 ### AIS research tables
 
-Because AIS data tables, specifically `messages_scored_`, contain all AIS positions, they are *extremely large tables* and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. **Therefore, the GFW AIS pipeline produces a series of "research tables" designed specifically to be more efficient for research/analysis**. At present, these tables are all stored in the `gfw_research` dataset and start with the prefix `pipe_vYYYYMMDD`, with `YYYYMMDD` referring to the corresponding version of the `pipe_production_vYYYYMMDD` dataset. 
+Because AIS data tables, specifically `messages_scored_`, contain all AIS positions, they are *extremely large tables* and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. **Therefore, the GFW AIS pipeline produces a series of "research tables" designed specifically to be more efficient for research/analysis**. These tables start with the prefix `research_`. 
 
 Key details of the research tables include the following:
-+ Data are thinned to one position per minute per segment
++ AIS positions in the main research table (`research_messages`) are thinned to one position per minute per segment
 + Every AIS position is assigned an amount of time (`hours`), which is equal to the time since the previous position in the segment
-+ There are two research tables of AIS positions - one that includes data for all vessels (`pipe_vYYYYMMDD`) and one that only includes likely fishing vessels (`pipe_vYYYYMMDD_fishing`)
++ There are two different fishing score variables - `nnet_score` and `night_loitering`. Use `night_loitering` for  `squid_jiggers` and `nnet_score` for all other fishing classes.
 
 ### AIS event tables
 
