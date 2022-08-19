@@ -75,9 +75,9 @@ The data tables contain all detections from 2017-01-01 to present, updated inter
 
 ## Example Queries
 
-+ [SAR_dark_vessel_locations.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/SAR_dark_vessel_locations.sql)
-+ [SAR_dark_vessels_eezs.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/SAR_dark_vessels_eezs.sql) 
-+ [SAR_matched_vessels.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/SAR_matched_vessels.sql)
++ [SAR_dark_vessel_locations.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/SAR_dark_vessel_locations.sql)
++ [SAR_dark_vessels_eezs.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/SAR_dark_vessels_eezs.sql) 
++ [SAR_matched_vessels.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/SAR_matched_vessels.sql)
 
 ## Additional Information
 
