@@ -1,7 +1,3 @@
-
-[Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
-
-
 GFW maintains a database of `anchorages` and identifies when vessels enter/exit these locations (`port visits`). By connecting a vessel's port EXIT and next port ENTRY it is also possible to identify vessel `voyages`. 
 
 `Port events` serve as the fundamental units used to create `port visits` or `voyages`. There are four types of port events:  
@@ -109,6 +105,12 @@ Voyages are a further processed dataset as they represent two port visits that b
 
 ## Example queries
 
-+ [proto_voyages_and_anchorages_20210730.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_voyages_and_anchorages_20210730.sql) 
-+ [proto_port_visits_and_events_example_20210730.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_port_visits_and_events_example_20210730.sql) 
-+ [proto_voyages_merge_loitering_20210730.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/proto_voyages_merge_loitering_20210730.sql) 
++ [proto_voyages_and_anchorages.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/proto_voyages_and_anchorages.sql) 
+
++ [proto_port_visits_and_events_example.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/proto_port_visits_and_events_example.sql) 
+
++ [proto_voyages_merge_loitering.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/proto_voyages_merge_loitering.sql) 
+
+## Resources
+
+[Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
