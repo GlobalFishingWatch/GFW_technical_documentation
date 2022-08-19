@@ -20,6 +20,6 @@ Just a note that naming is very important and care should be taken with labeling
 
 ## Example Query
 
-[adding_country_code_names.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/adding_country_code_names.sql)
+[adding_country_code_names.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/adding_country_code_names.sql)
 
 
