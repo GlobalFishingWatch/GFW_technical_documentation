@@ -1,18 +1,18 @@
 This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis. 
 
 Last update:
-   * Date: `2022-03-07`
-   * By: `Matias Piano`
+   * Date: `2022-08-19`
+   * By: `Tyler Clavelle`
 
 
 | Subject | Description | BQ Dataset | BQ Table | Pipeline version | Owner |
 | --- | --- | --- | --- | --- | --- |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_production_v20201001` | | 2.5 | Andres |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) | `pipe_production_v20201001` | `messages_scored_` | 2.5 | Andres |
-| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `gfw_research` | `pipe_v20201001` | 2.5 | Tyler |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel registry database](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database) | `vessel_database` | `all_vessels_v20220101` | 2.5 | Jaeyoon |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables) | `gfw_research` | `vi_ssvid_[byyear]_v20220101` | 2.5 | Tyler |
-| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual fishing vessel list | `gfw_research` | `fishing_vessels_ssvid_v20220101` | 2.5 | Tyler |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `pipe_production_v20201001` | `research_messages` | 2.5 | Tyler |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel registry database](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database) | `vessel_database` | `all_vessels_vYYYYMMDD` | 2.5 | Jaeyoon |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | [Vessel info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables) | `gfw_research` | `vi_ssvid_[byyear]_vYYYYMMDD` | 2.5 | Tyler |
+| [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual fishing vessel list | `gfw_research` | `fishing_vessels_ssvid_vYYYYMMDD` | 2.5 | Tyler |
 | [Vessel identity](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity) | Annual carrier vessel list | `vessel_database` | `carrier_vessels_byyear_v20220101` | 2.5 | Jaeyoon |
 | [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events no speed restrictions | `pipe_production_v20201001` | `encounters` | 2.5 | Nate |
 | [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events in Published format for Products | `pipe_production_v20201001` | `published_events_encounters` | 2.5 | Nate |
@@ -29,6 +29,7 @@ Last update:
 | [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | VIIRS vessel detections | `pipe_viirs_production_v20220112` | `raw_vbd_global` `raw_vbd_global_without_noise` |  | Masaki | 
 | [VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections) | [VIIRS vessel detections that matched/unmatched with AIS/VMS](VIIRS-AIS-matching) | `pipe_production_v20201001` | `proto_matches_raw_vbd_global_3top_v20210514` | 2.5 | Masaki | 
 | [AIS gaps](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps) | AIS gaps and suspected disabling events | `pipe_production_v20201001` | `proto_ais_gap_events` | 2.5 | Tyler |
+| AIS offsetting | AIS offsetting by `seg_id` | `gfw_research_precursors` | `offsetting_year_seg_v20220609` | 2.5 | Pete |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Peru VMS | `pipe_peru_production_v20211126` | | 2.5 | Andres |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Panama VMS | `pipe_panama_production_v20211126` | | 2.5 | Andres |
 | [VMS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS) | Chile VMS | `pipe_chile_production_v20211126` | | 2.5 | Andres |
