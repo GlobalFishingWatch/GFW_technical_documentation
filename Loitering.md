@@ -5,7 +5,7 @@ Vessels meet up at sea for a variety of reasons, including transshipment (transf
 + `world-fishing-827.pipe_production_v20201001.loitering` - loitering table is for all vessels types with no constraints on distance from shore and duration, and has not been filtered to good seg or overlapping and short. - analysts need to add restrictions. 
 + `world-fishing-827.pipe_production_v20201001.published_events_loitering` - Similar to loitering table, however the schema is modified to be consistent with the other `published_events_` tables AND the data is restricted to avg_distance_from_shore_nm>=20 and segments must be good_seg AND NOT overlapping_and_short , largely used in products APIs
 
-Note: Always use the `published_events_x` view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_loitering` then use that view table rather than `pipe_production_v20201001.published_events_loitering_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+> Note: Always use the `published_events_x` view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_loitering` then use that view table rather than `pipe_production_v20201001.published_events_loitering_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
 
 
 
@@ -31,7 +31,7 @@ It is no longer filtered on any of the following to allow the analyst the flexib
 It is partition on the loitering_start_timetamp field, and clustering by ssvid.
 
 
-#### definitions used in RFMO Transshipment Reports 
+#### Definitions used in RFMO Transshipment Reports 
 
 GFW, in partnership with The Pew Charitable Trusts, has produced annual reports covering the years of 2017-2019 on transshipment activity in the the five major tuna RFMOs. These reports compare reported activity to potential transshipment, fishing, and port activity detected on AIS. The definitions of encounter and loitering events used for these reports are as follows.
 
@@ -47,11 +47,10 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 
 ## Example queries
 
-+ [loitering_carrier_basic.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_carrier_basic.sql) 
-+ [loitering_carrier_tracks.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_carrier_tracks.sql) 
-+ [loitering_ex_carrier_list_20211004.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_ex_carrier_list_20211004.sql) 
-+ [loitering_overlap_encounters_r_v20210816.Rmd](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_r_v20210816.Rmd) 
-+ [loitering_overlap_encounters_v20210813.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/loitering_overlap_encounters_v20210813.sql) 
++ [loitering_carrier_basic.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_carrier_basic.sql) 
++ [loitering_carrier_tracks.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_carrier_tracks.sql) 
++ [loitering_ex_carrier_list.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_ex_carrier_list.sql) 
++ [loitering_overlap_encounters.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_overlap_encounters.sql) 
 + [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
 
 ## Related Content
