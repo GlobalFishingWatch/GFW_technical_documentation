@@ -4,7 +4,7 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
 
 ## Key Tables
 
-### current version
+### Current version
 
 - `pipe_viirs_production_v20220112.raw_vbd_global`
   - This table contains all the VBDs including non-vessel detections.
@@ -14,7 +14,7 @@ VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suo
   - partitioned by `Date_Mscan`
   - This table has a subset of columns from the `raw_vbd_global` table and some additional columns for the convenience of analysts. If you want columns not included in this table, you need to get it from `raw_vbd_global` table by joining with `id_Key` field. 
 
-### older version
+### Older version
 
 - `pipe_viirs_production_v20180723.raw_vbd_global`
   - Global VBD dataset. 
@@ -97,9 +97,9 @@ VIIRS satellite may scan the same area twice a night, thus VIIRS may double coun
 
 ## Example queries
 
-- [How to extract VBDs from specific dates and areas?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/viirs_get_points_date_area.sql)
-- [How to remove noise from VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/viirs_get_daily_count_without_noise.sql)
-- [How to eliminate double-counting from VIIRS?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/viirs_get_daily_count_without_double_counting.sql)
+- [How to extract VBDs from specific dates and areas?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_points_date_area.sql)
+- [How to remove noise from VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_daily_count_without_noise.sql)
+- [How to eliminate double-counting from VIIRS?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_daily_count_without_double_counting.sql)
 - Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
 - Join with VIIRS-AIS matching
