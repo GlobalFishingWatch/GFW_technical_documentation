@@ -10,6 +10,9 @@ This page highlights the data included in products; bigquery source tables, API 
 | V0 | [CVP](https://globalfishingwatch.org/carrier-vessel-portal/) | [V0 API Queries](https://github.com/GlobalFishingWatch/pipe-carrier-portal/tree/master/assets/bigquery) | The plan is to update the CVP to using the <br> same APIs as other the other products in the future. | 
 | V1 | [GFW Map](https://globalfishingwatch.org/map/), <br> [Marine Manager](https://globalfishingwatch.org/marine-manager-portal/), <br> [Vessel Viewer](https://globalfishingwatch.org/vessel-viewer), <br> [API Portal](https://globalfishingwatch.org/ocean-engine/tokens/signup) | [V1 API Queries](https://datasets.globalfishingwatch.org/) <br> Username: datasets <br> Password: gfw_doc | There are certain filters and manipulations done to data <br> in the API which can occur outside of the BigQuery code. <br> Those nuances may eventually be updated and included <br> in the Wiki but are not currently, so be aware. | 
 
+**Resources**
++ [Product Hour recordings](https://drive.google.com/drive/folders/1OZhFcIeSvGnCE0W6CiNBCDKxxgR8fgVT)
+
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) | v0 API
 
 The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. It synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. The CVP is the only Product using the v0 API, although, in the future, the Product and Engineering team will look to transition the CVP to using the same API as the other Products.
