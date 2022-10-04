@@ -12,6 +12,7 @@ This page highlights the data included in products; bigquery source tables, API 
 
 **Resources**
 + [Product Hour recordings](https://drive.google.com/drive/folders/1OZhFcIeSvGnCE0W6CiNBCDKxxgR8fgVT)
++ [Published Events with unnested authorization information example query](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql)
 
 ## [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) | v0 API
 
