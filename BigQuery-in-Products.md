@@ -31,6 +31,7 @@ The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through t
 **Unique Features (compared to GFW Map):** Authorization Data, Port visits
 
 **Resources**
++ [CVP Product Hour notes, resources, and demo recording](https://docs.google.com/document/d/1DbUyeKvZfE_wEsBNcJE61HBLixLPqm3t5fFn5FxJv0A/edit#)
 + [CVP FAQs](https://globalfishingwatch.org/help-faqs/)
 + [CVP Disclaimers](https://globalfishingwatch.org/carrier-vessel-portal-disclaimers/)
 + [Authorization Records](https://globalfishingwatch.org/authorization-records/)
