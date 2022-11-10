@@ -96,8 +96,8 @@ VIIRS satellite may scan the same area twice a night, thus VIIRS may double coun
 
 
 ### Known data disruptions
-- June 28 to July 7, 2022: The Suomi NPP satellite experienced [issues](https://www.ospo.noaa.gov/data/messages/2022/07/MSG_20220707_2318.html) on June 28, 2022 that resulted in excessive edge noise in the day / night band. There’s an unusually high number of VBD in some regions (e.g., within Gabon, Pakistan, India, Myanmar, Taiwan, China, and a few other places in Africa, Mediterranean Sea, and Asia), on June 28 and 29 and significantly fewer detections (globally) after, until July 7th.
-- July 26 to August 20, 2022: VIIRS Boat Detection data are not available from July 26 to August 20, 2022. The Suomi NPP satellite entered a non-nominal state during this period ([announcement](https://lpdaac.usgs.gov/news/suomi-npp-recovers-from-safe-mode2/)).
+- **June 28 to July 7, 2022**: The Suomi NPP satellite experienced [issues](https://www.ospo.noaa.gov/data/messages/2022/07/MSG_20220707_2318.html) on June 28, 2022 that resulted in excessive edge noise in the day / night band. There’s an unusually high number of VBD in some regions (e.g., within Gabon, Pakistan, India, Myanmar, Taiwan, China, and a few other places in Africa, Mediterranean Sea, and Asia), on June 28 and 29 and significantly fewer detections (globally) after, until July 7th.
+- **July 26 to August 20, 2022**: VIIRS Boat Detection data are not available from July 26 to August 20, 2022. The Suomi NPP satellite entered a non-nominal state during this period ([announcement](https://lpdaac.usgs.gov/news/suomi-npp-recovers-from-safe-mode2/)).
 
 ## Example queries
 
