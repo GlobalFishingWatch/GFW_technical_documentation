@@ -102,7 +102,7 @@ VIIRS satellite may scan the same area twice a night, thus VIIRS may double coun
 ## Example queries
 
 - [How to extract VBDs from specific dates and areas?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_points_date_area.sql)
-- [How to remove noise from VIIRS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_daily_count_without_noise.sql)
+
 - [How to eliminate double-counting from VIIRS?](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_daily_count_without_double_counting.sql)
 - Get VIIRS detection in the squid fishing area
 - Join with VIIRS footprint
