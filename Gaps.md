@@ -3,7 +3,7 @@ GFW's AIS gaps dataset catalogues instances of long gaps in vessel's AIS signal 
 
 ## Key Tables
 
-+ `world-fishing-827.pipe_production_v20201001.proto_published_events_ais_gaps`: Date-partitioned table of AIS gap events of 12+ hours in duration. Includes the boolean field `intentional_disabling` to indicate gaps that are likely due to suspected disabling. **This is the primary table for analyses of AIS gaps.**
++ `world-fishing-827.pipe_production_v20201001.proto_published_events_ais_gaps`: Date-partitioned table of AIS gap events of 12+ hours in duration. Includes the boolean field `intentional_disabling` to indicate gaps that are likely due to suspected disabling. Presently, however, only intentional disabling events (`intentional_disabling = 'true'`) are included in this table. **This is the primary table for analyses of AIS gaps.**
 
 + `world-fishing-827.pipe_production_v20201001.proto_ais_gap_events`: Date-partitioned table of AIS gap events of 6+ hours in duration. This table can be used to identify gap events that are currently ongoing (`is_closed = False`) but must be filtered to select AIS disabling events.
 
