@@ -46,6 +46,7 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 + [published_fishing_events_and_pipe_comparison.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_fishing_events_and_pipe_comparison.sql) 
 + [published_fishing_events_in_polygon_w_vessel_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_fishing_events_in_polygon_w_vessel_info.sql) 
 + [published_fishing_events_by_position_in_polygon.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_fishing_events_by_position_in_polygon_v20230525.sql)
++ [published_events_unnest_auth_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql) - This query is to help reduce barriers with pulling information out of the published event table format (which can be tricky!). While I focus on pulling information on authorization, this example query is a great reference for any time you want to extract information nested in the vessel_info or event_info fields.
 
 ## Links
 
@@ -56,4 +57,5 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 Last updated on **May 25th, 2023**
 
 + **[May 2023]** The `proto_events_fishing` table which was used in Products was updated to the `published_events_fishing` table, and the `proto_events_fishing` table was removed in June 2023. The published events fishing table now includes information on vessel authorization status, consistent with how authorization status is determined in vessel encounters. 
++ **[Spring 2023]** Authorization information is now included for fishing events, following the same logic as encounters for determining authorization status. Note, authorization information is limited to 7 RFMOs (5 tuna RFMOs, NPFC, and SPRFMO).
 + **[Aug 24 2021]** In the previous version for fishing events (prior to `world-fishing-827.pipe_production_v20201001.proto_events_fishing`) fishing events were more simply defined. Events were created if consecutive AIS points were considered ‘fishing’ by the neural net, and fishing events were grouped if they were only separated in time by a short duration (e.g., 10 minutes). There were no restrictions to remove likely noise nor to separate events made of AIS positions in different seg_id's.
