@@ -1,19 +1,20 @@
 Fishing Events is a GFW data product which groups AIS fishing positions together into events. In addition to grouping fishing positions together, the Fishing Events table also has a set of minimally restrictive rules applied to separate large fishing events and to remove fishing events considered to be likely noise. 
 
-The current fishing events table was implemented in the 20201001 pipe as a proto table (`world-fishing-827.pipe_production_v20201001.proto_events_fishing`). The proto_events_fishing is currently visualized in the GFW public map.
+Fishing Events are displayed on vessel tracks in the Map. 
+
+Note, Fishing Events and the apparent fishing effort layer in the Map are not consistent. See data caveats for more information.  
 
 ## Key Tables
 
 Current version
-+ `world-fishing-827.pipe_production_v20201001.proto_events_fishing` - new logic
++ `world-fishing-827.pipe_production_v20201001.published_events_fishing`
 
 
-Note: Always use the `published_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.proto_events_fishing` then use that view table rather than `pipe_production_v20201001.proto_events_fishing_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+Note: Always use the `published_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_fishing` then use that view table rather than `pipe_production_v20201001.published_events_fishing_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
 
 
 Previous versions 
 + `world-fishing-827.pipe_production_v20190502.published_events_fishing` - old logic
-+ `world-fishing-827.pipe_production_v20201001.published_events_fishing` - old logic
 
 ## Source Tables
 
@@ -52,6 +53,7 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 + Fishing Event Tech Call slide deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 
 ## Updates
-Last updated on **August 24th, 2021**
+Last updated on **May 25th, 2023**
 
++ **[May 2023]** The `proto_events_fishing` table which was used in Products was updated to the `published_events_fishing` table, and the `proto_events_fishing` table was removed in June 2023. The published events fishing table now includes information on vessel authorization status, consistent with how authorization status is determined in vessel encounters. 
 + **[Aug 24 2021]** In the previous version for fishing events (prior to `world-fishing-827.pipe_production_v20201001.proto_events_fishing`) fishing events were more simply defined. Events were created if consecutive AIS points were considered ‘fishing’ by the neural net, and fishing events were grouped if they were only separated in time by a short duration (e.g., 10 minutes). There were no restrictions to remove likely noise nor to separate events made of AIS positions in different seg_id's.
