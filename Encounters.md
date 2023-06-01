@@ -2,7 +2,7 @@ Vessels meet at sea for a variety of reasons, including transshipment (transferr
 
 ## Key Tables
 
-+ `pipe_production_v20201001.published_events_encounters` - same as the encounters table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). 
++ `pipe_production_v20201001.published_events_encounters` - same as the encounters table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This table also includes information on vessel authorization status. 
 + `pipe_production_v20201001.encounters` - Source table for published events encounters table. This is not filtered by speed and has one row per encounter.
 
 > **Note**   
@@ -14,6 +14,10 @@ Vessels meet at sea for a variety of reasons, including transshipment (transferr
  * `world-fishing-827:pipe_static.spatial_measures_20200311`
  * `world-fishing-827:pipe_production_v20201001.segment_info`
  * `world-fishing-827:pipe_production_v20201001.position_messages_`
+ * `world-fishing-827.pipe_production_v20201001.all_vessels_byyear`
+ * `world-fishing-827.pipe_production_v20201001.vessel_info`
+ * `world-fishing-827.vessel_identity.identity_core`
+ * `world-fishing-827.vessel_identity.identity_authorization`
 
 ## Data Description
 
@@ -44,6 +48,7 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 + [encounters_2_carriers.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_2_carriers.sql) 
 + [encounters_3_carriers_vessel_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_3_carriers_vessel_info.sql) 
 + [encounters_4_original_table.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_4_original_table.sql) 
++ [published_events_unnest_auth_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql) - how to pull event authorization from published event table schema  
 + [loitering_overlap_encounters.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_overlap_encounters.sql) 
 + [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
 
