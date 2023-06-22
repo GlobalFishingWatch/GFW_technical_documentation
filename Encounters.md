@@ -41,7 +41,8 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 
 + Point nature of events; if ais transmission is poor, the average location can be inconsistent with full location of tracks during time period. In addition, due to the way events are combined across days, average event parameters are approximate.
 + Due to the definition of encounter and loitering events, loitering events can overlap with encounter events.
-+ Maintaining up to date identity changes of carrier and fishing vessels of interest in encounters between carrier and fishing vessels. Always use the most up-to-date identity tables, and verify results when possible. 
++ Maintaining up to date identity changes of carrier and fishing vessels of interest in encounters between carrier and fishing vessels. Always use the most up-to-date identity tables, and verify results when possible.
++ Vessels may encounter more than one vessel at a time, an issue that comes up frequently in the presence of gear, but also occasionally with multiple vessels meeting. 
 
 ## Example queries
 + [encounters_1_ssvid.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_1_ssvid.sql)  
@@ -55,6 +56,4 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 ## Related Content
 + [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) 
 
-## Updates
 
-Encounters are generated in a two stage process: first, “raw” encounters are generated daily then these encounters are joined together across multiple days. Prior to 2021 both of these steps were performed on the basis of `vessel_id`. However, in 2021, the first step was changed to use `seg_id` instead. This fixes some inconsistencies in the data and allows bad segments to be dropped from encounters reducing overall noise. A second change allowed vessels to encounter more than one vessel at a time, an issue that comes up frequently in the presence of gear, but also occasionally with multiple vessels meeting.
