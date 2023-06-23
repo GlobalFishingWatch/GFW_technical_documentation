@@ -45,10 +45,10 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 + Vessels may encounter more than one vessel at a time, an issue that comes up frequently in the presence of gear, but also occasionally with multiple vessels meeting. 
 
 ## Example queries
-+ [encounters_1_ssvid.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_1_ssvid.sql)  
-+ [encounters_2_carriers_fishing.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_2_carriers_fishing.sql) 
++ [encounters_1_ssvid.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_1_ssvid.sql) - this query pulls information on both vessels in the encounter, including vessel attributes that are nested within the `event_vessels` field  
++ [encounters_2_carriers_fishing.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_2_carriers_fishing.sql) - this query identifies encounters between carrier and fishing vessels, pulling from the shiptype attribute used in Products (eg mirroring the encounters you would expect to see in Products as of June 2023 when this query was drafted).
 + [encounters_3_carriers_vessel_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_3_carriers_vessel_info.sql) 
-+ [encounters_4_original_table.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_4_original_table.sql) 
++ [encounters_4_original_table.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_4_original_table.sql) - this query pull encounters with an average speed of greater than 2 knots from the original encounter table that is the base for the published event encounter table. Note, for the most part, the only encounters in the original table that are not in the `published_event_encounter` table, are those encounters with an average speed above 2 knots. 
 + [published_events_unnest_auth_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql) - how to pull event authorization from published event table schema  
 + [loitering_overlap_encounters.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_overlap_encounters.sql) 
 + [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
