@@ -16,6 +16,7 @@ Detailed information on all layers is found and updated here: https://globalfish
 
 A simplified list of sources is provided below:
 
-| Region Layer | Description | Source | Detailed Attributes | Modifications? |
+| Region Layer | Description | Source | Detailed Attributes | Notes |
 | --- | --- | --- | --- | --- | 
-| EEZ | AIS pipeline dataset to use | [Marine Regions](https://www.marineregions.org/) - Marine and land zones: the union of world country boundaries and EEZ's version 3 2020-03-17. | [EEZs](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/459014157/EEZ+Boundaries) | Yes |
+| EEZ | Maritime exclusive economic zones (200 nautical mile boundary) for all coastal nations. | [Marine Regions](https://www.marineregions.org/) - Marine and land zones: the union of world country boundaries and EEZ's version 3 2020-03-17. | [EEZs](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/459014157/EEZ+Boundaries) | Layer adjusted for processing, see detailed page  |
+| MPAs | Marine protected areas from The World Database on Protected Areas (WDPA) via protectedplanet.net | [Protected Planet](https://www.protectedplanet.net/en/search-areas?filters[db_type][]=wdpa&filters[is_type][]=marine)| [MPAs](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/459112468/WDPA+Marine+MPAs) | `no take` and `partial` MPAs are provided as separate layers in BQ |
