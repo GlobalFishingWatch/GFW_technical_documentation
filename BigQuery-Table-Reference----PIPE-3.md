@@ -6,7 +6,7 @@ Last update:
 
 
 | Subject | Description | BQ Table| Previous BQ Table | Owner |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | Andres |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `pipe_production_v3_alpha_published.messages` | `pipe_production_v20201001.research_messages` | Andres |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) | `pipe_production_v3_alpha_internal` | `messages_scored_` | 3.0 | Andres |
