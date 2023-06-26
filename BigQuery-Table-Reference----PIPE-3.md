@@ -5,7 +5,7 @@ Last update:
    * By: `Hannah Linder`
 
 
-| Subject | Description | BQ Table| Previous BQ Table | Developer |
+| Subject | Description | BQ Table| Previous BQ Table | Research Owner |
 | --- | --- | --- | --- | --- |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | Tim H, Jenn, Andres, Mathias |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `pipe_production_v3_alpha_published.messages` | `pipe_production_v20201001.research_messages` | Andres |
