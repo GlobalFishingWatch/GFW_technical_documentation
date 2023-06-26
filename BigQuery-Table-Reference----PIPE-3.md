@@ -5,25 +5,27 @@ Last update:
    * By: `Hannah Linder`
 
 
-| Subject | Description | BQ Table| Previous BQ Table | Owner |
+| Subject | Description | BQ Table| Previous BQ Table | Developer |
 | --- | --- | --- | --- | --- |
-| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | Andres |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | Tim H, Jenn, Andres, Mathias |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `pipe_production_v3_alpha_published.messages` | `pipe_production_v20201001.research_messages` | Andres |
-| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) | `pipe_production_v3_alpha_internal` | `messages_scored_` | 3.0 | Andres |
-| [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events no speed restrictions | `pipe_production_v20201001` | `encounters` | 2.5 | Nate |
-| [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters) | Encounter events in Published format for Products | `pipe_production_v20201001` | `published_events_encounters` | 2.5 | Nate |
-| [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering) | Loitering events | `pipe_production_v20201001` | `loitering` `published_events_loitering` | 2.5 | Pete |
-| [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering) | Loitering events in Published format for Products | `pipe_production_v20201001` | `published_events_loitering` | 2.5 | Hannah |
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Anchorage locations | `anchorages` | `named_anchorages_v20211026` | 2.5 | Nate |
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Individual port events (entry, start, gap, stop, exit) | `pipe_production_v20201001` | `proto_raw_port_events_*` | 2.5 | Tim H| 
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Archived original individual port events (entry, start, gap, stop, exit) | `pipe_production_v20201001` | `archive_20201001_port_events_*` | 2.5 | Tim H | 
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Port visits (grouped port events) | `pipe_production_v20201001` | `proto_port_visits` | 2.5 | Tim H |  
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Port visits (grouped port events) in Published format for Products | `pipe_production_v20201001` | `published_events_port_visits` | 2.5 | Hannah | 
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Previous version of Port visits version (grouped port events) | `pipe_production_v20201001` | `port_visits_`| 2.5 | Tim H | 
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Vessel voyages between anchorages | `pipe_production_v20201001` | `proto_voyages_c2` `proto_voyages_c3` `proto_voyages_c4` | 2.5 | Tim H |
-| [Ports](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages) | Previous version of Vessel voyages between anchorages | `pipe_production_v20201001` | `voyages` | 2.5 | Tim H |
-| [AIS gaps](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps) | AIS gaps and suspected disabling events | `pipe_production_v20201001` | `proto_ais_gap_events` | 2.5 | Tyler |
-| AIS offsetting | AIS offsetting by `seg_id` | `gfw_research_precursors` | `offsetting_year_seg_v20220609` | 2.5 | Pete |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Satellite timing offsets | `pipe_production_v3_alpha_published.satellite_timing_offsets` | `pipe_production_v20201001.research_satellite_timing` | Tim Hochberg |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS activity aggregated at the segment level with noise indicators| `pipe_production_v3_alpha_published.segs_activity` | `pipe_production_v20201001.research_segs` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS activity aggregated at the daily segment level with noise indicators| `pipe_production_v3_alpha_published.segs_activity_daily` | `pipe_production_v20201001.research_segs_daily` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Aggregated raw AIS identity information by ssvid| `pipe_production_v3_alpha_published.ssvids_identity` | `pipe_production_v20201001.research_ids` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Daily raw AIS identity information by ssvid| `pipe_production_v3_alpha_published.ssvids_identities_daily` | `pipe_production_v20201001.research_ids_daily` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Stats on AIS data daily| `pipe_production_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Aggregated vessel identity information by vessel id and ssvid| `pipe_production_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | ? |
 
-
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS ML features used in the fishing model estimates | `pipe_production_v3_alpha_internal.features_` | `pipe_production_v20201001.features` | Tim Hochberg |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Fishing score estimated using features | `pipe_production_v3_alpha_internal.fishing_score_` | `pipe_production_v20201001.fishing_score_` | Tim Hochberg |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Daily segments considered 'fragments' used to stitch together segments | `pipe_production_v3_alpha_internal.fragments_` | NA | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) | `pipe_production_v3_alpha_internal.messages_positions` | `pipe_production_v20201001.position_messages_` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) merged with estimated fishing scores | `pipe_production_v3_alpha_internal.messages_scored_` | `pipe_production_v20201001.messages_scored_` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (all messages) merged with segment ids | `pipe_production_v3_alpha_internal.messages_segmented_` | `pipe_production_v20201001.messages_segmented_` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS daily SSVID identity information merged with associated seg id | `pipe_production_v3_alpha_internal.segment_identity_daily_` | `pipe_production_v20201001.segment_identity_daily_` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Aggregated segment and vessel id information | `pipe_production_v3_alpha_internal.segment_info` | `pipe_production_v20201001.segment_info` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Aggregated matching of segment, vessel id, and ssvid | `pipe_production_v3_alpha_internal.segment_vessel` | `pipe_production_v20201001.segment_vessel` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Daily matching of segment, vessel id, and ssvid | `pipe_production_v3_alpha_internal.segment_vessel_daily_` | `pipe_production_v20201001.segment_vessel_daily` | ? |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Daily determination of seg id from frag ids | `pipe_production_v3_alpha_internal.segments_` | `pipe_production_v20201001.segments_` | ? |
 
