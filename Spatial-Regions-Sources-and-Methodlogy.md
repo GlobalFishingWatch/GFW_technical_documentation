@@ -18,4 +18,4 @@ A simplified list of sources is provided below:
 
 | Region Layer | Description | Source | Detailed Attributes | Modifications? |
 | --- | --- | --- | --- | --- | 
-| EEZ | AIS pipeline dataset to use | `[Marine Regions](https://www.marineregions.org/) - Marine and land zones: the union of world country boundaries and EEZ's version 3 2020-03-17. | https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/459014157/EEZ+Boundaries | Yes |
+| EEZ | AIS pipeline dataset to use | [Marine Regions](https://www.marineregions.org/) - Marine and land zones: the union of world country boundaries and EEZ's version 3 2020-03-17. | [EEZs](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/459014157/EEZ+Boundaries) | Yes |
