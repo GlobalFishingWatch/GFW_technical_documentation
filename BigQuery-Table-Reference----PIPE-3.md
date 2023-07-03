@@ -16,11 +16,6 @@ Last update:
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Daily raw AIS identity information by ssvid| `pipe_production_v3_alpha_published.ssvids_identities_daily` | `pipe_production_v20201001.research_ids_daily` | ? |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Stats on AIS data daily| `pipe_production_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | ? |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Aggregated vessel identity information by vessel id and ssvid| `pipe_production_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | ? |
-
-
-
-
-
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS ML features used in the fishing model estimates | `pipe_production_v3_alpha_internal.features_` | `pipe_production_v20201001.features` | Tim Hochberg |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Fishing score estimated using features | `pipe_production_v3_alpha_internal.fishing_score_` | `pipe_production_v20201001.fishing_score_` | Tim Hochberg |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Daily segments considered 'fragments' used to stitch together segments | `pipe_production_v3_alpha_internal.fragments_` | NA | ? |
