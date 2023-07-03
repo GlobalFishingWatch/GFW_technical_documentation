@@ -28,8 +28,8 @@ TBD
 
 ## Links
 
-+ All vessels v1 confluence [HERE] (https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/445284357/How+to+generate+the+all+vessels+byyear+v+table)
-+ Vessel API link to All vessels [HERE] (https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow)
++ All vessels v1 confluence [HERE](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/445284357/How+to+generate+the+all+vessels+byyear+v+table)
++ Vessel API link to All vessels [HERE](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow)
 
 ## Updates
 Last updated on **July 3rd, 2023**
