@@ -25,7 +25,9 @@ Base Vessel Identity Info (step 1)
 
 ## Data Description
 
-TBD
+The All Vessels table is the sole table used to identify which vessels (vessel_ids) to include in Product and what information to associate with the vessel. The additional fields on vessel activity, vessel type, and noise are primarily for GFW staff, and, in particular, GFW analysts, to understand why a vessel appears the way it does in Products, or why a vessel may not be visible to non-GFW staff. 
+
+All the data attributes required to understand why a vessel is classified the way it is in Products or why a vessel is excluded or missing from a Product are included in this table. 
 
 
 ## Caveats and Known Issues
