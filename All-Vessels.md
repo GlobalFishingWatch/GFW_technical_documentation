@@ -1,4 +1,4 @@
-The All Vessels table is used in Products to select what vessels to show in various Product layers, and how to represent the data, depending on shiptype  
+The All Vessels table is used in Products to select what vessels to show in various Product layers, and how to represent the data, depending on shiptype.  
 
 ## Key Tables
 
@@ -11,7 +11,17 @@ Previous versions
 
 ## Source Tables
 
-TBD
+All Vessels
++ base vessel identity info (step 1 of creating Vessel API)
++ `world-fishing-827.gfw_research.vi_ssvid_byyear_vYYYYMMDD`
++ `world-fishing-827.vessel_database.purse_seine_support_vessels_byyear_vYYYYMMDD`
+
+
+Base Vessel Identity Info (step 1)
++ `world-fishing-827.vessel_identity.identity_core`
++ `world-fishing-827.pipe_production_v20201001.vessel_info`
++ `world-fishing-827.pipe_production_v20201001.research_segs`
++ `world-fishing-827.pipe_production_v20201001.segment_info`
 
 ## Data Description
 
