@@ -1,5 +1,7 @@
 The All Vessels table is used in Products to select what vessels to show in various Product layers, and how to represent the data, depending on shiptype.  
 
+[Feedback form](https://forms.gle/ErASvnmezcQGLQNu8) to provide feedback on All Vessels table by August 31st 2023
+
 ## Key Tables
 
 Current version
