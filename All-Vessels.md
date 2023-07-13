@@ -34,7 +34,8 @@ All the data attributes required to understand why a vessel is classified the wa
 
 ## Caveats and Known Issues
 
-TBD
++ **Noise filter:** Products only include non-noisy segments, and subsequently vessel_id's with at least one non-noisy seg_id (eg passes the `WHERE good_seg and NOT overlapping_and_short` filter) are excluded from Products.
++ **Time range match:** For there to be a match between hull id (eg `vessel_record_id`) and `vessel_id`, the time ranges of the two fields must overlap. Records with multiple identity characteristics that match (eg fuzzy ship name, callsign, imo, ssvid) still require a timestamp overlap for a match to occur. 
 
 ## Example Queries
 
