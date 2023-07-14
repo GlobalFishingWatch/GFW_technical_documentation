@@ -16,21 +16,10 @@ In order to estimate the clocks offset we compare the times from clocks on all o
 
 This table is derived directly from the `normalized_spire` sources, e.g., `pipe_ais_sources_v20220628.normalized_spire_*`
 
-## Use of Table
+This table is used to automatically drop all the messages from satellites with clocks that are off by more than 30 s (I need to check that), this happens on an hour by hour basis. This only applies to Spire. 
 
-+ Automatically drop all the messages from satellites with clocks that are off by more than 30 s (I need to check that), this happens on an hour by hour basis. This only applies to Spire. Pretty sure we don’t try to fix the timestamps currently just drop the ones that are way off (in part because once the clocks are sufficiently far off, the estimate starts to become less trustworthy).  The table is available though for anyone who want to try to adjust the clocks by hand or do anything else with the time offsets.
+The messages are dropped because they really mess up the tracks particularly when the clocks get really off. When you really notice is when two receivers are getting messages and one is a few minutes off, the boat periodically appears to move backward and forward in space when you map it, although it’s really the timestamps are off and the position information is fine. Often the segmenter will drop these into their own bad segment, but not always.
 
-## Example queries
-+ [encounters_1_ssvid.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_1_ssvid.sql) - this query pulls information on both vessels in the encounter, including vessel attributes that are nested within the `event_vessels` field  
-+ [encounters_2_carriers_fishing.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_2_carriers_fishing.sql) - this query identifies encounters between carrier and fishing vessels, pulling from the shiptype attribute used in Products (eg mirroring the encounters you would expect to see in Products as of June 2023 when this query was drafted).
-+ [encounters_3_iccat.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_3_iccat.sql) - new example query that pulls out encounters that occurred inside ICCAT. Pulls using the ICCAT shapefile in the `pipe_regions_layers` bin. Technically you could also use the method in the below example query to identify encounters in ICCAT - both pulling region information from within the published events table, and using the regions shapefiles in the `pipe_regions_layers` should yield the same results. 
-+ [encounters_3_no_take_mpa.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_3_no_take_mpa.sql) - new example query that pulls out encounters that occurred inside a no take MPA based on the region information in the Map.
-+ [encounters_4_original_table.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_4_original_table.sql) - this query pull encounters with an average speed of greater than 2 knots from the original encounter table that is the base for the published event encounter table. Note, for the most part, the only encounters in the original table that are not in the `published_event_encounter` table, are those encounters with an average speed above 2 knots. 
-+ [published_events_unnest_auth_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql) - how to pull event authorization from published event table schema  
-+ [loitering_overlap_encounters.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_overlap_encounters.sql) 
-+ [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
 
-## Related Content
-+ [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) 
 
 
