@@ -46,6 +46,6 @@ All Vessels v2
 + All Vessels v2 Confluence with code to build table [HERE](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/509345793/How+to+generate+the+all+vessels+byyear+v2+v+table+prototype)
 
 ## Updates
-Last updated on **July 3rd, 2023**
+Last updated on **July 19th, 2023**
 
 + **[July 2023]** The `all_vessels_byyear_v2` table is shared internally.  
