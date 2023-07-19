@@ -2,44 +2,41 @@ The All Vessels table is the sole table used to identify which vessels (vessel_i
 
 All the data attributes required to understand why a vessel is classified the way it is in Products or why a vessel is excluded or missing from a Product are included in this table.  
 
-[Feedback form](https://forms.gle/ErASvnmezcQGLQNu8) to **provide feedback on All Vessels table by August 31st 2023**
+[Feedback form](https://forms.gle/ErASvnmezcQGLQNu8) to **provide feedback on All Vessels v2 table by August 31st 2023**
 
 ## Key Tables
 
-Current version
-+ `world-fishing-827.pipe_production_v20201001.all_vessels_byyear_v2`
+NEW version - collecting feedback
++ `world-fishing-827.pipe_production_v20201001.all_vessels_byyear_v2` **COMING SOON**
 
 
-Previous versions 
+Current version 
 + `world-fishing-827.pipe_production_v20201001.all_vessels_byyear`
 
 ## Source Tables
 
-All Vessels
-+ base vessel identity info (step 1 of creating Vessel API)
+All Vessels v2
++ `world-fishing-827.pipe_production_v20201001.base_vessel_identity_info` **COMING SOON** engineer and data team table which is an intermediate step in creating the Vessel Identity API. This table uses the following source tables
+> * `world-fishing-827.vessel_identity.identity_core`
+> * `world-fishing-827.pipe_production_v20201001.vessel_info`
+> * `world-fishing-827.pipe_production_v20201001.research_segs`
+> * `world-fishing-827.pipe_production_v20201001.segment_info`
 + `world-fishing-827.gfw_research.vi_ssvid_byyear_vYYYYMMDD`
 + `world-fishing-827.vessel_database.purse_seine_support_vessels_byyear_vYYYYMMDD`
 
-
-Base Vessel Identity Info (step 1)
-+ `world-fishing-827.vessel_identity.identity_core`
-+ `world-fishing-827.pipe_production_v20201001.vessel_info`
-+ `world-fishing-827.pipe_production_v20201001.research_segs`
-+ `world-fishing-827.pipe_production_v20201001.segment_info`
-
 ## Data Description
 
-TBD
++ **UNDER CONSTRUCTION** For now, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for more.
 
 
 ## Caveats and Known Issues
 
 + **Noise filter:** Products only include non-noisy segments, and subsequently vessel_id's with at least one non-noisy seg_id (eg passes the `WHERE good_seg and NOT overlapping_and_short` filter) are excluded from Products.
-+ **Time range match:** For there to be a match between hull id (eg `vessel_record_id`) and `vessel_id`, the time ranges of the two fields must overlap. Records with multiple identity characteristics that match (eg fuzzy ship name, callsign, imo, ssvid) still require a timestamp overlap for a match to occur. 
++ **UNDER CONSTRUCTION** For now, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Caveats` section for more. 
 
 ## Example Queries
 
-+ TBD
++ **UNDER CONSTRUCTION** For now, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Use cases` section for more.
 
 ## Links
 
