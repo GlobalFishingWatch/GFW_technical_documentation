@@ -2,7 +2,7 @@ The All Vessels table is the sole table used to identify which vessels (vessel_i
 
 All the data attributes required to understand why a vessel is classified the way it is in Products or why a vessel is excluded or missing from a Product are included in this table.  
 
-[Feedback form](https://forms.gle/ErASvnmezcQGLQNu8) to **provide feedback on All Vessels v2 table by August 31st 2023**
+Please **provide feedback on All Vessels v2 table by August 31st 2023.** See `LINKS` section for feedback form links.
 
 ## Key Tables
 
@@ -40,10 +40,14 @@ All Vessels v2
 
 ## Links
 
-+ Survey to collect feedback on All Vessels v2 [HERE](https://forms.gle/ErASvnmezcQGLQNu8)
-+ All Vessels data template documentation [HERE](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1)
-+ Vessel API link to All vessels [HERE](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow)
-+ All Vessels v2 Confluence with code to build table [HERE](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/509345793/How+to+generate+the+all+vessels+byyear+v2+v+table+prototype)
+Feedback **(Priority to feedback submitted before August 31st 2023)**
++ [All Vessels v2 Vessel/Fleet Specific Feedback Form](https://forms.gle/FfzsY9mtCcbg3M6AA)
++ [All Vessels v2 Feedback Form](https://forms.gle/ErASvnmezcQGLQNu8)
+
+All Vessels
++ [All Vessels data template documentation](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1): redundant in many ways to the GitWiki. Intended to flesh out field definitions and other data tables in a format accessible by non-github using staff.
++ [Vessel API link to All vessels](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow): Diagram showing how All Vessels v2 fits within the work flow of the Vessel Identity API
++ [All Vessels v2 Confluence](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/509345793/How+to+generate+the+all+vessels+byyear+v2+v+table+prototype): Includes source tables and code used to populated All Vessels v2 table. 
 
 ## Updates
 Last updated on **July 19th, 2023**
