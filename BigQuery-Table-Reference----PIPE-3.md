@@ -1,7 +1,20 @@
 This page contains the list and location of the BigQuery datasets and tables composing AIS Pipe 3. These BQ tables are for internal testing only for Q3 2023, but will replace all previous pipe_production_v20201001 tables upon completion of internal testing. 
 
+Table Development and Ownership: 
+
+Andres Arana - lead engineer
+Matias Piano - core engineer
+Jenn Van Osdel - Researcher lead - Identity and Review of Segmenter
+Tim Hochberg - Researcher lead - Segmenter
+Chris Homberg - QA Analyst
+Hannah Linder - Pipeline Manager
+
+
+Data pipeline ownership falls with the pipeline engineering team, currently Andres Arana and Matias Piano. This means they operate, maintain, and develop and deprecate  the core pipeline data outputs. The naming, security, versioning control of these tables is decided upon across all engineers, Pipeline Manager, and CTO. Development of the pipeline logic and methodology was originally created outside of the pipeline team that developed Pipeline 3. In the future the pipeline methodology is developed by partnership between the Research team and Engineering team. 
+
+
 Last update:
-   * Date: `2023-06-26`
+   * Date: `2023-07-24`
    * By: `Hannah Linder`
 
 
