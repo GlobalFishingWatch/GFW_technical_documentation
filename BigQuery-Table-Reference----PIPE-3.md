@@ -5,9 +5,9 @@ Last update:
    * By: `Hannah Linder`
 
 
-| Subject | Description | BQ Table| Previous BQ Table | Research Owner |
-| --- | --- | --- | --- | --- |
-| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | Tim H, Jenn, Andres, Mathias |
+| Subject | Description | BQ Table| Previous BQ Table |
+| --- | --- | --- | --- |
+| [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | 
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS position table (thinned) | `pipe_production_v3_alpha_published.messages` | `pipe_production_v20201001.research_messages` | Andres |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | Satellite timing offsets | `pipe_production_v3_alpha_published.satellite_timing_offsets` | `pipe_production_v20201001.research_satellite_timing` | Tim Hochberg |
 | [AIS](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline) | AIS activity aggregated at the segment level with noise indicators| `pipe_production_v3_alpha_published.segs_activity` | `pipe_production_v20201001.research_segs` | ? |
