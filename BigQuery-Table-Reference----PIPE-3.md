@@ -18,6 +18,7 @@ Last update:
    * By: `Hannah Linder`
 
 
+## AIS Pipe 3 -- Published
 | Description | BQ Table| Previous BQ Table |
 | --- | --- | --- |
 | AIS pipeline dataset to use | `pipe_ais_v3_alpha`| `pipe_production_v20201001` | 
@@ -29,6 +30,10 @@ Last update:
 | Daily raw AIS identity information by ssvid| `pipe_production_v3_alpha_published.ssvids_identities_daily` | `pipe_production_v20201001.research_ids_daily` | 
 | Stats on AIS data daily| `pipe_production_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | 
 | Aggregated vessel identity information by vessel id and ssvid| `pipe_production_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | 
+
+## AIS Pipe 3 -- Internal
+| Description | BQ Table| Previous BQ Table |
+| --- | --- | --- |
 | AIS ML features used in the fishing model estimates | `pipe_production_v3_alpha_internal.features_` | `pipe_production_v20201001.features_` | 
 | Fishing score estimated using features | `pipe_production_v3_alpha_internal.fishing_score_` | `pipe_production_v20201001.fishing_score_` | 
 | Daily segments considered 'fragments' used to stitch together segments | `pipe_production_v3_alpha_internal.fragments_` | NA |
@@ -40,3 +45,4 @@ Last update:
 | Aggregated matching of segment, vessel id, and ssvid | `pipe_production_v3_alpha_internal.segment_vessel` | `pipe_production_v20201001.segment_vessel` |
 | Daily matching of segment, vessel id, and ssvid | `pipe_production_v3_alpha_internal.segment_vessel_daily_` | `pipe_production_v20201001.segment_vessel_daily_` |
 | Daily determination of seg id from frag ids | `pipe_production_v3_alpha_internal.segments_` | `pipe_production_v20201001.segments_` |
+
