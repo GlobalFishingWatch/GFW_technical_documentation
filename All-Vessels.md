@@ -7,7 +7,7 @@ Please **provide feedback on All Vessels v2 table by August 31st 2023.** See `LI
 ## Key Tables
 
 NEW version - collecting feedback
-+ `world-fishing-827.pipe_production_v20201001.all_vessels_byyear_v2` **COMING SOON**
++ `world-fishing-827.pipe_production_v20201001.all_vessels_byyear_v2`
 
 
 Current version 
@@ -16,7 +16,7 @@ Current version
 ## Source Tables
 
 All Vessels v2
-+ `world-fishing-827.pipe_production_v20201001.base_vessel_identity_info` **COMING SOON** engineer and data team table which is an intermediate step in creating the Vessel Identity API. This table uses the following source tables
++ `world-fishing-827.pipe_production_v20201001.base_vessel_identity_info` - engineer and data team table which is an intermediate step in creating the Vessel Identity API. This table uses the following source tables
 > * `world-fishing-827.vessel_identity.identity_core`
 > * `world-fishing-827.pipe_production_v20201001.vessel_info`
 > * `world-fishing-827.pipe_production_v20201001.research_segs`
