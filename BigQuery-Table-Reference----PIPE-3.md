@@ -14,7 +14,7 @@ Data pipeline ownership falls with the pipeline engineering team, currently Andr
 
 
 Last update:
-   * Date: `2023-07-24`
+   * Date: `2023-08-21`
    * By: `Hannah Linder`
 
 
@@ -30,6 +30,11 @@ Last update:
 | Daily raw AIS identity information by ssvid| `pipe_production_v3_alpha_published.ssvids_identities_daily` | `pipe_production_v20201001.research_ids_daily` | 
 | Stats on AIS data daily| `pipe_production_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | 
 | Aggregated vessel identity information by vessel id and ssvid| `pipe_production_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | 
+| Encounter events| `pipe_production_v3_alpha_published.encounters` | `pipe_production_v20201001.encounters` | 
+| Loitering events| `pipe_production_v3_alpha_published.loitering` | `pipe_production_v20201001.loitering` | 
+| Port visits by vessels| `pipe_production_v3_alpha_published.port_visits` | `pipe_production_v20201001.proto_port_visits` | 
+| Confidence 3 vessel voyages| `pipe_production_v3_alpha_published.voyages_c3` | `pipe_production_v20201001.proto_voyages_c3` | 
+| Confidence 4 vessel voyages| `pipe_production_v3_alpha_published.voyages_c4` | `pipe_production_v20201001.proto_voyages_c4` | 
 
 ## AIS Pipe 3 -- Internal
 | Description | BQ Table| Previous BQ Table |
@@ -45,4 +50,13 @@ Last update:
 | Aggregated matching of segment, vessel id, and ssvid | `pipe_production_v3_alpha_internal.segment_vessel` | `pipe_production_v20201001.segment_vessel` |
 | Daily matching of segment, vessel id, and ssvid | `pipe_production_v3_alpha_internal.segment_vessel_daily_` | `pipe_production_v20201001.segment_vessel_daily_` |
 | Daily determination of seg id from frag ids | `pipe_production_v3_alpha_internal.segments_` | `pipe_production_v20201001.segments_` |
+| Intermediate internal table that's
+used to later aggregate into merged final encounter events | `pipe_production_v3_alpha_internal.raw_encounters_` | `pipe_production_v20201001.raw_encounters_` |
+| Intermediate internal table that's
+used to later aggregate into actual loitering events | `pipe_production_v3_alpha_internal.raw_loitering_` | `pipe_production_v20201001.raw_loitering_` |
+| Port events before developed into port visits | `pipe_production_v3_alpha_internal.raw_port_events_` | `pipe_production_v20201001.proto_raw_port_events_` |
+| Estimate of confidence 2 level voyages | `pipe_production_v3_alpha_internal.voyages_c2` | `pipe_production_v20201001.proto_voyages_c2` |
+
+
+
 
