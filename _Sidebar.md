@@ -35,7 +35,7 @@
 
 # AIS Pipe 3 Update Resources
 - [BigQuery Table Reference PIPE 3](BigQuery-Table-Reference----PIPE-3)
-- [Spatial Regions Sources and Methodlogy](Spatial-Regions-Sources-and-Methodlogy)
+- [Spatial Regions Sources and Methodology](Spatial-Regions-Sources-and-Methodology)
 - [Satellite Timing Offset Table](Satellite-Timing-Offset-Table)
 
 
