@@ -1,7 +1,7 @@
 This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis. 
 
 Last update:
-   * Date: `2023-06-26`
+   * Date: `2023-07-03`
    * By: `Hannah Linder`
    * Note on update cycle: All layers in pipe_regions are updated on an annual basis EXCEPT for Marine protected areas from The World Database 
      on Protected Areas (WDPA) via protectedplanet.net. These layers are updated on a monthly basis. 
