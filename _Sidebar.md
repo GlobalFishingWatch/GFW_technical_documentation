@@ -8,6 +8,7 @@
 # Data products
 
 - [All Vessels (in drafting)](All-vessels)
+- [Coverage (in drafting)](Coverage)
 - [Pipeline](Pipeline)
 - [Fishing effort and vessel presence](Fishing-effort-and-vessel-presence)
 - [Fishing events](Fishing-events)
