@@ -32,7 +32,7 @@
 
 - [Wiki Documentation Standards](Wiki-Documentation-Standards)
 - [Useful links](Useful-links)
-- Data products page template
+- [Data products page TEMPLATE](Data-products-page-TEMPLATE)
 
 # AIS Pipe 3 Update Resources
 - [BigQuery Table Reference PIPE 3](BigQuery-Table-Reference----PIPE-3)
