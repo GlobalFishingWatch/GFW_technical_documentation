@@ -3,7 +3,7 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 
 ## Key Tables
 
-+ There is no key table for `coverage`. Coverage is instead calculated in the API without an associated BigQuery table, because coverage is calculated every day (with a 3 day delay) for a vessels activity in the previous year. The coverage value therefore must be recalculated every day, and also must consider if you are vessel records being manually merged together, which requires individual calculations for every manual merge configuration. 
++ There is no key table for coverage. Coverage is instead calculated in the API without an associated BigQuery table, because coverage is calculated every day (with a 3 day delay) for a vessels activity in the previous year. The coverage value therefore must be recalculated every day, and also must consider if you are vessel records being manually merged together, which requires individual calculations for every manual merge configuration. 
 
 ## Source Tables
 
@@ -22,7 +22,7 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 
 ## Example Queries
 
-+ **To be added shortly**
++ **To be added shortly** with loom video for additional context/support
 
 ## Links
 
@@ -30,5 +30,3 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 
 ## Updates
 Last updated on **October 18, 2023**
-
-+ **[DATE]** First update TBD
