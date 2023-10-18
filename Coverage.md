@@ -7,7 +7,7 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 
 ## Source Tables
 
-+ `world-fishing-827.pipe_v20201001_api.indicators_coverage_blocks` - daily hourly coverage rate per vessel_id. Each vessel_id lists for every day the number of hours the vessel was active, and the number of hours were at least one AIS transmission was counted. In this way, this table provides a daily coverage value which gets aggregated together in the API to get an overall coverage value. See example query section for query which illustrates how to nearly replicate the coverage calculation seen in Vessel View. 
++ `world-fishing-827.pipe_v20201001_api.indicators_coverage_blocks` - daily hourly coverage rate per vessel_id. Each vessel_id lists for every day the number of hours the vessel was active, and the number of hours were at least one AIS transmission was counted. In this way, this table provides a daily coverage value which gets aggregated together in the API to get an overall coverage value. See example query section for query which illustrates how to nearly replicate the coverage calculation seen in Vessel Viewer. 
 + `pipe_production_v20201001.vessel_info` - used to set the date range for a vessels activity (vessel_id resolution)
 
 ## Data Description
