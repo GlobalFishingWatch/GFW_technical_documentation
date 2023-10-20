@@ -1,4 +1,4 @@
-The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a contextual piece of information to help users identify how useful/complete the activity summary for the vessel being searched is. See Data Description section for more information. 
+The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a contextual piece of information to help users identify how useful/complete the activity summary for the vessel being searched is. The coverage metric is a percentage representing the proportion of one hour blocks a vessel is in a voyage and has at least one AIS transmission. See Data Description section for more information. 
 
 
 ## Key Tables
@@ -21,8 +21,10 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 + **One year intervals:** In Products, the coverage metric is calculated for the past year of activity with a three day delay. If a vessel of interest has primarily been active during at time not in the past year, then the coverage value is not very useful. However coverage can manually be calculated in BigQuery in these cases. See Example Queries for more.   
 
 ## Example Queries
-
-+ **To be added shortly** with loom video for additional context/support
+** if trying to replicate coverage in Vessel Viewer, user should define time range for one year period considering 3 day delay. For example if user looks at coverage in Vessel Viewer on Oct 20th 2023, then date range in example query should be set for Oct 17th 2023 to Oct 17th 2022. 
++ [coverage_single_vessel_id.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/coverage_single_vessel_id.sql) - coverage for specified vessel_id and user defined time range
++ [coverage_multi_vessel_id.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/coverage_multi_vessel_id.sql) - coverage for list of vessel_ids with user defined time range
++ [coverage_aggregate.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/coverage_aggregate.sql) - aggregate coverage vessel for select group of vessel_ids and user defined time range 
 
 ## Links
 
