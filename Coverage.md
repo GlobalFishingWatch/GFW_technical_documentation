@@ -3,11 +3,12 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 
 ## Key Tables
 
-+ There is no key table for coverage. Coverage is instead calculated in the API without an associated BigQuery table, because coverage is calculated every day (with a 3 day delay) for a vessels activity in the previous year. The coverage value therefore must be recalculated every day, and also must consider if you are vessel records being manually merged together, which requires individual calculations for every manual merge configuration. 
++ There is no key table for coverage. Coverage is instead calculated in the API without an associated BigQuery table, because coverage is calculated every day (with a 3 day delay) for a vessels activity in the previous year. The coverage value therefore must be recalculated every day, and also must consider if you are vessel records being manually merged together, which requires individual calculations for every manual merge configuration. See Example Queries sections for information on how to manually calculate coverage. 
 
 ## Source Tables
 
-+ `world-fishing-827.pipe_v20201001_api.indicators_coverage_blocks` - daily hourly coverage rate per vessel_id. Each vessel_id lists for every day the number of hours the vessel was active, and the number of hours were at least one AIS transmission was counted. In this way, this table provides a daily coverage value which gets aggregated together in the API to get an overall coverage value. See example query section for query which illustrates how to nearly replicate the coverage calculation seen in Vessel Viewer. 
++ `pipe_v20201001_api.indicators_coverage_blocks_v2` (v2 used in vv 2.0; should be used as default) - daily hourly coverage rate per vessel_id. Each vessel_id lists for every day the number of hours the vessel was active, and the number of hours were at least one AIS transmission was counted. In this way, this table provides a daily coverage value which gets aggregated together in the API to get an overall coverage value. See example query section for query which illustrates how to nearly replicate the coverage calculation seen in Vessel Viewer.
++ `pipe_v20201001_api.indicators_coverage_blocks` (original version currently used in vv (prototype)) - this table is generally reflective of what is in v2, but is maintained separately for vv (prototype).   
 + `pipe_production_v20201001.vessel_info` - used to set the date range for a vessels activity (vessel_id resolution)
 
 ## Data Description
