@@ -31,4 +31,4 @@ The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a
 + [Vessel Viewer FAQs](https://drive.google.com/file/d/1Z3WAgFrsibAUjtrapMnvs8m9ZrDXp-8T/view?pli=1) - see bottom of page 6 for description of how coverage is defined. 
 
 ## Updates
-Last updated on **October 18, 2023**
+Last updated on **October 20, 2023**
