@@ -35,6 +35,8 @@ Last update:
 | Port visits by vessels| `pipe_ais_v3_alpha_published.port_visits` | `pipe_production_v20201001.proto_port_visits` | 
 | Confidence 3 vessel voyages| `pipe_ais_v3_alpha_published.voyages_c3` | `pipe_production_v20201001.proto_voyages_c3` | 
 | Confidence 4 vessel voyages| `pipe_ais_v3_alpha_published.voyages_c4` | `pipe_production_v20201001.proto_voyages_c4` | 
+| Vessel database (registry) table| `pipe_ais_v3_alpha_published.all_vessels_v` | `vessel_database.all_vessels_v` | 
+
 
 ## AIS Pipe 3 -- Internal
 | Description | BQ Table| Previous BQ Table |
