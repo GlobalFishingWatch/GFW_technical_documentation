@@ -48,6 +48,7 @@ All Vessels
 Last updated on **November 6th, 2023**
 
 + **[Oct 2023]** `all_vessels_byyear_v2` released in Products, with updates from internal feedback survey. 
+> Changes in the table
 > * added most frequent imo transmitted on AIS
 > * added most frequent callsign transmitted on AIS
 > * renamed flag field to mmsi_flag to make it clear that this flag is populated based on the first 3 digits of the MMSI transmitted on AIS
@@ -57,4 +58,6 @@ Last updated on **November 6th, 2023**
 > * Within prod_shiptype field, eliminated the 'potential_fishing' shiptype option, and reclassified those vessels to ‘fishing’ to reduce confusion. We maintained the potential_fishing boolean field (see data template for field definition). See whimsical in data template on how shiptype and geartype are designated for clarity on what this means for how shiptype is determined. (shout out to Matt for spearheading the whimsical)
 > * changed how prod_geartype field is populated, to reflect exactly what is expected to be seen in Products.
 > * added potential_fishing_source field. This indicates the highest confidence field used to inform the potential_fishing boolean field.
+
+> Impacts
 + **[July 2023]** The `all_vessels_byyear_v2` table is shared internally.  
