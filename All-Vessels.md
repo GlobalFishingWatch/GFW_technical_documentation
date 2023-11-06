@@ -26,7 +26,6 @@ All Vessels v2
 
 + **UNDER CONSTRUCTION** For now, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for more.
 
-
 ## Caveats and Known Issues
 
 + **Noise filter:** Products only include non-noisy segments, and subsequently vessel_id's with at least one non-noisy seg_id (eg passes the `WHERE good_seg and NOT overlapping_and_short` filter) are excluded from Products.
