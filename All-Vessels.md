@@ -5,11 +5,11 @@ The All Vessels table is the sole table used to identify which vessels (vessel_i
 ## Key Tables
 
 Current version
-+ `world-fishing-827.pipe_production_v20201001.all_vessels_byyear_v2`
++ `pipe_production_v20201001.all_vessels_byyear_v2`
 
 
 Previous version 
-+ `world-fishing-827.pipe_production_v20201001.all_vessels_byyear`
++ `pipe_production_v20201001.all_vessels_byyear`
 
 ## Source Tables
 
