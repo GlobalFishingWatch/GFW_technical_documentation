@@ -44,7 +44,7 @@ All Vessels
 Last updated on **November 6th, 2023**
 
 + **[Oct 2023]** `all_vessels_byyear_v2` released in Products, with updates from internal feedback survey. 
-> Changes in the table
+> **Updates to table:**
 > * added most frequent imo transmitted on AIS
 > * added most frequent callsign transmitted on AIS
 > * renamed flag field to mmsi_flag to make it clear that this flag is populated based on the first 3 digits of the MMSI transmitted on AIS
@@ -55,5 +55,12 @@ Last updated on **November 6th, 2023**
 > * changed how prod_geartype field is populated, to reflect exactly what is expected to be seen in Products.
 > * added potential_fishing_source field. This indicates the highest confidence field used to inform the potential_fishing boolean field.
 
-> Impacts
+> **Impacts on other datasets:** 
+For engineering reasons (mainly the maintenance of Vessel Viewer (prototype)), we need to maintain All Vessels v1 and the AIS Published Event datasets along side All Vessels v2. That said, for the time being there are two sets of published event tables. **Please use the following tables moving forward for analysis.** If you have any questions about this, please reach out.
+> * all_vessels: pipe_production_v20201001.all_vessels_byyear_v2
+> * coverage block: pipe_v20201001_api.indicators_coverage_blocks_v2
+> * encounters: pipe_production_v20201001.published_events_encounters_v2
+> * fishing: pipe_production_v20201001.published_events_fishing_v2
+> * loitering: pipe_production_v20201001.published_events_loitering_v2
+> * port visits: pipe_production_v20201001.published_events_port_visits_v2
 + **[July 2023]** The `all_vessels_byyear_v2` table is shared internally.  
