@@ -75,11 +75,13 @@ Last updated on **November 6th, 2023**
 
 > **Impacts on other datasets:** 
 For engineering reasons (mainly the maintenance of Vessel Viewer (prototype)), we need to maintain All Vessels v1 and the AIS Published Event datasets along side All Vessels v2. That said, for the time being there are two sets of published event tables. **Please use the following tables moving forward for analysis.** If you have any questions about this, please reach out.
-> * all_vessels: pipe_production_v20201001.all_vessels_byyear_v2
-> * coverage: pipe_v20201001_api.indicators_coverage_blocks_v2
-> * encounters: pipe_production_v20201001.published_events_encounters_v2
-> * fishing events: pipe_production_v20201001.published_events_fishing_v2
+> * all_vessels: `pipe_production_v20201001.all_vessels_byyear_v2`
+> * coverage: `pipe_v20201001_api.indicators_coverage_blocks_v2`
+> * encounters: `pipe_production_v20201001.published_events_encounters_v2` - carriers and fishing vessels are identified differently in  All Vessels v2. Thus which encounters are flagged as carrier-fishing and support-fishing and thus included publicly in map are different. See below for more details.
+> > * Carrier vessels (and bunker vessels) require a match to a hull_id in the identity core table to be flagged. The process for matching carrier vessel records to AIS records is more precise than what was originally implemented. As a result there are fewer carriers in products. Based on initial analysis, this change is a good one and should make our identification of carriers more accurate. I am still investigating this to make sure we aren’t systematically losing legitimate carrier vessels, and from the analysis so far, things look good.
+> > * Fishing vessels: The long standing bug which classified known fishing vessels to 'other' vessel type due to noise should now be fixed in the All Vessels v2 table. Further the list of vessels flagged as fishing is expanded. In addition to vessels that are flagged as on_fishing_list_best (the original filter for identifying fishing vessels) in the vi_ssvid_byyear table, vessels that are flagged as a fishing vessel in a registry on by the neural net are included as fishing vessels in Product if the vessel isn’t already flagged as a support, carrier, bunker, or discrepancy vessel (see whimsical in data template for visual flow diagram of what this looks like).
+> * fishing events: `pipe_production_v20201001.published_events_fishing_v2`
 > > * fishing events query has been re-run on an expanded list of fishing vessels using the All Vessels v2 table as the source, where if a vessel is potential_fishing or on_fishing_list_sr (see data template for field definitions), then the vessel has fishing events populated for it. In Products, a narrower set of vessels have fishing events displayed (eg only vessels where prod_shiptype = ‘fishing’). This provided, depending on the use case, analysts may need to add an extra filter when using the published events fishing table. If you have any questions on this, please reach out.
-> * loitering: pipe_production_v20201001.published_events_loitering_v2
-> * port visits: pipe_production_v20201001.published_events_port_visits_v2
+> * loitering: `pipe_production_v20201001.published_events_loitering_v2`
+> * port visits: `pipe_production_v20201001.published_events_port_visits_v2`
 + **[July 2023]** The `all_vessels_byyear_v2` table is shared internally.  
