@@ -31,7 +31,12 @@ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1z
 
 ## Example Queries
 
-+ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Use cases` section for more.
++ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Use cases` section for example Queries expanding on the following questions:
+> * How do I use the activity summary fields to understand vessel activity? 
+> * How do I compare what the current product ship and gear type is (v2) to what was in the previous all vessel (unversioned) table?
+> * Discrepancy vessel example
+> * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
+> * How can the All Vessels v2 table be used to identify all possible fishing vessels? 
 + [vessel_id_connected_to_noisy_segment_check](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/vessel_id_connected_to_noisy_segment_check.sql) - if a vessel_id does not appear in All Vessels v2, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the All Vessels v2 table.
 
 ## Links
