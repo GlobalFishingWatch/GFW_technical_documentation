@@ -4,12 +4,8 @@ The All Vessels table is the sole table used to identify which vessels (vessel_i
 
 ## Key Tables
 
-Current version
 + `pipe_production_v20201001.all_vessels_byyear_v2`
-
-
-Previous version 
-+ `pipe_production_v20201001.all_vessels_byyear`
+> + `pipe_production_v20201001.all_vessels_byyear` - the previous all vessels table, maintained in pipeline 2.5, but to be officially deprecated in pipeline 3.0. 
 
 ## Source Tables
 
