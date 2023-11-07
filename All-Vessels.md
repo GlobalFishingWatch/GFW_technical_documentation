@@ -29,7 +29,7 @@ All Vessels v2
 
 ## Example Queries
 
-+ **UNDER CONSTRUCTION** For now, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Use cases` section for more.
++ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Use cases` section for more.
 + [vessel_id_connected_to_noisy_segment_check](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/vessel_id_connected_to_noisy_segment_check.sql) - if a vessel_id does not appear in All Vessels v2, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the All Vessels v2 table.
 
 ## Links
