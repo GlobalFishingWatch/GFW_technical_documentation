@@ -65,9 +65,9 @@ Last updated on **November 6th, 2023**
 > **Impacts on other datasets:** 
 For engineering reasons (mainly the maintenance of Vessel Viewer (prototype)), we need to maintain All Vessels v1 and the AIS Published Event datasets along side All Vessels v2. That said, for the time being there are two sets of published event tables. **Please use the following tables moving forward for analysis.** If you have any questions about this, please reach out.
 > * all_vessels: pipe_production_v20201001.all_vessels_byyear_v2
-> * coverage block: pipe_v20201001_api.indicators_coverage_blocks_v2
+> * coverage: pipe_v20201001_api.indicators_coverage_blocks_v2
 > * encounters: pipe_production_v20201001.published_events_encounters_v2
-> * fishing: pipe_production_v20201001.published_events_fishing_v2
+> * fishing events: pipe_production_v20201001.published_events_fishing_v2
 > > * fishing events query has been re-run on an expanded list of fishing vessels using the All Vessels v2 table as the source, where if a vessel is potential_fishing or on_fishing_list_sr (see data template for field definitions), then the vessel has fishing events populated for it. In Products, a narrower set of vessels have fishing events displayed (eg only vessels where prod_shiptype = ‘fishing’). This provided, depending on the use case, analysts may need to add an extra filter when using the published events fishing table. If you have any questions on this, please reach out.
 > * loitering: pipe_production_v20201001.published_events_loitering_v2
 > * port visits: pipe_production_v20201001.published_events_port_visits_v2
