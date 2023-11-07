@@ -26,7 +26,19 @@ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1z
 
 ## Caveats and Known Issues
 
-+ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Caveats` section and `FAQs` section for more.
++ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Caveats` section and `FAQs` section for more on the following topics.
+> * Caveats
+> > * Inaccuracies in inferred (neural net) class information
+> > * Possibility of error between ssvid and vessel id merger
+> * FAQs
+> > * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
+> > * What if a vessel is considered multiple gear types?
+> > * What should I do if I think a vessel type has been incorrectly assigned?
+> > * Why is my vessel_id NOT included in All Vessels v2 (and thus in Products)?
+> > * Multiple Vessel IDs for a single unique hul
+> > * Why am I only seeing a short track segment when I search for a vessel that I know is transmitting on AIS across years?
+> > * Making sense of vessels with shiptype ‘Discrepancy’
+> > * What is the difference between core_geartype and registry_vessel_class fields?
 + **Noise filter:** Products only include non-noisy segments, and subsequently vessel_id's with at least one non-noisy seg_id (eg passes the `WHERE good_seg and NOT overlapping_and_short` filter) are excluded from Products. 
 
 ## Example Queries
@@ -41,7 +53,6 @@ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1z
 
 ## Links
 
-All Vessels
 + [All Vessels data template documentation](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1): redundant in many ways to the GitWiki. Intended to flesh out field definitions and other data tables in a format accessible by non-github using staff.
 + [Vessel API link to All vessels](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow): Diagram showing how All Vessels v2 fits within the work flow of the Vessel Identity API
 + [All Vessels v2 Confluence](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/509345793/How+to+generate+the+all+vessels+byyear+v2+v+table+prototype): Includes source tables and code used to populated All Vessels v2 table. 
