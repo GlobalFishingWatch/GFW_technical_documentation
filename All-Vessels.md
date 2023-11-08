@@ -20,9 +20,11 @@ All Vessels v2 uses the following source tables, below. For more information on 
 
 ## Data Description
 
+The All Vessels v2 table links AIS records to registry records and is intended to act as a one stop shop for vessel identity for Products. At the product level we want to provide the cleanest information we have on vessel identity, which is why there is an extra layer of logic that we don't have in the other identity tables. The extra layer of logic lays out a hierarchy for how to represent a vessel in Products when there is conflicting information. 
+
+We want to be transparent on this hierarchy and the logic behind it, internally, but also externally for all users. As a result, the table includes numerous summary fields on vessel activity, noise, and identity. While these extra details are not featured in Products, the information is intended to provide context for internal staff to understand why a vessel is represented the way it is. Further these fields allow analysts to use the All Vessels v2 table more flexibly than how it is included in Products, to meet broader uses cases. Being able to use All Vessels v2 for analysis that are separate from Products is valuable, as it is still easy to link analysis back to what is in Products and allows analysts to easily identify how the vessels in their reports reflect what is in Product, what is miss from Product, and what is represented differently from what is in Product, and why.       
+
 Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for field definitions of all fields in table.
-+ `prod_shiptype` - The ship type displayed in products (referred to in products as Vessel Class). Note, prod_shiptype and prod_geartype can only have one value per vessel_id. A CASE WHEN logic is applied in the cases where a vessel has numerous shiptype or geartypes associated with it. For details on the CASE WHEN logic, see methodology section in [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1).
-+ `prod_geartype` - The gear type displayed in products. Note, prod_shiptype and prod_geartype can only have one value per vessel_id. A CASE WHEN logic is applied in the cases where a vessel has numerous shiptype or geartypes associated with it. For details on the CASE WHEN logic, see methodology section in [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1).
 
 ## Caveats and Known Issues
 
