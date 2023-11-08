@@ -26,7 +26,7 @@ Last update:
 | Satellite timing offsets | `pipe_ais_v3_alpha_published.satellite_timing_offsets` | `pipe_production_v20201001.research_satellite_timing` | 
 | AIS activity aggregated at the segment level with noise indicators| `pipe_ais_v3_alpha_published.segs_activity` | `pipe_production_v20201001.research_segs` | 
 | AIS activity aggregated at the daily segment level with noise indicators| `pipe_ais_v3_alpha_published.segs_activity_daily` | `pipe_production_v20201001.research_segs_daily` | 
-| Aggregated raw AIS identity information by ssvid| `pipe_ais_v3_alpha_published.ssvids_identity` | `pipe_production_v20201001.research_ids` | 
+| Aggregated raw AIS identity information by ssvid| `pipe_ais_v3_alpha_published.ssvids_identities` | `pipe_production_v20201001.research_ids` | 
 | Daily raw AIS identity information by ssvid| `pipe_ais_v3_alpha_published.ssvids_identities_daily` | `pipe_production_v20201001.research_ids_daily` | 
 | Stats on AIS data daily| `pipe_ais_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | 
 | Aggregated vessel identity information by vessel id and ssvid| `pipe_ais_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | 
