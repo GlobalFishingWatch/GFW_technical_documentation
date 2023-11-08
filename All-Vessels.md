@@ -10,7 +10,7 @@ The All Vessels table is the sole table used to identify which vessels (vessel_i
 ## Source Tables
 
 All Vessels v2 uses the following source tables, below. For more information on how these source tables are utilized to populate the All Vessels table, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1).
-+ `pipe_production_v20201001.base_vessel_identity_info_merge` - engineer and data team table which is an intermediate step in creating the Vessel Identity API. `vessel_id`'s can be searched in this table to find associated `vessel_record_id`'s. 
++ `pipe_production_v20201001.base_vessel_identity_info_merge` - internal table not to be used outside of products. This table was created to match our vessel_id (AIS transmitted data) to our registry matched table (identity core) so that Products automatically connect vessel_id (AIS records) to any existing registry records. 
 > * `vessel_identity.identity_core`
 > * `pipe_production_v20201001.vessel_info`
 > * `pipe_production_v20201001.research_segs`
