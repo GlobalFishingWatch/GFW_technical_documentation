@@ -27,10 +27,8 @@ These are defined as :
 An example of a port visit that has a confidence of 2 is shown in the [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0): In this instance the vessel turns AIS off, then it transmits only in port, it turns AIS off again and appears on the high seas. In the database this only shows up as a `PORT_STOP` with NO Entry or Exit. 
  
 An example of a port visit that has a confidence of 3 is shown the [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0): In this instance the vessel went to port but changed IDs in port, so under this ID we only see a PORT_ENTRY and PORT_STOP.
-  
- <br>
  
-**Key Tables**
+## Key Tables
 
 The tables associated with ports and voyages include the following:
 
