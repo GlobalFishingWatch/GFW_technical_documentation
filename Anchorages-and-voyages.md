@@ -1,3 +1,5 @@
+> **Update** *As a result of the All Vessels v2 table, all AIS published event tables now have a new v2 version which should be used moving forward, `pipe_production_v20201001.published_events_port_visits_v2`, until we switch to using pipeline 3.0, where all v2 published event tables will become the only maintained versions of the tables. The logic for the events themselves haven’t changed, but due to the change in how shiptype is determined in products, the published events tables have been re-run and ingested into products with the updated shtipetype designation. All example queries referencing published events tables should use the v2 versions of the tables.* 
+
 GFW maintains a database of `anchorages` and identifies when vessels enter/exit these locations (`port visits`). By connecting a vessel's port EXIT and next port ENTRY it is also possible to identify vessel `voyages`. 
 
 `Port events` serve as the fundamental units used to create `port visits` or `voyages`. There are four types of port events:  
