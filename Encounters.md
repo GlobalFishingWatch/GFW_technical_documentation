@@ -4,7 +4,7 @@ Vessels meet at sea for a variety of reasons, including transshipment (transferr
 
 ## Key Tables
 
-+ `pipe_production_v20201001.published_events_encounters` - same as the encounters table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This table also includes information on vessel authorization status. 
++ `pipe_production_v20201001.published_events_encounters_v2` - same as the encounters table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This table also includes information on vessel authorization status. 
 + `pipe_production_v20201001.encounters` - Source table for published events encounters table. This is not filtered by speed and has one row per encounter.
 
 > **Note**   
