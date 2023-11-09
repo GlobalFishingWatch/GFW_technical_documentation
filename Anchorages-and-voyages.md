@@ -107,11 +107,9 @@ Voyages are a further processed dataset as they represent two port visits that b
 ## Example queries
 
 + [proto_voyages_and_anchorages.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/proto_voyages_and_anchorages.sql) 
-
 + [proto_port_visits_and_events_example.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/proto_port_visits_and_events_example.sql) 
-
 + [proto_voyages_merge_loitering.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/proto_voyages_merge_loitering.sql) 
 
-## Resources
+## Links
 
-[Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
++ [Training Slide Deck](https://docs.google.com/presentation/d/1CNL-hUbZGkj41siUWPi4QvHgz82Ohe_G1fLHMfSjXu4/edit#slide=id.g7b6fe9f445_0_0)
