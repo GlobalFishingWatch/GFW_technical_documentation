@@ -57,8 +57,9 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 + Fishing Event Tech Call slide deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 
 ## Updates
-Last updated on **May 25th, 2023**
+Last updated on **Nov 9th, 2023**
 
++ **[October 2023]** The `published_events_fishing` was re-run on an expanded list of fishing vessels using information from the `all_vessels_v2` table. Now vessels that are on_fishing_list_best, on_fishing_list_inferred, on_fishing_list_known, or on_fishing_list_sr have fishing events populated. This means that to reproduce the fishing events in Products, the fishing events table will need to be filtered for vessel_ids which are prod_shiptype = fishing in the all_vessels_v2 table. 
 + **[May 2023]** The `proto_events_fishing` table which was used in Products was updated to the `published_events_fishing` table, and the `proto_events_fishing` table was removed in June 2023. The published events fishing table now includes information on vessel authorization status, consistent with how authorization status is determined in vessel encounters. 
 + **[Spring 2023]** Authorization information is now included for fishing events, following the same logic as encounters for determining authorization status. Note, authorization information is limited to 7 RFMOs (5 tuna RFMOs, NPFC, and SPRFMO).
 + **[Aug 24 2021]** In the previous version for fishing events (prior to `world-fishing-827.pipe_production_v20201001.proto_events_fishing`) fishing events were more simply defined. Events were created if consecutive AIS points were considered ‘fishing’ by the neural net, and fishing events were grouped if they were only separated in time by a short duration (e.g., 10 minutes). There were no restrictions to remove likely noise nor to separate events made of AIS positions in different seg_id's.
