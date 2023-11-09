@@ -44,7 +44,8 @@ The tables associated with ports and voyages include the following:
 + `pipe_production_vYYYYMMDD.proto_voyages_c4` - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
 
 
-Note: Always use the `published_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_port_visits` then use that view table rather than `pipe_production_v20201001.published_events_port_visits_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+>**Note** 
+> Always use the `published_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_port_visits` then use that view table rather than `pipe_production_v20201001.published_events_port_visits_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
 
 
 **Original data tables still available**
