@@ -1,3 +1,5 @@
+> **Update** *As a result of the All Vessels v2 table, all AIS published event tables now have a new v2 version which should be used moving forward, `pipe_production_v20201001.published_events_loitering_v2`, until we switch to using pipeline 3.0, where all v2 published event tables will become the only maintained versions of the tables. The logic for the events themselves haven’t changed, but due to the change in how shiptype is determined in products, the published events tables have been re-run and ingested into products with the updated shtipetype designation. All example queries referencing published events tables should use the v2 versions of the tables.* 
+
 Vessels meet up at sea for a variety of reasons, including transshipment (transferring catch, crew, fuel, etc.), and loitering events may indicate when a vessel has met up with another vessel that is not transmitting AIS and may be of interest for monitoring illegal behavior. 
 
 ## Key Tables
