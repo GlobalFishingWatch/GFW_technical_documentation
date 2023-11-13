@@ -24,7 +24,7 @@ The All Vessels v2 table links AIS records to registry records and is intended t
 
 We want to be transparent on this hierarchy and the logic behind it, internally, but also externally for all users. As a result, the table includes numerous summary fields on vessel activity, noise, and identity. While these extra details are not featured in Products, the information is intended to provide context for internal staff to understand why a vessel is represented the way it is. Further these fields allow analysts to use the All Vessels v2 table more flexibly than how it is included in Products, to meet broader uses cases. Being able to use All Vessels v2 for analysis that are separate from Products is valuable, as it is still easy to link analysis back to what is in Products and allows analysts to easily identify how the vessels in their reports reflect what is in Product, what is miss from Product, and what is represented differently from what is in Product, and why.       
 
-Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for field definitions of all fields in table.
+Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for field definitions of all fields in table. In the coming weeks, field definitions will be added to the schema of the All Vessel v2 table in BigQuery.
 
 ## Caveats and Known Issues
 
