@@ -31,6 +31,9 @@ How the Vessel Identity API is populated is highlighted in the diagram below; sp
 ![Vessel Identity API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_1.png) <br>
 [Vessel Identity API diagram link](https://drive.google.com/file/d/1w-H8JawKDdjj0bikUXlXpZ-I8vNvPccm/view?usp=sharing)
 
+![All Vessels vessel and gear type diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/All%20vessels%402x.png) <br>
+[Whimsical for how prod_shiptype and prod_geartype are populated](https://whimsical.com/all-vessels-7mpjsDLTutacKzUn4jPtHA)
+
 Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for field definitions of all fields in table. In the coming weeks, field definitions will be added to the schema of the All Vessel v2 table in BigQuery.
 
 ## Caveats and Known Issues
