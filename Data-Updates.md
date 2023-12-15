@@ -3,6 +3,19 @@
 > **Note**
 > Do not forget to update the version of the tables in the [BigQuery Table Reference](BigQuery-Table-Reference).
 
+#### December 15, 2023
+
+Due to limits on data partitions last year we removed 2012 data from the pipe_production_v20201001 tables. We have now had to do that again for 2013. 
+
+Note: this does not  apply to pipe 3 where this issue is resolved. Therefore the following applies:
+
+If using pipe 2.5 (pipe_production_v20201001) currently note that it will now have data from 2014- present
+
+If you want older data please join with the archive version of the table of interest which will include both 2012 and 2013 (you do no longer need to use the _2012 version of the dataset). Additional clarification:
+* the tables with prefix _2012 will be kept
+* For each cases, we’ll have tables with suffix archive_ which will contain the archive years (in this case 2012 and 2013 data). Making anyone decision if they want to join the archive_ or the _2012 ones => this implies a breaking change to who are using only _2012 and wants the 2012 and 2013 data, in that case it should be use archive_.
+
+
 ### August 19, 2022 Updates
 
 This update contains a handful of updates that have been released since the last update message below on March 7, 2022. 
