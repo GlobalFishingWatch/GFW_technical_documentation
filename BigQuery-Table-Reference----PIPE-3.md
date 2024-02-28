@@ -31,6 +31,7 @@ Last update:
 | Stats on AIS data daily| `pipe_ais_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | 
 | Aggregated vessel identity information by vessel id and ssvid| `pipe_ais_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | 
 | Encounter events| `pipe_ais_v3_alpha_published.encounters` | `pipe_production_v20201001.encounters` | 
+| Encounter events used in products (additional fields compared to encounters)| `pipe_ais_v3_alpha_published.product_events_encounter_v` | `pipe_production_v20201001.published_events_encounters_v` | 
 | Loitering events| `pipe_ais_v3_alpha_published.loitering` | `pipe_production_v20201001.loitering` | 
 | Port visits by vessels| `pipe_ais_v3_alpha_published.port_visits` | `pipe_production_v20201001.proto_port_visits` | 
 | Confidence 3 vessel voyages| `pipe_ais_v3_alpha_published.voyages_c3` | `pipe_production_v20201001.proto_voyages_c3` | 
