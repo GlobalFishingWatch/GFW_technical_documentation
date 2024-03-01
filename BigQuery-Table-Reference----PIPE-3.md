@@ -31,15 +31,19 @@ Last update:
 | Stats on AIS data daily| `pipe_ais_v3_alpha_published.stats_daily` | `pipe_production_v20201001.research_stats` | 
 | Aggregated vessel identity information by vessel id and ssvid| `pipe_ais_v3_alpha_published.vessel_info` | `pipe_production_v20201001.vessel_info` | 
 | Encounter events| `pipe_ais_v3_alpha_published.encounters` | `pipe_production_v20201001.encounters` | 
-| Encounter events used in products (additional fields compared to encounters)| `pipe_ais_v3_alpha_published.product_events_encounter_v` | `pipe_production_v20201001.published_events_encounters_v` | 
+| Encounter events used in products (adjustment to schema and additional fields compared to encounters)| `pipe_ais_v3_alpha_published.product_events_encounter_v` | `pipe_production_v20201001.published_events_encounters_v` | 
 | Loitering events| `pipe_ais_v3_alpha_published.loitering` | `pipe_production_v20201001.loitering` | 
+| Loitering events used in products (adjustment to schema and additional fields compared to encounters)| `pipe_ais_v3_alpha_published.product_events_loitering_v` | `pipe_production_v20201001.published_events_loitering_v` | 
 | Port visits by vessels| `pipe_ais_v3_alpha_published.port_visits` | `pipe_production_v20201001.proto_port_visits` | 
+| Port visits by vessels used in products (adjustment to schema and additional fields compared to port visits| `pipe_ais_v3_alpha_published.product_events_port_visit_v` | `pipe_production_v20201001.published_events_port_visits_v` | 
 | Confidence 3 vessel voyages| `pipe_ais_v3_alpha_published.voyages_c3` | `pipe_production_v20201001.proto_voyages_c3` | 
 | Confidence 4 vessel voyages| `pipe_ais_v3_alpha_published.voyages_c4` | `pipe_production_v20201001.proto_voyages_c4` | 
-| Vessel database (registry) table| `pipe_ais_v3_alpha_published.identity_all_vessels_v` | `vessel_database.all_vessels_v` | 
-| Vessel database (registry) table| `pipe_ais_v3_alpha_published.identity_authorization_v` | `vessel_identity_staging.identity_authorization_v` | 
-| Vessel database (registry) table| `pipe_ais_v3_alpha_published.identity_owner_v` | `vessel_identity_staging.identity_owner_v` | 
-| Vessel database (registry) table| `pipe_ais_v3_alpha_published.identity_core_v` | `vessel_identity_staging.identity_core_v` | 
+| Vessel database (registry) table ais activity summary| `pipe_ais_v3_alpha_published.ais_activity_v` | `vessel_identity.identity_ais_activity_v` | 
+| Vessel database (registry) table aggregated authorization records| `pipe_ais_v3_alpha_published.identity_authorization_v` | `vessel_identity.identity_authorization_v` | 
+| Vessel database (registry) table aggregated owner records| `pipe_ais_v3_alpha_published.identity_owner_v` | `vessel_identity.identity_owner_v` | 
+| Vessel database (registry) table core identity matched| `pipe_ais_v3_alpha_published.identity_core_v` | `vessel_identity.identity_core_v` | 
+| Merged identity and class summary table used in products| `pipe_ais_v3_alpha_published.all_vessels_byyear_v` | `pipe_production_v20201001.all_vessels_byyear_v2_v` | 
+| Vessel identity match between pipe vessel info and registry table| `pipe_ais_v3_alpha_published.identity_base_vessel_info_match_v` | `pipe_production_v20201001.base_vessel_identity_info_match_v` | 
 
 ## AIS Pipe 3 -- Internal
 | Description | BQ Table| Previous BQ Table |
@@ -61,6 +65,7 @@ used to later aggregate into merged final encounter events | `pipe_ais_v3_alpha_
 used to later aggregate into actual loitering events | `pipe_ais_v3_alpha_internal.raw_loitering_` | `pipe_production_v20201001.raw_loitering_` |
 | Port events before developed into port visits | `pipe_ais_v3_alpha_internal.raw_port_events_` | `pipe_production_v20201001.proto_raw_port_events_` |
 | Estimate of confidence 2 level voyages | `pipe_ais_v3_alpha_internal.voyages_c2` | `pipe_production_v20201001.proto_voyages_c2` |
+| Original vessel database (registry) table before developed into polished identity output for users| `pipe_ais_v3_alpha_published.identity_all_vessels_v` | `vessel_database.all_vessels_v` | 
 
 
 
