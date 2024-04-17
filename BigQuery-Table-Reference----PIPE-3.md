@@ -1,6 +1,6 @@
 This page contains the published tables of AIS Pipeline 3 `pipe_ais_v3_published.` and their previous names in the AIS Pipeline 2.5 `pipe_production_v20201001.` If you do NOT see a table listed below it has either been archived or placed in the `internal` bucket within BQ. This page does NOT contain the description of the internal tables of AIS Pipeline 3 `pipe_ais_v3_internal.` Please contact the engineers and pipeline manager if you request to use an internal table for your work. 
 
-Table Development and Ownership: 
+Table Development: 
 
 + Andres Arana: lead engineer
 + Matias Piano: core engineer
@@ -14,7 +14,7 @@ Data pipeline ownership falls with the pipeline engineering team, currently Andr
 
 
 Last update:
-   * Date: `2024-04-25`
+   * Date: `2024-04-18`
    * By: `Hannah Linder`
 
 
