@@ -36,8 +36,8 @@ Last update:
 | Vessel database (registry) table aggregated authorization records| `pipe_ais_v3_published.identity_authorization_v` | `vessel_identity.identity_authorization_v` | 
 | Vessel database (registry) table aggregated owner records| `pipe_ais_v3_published.identity_owner_v` | `vessel_identity.identity_owner_v` | 
 | Vessel database (registry) table core identity matched| `pipe_ais_v3_published.identity_core_v` | `vessel_identity.identity_core_v` | 
-| Merged identity and class summary table used in products| `pipe_ais_v3_published.all_vessels_byyear_v` | `pipe_production_v20201001.all_vessels_byyear_v2_v` | 
-| Vessel identity match between pipe vessel info and registry table| `pipe_ais_v3_published.identity_base_vessel_info_match_v` | `pipe_production_v20201001.base_vessel_identity_info_match_v` | 
+| Merged identity and class summary table used in products| `pipe_ais_v3_published.product_vessel_info_summary` | `pipe_production_v20201001.all_vessels_byyear_v2_v` | 
+| Vessel identity match between pipe vessel info and registry table| `pipe_ais_v3_published.product_vessel_info_match` | `pipe_production_v20201001.base_vessel_identity_info_match_v` | 
 | Aggregated vessel classification and activity summaries across all time by ssvid| `pipe_ais_v3_published.vi_ssvid_v` | `pipe_production_v20201001.vi_ssvid_v` |
 | Aggregated vessel classification and activity summaries (difference from vi_ssvid_v is AIS based summaries by year) by ssvid| `pipe_ais_v3_published.vi_ssvid_byyear_v` | `pipe_production_v20201001.vi_ssvid_byyear_v` |
 | Satellite timing offsets | `pipe_ais_v3_published.satellite_timing_offsets` | `pipe_production_v20201001.research_satellite_timing` | 
