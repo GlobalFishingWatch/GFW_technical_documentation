@@ -31,8 +31,7 @@ Last update:
 | Port visits by vessels| `pipe_ais_v3_published.port_visits` | `pipe_production_v20201001.proto_port_visits` | 
 | Port visits by vessels used in products (adjustment to schema and additional fields compared to port visits| `pipe_ais_v3_published.product_events_port_visit_v` | `pipe_production_v20201001.published_events_port_visits_v` | 
 | Confidence 3 vessel voyages| `pipe_ais_v3_published.voyages_c3` | `pipe_production_v20201001.proto_voyages_c3` | 
-| Confidence 4 vessel voyages| `pipe_ais_v3_published.voyages_c4` | `pipe_production_v20201001.proto_voyages_c4` | 
-| Vessel database (registry) table ais activity summary| `pipe_ais_v3_published.ais_activity_v` | `vessel_identity.identity_ais_activity_v` | 
+| Confidence 4 vessel voyages| `pipe_ais_v3_published.voyages_c4` | `pipe_production_v20201001.proto_voyages_c4` |  
 | Vessel database (registry) table aggregated authorization records| `pipe_ais_v3_published.identity_authorization_v` | `vessel_identity.identity_authorization_v` | 
 | Vessel database (registry) table aggregated owner records| `pipe_ais_v3_published.identity_owner_v` | `vessel_identity.identity_owner_v` | 
 | Vessel database (registry) table core identity matched| `pipe_ais_v3_published.identity_core_v` | `vessel_identity.identity_core_v` | 
