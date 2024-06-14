@@ -28,6 +28,8 @@ Last update:
 | Encounter events used in products (adjustment to schema and additional fields compared to encounters)| `pipe_ais_v3_published.product_events_encounter_v` | `pipe_production_v20201001.published_events_encounters_v` | 
 | Loitering events| `pipe_ais_v3_published.loitering` | `pipe_production_v20201001.loitering` | 
 | Loitering events used in products (adjustment to schema and additional fields compared to encounters)| `pipe_ais_v3_published.product_events_loitering_v` | `pipe_production_v20201001.published_events_loitering_v` | 
+| Fishing events (consistent list of fishing vessels in previous versions)| `pipe_ais_v3_published.fishing_events_v` | `pipe_production_v20201001.published_events_fishing` | 
+| Fishing events updated in product to restrict to only prod_shiptype = 'fishing'| `pipe_ais_v3_published.product_events_fishing_v` | --Same Table not Previously Developed---- | 
 | Port visits by vessels| `pipe_ais_v3_published.port_visits` | `pipe_production_v20201001.proto_port_visits` | 
 | Port visits by vessels used in products (adjustment to schema and additional fields compared to port visits| `pipe_ais_v3_published.product_events_port_visit_v` | `pipe_production_v20201001.published_events_port_visits_v` | 
 | Confidence 3 vessel voyages| `pipe_ais_v3_published.voyages_c3` | `pipe_production_v20201001.proto_voyages_c3` | 
@@ -39,7 +41,8 @@ Last update:
 | Vessel identity match between pipe vessel info and registry table| `pipe_ais_v3_published.product_vessel_info_match` | `pipe_production_v20201001.base_vessel_identity_info_match_v` | 
 | Aggregated vessel classification and activity summaries across all time by ssvid| `pipe_ais_v3_published.vi_ssvid_v` | `pipe_production_v20201001.vi_ssvid_v` |
 | Aggregated vessel classification and activity summaries (difference from vi_ssvid_v is AIS based summaries by year) by ssvid| `pipe_ais_v3_published.vi_ssvid_byyear_v` | `pipe_production_v20201001.vi_ssvid_byyear_v` |
-| Prototype gaps| `pipe_ais_v3_published.product_events_gaps_proto` | `pipe_production_v20201001.proto_published_events_ais_gaps` |
+| Prototype gaps| `pipe_ais_v3_published.product_events_ais_gaps` | `pipe_production_v20201001.proto_published_events_ais_gaps` |
+| Prototype disabling events| `pipe_ais_v3_published.product_events_ais_disabling` | `world-fishing-827.pipe_production_v20201001.proto_published_events_ais_gaps` |
 | Satellite timing offsets | `pipe_ais_v3_published.satellite_timing_offsets` | `pipe_production_v20201001.research_satellite_timing` | 
 | AIS activity aggregated at the segment level with noise indicators| `pipe_ais_v3_published.segs_activity` | `pipe_production_v20201001.research_segs` | 
 | AIS activity aggregated at the daily segment level with noise indicators| `pipe_ais_v3_published.segs_activity_daily` | `pipe_production_v20201001.research_segs_daily` | 
