@@ -41,8 +41,8 @@ Last update:
 | Vessel identity match between pipe vessel info and registry table| `pipe_ais_v3_published.product_vessel_info_match` | `pipe_production_v20201001.base_vessel_identity_info_match_v` | 
 | Aggregated vessel classification and activity summaries across all time by ssvid| `pipe_ais_v3_published.vi_ssvid_v` | `pipe_production_v20201001.vi_ssvid_v` |
 | Aggregated vessel classification and activity summaries (difference from vi_ssvid_v is AIS based summaries by year) by ssvid| `pipe_ais_v3_published.vi_ssvid_byyear_v` | `pipe_production_v20201001.vi_ssvid_byyear_v` |
-| Prototype gaps| `pipe_ais_v3_published.product_events_ais_gaps` | `pipe_production_v20201001.proto_published_events_ais_gaps` |
-| Prototype disabling events| `pipe_ais_v3_published.product_events_ais_disabling` | `world-fishing-827.pipe_production_v20201001.proto_published_events_ais_gaps` |
+| Prototype gaps| `pipe_ais_v3_published.product_events_ais_gaps` | `pipe_production_v20201001.proto_ais_gap_events` |
+| Prototype disabling events| `pipe_ais_v3_published.product_events_ais_disabling` | `pipe_production_v20201001.proto_published_events_ais_gaps` |
 | Satellite timing offsets | `pipe_ais_v3_published.satellite_timing_offsets` | `pipe_production_v20201001.research_satellite_timing` | 
 | AIS activity aggregated at the segment level with noise indicators| `pipe_ais_v3_published.segs_activity` | `pipe_production_v20201001.research_segs` | 
 | AIS activity aggregated at the daily segment level with noise indicators| `pipe_ais_v3_published.segs_activity_daily` | `pipe_production_v20201001.research_segs_daily` | 
