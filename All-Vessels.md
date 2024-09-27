@@ -28,7 +28,7 @@ We want to be transparent on this hierarchy and the logic behind it, internally,
 
 How the Vessel Identity API is populated is highlighted in the diagram below; specifically how All Vessels v2 fits into the Vessel Identity API. 
 
-![Vessel Identity API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_1.png) <br>
+![Vessel Identity API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_2.png) <br>
 [Vessel Identity API diagram link](https://drive.google.com/file/d/1w-H8JawKDdjj0bikUXlXpZ-I8vNvPccm/view?usp=sharing)
 
 ![All Vessels vessel and gear type diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/All%20vessels%402x.png) <br>
