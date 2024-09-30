@@ -1,6 +1,6 @@
 The Product Vessel Info Summary table is the sole table used to identify which vessels (vessel_ids) to include in Product and what information to associate with the vessel. The additional fields on vessel activity, vessel type, and noise in the table are primarily for GFW staff, and, in particular, GFW analysts, to understand why a vessel appears the way it does in Products, or why a vessel may not be visible to non-GFW staff. Owner: Willa 
 
-This table was previously named All Vessels v2, but was renamed to Product Vessel Info Summary in Pipeline 3.0
+This table was previously named All Vessels v2, but was renamed to Product Vessel Info Summary in Pipeline 3.0. See `Updates` section for more information.
 
 ## Key Tables
 
@@ -9,36 +9,35 @@ This table was previously named All Vessels v2, but was renamed to Product Vesse
 
 ## Source Tables
 
-All Vessels v2 uses the following source tables, below. For more information on how these source tables are utilized to populate the All Vessels table, please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1).
-+ `pipe_production_v20201001.base_vessel_identity_info_merge` - internal table not to be used outside of products. This table was created to match our vessel_id (AIS transmitted data) to our registry matched table (identity core) so that Products automatically connect vessel_id (AIS records) to any existing registry records. 
-> * `vessel_identity.identity_core`
-> * `pipe_production_v20201001.vessel_info`
-> * `pipe_production_v20201001.research_segs`
-> * `pipe_production_v20201001.segment_info`
-+ `gfw_research.vi_ssvid_byyear_vYYYYMMDD`
-+ `vessel_database.purse_seine_support_vessels_byyear_vYYYYMMDD`
-
-Links to the queries used to populate the base vessel identity merge and all vessels v2 tables to be added here in the near future.      
+The Product Vessel Info Summary table uses the following source tables, below. For more information on how these source tables are utilized to populate the Product Vessel Info Summary table, please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit). The documentation for All Vessels v2, the previous version of the Product Vessel Info Summary Table can be found [here](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit).
++ `pipe_ais_v3_published.product_vessel_info_match` - internal table not to be used outside of products. This table was created to match our vessel_id (AIS transmitted data) to our registry matched table (identity core) so that Products automatically connect vessel_id (AIS records) to any existing registry records. 
+> * `pipe_ais_v3_published.identity_core`
+> * `pipe_ais_v3_published.vessel_info`
+> * `pipe_ais_v3_published.segs_activity`
+> * `pipe_ais_v3_published.segment_info`
++ `pipe_ais_v3_published.vi_ssvid`
++ `pipe_ais_v3_published.vi_ssvid_byyear`
++ `pipe_ais_v3_internal.purse_seine_support_vessels_byyear`     
 
 ## Data Description
 
-The All Vessels v2 table is a step in the Vessel Identity API, which links AIS records to registry records and is intended to act as a one stop shop for vessel identity for Products. At the product level we want to provide the cleanest information we have on vessel identity, which is why there is an extra layer of logic to lay out a hierarchy for how to represent a vessel in Products when there is conflicting information. 
+The Product Vessel Info Summary table is a step in the Vessels API, which links AIS records to registry records and is intended to act as a one stop shop for vessel identity for GFW Products. At the product level we want to provide the cleanest information we have on vessel identity, which is why there is an extra layer of logic to lay out a hierarchy for how to represent a vessel in Products when there is conflicting information. 
 
-We want to be transparent on this hierarchy and the logic behind it, internally, but also externally for all users. As a result, the table includes numerous summary fields on vessel activity, noise, and identity. While these extra details are not featured in Products, the information is intended to provide context for internal staff to understand why a vessel is represented the way it is. Further these fields allow analysts to use the All Vessels v2 table more flexibly than how it is included in Products, to meet broader uses cases. Being able to use All Vessels v2 for analysis that are separate from Products is valuable, as it is still easy to link analysis back to what is in Products and allows analysts to easily identify how the vessels in their reports reflect what is in Product, what is miss from Product, and what is represented differently from what is in Product, and why. 
+We want to be transparent on this hierarchy and the logic behind it, internally, but also externally for all users. As a result, the table includes numerous summary fields on vessel activity, noise, and identity. While these extra details are not featured in Products, the information is intended to provide context for internal staff to understand why a vessel is represented the way it is. Further these fields allow analysts to use the Product Vessel Info Summary table more flexibly than how it is included in Products, to meet broader uses cases. Being able to use the Product Vessel Info Summary table for analysis that are separate from Products is valuable, as it is still easy to link analysis back to what is in Products and allows analysts to easily identify how the vessels in their reports reflect what is in Product, what is miss from Product, and what is represented differently from what is in Product, and why. 
 
-How the Vessel Identity API is populated is highlighted in the diagram below; specifically how All Vessels v2 fits into the Vessel Identity API. 
+How the Vessels API is populated is highlighted in the diagram below; specifically how the Product Vessel Info Summary table fits into the Vessels API. 
 
-![Vessel Identity API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_2.png) <br>
-[Vessel Identity API diagram link](https://drive.google.com/file/d/1w-H8JawKDdjj0bikUXlXpZ-I8vNvPccm/view?usp=sharing)
+![Vessels API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_2.png) <br>
+[Vessels API diagram link](https://drive.google.com/file/d/1w-H8JawKDdjj0bikUXlXpZ-I8vNvPccm/view?usp=sharing)
 
-![All Vessels vessel and gear type diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/All%20vessels%402x.png) <br>
+![Product Vessel Info Summary vessel and gear type diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/All%20vessels%402x.png) <br>
 [Whimsical for how prod_shiptype and prod_geartype are populated](https://whimsical.com/all-vessels-7mpjsDLTutacKzUn4jPtHA)
 
-Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) for field definitions of all fields in table. In the coming weeks, field definitions will be added to the schema of the All Vessel v2 table in BigQuery.
+Please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit) for field definitions of all fields in table. 
 
 ## Caveats and Known Issues
 
-+ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Caveats` section and `FAQs` section for more on the following topics.
++ Please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit) `Caveats` section and `FAQs` section for more on the following topics.
 > * Caveats
 > > * Inaccuracies in inferred (neural net) class information
 > > * Possibility of error between ssvid and vessel id merger
@@ -46,8 +45,8 @@ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1z
 > > * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
 > > * What if a vessel is considered multiple gear types?
 > > * What should I do if I think a vessel type has been incorrectly assigned?
-> > * Why is my vessel_id NOT included in All Vessels v2 (and thus in Products)?
-> > * Multiple Vessel IDs for a single unique hul
+> > * Why is my vessel_id NOT included in the Product Vessel Info Summary table (and thus in Products)?
+> > * Multiple Vessel IDs for a single unique hull
 > > * Why am I only seeing a short track segment when I search for a vessel that I know is transmitting on AIS across years?
 > > * Making sense of vessels with shiptype ‘Discrepancy’
 > > * What is the difference between core_geartype and registry_vessel_class fields?
@@ -55,20 +54,21 @@ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1z
 
 ## Example Queries
 
-+ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1) `Use cases` section for example Queries expanding on the following questions:
++ Please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit) `Use cases` section for example Queries expanding on the following questions:
 > * How do I use the activity summary fields to understand vessel activity? 
-> * How do I compare what the current product ship and gear type is (v2) to what was in the previous all vessel (unversioned) table?
+> * How do I compare what the current product ship and gear type is in the product vessel info summary table to what was in the previous version of the table (all vessels v2)?
 > * Discrepancy vessel example
 > * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
-> * How can the All Vessels v2 table be used to identify all possible fishing vessels? 
-+ [vessel_id_connected_to_noisy_segment_check](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/vessel_id_connected_to_noisy_segment_check.sql) - if a vessel_id does not appear in All Vessels v2, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the All Vessels v2 table.
+> * How can the Product Vessel Info Summary table be used to identify all possible fishing vessels? 
++ [vessel_id_connected_to_noisy_segment_check](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/vessel_id_connected_to_noisy_segment_check.sql) - if a vessel_id does not appear in the Product Vessel Info Summary table, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the Product Vessel Info Summary table.
 
 ## Links
 
-+ [All Vessels data template documentation](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit?pli=1): redundant in many ways to the GitWiki. Intended to flesh out field definitions and other data tables in a format accessible by non-github using staff.
-+ [Vessel API link to All vessels](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow): Diagram showing how All Vessels v2 fits within the work flow of the Vessel Identity API
-+ [All Vessels v2 Confluence](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/509345793/How+to+generate+the+all+vessels+byyear+v2+v+table+prototype): Includes source tables and code used to populated All Vessels v2 table. 
-+ [All Vessels v2 Tech Call slides](https://docs.google.com/presentation/d/1JqegdW8X4jjrkCVIF2ehukuI894BAQQgQ0Z7D0tOK-s/edit?usp=sharing): from bi weekly tech call presentation on July 27th
++ [Product Vessel Info Summary table data template documentation](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit): redundant in many ways to the GitWiki. Intended to flesh out field definitions and other data tables in a format accessible by non-github using staff.
++ [Outdated] All Vessels v2 resources 
+> * [Vessel API link to All vessels](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/507084801/Vessel+Identity+API+flow): Diagram showing how All Vessels v2 fits within the work flow of the Vessel Identity API
+> * [All Vessels v2 Confluence](https://globalfishingwatch.atlassian.net/wiki/spaces/TD/pages/509345793/How+to+generate+the+all+vessels+byyear+v2+v+table+prototype): Includes source tables and code used to populated All Vessels v2 table. 
+> * [All Vessels v2 Tech Call slides](https://docs.google.com/presentation/d/1JqegdW8X4jjrkCVIF2ehukuI894BAQQgQ0Z7D0tOK-s/edit?usp=sharing): from bi weekly tech call presentation on July 27th 2023
 
 ## Updates
 Last updated on **September 30th, 2024**
