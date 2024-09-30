@@ -1,6 +1,6 @@
-The Product Vessel Info Summary table is the sole table used to identify which vessels (vessel_ids) to include in Product and what information to associate with the vessel. The additional fields on vessel activity, vessel type, and noise in the table are primarily for GFW staff, and, in particular, GFW analysts, to understand why a vessel appears the way it does in Products, or why a vessel may not be visible to non-GFW staff. Owner: Willa 
+The **Product Vessel Info Summary** table is the main source for determining which vessels are included in GFW Products and what identity information is shown for each vessel. The table also contains additional fields related to vessel activity, type, and noise, which are not displayed in Products. These fields are for GFW technical staff with access to BigQuery, to be used in analysis and also to be used to understand why a vessel appears in Products the way it does. **Owner:** Willa
 
-This table was previously named All Vessels v2, but was renamed to Product Vessel Info Summary in Pipeline 3.0. See `Updates` section for more information.
+Previously, this table was called **All Vessels v2** but was renamed to **Product Vessel Info Summary** in **Pipeline 3.0**. For more details, refer to the **`Updates`** section.
 
 ## Key Tables
 
