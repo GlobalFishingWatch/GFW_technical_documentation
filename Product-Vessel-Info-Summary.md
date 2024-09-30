@@ -1,11 +1,11 @@
-The All Vessels table is the sole table used to identify which vessels (vessel_ids) to include in Product and what information to associate with the vessel. The additional fields on vessel activity, vessel type, and noise in the All Vessels table are primarily for GFW staff, and, in particular, GFW analysts, to understand why a vessel appears the way it does in Products, or why a vessel may not be visible to non-GFW staff. Owner: Willa 
+The Product Vessel Info Summary table is the sole table used to identify which vessels (vessel_ids) to include in Product and what information to associate with the vessel. The additional fields on vessel activity, vessel type, and noise in the table are primarily for GFW staff, and, in particular, GFW analysts, to understand why a vessel appears the way it does in Products, or why a vessel may not be visible to non-GFW staff. Owner: Willa 
 
-**All Vessels v2 officially launched in Products October 26th 2023** as part of public Vessel Viewer (VV 2.0) release. See `Updates` section for more on the lastest changes to the dataset. 
+This table was previously named All Vessels v2, but was renamed to Product Vessel Info Summary in Pipeline 3.0
 
 ## Key Tables
 
-+ `pipe_production_v20201001.all_vessels_byyear_v2`
-> + `pipe_production_v20201001.all_vessels_byyear` - the previous all vessels table, maintained in pipeline 2.5, but to be officially deprecated in pipeline 3.0. 
++ `pipe_ais_v3_published.product_vessel_info_summary`
+> + `pipe_production_v20201001.all_vessels_byyear_v2` - the previous version of the table table, maintained in pipeline 2.5. 
 
 ## Source Tables
 
@@ -71,9 +71,11 @@ Please see the [All Vessels Data Template](https://docs.google.com/document/d/1z
 + [All Vessels v2 Tech Call slides](https://docs.google.com/presentation/d/1JqegdW8X4jjrkCVIF2ehukuI894BAQQgQ0Z7D0tOK-s/edit?usp=sharing): from bi weekly tech call presentation on July 27th
 
 ## Updates
-Last updated on **November 6th, 2023**
+Last updated on **September 30th, 2024**
 
-+ **[Oct 2023]** `all_vessels_byyear_v2` released in Products, with updates from internal feedback survey. 
++ **[Aug 2024]** Pipeline 3.0 released in Products alongside DeckGL release. This marks official shift to using product_vessel_info_summary table, and retiring all_vessels_v2 for both internal/staff and external users.
++ **[2024 - Pipeline 3.0]** In Pipeline 3.0, `all_vessels_byyear_v2` renamed to `product_vessel_info_summary`
++ **[Oct 26 2023]** `all_vessels_byyear_v2` released in Products as part of public Vessel Viewer (VV 2.0) release, with updates from internal feedback survey. 
 > **Updates to table:**
 > * added most frequent imo transmitted on AIS
 > * added most frequent callsign transmitted on AIS
