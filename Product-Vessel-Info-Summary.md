@@ -27,7 +27,7 @@ We want to be transparent on this hierarchy and the logic behind it, internally,
 
 How the Vessels API is populated is highlighted in the diagram below; specifically how the Product Vessel Info Summary table fits into the Vessels API. 
 
-![Vessels API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_2.png) <br>
+![Vessels API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_3.png) <br>
 [Vessels API diagram link](https://drive.google.com/file/d/1w-H8JawKDdjj0bikUXlXpZ-I8vNvPccm/view?usp=sharing)
 
 ![Product Vessel Info Summary vessel and gear type diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/All%20vessels%402x.png) <br>
