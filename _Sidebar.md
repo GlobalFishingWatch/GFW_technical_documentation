@@ -12,7 +12,7 @@
 - [Fishing effort and vessel presence](Fishing-effort-and-vessel-presence)
 - [Fishing events](Fishing-events)
 - [Vessel identity](Vessel-identity)
-   - [PVIS (previously All Vessels)](Product-Vessel-Info-Summary)
+   - [PVIS (previously All Vessels)](Product-Vessel-Info-Summary-(PVIS))
    - [Vessel database](Vessel-database)
    - [Vessel info tables](Vessel-info-tables)
    - [Annual carrier vessel list](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Annual-carrier-vessel-list)
