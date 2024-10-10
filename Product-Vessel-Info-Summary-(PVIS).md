@@ -1,4 +1,4 @@
-The **Product Vessel Info Summary** table is the main source for determining which vessels are included in GFW Products and what identity information is shown for each vessel. The table also contains additional fields related to vessel activity, type, and noise, which are not displayed in Products. These fields are for GFW technical staff with access to BigQuery, to be used in analysis and also to be used to understand why a vessel appears in Products the way it does. **Owner:** Willa
+The **Product Vessel Info Summary (PVIS)** table is the main source for determining which vessels are included in GFW Products and what identity information is shown for each vessel. The table also contains additional fields related to vessel activity, type, and noise, which are not displayed in Products. These fields are for GFW technical staff with access to BigQuery, to be used in analysis and also to be used to understand why a vessel appears in Products the way it does. **Owner:** Willa
 
 Previously, this table was called **All Vessels v2** but was renamed to **Product Vessel Info Summary** in **Pipeline 3.0**. For more details, refer to the **`Updates`** section.
 
