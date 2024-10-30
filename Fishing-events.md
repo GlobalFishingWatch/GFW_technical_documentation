@@ -11,7 +11,7 @@ Note, Fishing Events and the apparent fishing effort layer in the Map are not co
 
 
 > **Note** 
-> Always use the `published_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_fishing` then use that view table rather than `pipe_production_v20201001.published_events_fishing_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+> Always use the `product_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `product_events_x_v` (for example, if you want to use `pipe_ais_v3_published.product_events_fishing` then use that view table rather than `pipe_ais_v3_published.product_events_fishing_v`. The _v form of a product events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `product_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
 
 ## Source Tables
 
