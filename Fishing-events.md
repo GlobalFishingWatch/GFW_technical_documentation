@@ -15,7 +15,9 @@ Note, Fishing Events and the apparent fishing effort layer in the Map are not co
 
 ## Source Tables
 
-The current fishing events are calculated from the `gfw_reasearch.pipe_vYYYYMMDD_fishing` table and using the `gfw_research.vi_ssvid_vYYYMMDD` table. _You can also reference the ‘Details’ tab between ‘Schema’ and ‘Preview’ in BigQuery for list of GFW data tables used to build this database_
+See the `Details` tab in BigQuery for this information.
+
+![Fishing events BQ source tables](https://github.com/willabrooksGFW/gfw_photos/blob/main/product_events_fishing_BQ_details.png)
 
 ## Data Description
 
@@ -60,8 +62,10 @@ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https:/
 + Fishing Event Tech Call slide deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 
 ## Updates
-Last updated on **Nov 9th, 2023**
+Last updated on **Oct 30th, 2024**
 
++ **[August 2024]** Pipeline 3.0 released in Products alongside DeckGL release. This marks official shift to using the `pipe_ais_v3_published.product_events_fishing` table, and retiring the pipe 2.5 fishing events table for both internal/staff and external users.
++ **[2024 - Pipeline 3.0]** In Pipeline 3.0, published_events_fishing_v2 renamed to `product_events_fishing`. A second table of fishing events with a less restrictive list of potential fishing vessels was created in pipe 3 as well. This table is named `fishing_events`. Both tables are in `pipe_ais_v3_published` bin. Both tables use the exact same logic. The only difference is the list of vessels the query is run on. 
 + **[October 2023]** The `published_events_fishing` was re-run on an expanded list of fishing vessels using information from the `all_vessels_v2` table. Now vessels that are on_fishing_list_best, on_fishing_list_inferred, on_fishing_list_known, or on_fishing_list_sr have fishing events populated. This means that to reproduce the fishing events in Products, the fishing events table will need to be filtered for vessel_ids which are prod_shiptype = fishing in the all_vessels_v2 table. 
 + **[May 2023]** The `proto_events_fishing` table which was used in Products was updated to the `published_events_fishing` table, and the `proto_events_fishing` table was removed in June 2023. The published events fishing table now includes information on vessel authorization status, consistent with how authorization status is determined in vessel encounters. 
 + **[Spring 2023]** Authorization information is now included for fishing events, following the same logic as encounters for determining authorization status. Note, authorization information is limited to 7 RFMOs (5 tuna RFMOs, NPFC, and SPRFMO).
