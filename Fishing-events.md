@@ -42,9 +42,13 @@ The current Fishing Events are constructed through the following steps. Step 1 a
 
 ## Caveats and Known Issues
 
-Point nature of events: 
-+ if there is poor AIS transmission, average location of fishing event can be inconsistent with full location of tracks during time period.
-+ On the GFW Map, fishing events and fishing effort (see slide deck [HERE](https://docs.google.com/presentation/d/17brGIUs1gsRMKMmaFEqi_dd_TPMapVoE9_9PQH8esrM/edit?usp=sharing********)) do not follow the same restrictions. Fishing effort is not as restrictive and does not have filters to remove false/noisy fishing positions. Given Fishing Events and Fishing Efforts both appear in the GFW Map, this may lead to discrepancies on the public map on occasion (eg Fishing effort cells appearing on GFW map but no fishing events). See Fishing Event Tech Call slide deck in supplementary materials for a comparison of fishing events and pipefishing (eg fishing effort). In future pipeline versions and updates to the public map effort may be made to make fishing events and fishing effort data align.
+Accuracy of events:
++ If a vessel uses a recycled MMSI, or if another vessels transmits the same MMSI, then the models used to determine if a vessel is likely a fishing vessel may have reduced accuracy. It is important to verify that the vessel you are interested in is identified as a fishing vessel. See PVIS gitwiki for more guidance on this. 
++ Similarly, if a vessel is identified as a fishing vessel when it should not be, then the PVIS gitwiki should be reviewed to support investigation.
++ The fishing events logic is applied in the same way for all vessels (with squid jiggers as an exception). Given fishing behavior can look very different, the accuracy of applying the identical logic for grouping fishing positions could have limited accuracy. Subsequently, the count of individual events should be viewed as arbitrary. For greater context, fishing events were developed for grouping positions visually on the map, and for isolating and removing positions identified as unlikely to actually be fishing (events that are too short, or where the vessel is moving too quickly, or where the previous and subsequent positions associated with the vessel are not frequent enough to suggest identification of fishing behavior can be identified meaningfully). 
+
+Discrepancies between fishing events and apparent fishing effort: 
++ Fishing events and apparent fishing effort are not perfectly aligned. Given Fishing Events and Fishing Efforts both appear in the GFW Map, this may lead to discrepancies on the public map on occasion (eg Fishing effort cells appearing on GFW map but no fishing events). See Fishing Event Tech Call slide deck in supplementary materials for a comparison of fishing events and pipefishing (eg fishing effort). In future pipeline versions and updates to the public map effort may be made to make fishing events and fishing effort data align.
 
 ## Example Queries (needs to be updated to reflect pipe 3.0 data tables)
 
