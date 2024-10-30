@@ -59,6 +59,7 @@ Discrepancies between fishing events and apparent fishing effort:
 
 ## Links
 
++ [What is the difference between the apparent fishing effort layer and the fishing events in the vessel track? FAQ](https://globalfishingwatch.org/faqs/difference-between-fishing-effort-and-fishing-events/#:~:text=Therefore%2C%20GFW%20developed%20fishing%20events,fishing%20for%20a%20given%20vessel.) 
 + (likely outdated) Fishing Effort and Events training slide deck link [HERE](https://docs.google.com/presentation/d/17brGIUs1gsRMKMmaFEqi_dd_TPMapVoE9_9PQH8esrM/edit#slide=id.g101ceedbfaa_0_66_) 
 + (likely outdated) Fishing Event Tech Call slide deck link [HERE](https://docs.google.com/presentation/d/1ndJ4aau2Ci0dqmA2xyEp7vPrwlpt8gkVNNi0aFb7csY/edit?usp=sharing) 
 
