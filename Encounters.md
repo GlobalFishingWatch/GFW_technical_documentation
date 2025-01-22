@@ -41,6 +41,7 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 
 ## Caveats & Known Issues
 
++ GFW has never created encounters for short events on either side of the UTC day boundary - specifically those that start between 10pm and 12am or end between 12am and 2am. This is a known issue that will be fixed in the future, for more information see [PIPELINE-2137](https://globalfishingwatch.atlassian.net/browse/PIPELINE-2137) and [this Slack thread](https://globalfishingwatch.slack.com/archives/CHBNB2JAE/p1737127108538739?thread_ts=1737046100.552259&cid=CHBNB2JAE)
 + Point nature of events; if ais transmission is poor, the average location can be inconsistent with full location of tracks during time period. In addition, due to the way events are combined across days, average event parameters are approximate.
 + Due to the definition of encounter and loitering events, loitering events can overlap with encounter events.
 + Maintaining up to date identity changes of carrier and fishing vessels of interest in encounters between carrier and fishing vessels. Always use the most up-to-date identity tables, and verify results when possible.
