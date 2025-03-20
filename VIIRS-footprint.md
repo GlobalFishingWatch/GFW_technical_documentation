@@ -1,11 +1,12 @@
+# VIIRS footprint
 
 VIIRS footprint table contains information on the area observed by the VIIRS satellite (Suomi-NPP). The data is obtained from [NASA LAADS](https://ladsweb.modaps.eosdis.nasa.gov/archive/geoMetaJPSS/5110/NPP/).
 
-# Repository
+## Repository
 
 https://github.com/GlobalFishingWatch/viirs-footprint
 
-# Key tables
+## Key tables
 
 Current version
 

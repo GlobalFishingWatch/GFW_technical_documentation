@@ -1,3 +1,7 @@
+# (PART) Global Fishing Watch Datasets {-} 
+
+# Fishing effort and vessel presence
+
 ## Data Overview
 
 The flagship datasets of Global Fishing Watch are vessel presences and apparent fishing effort based on transmissions from vessel tracking datasets. These datasets represent the amount of time vessels are present in an area and, for fishing vessels, how much of that time is spent fishing. Using cloud computing, machine learning, and public vessel registry information, GFW analyzes tens of millions of AIS positions each day to map global apparent fishing effort.
@@ -14,7 +18,7 @@ We combine our comprehensive database of vessels with a known vessel type from v
 
 ## Key Tables
 
-+ `pipe_production_vYYYYMMDD.research_messages` - AIS positions, thinned to one minute per segment, for all vessels.
++ `pipe_ais_v3.research_messages` - AIS positions, thinned to one minute per segment, for all vessels.
 
 + `pipe_production_vYYYYMMDD.research_segs` - Summaries of vessel activity by segment (`seg_id`). Includes fields indicating which segments are likely noise (e.g. `good_seg`, `good_seg2`, `overlapping_and_short`) and should be filtered out.
 

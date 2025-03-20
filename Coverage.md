@@ -1,3 +1,5 @@
+# Coverage
+
 The coverage metric was first released in Vessel Viewer (prototype) in 2023 as a contextual piece of information to help users identify how useful/complete the activity summary for the vessel being searched is. The coverage metric is a percentage representing the proportion of one hour blocks a vessel is in a voyage and has at least one AIS transmission. See Data Description section for more information. 
 
 

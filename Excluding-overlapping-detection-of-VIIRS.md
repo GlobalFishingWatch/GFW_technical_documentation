@@ -1,3 +1,4 @@
+# VIIRS excluding overlapping detection
 
 Single VIIRS overpass from North to South at night can be distinguishable using OrbitNumber. And Successive VIIRS overpasses have overlapping regions. To eliminate the overlapping, We will choose an overpass (i.e OrbitNumber) with a smaller satellite zenith angle for each 1-degree grid area for each day.
 

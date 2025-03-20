@@ -1,3 +1,7 @@
+# (PART) Big Query {-} 
+
+# Big Query datasets
+
 GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW's data pipeline (`pipe_production_vYYYYMMDD`), vessel identity information pulled from vessel registries (`vessel_database`), and streamlined versions of these tables and other derived data products relevant for research and analysis (`gfw_research`).    
 
 ## Staging Process (2021 Updates)

@@ -1,4 +1,6 @@
-# Example query
+# VIIRS noise filter
+
+## Example query
 
 VIIRS contains many false detections, especially around South America. The example query linked below reduces the noise in South America. (but it may eliminate some prat of true detection as well as South Atlantic Anomaly)
 
@@ -6,7 +8,7 @@ VIIRS contains many false detections, especially around South America. The examp
 
 The filter basically adopts QF1,2,3,10 for outside of South America, while adopting some portion of QF1,2,3,5,7,10 based on the value of `Rad_DNB` and `SHI`.
 
-# Repository
+## Repository
 
 The filter was developed in the repository [viirs-noise-filter](https://github.com/GlobalFishingWatch/viirs-noise-filter).
 

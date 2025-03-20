@@ -1,3 +1,5 @@
+# Annual carrier vessel list 
+
 The **annual carrier vessel list** table contains likely carrier vessels that are active in AIS and matched to one or more registries by year. The information is pulled from the [vessel database](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database) and includes only the following fields (year, MMSI number, and carrier classification) that helps identify carrier vessels in other tables including pipeline tables, vessel info table, encounter/loitering tables among others. It is mainly used for the Carrier Vessel Portal to have the base list of carriers for further data process. The carrier MMSI is presented for each year that it was AIS-active. Currently, no filters have been applied to remove noisy MMSIs. As a consequence, it may include some MMSIs that are used by multiple (possibly non-carrier) vessels, which should be treated according to the user's objective. For the further information about the query that creates the table, go to the [link](https://github.com/GlobalFishingWatch/vessel-identity/blob/master/vessel-database/push_staging_data/carrier_vessels_byyear.sql.j2). 
 
 ## Key Tables

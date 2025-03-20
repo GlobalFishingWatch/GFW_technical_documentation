@@ -1,3 +1,5 @@
+# Big Query Key concepts
+
 This page provides an overview and key concepts for working with GFW data in BigQuery, Google's serverless, highly scalable enterprise data warehouse. 
 
 Information is organized in the following topics:
@@ -69,6 +71,7 @@ Datasets are the top level containers of our data in BigQuery. They should have 
 #### Prefixes
 
 The following prefixes are used to organize datasets into groups:
+
 + `pipe_`: These datasets contain automated tables that are consumed or produced by a GFW pipeline.
 + `gfw_`: Datasets related to GFW's research work and public data 
 + `proj_`: Project-specific datasets. Each project should receive its own dataset clearly named with the project topic and/or client (e.g. `proj_[topic]_[client]`)

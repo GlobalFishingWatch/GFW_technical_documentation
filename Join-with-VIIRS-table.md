@@ -1,3 +1,4 @@
+# Join with VIIRS table
 
 ```sql
 CREATE TEMP FUNCTION start_date() AS (DATE('2020-01-01'));

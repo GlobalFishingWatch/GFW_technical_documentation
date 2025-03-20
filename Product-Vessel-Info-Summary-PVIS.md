@@ -1,3 +1,5 @@
+# Product Vessel Info Summary (PVIS)
+
 The **Product Vessel Info Summary (PVIS)** table is the main source for determining which vessels are included in GFW Products and what identity information is shown for each vessel. The table also contains additional fields related to vessel activity, type, and noise, which are not displayed in Products. These fields are for GFW technical staff with access to BigQuery, to be used in analysis and also to be used to understand why a vessel appears in Products the way it does. **Owner:** Willa
 
 Previously, this table was called **All Vessels v2** but was renamed to **Product Vessel Info Summary** in **Pipeline 3.0**. For more details, refer to the **`Updates`** section.
@@ -5,16 +7,19 @@ Previously, this table was called **All Vessels v2** but was renamed to **Produc
 ## Key Tables
 
 + `pipe_ais_v3_published.product_vessel_info_summary`
-> + `pipe_production_v20201001.all_vessels_byyear_v2` - the previous version of the table table, maintained in pipeline 2.5. 
++ `pipe_production_v20201001.all_vessels_byyear_v2` - the previous version of the table table, maintained in pipeline 2.5. 
 
 ## Source Tables
 
 The Product Vessel Info Summary table uses the following source tables, below. For more information on how these source tables are utilized to populate the Product Vessel Info Summary table, please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit). The documentation for All Vessels v2, the previous version of the Product Vessel Info Summary Table can be found [here](https://docs.google.com/document/d/1zhYOFaur-XNv5i1q3cE-IGn84bcJRNAJqTya0BIBmQo/edit).
+
 + `pipe_ais_v3_published.product_vessel_info_match` - internal table not to be used outside of products. This table was created to match our vessel_id (AIS transmitted data) to our registry matched table (identity core) so that Products automatically connect vessel_id (AIS records) to any existing registry records. 
+
 > * `pipe_ais_v3_published.identity_core`
 > * `pipe_ais_v3_published.vessel_info`
 > * `pipe_ais_v3_published.segs_activity`
 > * `pipe_ais_v3_published.segment_info`
+
 + `pipe_ais_v3_published.vi_ssvid`
 + `pipe_ais_v3_published.vi_ssvid_byyear`
 + `pipe_ais_v3_internal.purse_seine_support_vessels_byyear`     
@@ -38,28 +43,30 @@ Please see the [Product Vessel Info Summary Data Template](https://docs.google.c
 ## Caveats and Known Issues
 
 + Please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit) `Caveats` section and `FAQs` section for more on the following topics.
-> * Caveats
-> > * Inaccuracies in inferred (neural net) class information
-> > * Possibility of error between ssvid and vessel id merger
-> * FAQs
-> > * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
-> > * What if a vessel is considered multiple gear types?
-> > * What should I do if I think a vessel type has been incorrectly assigned?
-> > * Why is my vessel_id NOT included in the Product Vessel Info Summary table (and thus in Products)?
-> > * Multiple Vessel IDs for a single unique hull
-> > * Why am I only seeing a short track segment when I search for a vessel that I know is transmitting on AIS across years?
-> > * Making sense of vessels with shiptype ‘Discrepancy’
-> > * What is the difference between core_geartype and registry_vessel_class fields?
+
+* Caveats
+* Inaccuracies in inferred (neural net) class information
+* Possibility of error between ssvid and vessel id merger
+* FAQs
+  * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
+  * What if a vessel is considered multiple gear types?
+  * What should I do if I think a vessel type has been incorrectly assigned?
+  * Why is my vessel_id NOT included in the Product Vessel Info Summary table (and thus in Products)?
+  * Multiple Vessel IDs for a single unique hull
+  * Why am I only seeing a short track segment when I search for a vessel that I know is transmitting on AIS across years?
+  * Making sense of vessels with shiptype ‘Discrepancy’
+  * What is the difference between core_geartype and registry_vessel_class fields?
 + **Noise filter:** Products only include non-noisy segments, and subsequently vessel_id's with at least one non-noisy seg_id (eg passes the `WHERE good_seg and NOT overlapping_and_short` filter) are excluded from Products. 
 
 ## Example Queries
 
 + Please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit) `Use cases` section for example Queries expanding on the following questions:
-> * How do I use the activity summary fields to understand vessel activity? 
-> * How do I compare what the current product ship and gear type is in the product vessel info summary table to what was in the previous version of the table (all vessels v2)?
-> * Discrepancy vessel example
-> * Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
-> * How can the Product Vessel Info Summary table be used to identify all possible fishing vessels? 
+
+* How do I use the activity summary fields to understand vessel activity? 
+* How do I compare what the current product ship and gear type is in the product vessel info summary table to what was in the previous version of the table (all vessels v2)?
+* Discrepancy vessel example
+* Why is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?
+* How can the Product Vessel Info Summary table be used to identify all possible fishing vessels? 
 + [vessel_id_connected_to_noisy_segment_check](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/vessel_id_connected_to_noisy_segment_check.sql) - if a vessel_id does not appear in the Product Vessel Info Summary table, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the Product Vessel Info Summary table.
 
 ## Links

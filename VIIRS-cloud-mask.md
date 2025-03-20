@@ -1,3 +1,4 @@
+# VIIRS cloud mask
 
 This table contains information on the Cloud presence/absence data derived from VIIRS satellite (Suomi-NPP). The data was obtained from [CLDMSK_L2_VIIRS_SNPP](https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/CLDMSK_L2_VIIRS_SNPP/). The table is aggregated into a 0.1-degree grid (represented by `lat_bin`, `lon_bin`).
 

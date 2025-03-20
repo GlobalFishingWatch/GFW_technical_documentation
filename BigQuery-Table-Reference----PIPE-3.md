@@ -1,3 +1,5 @@
+# Big Query table reference PIPE 3
+
 This page contains the published tables of AIS Pipeline 3 `pipe_ais_v3_published.` and their previous names in the AIS Pipeline 2.5 `pipe_production_v20201001.` If you do NOT see a table listed below it has either been archived or placed in the `internal` bucket within BQ. This page does NOT contain the description of the internal tables of AIS Pipeline 3 `pipe_ais_v3_internal.` Please contact the engineers and pipeline manager if you request to use an internal table for your work. 
 
 Table Development: 
@@ -18,7 +20,8 @@ Last update:
    * By: `Hannah Linder`
 
 
-## AIS Pipe 3 -- Published
+__AIS Pipe 3 -- Published__
+
 | Description | BQ Table| Previous BQ Table |
 | --- | --- | --- |
 | AIS pipeline dataset to use | `pipe_ais_v3`| `pipe_production_v20201001` | 

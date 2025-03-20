@@ -2,7 +2,7 @@
 
 This wiki includes the primary documentation of Global Fishing Watch's data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g. fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.
 
-GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, and VIIRS. These data are processed by GFW's automated [pipelines](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline). These raw and processed data are stored as tables and organized in a handful of [key BigQuery datasets](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/BigQuery-datasets). 
+GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, and VIIRS. These data are processed by GFW's automated [pipelines](#pipelines). These raw and processed data are stored as tables and organized in a handful of [key BigQuery datasets](#BigQuery-datasets). 
 
 ## Data Updates
 Check the [Data updates](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Data-updates) for new changes to GFW data.

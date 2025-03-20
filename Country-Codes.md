@@ -1,3 +1,4 @@
+# Country codes
 
 GFW maintains a table which links MID codes (the first three digits of the MMSI) to alternative country/flag designations and EEZ characteristics. This table is also used to link the numeric `eez_id` to an EEZ name/label.  
  

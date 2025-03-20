@@ -1,4 +1,4 @@
-# GFW Pipelines
+# GFW Pipelines {#pipelines}
 
 A GFW "pipeline" refers to an automated process by which GFW converts raw AIS or other data into the datasets and tables used for research and analysis. Pipelines are a multi-step process that includes ingesting and cleaning raw data, applying GFW algorithms, and saving data to BigQuery tables and/or other locations. 
  
