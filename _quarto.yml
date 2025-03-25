@@ -4,10 +4,23 @@ project:
 
 book:
   title: "Global Fishing Watch documentation"
-  # author: "Jane Doe"
-  # date: "8/18/2021"
+  date: last-modified
+  repo-url: https://github.com/GlobalFishingWatch/GFW_technical_documentation
+  repo-actions: [issue]
+  
+  sidebar:
+    title: "Documentation Materials"
+    style: "floating"
+    search: true
+    pinned: true
+    tools:
+      - icon: house-door-fill
+        href: https://globalfishingwatch.org/
+    # - icon: twitter
+    #   href: [link to bluesky?]
+  
   chapters:
-    - index.qmd
+    - index.md
     - Data-Updates.md
     - BigQuery-datasets.md
     - BigQuery-Table-Reference----PIPE-3.md
