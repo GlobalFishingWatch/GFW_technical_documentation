@@ -6,9 +6,9 @@ A key purpose of the vessel info tables is to evaluate these multiple and potent
 
 ## Key Tables
 
-+ `gfw_research.vi_ssvid_vYYYYMMDD` - This table includes the best activity and identity information available for the vessel based on its full AIS timeseries.
-+ `gfw_research.vi_ssvid_byyear_vYYYYMMDD` - This table includes annual best activity and identity information for the vessel based only on data in each year. As a result, the information for a given year in `gfw_research.vi_ssvid_byyear_vYYYYMMDD` may not match that in `gfw_research.vi_ssvid_vYYYYMMDD` (e.g. the vessel recently re-flagged).  
-+ `gfw_research.fishing_vessels_ssvid_vYYYYMMDD` - This table includes the GFW yearly list of active non spoofing/offsetting fishing vessels. It is GFW's most restrictive list of fishing vessels and the default list to use in research/analysis.
++ `pipe_ais_v3_published.vi_ssvid_vYYYYMMDD` - This table includes the best activity and identity information available for the vessel based on its full AIS timeseries.
++ `pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD` - This table includes annual best activity and identity information for the vessel based only on data in each year. As a result, the information for a given year in `pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD` may not match that in `pipe_ais_v3_published.vi_ssvid_vYYYYMMDD` (e.g. the vessel recently re-flagged).  
+
 
 ## Data Description
 
@@ -52,26 +52,20 @@ combined neural net score for fishing classes `inferred.fishing_class_score` > 0
   + The vessel’s highest `inferred.inferred_vessel_class_score` is for a fishing vessel class and exceeds 0.85
   + The vessel is `on_fishing_list_nn` and `on_fishing_list_known` is **not** False
 
-### `fishing_vessels_ssvid` table
-
-The `on_fishing_list_best` field in the vessel info tables indicates whether GFW believes an MMSI is likely a fishing vessel. However, many of these MMSI are spoofing, offsetting, likely gear, or simply highly inactive and including them in analyses can introduce a lot of noise. For this reason, GFW produces the `fishing_vessels_ssvid` table, which takes the MMSI listed as `on_fishing_list_best` and applies a set of filters to fields in the `activity` struct of the `vi_ssvid_byyear` table to create a yearly list of likely fishing vessels. 
-
 ## Caveats & Known Issues
 
 ### Fishing hours incorrect for squid jiggers
 
-Currently, the vessel info table summarizes `fishing_hours` from the `pipe_v20201001_segs_daily` table. Fishing hours in this table are calculated solely from `nnet_score` and are therefore incorrect for `squid_jiggers`, which should be calculated using `night_loitering`. 
+Currently, the vessel info table summarizes `fishing_hours` from the `pipe_ais_v3_published.segs_activity_daily` table. Fishing hours in this table are calculated solely from `nnet_score` and are therefore incorrect for `squid_jiggers`, which should be calculated using `night_loitering`. 
 
-## Example Queries
+## Example Queries (need updating)
 
-+ [vessel_info_examples_1_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/vessel_info_examples_1_v20211128.sql)
++ vessel_info_examples_1_v20211128.sql
 
-+ [vessel_info_examples_2_v20211128.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/examples/current/vessel_info_examples_2_v20211128.sql)
++ vessel_info_examples_2_v20211128.sql
 
 ## Links
 
 + [Vessel info training slides](https://docs.google.com/presentation/d/1Eu3vVM2w2bhnbDYRgdNqV6fEMcC5AWX_5nnm6YRWqDw/edit?usp=sharing)
 
 + [Vessel class definitions](https://docs.google.com/document/d/1HCQbP_gU79CYjSL1qpSkS5q-W0Guw0W40q6rUL39GoQ/edit?usp=sharing)
-
-## Updates

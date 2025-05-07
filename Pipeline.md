@@ -11,9 +11,20 @@ The AIS pipeline is GFW's primary pipeline and includes the following processes:
 3. Predict which positions are likely fishing positions
 4. Identify various event types (e.g. transshipment, port visits, fishing, AIS gaps, etc.) 
 
-[AIS data tables](#AIS-data-tables) and [AIS event tables](#AIS-event-tables) produced by a given version of the AIS pipeline are stored within a BigQuery dataset named `pipe_production_vYYYYMMDD`, where the `YYYYMMDD` refers to the date the pipeline was created. Additionally, [AIS research tables](#AIS-research-tables), which are designed for research and analysis, are stored in `gfw_research`, with each table including the AIS pipeline version (`YYYYMMDD`) in its name (e.g. `pipe_vYYYYMMDD`).   
+[AIS data tables](#AIS-data-tables) and [AIS event tables](#AIS-event-tables) produced by a given version of the AIS pipeline are stored within several BigQuery datasets. The `pipe_ais_[version]_published` contains final output tables (e.g. positions, events, vessel identity) of the pipeline and are the primary tables used in analyses, research, and products. Additionally, intermediate tables that are primarily used to generate the tables in `pipe_ais_[version]_published` are stored in a separate dataset named `pipe_ais_[version]_internal`.   
 
-### AIS data tables
+
+### `pipe_ais_[version]_published` tables
+
++ `messages`
++ `segment_info`
++ `segs_activity_daily`
++ `segs_activity`
++ `ssvids_identities_daily`
++ `ssvids_identities`
++ `vessel_info`
+
+### `pipe_ais_[version]_internal` tables
 
 AIS data tables are tables produced by the AIS pipeline that contain a version or summary of the *entire* AIS dataset. The first type of AIS data tables are those that contain a complete copy of the AIS data output during various steps in the pipeline: 
 
@@ -23,6 +34,7 @@ AIS data tables are tables produced by the AIS pipeline that contain a version o
 + `features_YYYYMMDD`
 + `fishing_score_YYYYMMDD`
 + `messages_scored_YYYYMMDD`
++ `messages_regions`
 
 For example, the `position_messages_YYYYMMDD` table is output following data normalization, and the `messages_segmented_YYYYMMDD` table is the output of the segmenter stage of the AIS pipeline. The final output is the `messages_scored_` table, which contains *all* AIS position messages and their fishing score.
 
@@ -39,21 +51,24 @@ A key feature of the AIS data tables is `vessel_id`, which is intended as a uniq
 
 ### AIS research tables
 
-Because AIS data tables, specifically `messages_scored_`, contain all AIS positions, they are *extremely large tables* and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. **Therefore, the GFW AIS pipeline produces a series of "research tables" designed specifically to be more efficient for research/analysis**. These tables start with the prefix `research_`. 
+Because raw AIS data tables contain all AIS positions, they are *extremely large tables* and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. 
 
 Key details of the research tables include the following:
-+ AIS positions in the main research table (`research_messages`) are thinned to one position per minute per segment
++ AIS positions in the main research table (`messages`) are thinned to one position per minute per segment
 + Every AIS position is assigned an amount of time (`hours`), which is equal to the time since the previous position in the segment
 + There are two different fishing score variables - `nnet_score` and `night_loitering`. Use `night_loitering` for  `squid_jiggers` and `nnet_score` for all other fishing classes.
 
 ### AIS event tables
 
 Lastly, the AIS pipeline includes a series of algorithms that identify certain vessel behaviors, referred to as events:
-+ [Encounters](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters)
-+ [Loitering](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering)
-+ [Port visits and voyages](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages)
-+ [Fishing events](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-events)  
+
+[update links to relative links within the repo]
+
++ Encounters
++ Loitering
++ Port visits and voyages
++ Fishing events
 
 ## VMS pipeline
 
-GFW also creates individual VMS pipelines to process national VMS data. The output tables of the VMS pipelines mirror the data and event tables from the AIS pipeline and are stored in datasets named `pipe_[country]_production_vYYYYMMDD`. The VMS pipeline does not (yet) output VMS research tables.
+GFW also creates individual VMS pipelines to process national VMS data. The output tables of the VMS pipelines mirror the data and event tables from the AIS pipeline and are stored in datasets named `pipe_[country]_production_vYYYYMMDD`.

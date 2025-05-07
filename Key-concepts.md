@@ -44,15 +44,14 @@ The BigQuery validator is a built-in query debugger that also estimates query co
 
 Within a BigQuery project, data is stored in tables and organized in datasets. There are many datasets in the `world-fishing-827` project, but the following are the primary datasets for research and analysis:  
 
-   + `pipe_production_vYYYYMMDD`: AIS pipeline dataset  
+   + `pipe_ais_v3_published`: AIS pipeline dataset
+   + `pipe_sar_published`
      + `pipe_[country]_production_vYYYYMMDD`: Country-specific VMS pipeline datasets
        > + VMS data can only be used by partners with written permission from the relevant national authorities (see [VMS](#VMS) for more info).
    + `gfw_research`: Contains a variety of static tables useful for analysis and early versions of new research concepts
    + `vessel_database`: Contains tables related to vessel registry information 
    + `anchorages`: Contains the GFW anchorages dataset 
 
-If you don't see at least the `pipe_production_vYYYYMMDD`, `gfw_research`, `vessel_database`, and `anchorages` dataset let Tyler or Enrique know.
- 
 ## Naming conventions
 
 Many datasets and tables in the `world-fishing-827` project follow several key naming conventions. Abiding by these conventions will help make it easier for everyone to navigate the large amount of data in `world-fishing-827`. It is beyond the scope of this document and unnecessary to prescribe naming conventions for every table. However, tables within a dataset should use clear and self-explanatory names. 
