@@ -101,6 +101,8 @@ Voyages are a further processed dataset as they represent two port visits that b
 
 * These events use `vessel_id` as vessel identifier and may need to be mapped to `SSVID` for broader use by using for example `PVIS (product_vessel_info_summary)`.
 
+* Port visits are regenerated daily, so a vessel's historical port visits may change as new data is added, the way the assignment of `seg_id` to `vessel_id` changes over time, or noise filters mutate (e.g. from `overlapping_and_short = FALSE` to `overlapping_and_short = TRUE` or vice versa). This means that port visits may change over time so it is recommended to use the most recent version of the port visits table. This happens particularly during the first few days or even weeks of a new port visit and much more often for lower confidence port visits than confidence 4 port visits (which by definition have ended).
+
 ### Voyages
 * These events use port visits and have similar caveats.  
 * There are three tables of voyages based on a minimum confidence value for the start or end port visits of a voyage. 
