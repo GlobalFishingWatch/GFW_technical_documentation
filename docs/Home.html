@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-04-14">
 
-<title>Global Fishing Watch documentation</title>
+<title>2&nbsp; GFW Data Documentation – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./Home.html" rel="next">
+<link href="./Data-Updates.html" rel="next">
+<link href="./index.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Home.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -111,13 +111,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Home.html" class="sidebar-item-text sidebar-link">
+  <a href="./Home.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></span></a>
   </div>
 </li>
@@ -359,7 +359,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome-to-gfw-documentation" id="toc-welcome-to-gfw-documentation" class="nav-link active" data-scroll-target="#welcome-to-gfw-documentation">Welcome to GFW Documentation</a></li>
+  <li><a href="#data-updates" id="toc-data-updates" class="nav-link active" data-scroll-target="#data-updates"><span class="header-section-number">2.1</span> Data Updates</a></li>
+  <li><a href="#bigquery-key-concepts" id="toc-bigquery-key-concepts" class="nav-link" data-scroll-target="#bigquery-key-concepts"><span class="header-section-number">2.2</span> BigQuery Key Concepts</a></li>
+  <li><a href="#data-products" id="toc-data-products" class="nav-link" data-scroll-target="#data-products"><span class="header-section-number">2.3</span> Data Products</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -368,7 +370,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Global Fishing Watch documentation</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></h1>
 </div>
 
 
@@ -376,12 +378,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">April 14, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -391,21 +387,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome-to-gfw-documentation" class="level2 unnumbered">
-<h2 class="unnumbered anchored" data-anchor-id="welcome-to-gfw-documentation">Welcome to GFW Documentation</h2>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>WORK IN PROGRESS</strong>. Information on this book is not up to date. We are currently working on improving GFW documentation.</p>
-</div>
-</div>
+<p>This wiki includes the primary documentation of Global Fishing Watch’s data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g.&nbsp;fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.</p>
+<p>GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, and VIIRS. These data are processed by GFW’s automated <a href="Pipeline.html">pipelines</a>. These raw and processed data are stored as tables and organized in a handful of <a href="#BigQuery-datasets">key BigQuery datasets</a>.</p>
+<section id="data-updates" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="data-updates"><span class="header-section-number">2.1</span> Data Updates</h2>
+<p>Check the <a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Data-updates">Data updates</a> for new changes to GFW data.</p>
+<p>See the <a href="#Bigquery-table-reference">BigQuery Table Reference</a> for checking the latest version of key tables to use.</p>
+</section>
+<section id="bigquery-key-concepts" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="bigquery-key-concepts"><span class="header-section-number">2.2</span> BigQuery Key Concepts</h2>
+<p>Read the <a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Key-concepts">BigQuery Key Concepts page</a> for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.</p>
+</section>
+<section id="data-products" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="data-products"><span class="header-section-number">2.3</span> Data Products</h2>
+<p>GFW data are grouped into the following general categories, or data products, that are used for various analyses.</p>
+<ol type="1">
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-effort-and-vessel-presence">Fishing effort and vessel presences</a> - Activity and fishing activity for all vessels</li>
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Fishing-events">Fishing events</a> - Activity by the world’s fishing vessels grouped into events</li>
+<li><a href="Vessel-database">Vessel database</a> and <a href="Vessel-info-tables">Vessel info tables</a> - Database of vessel identity</li>
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters">Encounters</a> - Encounters between two vessels</li>
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering">Loitering</a> - Loitering events by potential transshipment vessels</li>
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Anchorages-and-voyages">Anchorages &amp; voyages</a> - Database of ports and vessel voyages between ports</li>
+<li><a href="VMS">Country VMS</a> - Country-specific VMS data</li>
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/SAR-object-detections">SAR Detections</a> - Vessel detections from Sentinel-1 SAR imagery</li>
+<li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps">AIS Gaps</a> - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.</li>
+</ol>
 
 
 </section>
@@ -833,10 +839,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Introduction">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./Home.html" class="pagination-link" aria-label="GFW Data Documentation">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Data-Updates.html" class="pagination-link" aria-label="(PART) Data updates">
+        <span class="nav-page-text">(PART) Data updates</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

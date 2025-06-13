@@ -1492,31 +1492,31 @@
   {
     "objectID": "Pipeline.html",
     "href": "Pipeline.html",
-    "title": "30  GFW Pipelines",
+    "title": "31  GFW Pipelines",
     "section": "",
-    "text": "30.1 AIS pipeline\nThe AIS pipeline is GFW’s primary pipeline and includes the following processes:\nAIS data tables and AIS event tables produced by a given version of the AIS pipeline are stored within a BigQuery dataset named pipe_production_vYYYYMMDD, where the YYYYMMDD refers to the date the pipeline was created. Additionally, AIS research tables, which are designed for research and analysis, are stored in gfw_research, with each table including the AIS pipeline version (YYYYMMDD) in its name (e.g. pipe_vYYYYMMDD).",
+    "text": "31.1 AIS pipeline\nThe AIS pipeline is GFW’s primary pipeline and includes the following processes:\nAIS data tables and AIS event tables produced by a given version of the AIS pipeline are stored within a BigQuery dataset named pipe_production_vYYYYMMDD, where the YYYYMMDD refers to the date the pipeline was created. Additionally, AIS research tables, which are designed for research and analysis, are stored in gfw_research, with each table including the AIS pipeline version (YYYYMMDD) in its name (e.g. pipe_vYYYYMMDD).",
     "crumbs": [
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>GFW Pipelines</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>GFW Pipelines</span>"
     ]
   },
   {
     "objectID": "Pipeline.html#ais-pipeline",
     "href": "Pipeline.html#ais-pipeline",
-    "title": "30  GFW Pipelines",
+    "title": "31  GFW Pipelines",
     "section": "",
-    "text": "Normalize and combine raw AIS data from Orbcomm and Spire\nRemove noise and group positions into segments (e.g. the “segmenter”)\nPredict which positions are likely fishing positions\nIdentify various event types (e.g. transshipment, port visits, fishing, AIS gaps, etc.)\n\n\n\n30.1.1 AIS data tables\nAIS data tables are tables produced by the AIS pipeline that contain a version or summary of the entire AIS dataset. The first type of AIS data tables are those that contain a complete copy of the AIS data output during various steps in the pipeline:\n\nposition_messages_YYYYMMDD\nmessages_segmented_YYYYMMDD\nspatial_measures_YYYYMMDD\nfeatures_YYYYMMDD\nfishing_score_YYYYMMDD\nmessages_scored_YYYYMMDD\n\nFor example, the position_messages_YYYYMMDD table is output following data normalization, and the messages_segmented_YYYYMMDD table is the output of the segmenter stage of the AIS pipeline. The final output is the messages_scored_ table, which contains all AIS position messages and their fishing score.\nThe other group of AIS data tables include tables that summarize the complete AIS data by segment or vessel. These tables may be further organized into daily date sharded tables and overall tables. Daily summary tables are considered “static”, meaning their data is fixed, while overall summary tables are considered dynamic because their data is subject to change over time as new data are incorporated.\n\nsegment_vessel_daily_YYYYMMDD and segment_vessel\nsegment_info\nsegment_identity_daily_YYYYMMDD\nvessel_info\n\n\n30.1.1.1 vessel_id\nA key feature of the AIS data tables is vessel_id, which is intended as a unique ID for an identity in the AIS data and is used to link AIS positions to an identity and AIS events…[EXPAND].\n\n\n\n30.1.2 AIS research tables\nBecause AIS data tables, specifically messages_scored_, contain all AIS positions, they are extremely large tables and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. Therefore, the GFW AIS pipeline produces a series of “research tables” designed specifically to be more efficient for research/analysis. These tables start with the prefix research_.\nKey details of the research tables include the following: + AIS positions in the main research table (research_messages) are thinned to one position per minute per segment + Every AIS position is assigned an amount of time (hours), which is equal to the time since the previous position in the segment + There are two different fishing score variables - nnet_score and night_loitering. Use night_loitering for squid_jiggers and nnet_score for all other fishing classes.\n\n\n30.1.3 AIS event tables\nLastly, the AIS pipeline includes a series of algorithms that identify certain vessel behaviors, referred to as events: + Encounters + Loitering + Port visits and voyages + Fishing events",
+    "text": "Normalize and combine raw AIS data from Orbcomm and Spire\nRemove noise and group positions into segments (e.g. the “segmenter”)\nPredict which positions are likely fishing positions\nIdentify various event types (e.g. transshipment, port visits, fishing, AIS gaps, etc.)\n\n\n\n31.1.1 AIS data tables\nAIS data tables are tables produced by the AIS pipeline that contain a version or summary of the entire AIS dataset. The first type of AIS data tables are those that contain a complete copy of the AIS data output during various steps in the pipeline:\n\nposition_messages_YYYYMMDD\nmessages_segmented_YYYYMMDD\nspatial_measures_YYYYMMDD\nfeatures_YYYYMMDD\nfishing_score_YYYYMMDD\nmessages_scored_YYYYMMDD\n\nFor example, the position_messages_YYYYMMDD table is output following data normalization, and the messages_segmented_YYYYMMDD table is the output of the segmenter stage of the AIS pipeline. The final output is the messages_scored_ table, which contains all AIS position messages and their fishing score.\nThe other group of AIS data tables include tables that summarize the complete AIS data by segment or vessel. These tables may be further organized into daily date sharded tables and overall tables. Daily summary tables are considered “static”, meaning their data is fixed, while overall summary tables are considered dynamic because their data is subject to change over time as new data are incorporated.\n\nsegment_vessel_daily_YYYYMMDD and segment_vessel\nsegment_info\nsegment_identity_daily_YYYYMMDD\nvessel_info\n\n\n31.1.1.1 vessel_id\nA key feature of the AIS data tables is vessel_id, which is intended as a unique ID for an identity in the AIS data and is used to link AIS positions to an identity and AIS events…[EXPAND].\n\n\n\n31.1.2 AIS research tables\nBecause AIS data tables, specifically messages_scored_, contain all AIS positions, they are extremely large tables and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. Therefore, the GFW AIS pipeline produces a series of “research tables” designed specifically to be more efficient for research/analysis. These tables start with the prefix research_.\nKey details of the research tables include the following: + AIS positions in the main research table (research_messages) are thinned to one position per minute per segment + Every AIS position is assigned an amount of time (hours), which is equal to the time since the previous position in the segment + There are two different fishing score variables - nnet_score and night_loitering. Use night_loitering for squid_jiggers and nnet_score for all other fishing classes.\n\n\n31.1.3 AIS event tables\nLastly, the AIS pipeline includes a series of algorithms that identify certain vessel behaviors, referred to as events: + Encounters + Loitering + Port visits and voyages + Fishing events",
     "crumbs": [
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>GFW Pipelines</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>GFW Pipelines</span>"
     ]
   },
   {
     "objectID": "Pipeline.html#vms-pipeline",
     "href": "Pipeline.html#vms-pipeline",
-    "title": "30  GFW Pipelines",
-    "section": "30.2 VMS pipeline",
-    "text": "30.2 VMS pipeline\nGFW also creates individual VMS pipelines to process national VMS data. The output tables of the VMS pipelines mirror the data and event tables from the AIS pipeline and are stored in datasets named pipe_[country]_production_vYYYYMMDD. The VMS pipeline does not (yet) output VMS research tables.",
+    "title": "31  GFW Pipelines",
+    "section": "31.2 VMS pipeline",
+    "text": "31.2 VMS pipeline\nGFW also creates individual VMS pipelines to process national VMS data. The output tables of the VMS pipelines mirror the data and event tables from the AIS pipeline and are stored in datasets named pipe_[country]_production_vYYYYMMDD. The VMS pipeline does not (yet) output VMS research tables.",
     "crumbs": [
-      "<span class='chapter-number'>30</span>  <span class='chapter-title'>GFW Pipelines</span>"
+      "<span class='chapter-number'>31</span>  <span class='chapter-title'>GFW Pipelines</span>"
     ]
   },
   {
@@ -1677,6 +1677,36 @@
     "text": "GFW Data Training Materials\nhttps://docs.google.com/document/d/1mvpQa01gRTvEKKCcrqCwinapJ_NKB66MlLmxa1RGQrM/edit?tab=t.0\nPurpose: The GFW Data Training Shared Drive contains training materials for using GFW data.\nUses:\n\nReference for current GFW staff and partners\n\nOnboarding for new GFW staff and partners\n\nPeriodic training meetings and workshops\n\nContents:\n\nTraining Slide Decks: This folder contains numerous slide decks focused on different GFW datasets. The most up-to-date training slide decks are in training_slides_current. Quarterly versions of the complete training slide deck set are saved in training_slides_archive following the naming convention training_slides_YYYY_Q\nExample Queries: This folder contains a Google Doc with descriptions and links to the most current example queries for working with GFW data.\n\nAll queries are saved as SQL files on GitHub in the queries/examples/current folder in the bigquery-documentation-wf827 repo.\n\nOld versions of example queries are stored in the queries/examples/archive folder\n\n\nBigQuery Table Reference: Table containing current best list of datasets and tables to use for analysis\nTraining Workshops: This folder contains various admin materials for planning GFW training workshops\n\nUpdating: As new versions of datasets and tables are produced, GFW staff should periodically update the GFW data training materials for their assigned datasets (see Assignments) accordingly. This process includes the following:\n\nGFW staff add/update example queries.\n\nThe old versions of the queries should be moved to the queries/examples/archive folder in the bigquery-documentation-wf827 repo.\n\nThe new versions of the queries should be added to the queries/examples/current folder using the options below. Queries should be clearly named according to what they do and be date-versioned with the vYYYYMMDD format (e.g. vessel_track_with_fishing_hours_vYYYYMMDD.sql).\n\n\n\nOption A: Clone the bigquery-documentation-wf827 repo and push new queries to the correct folder (make sure to pull first if not cloning for the first time!)\n\nOption B: Upload files to the bigquery-documentation-wf827 repo\n\nStep 1: Save example query locally as a .sql file\n\nStep 2: Navigate to the current example query folder bigquery-documentation-wf827/queries/examples/current\n\nStep 3: Click Upload files\n\nStep 4: Drag/drop file, add a commit message, and press Commit\n\n\nOption C: Create a new file directly in the bigquery-documentation-wf827 repo on github.com\n\nStep 1: Navigate to the example query folder for the current quarter in bigquery-documentation-wf827/queries/examples/current\n\nStep 2: Click Create new file\n\nStep 3: Name query in the Name your file… box (make sure to use .sql suffix)\n\nStep 4: Copy/paste query into the &lt;&gt;Edit new file window\n\nStep 5: Add a commit message and press Commit\n\n\n\nGFW staff update their assigned slide decks in training_slides_current. Links to example queries should be updated to reference the correct version of the query stored in bigquery-documentation-wf827.\nAll slide decks are combined into a single, versioned slide deck and saved in training_slides_archive (Tyler).\n\nAssignments: GFW staff are responsible for updating the training materials for certain datasets. These assignments are generally based on that staff member’s expertise in the subject/dataset.\n\nBigQuery: Tyler, David\n\nIntro to AIS: David\n\nPipeline: Enrique, Andres, Matias, Tim\n\nResearch tables: Tyler\n\nFishing effort: Tyler\n\nVessel database: Jaeyoon\n\nVessel info tables: Tyler\n\nPorts and voyages: Nate, Tim\n\nTransshipment: Hannah, Nate\n\nVIIRS: Masaki\n\nSAR: Fernando, David\n\nVMS: Bjorn, Tim W",
     "crumbs": [
       "(PART) Training materials"
+    ]
+  },
+  {
+    "objectID": "Home.html",
+    "href": "Home.html",
+    "title": "2  GFW Data Documentation",
+    "section": "",
+    "text": "2.1 Data Updates\nCheck the Data updates for new changes to GFW data.\nSee the BigQuery Table Reference for checking the latest version of key tables to use.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "Home.html#bigquery-key-concepts",
+    "href": "Home.html#bigquery-key-concepts",
+    "title": "2  GFW Data Documentation",
+    "section": "2.2 BigQuery Key Concepts",
+    "text": "2.2 BigQuery Key Concepts\nRead the BigQuery Key Concepts page for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "Home.html#data-products",
+    "href": "Home.html#data-products",
+    "title": "2  GFW Data Documentation",
+    "section": "2.3 Data Products",
+    "text": "2.3 Data Products\nGFW data are grouped into the following general categories, or data products, that are used for various analyses.\n\nFishing effort and vessel presences - Activity and fishing activity for all vessels\nFishing events - Activity by the world’s fishing vessels grouped into events\nVessel database and Vessel info tables - Database of vessel identity\nEncounters - Encounters between two vessels\nLoitering - Loitering events by potential transshipment vessels\nAnchorages & voyages - Database of ports and vessel voyages between ports\nCountry VMS - Country-specific VMS data\nSAR Detections - Vessel detections from Sentinel-1 SAR imagery\nAIS Gaps - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
     ]
   }
 ]
