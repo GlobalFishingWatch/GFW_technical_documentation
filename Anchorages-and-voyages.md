@@ -1,6 +1,11 @@
 # Anchorages, voyages and port visits
 
-> **Update** *As a result of the All Vessels v2 table, all AIS published event tables now have a new v2 version which should be used moving forward, `pipe_production_v20201001.published_events_port_visits_v2`, until we switch to using pipeline 3.0, where all v2 published event tables will become the only maintained versions of the tables. The logic for the events themselves haven’t changed, but due to the change in how shiptype is determined in products, the published events tables have been re-run and ingested into products with the updated shtipetype designation. All example queries referencing published events tables should use the v2 versions of the tables.* 
+> **Update** *Within the release of pipe3, the new product_events_port_visit_v2_v\* has been added while maintaining the previous version as a compatibility layer. In the new version the definition of the port visit location has changed:
+
+> - Previously, this used to be the average location of a vessel's position during the port visit. This was different from the port visit label, which was based on the "intermediate anchorage" of the port visit. The "intermediate anchorage" is the PORT_GAP or PORT_STOP of the port visit that has the longest duration. This behaviour led to 1. port visit locations being different from the port visit label, and 2. port visit locations possibly not being representative of the port visit at all, especially for long port visits where entrance and exit were in entirely different locations.
+
+> - In the new version, the port visit location as well as label are based on the "port visit start" of the port visit, which is the *anchorage* of the first `PORT_STOP_BEGIN` - if it exists - or otherwise the first `PORT_STOP_END`, the first `PORT_GAP_BEGIN`, or the first `PORT_GAP_END` if none of the others exist.
+
 
 GFW maintains a database of `anchorages` and identifies when vessels enter/exit these locations (`port visits`). By connecting a vessel's port EXIT and next port ENTRY it is also possible to identify vessel `voyages`. 
 
@@ -36,21 +41,16 @@ The tables associated with ports and voyages include the following:
 
 + `anchorages.named_anchorages_vYYYYMMDD` - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats regarding anchorage at the time of creation.
 + `gfw_research.named_anchorages` - View of most the recent version of `anchorages.named_anchorages_vYYYYMMDD`
-+ `pipe_production_vYYYYMMDD.proto_raw_port_events_*` - Port events by seg_id. Each port activity by a vessel (e.g. port entry, port exit) recorded in a single row. 
-+ `pipe_production_vYYYYMMDD.proto_port_visits` - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the `events` array. 
-+ `pipe_production_vYYYYMMDD.published_events_port_visits` - Proto_port_visits table version, limited to confidence >=2, that is used in API (different scheme than original proto_port_visits table). Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.
-+ `pipe_production_vYYYYMMDD.proto_voyages_c2` - Voyages by vessels with a port visit confidence of >=2. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
-+ `pipe_production_vYYYYMMDD.proto_voyages_c3` - Voyages by vessels with a port visit confidence of >=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
-+ `pipe_production_vYYYYMMDD.proto_voyages_c4` - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
++ `pipe_ais_v{PIPE_VERSION}_internal.raw_port_events_*` - Port events by seg_id. Each port activity by a vessel (e.g. port entry, port exit) recorded in a single row. 
++ `pipe_ais_v{PIPE_VERSION}_published.port_visits` - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the `events` array. 
++ `pipe_ais_v{PIPE_VERSION}_published.product_events_port_visit_v2` - Port visits table used in the API and map, limited to confidence >=2. Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.
++ `pipe_ais_v{PIPE_VERSION}_internal.voyages_c2` - Voyages by vessels with a port visit confidence of >=2. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
++ `pipe_ais_v{PIPE_VERSION}_published.voyages_c3` - Voyages by vessels with a port visit confidence of >=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
++ `pipe_ais_v{PIPE_VERSION}_published.voyages_c4` - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.
 
 
 >**Note** 
-> Always use the `published_events_x` or `proto_events_x` (if still considered a prototype) view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_production_v20201001.published_events_port_visits` then use that view table rather than `pipe_production_v20201001.published_events_port_visits_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
-
-
-**Original data tables still available**
-+ `pipe_production_vYYYYMMDD.port_visits_` - Previously used port_visits table, which can still be used now if you do not want to shift to the 'proto_' data. This data includes port visits with a confidence of 4 only. 
-+ `pipe_production_vYYYYMMDD.voyages` - Previously used voyages table, which can still be used now. Creates voyages from `pipe_production_vYYYYMMDD.port_visits_`. 
+> Always use the `product_events_x` view version of a table rather than `published_events_x_v` (for example, if you want to use `pipe_ais_v3_published.product_events_port_visit_v2` then use that view rather than `pipe_ais_v3_published.product_events_port_visit_v2_20250611`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `product_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
 
 
 ## Data Description
@@ -60,7 +60,7 @@ Note that all data points involve `anchorage_points` for visits and to convert t
   
 ### Port Events:  
   
-Port events data are stored in `pipe_production_vYYYYMMDD.proto_raw_port_events_*`. There are four different types of port events: `PORT_ENTRY`, `PORT_STOP`, `PORT_GAP`, `PORT_EXIT`. 
+Port events data are stored in the `raw_port_events` table. There are four different types of port events: `PORT_ENTRY`, `PORT_STOP`, `PORT_GAP`, `PORT_EXIT`. 
 
 A `PORT_ENTRY` event occurs when a vessel gets within 3 km of an anchorage point and a `PORT_EXIT` event occurs when it exceeds 4 km. These points can be considered changes in state, between "AT SEA" and "IN PORT". The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.   
 
@@ -76,15 +76,15 @@ Port visits represents a second dataset built on the **Port Events**. **Port Vis
 
 ### Voyages:
 
-Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit `confidence >= 2`, then you should use the `pipe_production_vYYYYMMDD.proto_voyages_c2` table that shows voyages where both the start and end port visit had a confidence of `>=2`.
+Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two **Port Visits** (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit `confidence >= 3`, then you should use the `voyages_c3` table that shows voyages where both the start and end port visit had a confidence of `>=3`.
 
 ## Caveats & Known Issues
 
 ### Port Events:  
-* These events use `seg_id` as the vessel identifier and may need to be mapped to `SSVID` for broader use.  
+* These events use `seg_id` as the vessel identifier and may need to be mapped to `vessel_id` for broader use.  
 
 ### Port Visits:
-* Port visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. 
+* Port visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives where a vessel transits nearby an anchorage. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. 
 *Generally confidence of 4 will capture most port visits (see notes below)
 
 	Looking at all confidence `>=2`port visits:  
@@ -99,7 +99,9 @@ Voyages are a further processed dataset as they represent two port visits that b
 	
 	There are more low confidence visits when looking at all data, because 'noisy' vessels dominate the results, but when filtering to a tidier vessel list there is considerably less 'noise'. However, even small percentages can provide key insight into voyage history.  
 
-* These events use `vessel_id` as vessel identifier and may need to be mapped to `SSVID` for broader use.  
+* These events use `vessel_id` as vessel identifier and may need to be mapped to `SSVID` for broader use by using for example `PVIS (product_vessel_info_summary)`.
+
+* Port visits are regenerated daily, so a vessel's historical port visits may change as new data is added, the way the assignment of `seg_id` to `vessel_id` changes over time, or noise filters mutate (e.g. from `overlapping_and_short = FALSE` to `overlapping_and_short = TRUE` or vice versa). This means that port visits may change over time so it is recommended to use the most recent version of the port visits table. This happens particularly during the first few days or even weeks of a new port visit and much more often for lower confidence port visits than confidence 4 port visits (which by definition have ended).
 
 ### Voyages
 * These events use port visits and have similar caveats.  
