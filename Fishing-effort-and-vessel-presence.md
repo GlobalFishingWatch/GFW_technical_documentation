@@ -14,13 +14,13 @@ Producing such a dataset involves two key steps:
 
 We combine our comprehensive database of vessels with a known vessel type from vessel registries with two convolutional neural network (CNN) models to help us classify vessels and predict when they are fishing. The resulting output are a list of vessels by type (e.g. trawler, drifting_longline, cargo, etc.) and a dataset of AIS positions, where each position is labeled as a fishing/non-fishing position. These datasets can then be combined to evaluate the presence and fishing activity of individual vessels or make rasters of aggregate vessel presence or fishing activity.
 
->**Note**: Every AIS position receives a fishing score (or NULL if the model can't make a prediction), regardless of whether that MMSI is classified as a fishing vessel.
+>**Note**: Every AIS position receives a fishing score (or NULL if the model can't make a prediction), regardless of whether that MMSI is classified as a fishing vessel. As non-fishing vessels can often move in ways similar to fishing vessels, it is not uncommon for their positions to be scored as fishing positions. This is why it is critical to filter to fishing vessels before calculating and summarizing fishing hours.
 
 ## Key Tables
 
-+ `pipe_ais_v3_internal.messages_regions` - AIS positions, thinned to one minute per segment, for all vessels. This table is stored in the internal pipe 3 dataset.
++ `pipe_ais_v3_published.messages` - AIS positions, thinned to one minute per segment, for all vessels. **This is the primary table for use in research, analysis, and products.**
 
-+ `pipe_ais_v3_published.messages` - AIS positions, thinned to one minute per segment, for all vessels.
++ `pipe_ais_v3_internal.messages_regions` - AIS positions, thinned to one minute per segment, for all vessels. This table is stored in the internal pipe 3 dataset.
 
 + `pipe_ais_v3_published.segs_activity` - Summaries of vessel activity by segment (`seg_id`). Includes fields indicating which segments are likely noise (e.g. `good_seg`, `good_seg2`, `overlapping_and_short`) and should be filtered out.
 
@@ -59,7 +59,7 @@ While AIS provides a revolutionary way to monitor global commercial fishing acti
 
 ### Many fishing vessels are not trackable via AIS
 
-AIS data includes only a small fraction—approximately 100,000—of the world’s estimated 2.8 million fishing vessels. Coverage is much higher for larger vessels with less than 1 percent of vessels under 12 meters represented, 14-19 percent for vessels between 12-24 meters, and 52-85 percent for vessels larger than 24 meters. The International Maritime Organization mandates AIS for most vessels larger than 36 meters, and vessels broadcasting AIS are predominantly from upper and upper-middle income countries.
+AIS data includes only a small fraction — approximately 100,000 — of the world’s estimated 2.8 million fishing vessels. Coverage is much higher for larger vessels with less than 1 percent of vessels under 12 meters represented, 14-19 percent for vessels between 12-24 meters, and 52-85 percent for vessels larger than 24 meters. The International Maritime Organization mandates AIS for most vessels larger than 36 meters, and vessels broadcasting AIS are predominantly from upper and upper-middle income countries.
 
 ### GFW identifies _apparent_ fishing effort
 

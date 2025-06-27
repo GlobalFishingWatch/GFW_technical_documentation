@@ -1,14 +1,15 @@
-# Vessel info tables
+# `vi_ssvid` tables
 
-Building on the vessel database, the vessel info tables provide summary information by MMSI that combine AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.) 
+An intermediate step of the vessel identity pipeline combines AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.) to produce summary information by vessel. In their current form, these tables treat `ssvid` as the unit of a vessel and are thus commonly referred to as the `vi_ssvid` tables.
 
-A key purpose of the vessel info tables is to evaluate these multiple and potentially conflicting sources of information to determine the "best" values for various fields (e.g. vessel class, flag, dimensions) to be used by GFW. The vessel info tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.
+A key purpose of the `vi_ssvid` tables is to evaluate these multiple and potentially conflicting sources of information to determine the "best" values for various fields (e.g. vessel class, flag, dimensions) to be used by GFW. The vessel info tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.
+
+>Note: Ongoing work is adding a new step, referred to as the secondary classifier, to the `vi_ssvid` tables. This step improves upon our previous rule-based approach to combining information from multiple sources by using a Random Forest model. When this process is completed and integrated into production we will update the information below accordingly. 
 
 ## Key Tables
 
 + `pipe_ais_v3_published.vi_ssvid_vYYYYMMDD` - This table includes the best activity and identity information available for the vessel based on its full AIS timeseries.
 + `pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD` - This table includes annual best activity and identity information for the vessel based only on data in each year. As a result, the information for a given year in `pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD` may not match that in `pipe_ais_v3_published.vi_ssvid_vYYYYMMDD` (e.g. the vessel recently re-flagged).  
-
 
 ## Data Description
 

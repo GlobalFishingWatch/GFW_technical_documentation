@@ -1,37 +1,27 @@
 # Encounters
 
-> **Update** *As a result of the All Vessels v2 table, all AIS published event tables now have a new v2 version which should be used moving forward, `pipe_production_v20201001.published_events_encounters_v2`, until we switch to using pipeline 3.0, where all v2 published event tables will become the only maintained versions of the tables. The logic for the events themselves haven’t changed, but due to the change in how shiptype is determined in products, the published events tables have been re-run and ingested into products with the updated shtipetype designation. All example queries referencing published events tables should use the v2 versions of the tables.* 
-
 Vessels meet at sea for a variety of reasons, including transshipment (transferring catch, crew, fuel, etc.), and these encounters between vessels are of interest for monitoring illegal behavior. 
 
 ## Key Tables
 
-+ `pipe_production_v20201001.published_events_encounters_v2` - same as the encounters table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This table also includes information on vessel authorization status. 
-+ `pipe_production_v20201001.encounters` - Source table for published events encounters table. This is not filtered by speed and has one row per encounter.
++ `pipe_ais_v3_published.product_events_encounter` - A view of `product_events_encounter_vYYYYMMDD` that always provides data from the latest version (`vYYYYMMDD`) of the table.
++ `pipe_ais_v3_published.product_events_encounter_vYYYYMMDD` - Same as the `encounters` table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This table also includes information on vessel authorization status. This table may contain multiple versions, indicated by the `_vYYYYMMDD` and should be used instead of the `product_events_encounter` view for analyses that need to be reproducible.
++ `pipe_ais_v3_published.encounters` - Source table for the `product_events_encounter_vYYYYMMDD` table. This is not filtered by speed and has one row per encounter.
 
 > **Note**   
-> Always use the `published_events_x` view version of a table rather than `published_events_x_v` 
-(for example, if you want to use `pipe_production_v20201001.published_events_encounters` then use that view table rather than `pipe_production_v20201001.published_events_encounters_v`. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `published_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+> Use the `product_events` view version of rather than a specific `product_events_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table so that it's clear what data was used in the query. The date partitioned (`_vYYYYMMDD`) form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `product_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
 
 ### Source Tables
- * `world-fishing-827:pipe_production_v20201001.raw_encounters_*`
- * `world-fishing-827:pipe_static.spatial_measures_20200311`
- * `world-fishing-827:pipe_production_v20201001.segment_info`
- * `world-fishing-827:pipe_production_v20201001.position_messages_`
- * `world-fishing-827.pipe_production_v20201001.all_vessels_byyear`
- * `world-fishing-827.pipe_production_v20201001.vessel_info`
- * `world-fishing-827.vessel_identity.identity_core`
- * `world-fishing-827.vessel_identity.identity_authorization`
 
 ## Data Description
 
-When two vessels are observed in close proximity for an extended period of time it is considered an **encounter**.  `published_events_encounters` applies the additional constraint that both vessels must be moving very slowly.
+When two vessels are observed in close proximity for an extended period of time it is considered an **encounter**.  `product_events_encounters` applies the additional constraint that both vessels must be moving very slowly.
 Encounters occur when:
 
 2 vessels within 500 meters of each other
 Minimum duration of 2 hours
 10 kilometers from a coastal anchorage
- traveling <2 knots [`published_events_encounters` only]
+ traveling <2 knots [`product_events_encounters` only]
 
  For more information, see data training slides on encounter and loitering events [HERE](https://docs.google.com/presentation/d/17ZSpH0F5sW0R7sTiNoDAm_pyUhHJeSd4fyyBFDHiAtw/edit?usp=sharing).
 
@@ -50,14 +40,17 @@ GFW, in partnership with The Pew Charitable Trusts, has produced annual reports 
 + Vessels may encounter more than one vessel at a time, an issue that comes up frequently in the presence of gear, but also occasionally with multiple vessels meeting. 
 
 ## Example queries
-+ [encounters_1_ssvid.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_1_ssvid.sql) - this query pulls information on both vessels in the encounter, including vessel attributes that are nested within the `event_vessels` field  
-+ [encounters_2_carriers_fishing.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_2_carriers_fishing.sql) - this query identifies encounters between carrier and fishing vessels, pulling from the shiptype attribute used in Products (eg mirroring the encounters you would expect to see in Products as of June 2023 when this query was drafted).
-+ [encounters_3_iccat.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_3_iccat.sql) - new example query that pulls out encounters that occurred inside ICCAT. Pulls using the ICCAT shapefile in the `pipe_regions_layers` bin. Technically you could also use the method in the below example query to identify encounters in ICCAT - both pulling region information from within the published events table, and using the regions shapefiles in the `pipe_regions_layers` should yield the same results. 
-+ [encounters_3_no_take_mpa.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_3_no_take_mpa.sql) - new example query that pulls out encounters that occurred inside a no take MPA based on the region information in the Map.
-+ [encounters_4_original_table.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/encounters_4_original_table.sql) - this query pull encounters with an average speed of greater than 2 knots from the original encounter table that is the base for the published event encounter table. Note, for the most part, the only encounters in the original table that are not in the `published_event_encounter` table, are those encounters with an average speed above 2 knots. 
-+ [published_events_unnest_auth_info.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql) - how to pull event authorization from published event table schema  
-+ [loitering_overlap_encounters.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/loitering_overlap_encounters.sql) 
-+ [analysis-pew-ts-reports/rfmo/rfmo-yyyy](https://github.com/GlobalFishingWatch/analysis-pew-ts-reports): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
+
+>Needs updating. Removed links until queries are updated/removed.
+
++ [encounters_1_ssvid.sql]() - this query pulls information on both vessels in the encounter, including vessel attributes that are nested within the `event_vessels` field  
++ [encounters_2_carriers_fishing.sql]() - this query identifies encounters between carrier and fishing vessels, pulling from the shiptype attribute used in Products (eg mirroring the encounters you would expect to see in Products as of June 2023 when this query was drafted).
++ [encounters_3_iccat.sql]() - new example query that pulls out encounters that occurred inside ICCAT. Pulls using the ICCAT shapefile in the `pipe_regions_layers` bin. Technically you could also use the method in the below example query to identify encounters in ICCAT - both pulling region information from within the published events table, and using the regions shapefiles in the `pipe_regions_layers` should yield the same results. 
++ [encounters_3_no_take_mpa.sql]() - new example query that pulls out encounters that occurred inside a no take MPA based on the region information in the Map.
++ [encounters_4_original_table.sql]() - this query pull encounters with an average speed of greater than 2 knots from the original encounter table that is the base for the published event encounter table. Note, for the most part, the only encounters in the original table that are not in the `published_event_encounter` table, are those encounters with an average speed above 2 knots. 
++ [published_events_unnest_auth_info.sql]() - how to pull event authorization from published event table schema  
++ [loitering_overlap_encounters.sql]() 
++ [analysis-pew-ts-reports/rfmo/rfmo-yyyy](): see `queries` folder for BQ data pull and `analysis` folder for data cleaning and analysis 
 
 ## Related Content
 + [Carrier Vessel Portal (CVP)](https://globalfishingwatch.org/carrier-vessel-portal/) 
