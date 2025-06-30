@@ -14,7 +14,7 @@ World 12 Nautical Miles Zone (Territorial Seas)
 | **Unique id field** | MRGID_EEZ |
 | **Short description** | World 12 Nautical Miles Zone (Territorial Seas) v3 |
 | **Source** | [https://www.marineregions.org/downloads.php](https://www.marineregions.org/downloads.php) |
-| **Citation** | Flanders Marine Institute (2019). Maritime Boundaries Geodatabase: Territorial Seas (12NM), version 3. Available online at [https://www.marineregions.org/](https://www.marineregions.org/). [https://doi.org/10.14284/387](https://doi.org/10.14284/387) |
+| **Citation** | Flanders Marine Institute (2024). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 4). Available online at [https://www.marineregions.org/](url). [https://doi.org/10.14284/698](url). Consulted on 2025-05-26. |
 | **Attribution** | Copyright Flanders Marine Institute - marineregions.org |
 | **Last updated** | 2019-11-18 |
 | **License** | [CC-BY](https://creativecommons.org/licenses/by/4.0/) |
@@ -29,10 +29,10 @@ World 12 Nautical Miles Zone (Territorial Seas)
 
 **GCS**
 
-- Original: gs://pipe-regions-layers-us-central1/eez_12nm/original/World_12NM_v3_20191118.zip
-- Normalized: gs://pipe-regions-layers-us-central1/eez_12nm/eez_12nm_v3.shp.zip
+- Original: gs://pipe-regions-layers-us-central1/eez_12nm/original/World_12NM_v4_20231025.zip
+- Normalized: gs://pipe-regions-layers-us-central1/eez_12nm/eez_12nm_v4.shp.zip
 
 **Bigquery**
 
-- Normalized: world-fishing-827.pipe_regions_layers.eez_12nm_v3
-- Processed for S2 lookup:: world-fishing-827.pipe_regions_layers.eez_12nm_v3_s2_10
+- Normalized:  world-fishing-827.pipe_regions_layers.eez_12nm_v4
+- Processed for S2 lookup::  world-fishing-827.pipe_regions_layers.eez_12nm_v4_S2_10
