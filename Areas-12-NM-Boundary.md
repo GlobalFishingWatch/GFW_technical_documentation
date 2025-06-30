@@ -16,7 +16,7 @@ World 12 Nautical Miles Zone (Territorial Seas)
 | **Source** | [https://www.marineregions.org/downloads.php](https://www.marineregions.org/downloads.php) |
 | **Citation** | Flanders Marine Institute (2024). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 4). Available online at [https://www.marineregions.org/](url). [https://doi.org/10.14284/698](url). Consulted on 2025-05-26. |
 | **Attribution** | Copyright Flanders Marine Institute - marineregions.org |
-| **Last updated** | 2019-11-18 |
+| **Last updated** | 2023-10-25 |
 | **License** | [CC-BY](https://creativecommons.org/licenses/by/4.0/) |
 
 ### Description
