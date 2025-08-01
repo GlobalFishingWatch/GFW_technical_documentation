@@ -8,8 +8,11 @@ Vessels meet up at sea for a variety of reasons, including transshipment (transf
 + `pipe_ais_v3_published.product_events_loitering_vYYYYMMDD` - Similar to `loitering` table, however the schema is modified to be consistent with the other `product_events_` tables largely used in products APIs This table may contain multiple versions, indicated by the `_vYYYYMMDD` and should be used instead of the `product_events_loitering` view for analyses that need to be reproducible.
 + `pipe_ais_v3_published.loitering` - Source loitering table for `product_events_loitering_vYYYYMMDD` that includes all vessels types with no constraints on distance from shore and duration, and has not been filtered to good seg or overlapping and short. - analysts need to add restrictions.
 
-> **Note** 
-> Use the `product_events` view version of rather than a specific `product_events_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table so that it's clear what data was used in the query. The date partitioned (`_vYYYYMMDD`) form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the `product_events`. The _v form of a table is created for this calculation, but is not to be used by anyone. 
+> **Note: Using event views**   
+> Use the `product_events_{EVENT_TYPE}` view version of rather than a specific `product_events_{EVENT_TYPE}_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table (e.g. `product_events_{EVENT_TYPE}_vYYYYMMDD`) so that it's clear what data was used in the query. 
+
+> **Note: Compatability views** 
+> When event tables are updated daily, we must calculate if any events have changed from yesterday to today and to add those into the `published_events_{EVENT_TYPE}` table. The `_v` form of a table is created for this calculation. This "compatability view" is not to be used by anyone as it only exists for internal engineering purposes. Always use the `published_events_{EVENT_TYPE}` or `proto_events_{EVENT_TYPE}` (if still considered a prototype) view table rather than the `published_events_{EVENT_TYPE}_v` view. For example, if you want to look at port visits, use the `published_events_loitering` view table rather than the `published_events_loitering_v` view table.
 
 ## Source Tables
 

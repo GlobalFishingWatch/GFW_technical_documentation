@@ -8,6 +8,12 @@ GFW's AIS gaps dataset catalogues instances of long gaps in a vessel's AIS signa
 
 + `pipe_ais_v3_published.product_events_ais_gaps`: Date-partitioned table of AIS gap events of 6+ hours in duration. This table can be used to identify gap events that are currently ongoing (`is_closed = False`) but must be filtered to select AIS disabling events. **Note: this table does not currently conform to the same schema of other `product_event` tables.**
 
+> **Note: Using event views**   
+> Use the `product_events_{EVENT_TYPE}` view version of rather than a specific `product_events_{EVENT_TYPE}_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table (e.g. `product_events_{EVENT_TYPE}_vYYYYMMDD`) so that it's clear what data was used in the query. 
+
+> **Note: Compatability views** 
+> When event tables are updated daily, we must calculate if any events have changed from yesterday to today and to add those into the `published_events_{EVENT_TYPE}` table. The `_v` form of a table is created for this calculation. This "compatability view" is not to be used by anyone as it only exists for internal engineering purposes. Always use the `published_events_{EVENT_TYPE}` or `proto_events_{EVENT_TYPE}` (if still considered a prototype) view table rather than the `published_events_{EVENT_TYPE}_v` view. For example, if you want to look at port visits, use the `published_events_gaps` view table rather than the `published_events_gaps_v` view table.
+
 ### Secondary Tables
 
 + `pipe_ais_v3_internal.proto_ais_off_events`: Date-partitioned table of AIS positions that are followed by a 6+ hour gap in AIS signal 
