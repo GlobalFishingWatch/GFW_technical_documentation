@@ -366,13 +366,6 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#accessing-api-logic" id="toc-accessing-api-logic" class="nav-link" data-scroll-target="#accessing-api-logic"><span class="header-section-number">6.2</span> Accessing API Logic</a></li>
   <li><a href="#caveats-and-considerations" id="toc-caveats-and-considerations" class="nav-link" data-scroll-target="#caveats-and-considerations"><span class="header-section-number">6.3</span> Caveats and Considerations</a></li>
-  <li><a href="#old-materials---to-be-deleted" id="toc-old-materials---to-be-deleted" class="nav-link" data-scroll-target="#old-materials---to-be-deleted"><span class="header-section-number">6.4</span> OLD MATERIALS - TO BE DELETED</a></li>
-  <li><a href="#product-overview" id="toc-product-overview" class="nav-link" data-scroll-target="#product-overview"><span class="header-section-number">6.5</span> Product Overview</a></li>
-  <li><a href="#carrier-vessel-portal-cvp-v0-api" id="toc-carrier-vessel-portal-cvp-v0-api" class="nav-link" data-scroll-target="#carrier-vessel-portal-cvp-v0-api"><span class="header-section-number">6.6</span> Carrier Vessel Portal (CVP) | v0 API</a></li>
-  <li><a href="#api-portal-v1-api" id="toc-api-portal-v1-api" class="nav-link" data-scroll-target="#api-portal-v1-api"><span class="header-section-number">6.7</span> API Portal | v1 API</a></li>
-  <li><a href="#gfw-map-v1-api" id="toc-gfw-map-v1-api" class="nav-link" data-scroll-target="#gfw-map-v1-api"><span class="header-section-number">6.8</span> GFW Map | v1 API</a></li>
-  <li><a href="#marine-manager-v1-api" id="toc-marine-manager-v1-api" class="nav-link" data-scroll-target="#marine-manager-v1-api"><span class="header-section-number">6.9</span> Marine Manager | v1 API</a></li>
-  <li><a href="#vessel-viewer-v1-api" id="toc-vessel-viewer-v1-api" class="nav-link" data-scroll-target="#vessel-viewer-v1-api"><span class="header-section-number">6.10</span> Vessel Viewer | v1 API</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -485,85 +478,6 @@ ul.task-list li input[type="checkbox"] {
 <li>What filters are applied</li>
 </ul>
 <p>Please contact <strong>Gisela</strong> for clarification.</p>
-<p><br> <br> <br> <br></p>
-</section>
-<section id="old-materials---to-be-deleted" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="old-materials---to-be-deleted"><span class="header-section-number">6.4</span> OLD MATERIALS - TO BE DELETED</h2>
-</section>
-<section id="product-overview" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="product-overview"><span class="header-section-number">6.5</span> <a href="https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit">Product Overview</a></h2>
-<p>This page highlights the data included in products; bigquery source tables, API code, and data restrictions applied to the data. Additionally, updates to data in products, such as changes in source data tables or changes in restrictions to the data are outlined. Resources on how to use and interact with products are linked.</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>API</th>
-<th>Product</th>
-<th>BQ Queries</th>
-<th>Notes</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>V0</td>
-<td><a href="https://globalfishingwatch.org/carrier-vessel-portal/">CVP</a></td>
-<td><a href="https://github.com/GlobalFishingWatch/pipe-carrier-portal/tree/master/assets/bigquery">V0 API Queries</a></td>
-<td>The plan is to update the CVP to using the <br> same APIs as other the other products in the future.</td>
-</tr>
-<tr class="even">
-<td>V1</td>
-<td><a href="https://globalfishingwatch.org/map/">GFW Map</a>, <br> <a href="https://globalfishingwatch.org/marine-manager-portal/">Marine Manager</a>, <br> <a href="https://globalfishingwatch.org/vessel-viewer">Vessel Viewer</a>, <br> <a href="https://globalfishingwatch.org/ocean-engine/tokens/signup">API Portal</a></td>
-<td><a href="https://datasets.globalfishingwatch.org/">V1 API Queries</a> <br> Username: datasets <br> Password: gfw_doc</td>
-<td>There are certain filters and manipulations done to data <br> in the API which can occur outside of the BigQuery code. <br> Those nuances may eventually be updated and included <br> in the Wiki but are not currently, so be aware.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Resources</strong> + <a href="https://drive.google.com/drive/folders/1OZhFcIeSvGnCE0W6CiNBCDKxxgR8fgVT">Product Hour recordings</a> + <a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/published_events_unnest_auth_info.sql">Published Events with unnested authorization information example query</a></p>
-</section>
-<section id="carrier-vessel-portal-cvp-v0-api" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="carrier-vessel-portal-cvp-v0-api"><span class="header-section-number">6.6</span> <a href="https://globalfishingwatch.org/carrier-vessel-portal/">Carrier Vessel Portal (CVP)</a> | v0 API</h2>
-<p>The Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. It synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. The CVP is the only Product using the v0 API, although, in the future, the Product and Engineering team will look to transition the CVP to using the same API as the other Products.</p>
-<p><strong>Data in the Portal</strong> + V0 API | <a href="https://github.com/GlobalFishingWatch/pipe-carrier-portal/tree/master/assets/bigquery">Current CVP queries</a> + The output of the current CVP queries can be found in BigQuery under the bin name <code>pipe_carrier_portal_production_v20220124</code></p>
-<p><strong>Data Restrictions in Portal</strong> + <strong>Encounters</strong> are limited to those between carriers and fishing vessels and support and fishing vessels + <strong>Loitering events</strong> are limited to those by carrier vessels with a minimum duration of 1 hour. + <strong>Port visits</strong> are limited to Confidence 4 visits. For more information see <a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Anchorages-and-voyages">Anchorages and Voyages</a> wiki + Information on <strong>vessel authorization</strong> is updated on one month lag</p>
-<p><strong>Unique Features (compared to GFW Map):</strong> Authorization Data, Port visits</p>
-<p><strong>Resources</strong> + <a href="https://docs.google.com/document/d/1DbUyeKvZfE_wEsBNcJE61HBLixLPqm3t5fFn5FxJv0A/edit#">CVP Product Hour notes, resources, and demo recording</a> + <a href="https://globalfishingwatch.org/help-faqs/">CVP FAQs</a> + <a href="https://globalfishingwatch.org/carrier-vessel-portal-disclaimers/">CVP Disclaimers</a> + <a href="https://globalfishingwatch.org/authorization-records/">Authorization Records</a> + <a href="https://globalfishingwatch.org/tutorials/">GFW Product Tutorials</a></p>
-<p><strong>Upcoming/Future Plans</strong> + If the CVP is maintained as a standalone product, then queries will be updated and V1 API will be used</p>
-<p><strong>Updates</strong> + Feb 15, 2022: CVP data updated on a 3 day lag rather than monthly update. CVP encounters code now pulls encounters from published_events_encounters and identified carrier, support, and fishing vessel by_year tables. + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query <br></p>
-</section>
-<section id="api-portal-v1-api" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="api-portal-v1-api"><span class="header-section-number">6.7</span> <a href="https://globalfishingwatch.org/ocean-engine/tokens/signup">API Portal</a> | v1 API</h2>
-<p>GFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications.</p>
-<p>The GFW API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal launched on July 19th, 2022. A wrapper package in R, named <code>gfwr</code>, also launched alongside the API Portal, and allows individuals to call data from the API Portal directly into R.</p>
-<p><strong>APIs Resources</strong> + <a href="https://docs.google.com/document/d/1CWVXqZpyutLOUO5YyACBzftUiEIxug7EPd8PXsadEE8/edit?usp=sharing">Intro APIs</a> - slide deck for introduction to API’s <br> + <a href="https://docs.google.com/presentation/d/1E6h00EUEEr2HRAAXm3rJUwrF6NcM52t8S0n_yinJbqw/edit#slide=id.gc69f7383cc_0_1092">GFW Ocean-Engine: APIs and Blueprints, June 2021</a> - introduction to GFW’s APIs + R package to access API Portal: A <a href="https://github.com/GlobalFishingWatch/gfwr">wrapper in R</a> has been developed so that GFW’s API Portal data can be easily used in R. The package named <code>gfwr</code> can now be accessed. <a href="https://globalfishingwatch.slack.com/archives/C026FKDJGMT/p1654885678794689">Slack thread.</a></p>
-<p><strong>Upcoming/Future Plans</strong> + TBD <br></p>
-<p><strong>Updates</strong> + July 19, 2022: API Portal Launch! gfwr R package release <br></p>
-</section>
-<section id="gfw-map-v1-api" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="gfw-map-v1-api"><span class="header-section-number">6.8</span> <a href="https://globalfishingwatch.org/map/">GFW Map</a> | v1 API</h2>
-<p>The Global Fishing Watch map is the “main” GFW product. The map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. The map includes global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view.</p>
-<p><strong>Data in the Portal</strong> + V1 API | <a href="https://datasets.globalfishingwatch.org/">V1 API Queries</a> (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.</p>
-<p><strong>Resources</strong> + <a href="https://www.loom.com/share/dd1daa446295450aa5bdc0bba9e124ba">LATEST demo of map - July 2022</a> + <a href="https://docs.google.com/presentation/d/1aexIaw_Gw_LpBVJf2O1elapq-wZ5iAu5q8aJcg3yXrA/edit?usp=sharing">Map 3.0 GFW Internal Slide Deck</a> - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map. + <a href="https://docs.google.com/document/d/18Thsx0ebYzyvm8JZoKm6LtrrfOfI6WZHcnG3FyAdLrE/edit">GFW Map Launch Materials</a> + <a href="https://globalfishingwatch.org/tutorials/">GFW Product Tutorials</a></p>
-<p><strong>Internal Features (GFW Staff Only)</strong> + <a href="https://www.loom.com/share/99594dec8de24887917ce02cae95629c">Load BigQuery data directly into GFW Map</a> - when logged into GFW Map with GFW email press ‘b’ 7 times to get to interface to run BigQuery + <a href="https://globalfishingwatch.slack.com/archives/G8V3UUFK8/p1660133391345519">Vessel Groups</a></p>
-<p><strong>Upcoming/Future Plans</strong> + Sept 2022: Vessel groups (public access); vessel gaps + TBD: <a href="https://docs.google.com/presentation/d/1NFLXiET5w6QYrPiQfAviJEMt0rqI8TR-_fRPDYyIDNo/edit?usp=sharing">layer on map with all Ports</a></p>
-<p><strong>Updates</strong> + [internal only] Aug 10 2022: Vessel groups. <a href="https://globalfishingwatch.slack.com/archives/G8V3UUFK8/p1660133391345519">Slack thread.</a> + June 8th 2022: SAR layer launched on Map. <a href="https://globalfishingwatch.slack.com/archives/G8V3UUFK8/p1654781549803069">Slack thread.</a> + [internal only] Dec 23 2021: Functionality to load bigquery data directly into GFW map added + Dec 2021: Upload point files as reference layer functionality added + Oct 18 2021: GFW legacy map officially removed from GFW website + July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map <br></p>
-</section>
-<section id="marine-manager-v1-api" class="level2" data-number="6.9">
-<h2 data-number="6.9" class="anchored" data-anchor-id="marine-manager-v1-api"><span class="header-section-number">6.9</span> <a href="https://globalfishingwatch.org/marine-manager-portal/">Marine Manager</a> | v1 API</h2>
-<p>Global Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.</p>
-<p><strong>Data in the Portal</strong> + V1 API | <a href="https://datasets.globalfishingwatch.org/">V1 API Queries</a> (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.</p>
-<p><strong>Unique Features (compared to GFW Map):</strong> Environmental data layers</p>
-<p><strong>Resources</strong> + <a href="https://globalfishingwatch.org/tutorials/">GFW Product Tutorials</a></p>
-<p><strong>Upcoming/Future Plans</strong> + N/A</p>
-<p><strong>Updates</strong> + Dec 9 2021: Marine Manager “v1.5” <a href="https://docs.google.com/document/d/1zndSgeY_kZN8yzRuLkquQ4b5CiJiohG8b6A1GpiFxVg/edit">release summary</a> <br></p>
-</section>
-<section id="vessel-viewer-v1-api" class="level2" data-number="6.10">
-<h2 data-number="6.10" class="anchored" data-anchor-id="vessel-viewer-v1-api"><span class="header-section-number">6.10</span> <a href="https://globalfishingwatch.org/vessel-viewer">Vessel Viewer</a> | v1 API</h2>
-<p>The Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App’s objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.</p>
-<p>At this time the Vessel Viewer is currently in development and available to GFW staff for internal use.</p>
-<p>Vessel Viewer is part of GFWs broader effort to develop a suite of vessel intelligence tools to support (1) port inspection, (2) patrol planning, (3) insurance underwriting and (4) supply chain management to mitigate IUU risk.</p>
-<p><strong>Data in the Portal</strong> + V1 API | <a href="https://datasets.globalfishingwatch.org/">V1 API Queries</a> (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.</p>
-<p><strong>Resources</strong> + Vessel Viewer FAQ in <a href="https://drive.google.com/file/d/1N4YRJ_yxAObEIWbaYM8l-YDPHS0bKe2N/view">English</a> and <a href="https://drive.google.com/file/d/195mbtLoHaY7iltFUbogiEX1cZNBpFg4E/view">French</a> + Vessel Viewer How-To Guide in <a href="https://drive.google.com/file/d/1q2veC-EEUHWPg_eCplERJzlo8PL3OFZS/view">English</a> and <a href="https://drive.google.com/file/d/1QaO3XKaXSnerAtcgw_a9EJpUEtM3WHN2/view">French</a> + <a href="https://drive.google.com/file/d/18yenS9pva3kF2YGKZcSqdHy8avzRinBP/view">Vessel Viewer basic video overview</a> (audio in English with French subtitles)</p>
-<p><strong>Upcoming/Future Plans</strong> + Add gaps to vessel viewer</p>
-<p><strong>Updates</strong> + TBD <br></p>
 
 
 </section>
