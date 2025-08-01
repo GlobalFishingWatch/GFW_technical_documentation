@@ -262,71 +262,71 @@
   {
     "objectID": "BigQuery-in-Products.html",
     "href": "BigQuery-in-Products.html",
-    "title": "5  BigQuery in products",
+    "title": "6  BigQuery to APIs to Products",
     "section": "",
-    "text": "5.1 Product Overview\nThis page highlights the data included in products; bigquery source tables, API code, and data restrictions applied to the data. Additionally, updates to data in products, such as changes in source data tables or changes in restrictions to the data are outlined. Resources on how to use and interact with products are linked.\nResources + Product Hour recordings + Published Events with unnested authorization information example query",
+    "text": "6.1 GFW APIs\nThe flow of data from BigQuery to GFW Products is enabled through a set of Application Programming Interfaces (APIs). This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
     "objectID": "BigQuery-in-Products.html#product-overview",
     "href": "BigQuery-in-Products.html#product-overview",
-    "title": "5  BigQuery in products",
-    "section": "",
-    "text": "API\nProduct\nBQ Queries\nNotes\n\n\n\n\nV0\nCVP\nV0 API Queries\nThe plan is to update the CVP to using the  same APIs as other the other products in the future.\n\n\nV1\nGFW Map,  Marine Manager,  Vessel Viewer,  API Portal\nV1 API Queries  Username: datasets  Password: gfw_doc\nThere are certain filters and manipulations done to data  in the API which can occur outside of the BigQuery code.  Those nuances may eventually be updated and included  in the Wiki but are not currently, so be aware.",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.5 Product Overview",
+    "text": "6.5 Product Overview\nThis page highlights the data included in products; bigquery source tables, API code, and data restrictions applied to the data. Additionally, updates to data in products, such as changes in source data tables or changes in restrictions to the data are outlined. Resources on how to use and interact with products are linked.\n\n\n\nAPI\nProduct\nBQ Queries\nNotes\n\n\n\n\nV0\nCVP\nV0 API Queries\nThe plan is to update the CVP to using the  same APIs as other the other products in the future.\n\n\nV1\nGFW Map,  Marine Manager,  Vessel Viewer,  API Portal\nV1 API Queries  Username: datasets  Password: gfw_doc\nThere are certain filters and manipulations done to data  in the API which can occur outside of the BigQuery code.  Those nuances may eventually be updated and included  in the Wiki but are not currently, so be aware.\n\n\n\nResources + Product Hour recordings + Published Events with unnested authorization information example query",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
     "objectID": "BigQuery-in-Products.html#carrier-vessel-portal-cvp-v0-api",
     "href": "BigQuery-in-Products.html#carrier-vessel-portal-cvp-v0-api",
-    "title": "5  BigQuery in products",
-    "section": "5.2 Carrier Vessel Portal (CVP) | v0 API",
-    "text": "5.2 Carrier Vessel Portal (CVP) | v0 API\nThe Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. It synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. The CVP is the only Product using the v0 API, although, in the future, the Product and Engineering team will look to transition the CVP to using the same API as the other Products.\nData in the Portal + V0 API | Current CVP queries + The output of the current CVP queries can be found in BigQuery under the bin name pipe_carrier_portal_production_v20220124\nData Restrictions in Portal + Encounters are limited to those between carriers and fishing vessels and support and fishing vessels + Loitering events are limited to those by carrier vessels with a minimum duration of 1 hour. + Port visits are limited to Confidence 4 visits. For more information see Anchorages and Voyages wiki + Information on vessel authorization is updated on one month lag\nUnique Features (compared to GFW Map): Authorization Data, Port visits\nResources + CVP Product Hour notes, resources, and demo recording + CVP FAQs + CVP Disclaimers + Authorization Records + GFW Product Tutorials\nUpcoming/Future Plans + If the CVP is maintained as a standalone product, then queries will be updated and V1 API will be used\nUpdates + Feb 15, 2022: CVP data updated on a 3 day lag rather than monthly update. CVP encounters code now pulls encounters from published_events_encounters and identified carrier, support, and fishing vessel by_year tables. + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.6 Carrier Vessel Portal (CVP) | v0 API",
+    "text": "6.6 Carrier Vessel Portal (CVP) | v0 API\nThe Carrier Vessel Portal (CVP) uses publicly available data from 2017 through the present to identify potential vessel encounters and loitering events. It synthesizes fishing registry information to create a picture of potential authorizations for both carrier and fishing vessels involved in transshipment activity. The CVP is the only Product using the v0 API, although, in the future, the Product and Engineering team will look to transition the CVP to using the same API as the other Products.\nData in the Portal + V0 API | Current CVP queries + The output of the current CVP queries can be found in BigQuery under the bin name pipe_carrier_portal_production_v20220124\nData Restrictions in Portal + Encounters are limited to those between carriers and fishing vessels and support and fishing vessels + Loitering events are limited to those by carrier vessels with a minimum duration of 1 hour. + Port visits are limited to Confidence 4 visits. For more information see Anchorages and Voyages wiki + Information on vessel authorization is updated on one month lag\nUnique Features (compared to GFW Map): Authorization Data, Port visits\nResources + CVP Product Hour notes, resources, and demo recording + CVP FAQs + CVP Disclaimers + Authorization Records + GFW Product Tutorials\nUpcoming/Future Plans + If the CVP is maintained as a standalone product, then queries will be updated and V1 API will be used\nUpdates + Feb 15, 2022: CVP data updated on a 3 day lag rather than monthly update. CVP encounters code now pulls encounters from published_events_encounters and identified carrier, support, and fishing vessel by_year tables. + Nov 2021: v0 API updated port visits and loitering events on CVP to pull from pipe_production_vYYYYMMDD published events ports and loitering tables. Port visits in the published events table are limited to confidence = 4. The loitering events logic has been changed to group points at seg_id level and not ssvid, and thus the number of loitering events in some areas increased noticeably due to some long loitering events now being grouped as many small loitering events. The CVP encounters query",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
     "objectID": "BigQuery-in-Products.html#api-portal-v1-api",
     "href": "BigQuery-in-Products.html#api-portal-v1-api",
-    "title": "5  BigQuery in products",
-    "section": "5.3 API Portal | v1 API",
-    "text": "5.3 API Portal | v1 API\nGFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications.\nThe GFW API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal launched on July 19th, 2022. A wrapper package in R, named gfwr, also launched alongside the API Portal, and allows individuals to call data from the API Portal directly into R.\nAPIs Resources + Intro APIs - slide deck for introduction to API’s  + GFW Ocean-Engine: APIs and Blueprints, June 2021 - introduction to GFW’s APIs + R package to access API Portal: A wrapper in R has been developed so that GFW’s API Portal data can be easily used in R. The package named gfwr can now be accessed. Slack thread.\nUpcoming/Future Plans + TBD \nUpdates + July 19, 2022: API Portal Launch! gfwr R package release",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.7 API Portal | v1 API",
+    "text": "6.7 API Portal | v1 API\nGFW’s API’s provide a set of instructions for software to access select GFW data and information. An API retrieves and delivers data to both front-end and back-end applications.\nThe GFW API Portal makes it feasible for our data to be hosted on the maps of collaborating organizations (like SeaVision). The API Portal launched on July 19th, 2022. A wrapper package in R, named gfwr, also launched alongside the API Portal, and allows individuals to call data from the API Portal directly into R.\nAPIs Resources + Intro APIs - slide deck for introduction to API’s  + GFW Ocean-Engine: APIs and Blueprints, June 2021 - introduction to GFW’s APIs + R package to access API Portal: A wrapper in R has been developed so that GFW’s API Portal data can be easily used in R. The package named gfwr can now be accessed. Slack thread.\nUpcoming/Future Plans + TBD \nUpdates + July 19, 2022: API Portal Launch! gfwr R package release",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
     "objectID": "BigQuery-in-Products.html#gfw-map-v1-api",
     "href": "BigQuery-in-Products.html#gfw-map-v1-api",
-    "title": "5  BigQuery in products",
-    "section": "5.4 GFW Map | v1 API",
-    "text": "5.4 GFW Map | v1 API\nThe Global Fishing Watch map is the “main” GFW product. The map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. The map includes global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view.\nData in the Portal + V1 API | V1 API Queries (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.\nResources + LATEST demo of map - July 2022 + Map 3.0 GFW Internal Slide Deck - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map. + GFW Map Launch Materials + GFW Product Tutorials\nInternal Features (GFW Staff Only) + Load BigQuery data directly into GFW Map - when logged into GFW Map with GFW email press ‘b’ 7 times to get to interface to run BigQuery + Vessel Groups\nUpcoming/Future Plans + Sept 2022: Vessel groups (public access); vessel gaps + TBD: layer on map with all Ports\nUpdates + [internal only] Aug 10 2022: Vessel groups. Slack thread. + June 8th 2022: SAR layer launched on Map. Slack thread. + [internal only] Dec 23 2021: Functionality to load bigquery data directly into GFW map added + Dec 2021: Upload point files as reference layer functionality added + Oct 18 2021: GFW legacy map officially removed from GFW website + July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.8 GFW Map | v1 API",
+    "text": "6.8 GFW Map | v1 API\nThe Global Fishing Watch map is the “main” GFW product. The map merges multiple types of vessel tracking data to provide a view of global human activity at sea, including fishing activity, encounters between vessels, night light vessel detection and vessel presence. The map includes global fishing activity from 2012 to the present from more than 65,000 commercial fishing vessels that are responsible for a significant part of global seafood catch. Users can search for vessels, filter activity by flag State or time period, identify port visits and view encounters between vessels. The map also allows anyone to upload and overlay their own data, download aggregated fishing reports of activity from custom areas, and save and share what is on the current view.\nData in the Portal + V1 API | V1 API Queries (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.\nResources + LATEST demo of map - July 2022 + Map 3.0 GFW Internal Slide Deck - highly recommend. Succinct but informative overview of target users, new functionalities, and examples of how to interact with map. + GFW Map Launch Materials + GFW Product Tutorials\nInternal Features (GFW Staff Only) + Load BigQuery data directly into GFW Map - when logged into GFW Map with GFW email press ‘b’ 7 times to get to interface to run BigQuery + Vessel Groups\nUpcoming/Future Plans + Sept 2022: Vessel groups (public access); vessel gaps + TBD: layer on map with all Ports\nUpdates + [internal only] Aug 10 2022: Vessel groups. Slack thread. + June 8th 2022: SAR layer launched on Map. Slack thread. + [internal only] Dec 23 2021: Functionality to load bigquery data directly into GFW map added + Dec 2021: Upload point files as reference layer functionality added + Oct 18 2021: GFW legacy map officially removed from GFW website + July 15 2021: GFW Map launched. Previous version of map will be available as a legacy map until Oct 18 2021 at https://globalfishingwatch.org/legacy-map",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
     "objectID": "BigQuery-in-Products.html#marine-manager-v1-api",
     "href": "BigQuery-in-Products.html#marine-manager-v1-api",
-    "title": "5  BigQuery in products",
-    "section": "5.5 Marine Manager | v1 API",
-    "text": "5.5 Marine Manager | v1 API\nGlobal Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.\nData in the Portal + V1 API | V1 API Queries (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.\nUnique Features (compared to GFW Map): Environmental data layers\nResources + GFW Product Tutorials\nUpcoming/Future Plans + N/A\nUpdates + Dec 9 2021: Marine Manager “v1.5” release summary",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.9 Marine Manager | v1 API",
+    "text": "6.9 Marine Manager | v1 API\nGlobal Fishing Watch and Dona Bertarelli have partnered to develop Global Fishing Watch Marine Manager. The portal empowers managers to rapidly collate and analyze scientific data integral to the governance of marine protected areas and other area-based conservation measures.\nData in the Portal + V1 API | V1 API Queries (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.\nUnique Features (compared to GFW Map): Environmental data layers\nResources + GFW Product Tutorials\nUpcoming/Future Plans + N/A\nUpdates + Dec 9 2021: Marine Manager “v1.5” release summary",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
     "objectID": "BigQuery-in-Products.html#vessel-viewer-v1-api",
     "href": "BigQuery-in-Products.html#vessel-viewer-v1-api",
-    "title": "5  BigQuery in products",
-    "section": "5.6 Vessel Viewer | v1 API",
-    "text": "5.6 Vessel Viewer | v1 API\nThe Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App’s objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.\nAt this time the Vessel Viewer is currently in development and available to GFW staff for internal use.\nVessel Viewer is part of GFWs broader effort to develop a suite of vessel intelligence tools to support (1) port inspection, (2) patrol planning, (3) insurance underwriting and (4) supply chain management to mitigate IUU risk.\nData in the Portal + V1 API | V1 API Queries (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.\nResources + Vessel Viewer FAQ in English and French + Vessel Viewer How-To Guide in English and French + Vessel Viewer basic video overview (audio in English with French subtitles)\nUpcoming/Future Plans + Add gaps to vessel viewer\nUpdates + TBD",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.10 Vessel Viewer | v1 API",
+    "text": "6.10 Vessel Viewer | v1 API\nThe Vessel Viewer, formally the Port Inspector App, is geared towards Port Inspectors and is currently being prototyped in the field. The App’s objective is to provide relevant information for port inspectors to assist them in identifying vessels which should be prioritized for inspection upon arrival in port.\nAt this time the Vessel Viewer is currently in development and available to GFW staff for internal use.\nVessel Viewer is part of GFWs broader effort to develop a suite of vessel intelligence tools to support (1) port inspection, (2) patrol planning, (3) insurance underwriting and (4) supply chain management to mitigate IUU risk.\nData in the Portal + V1 API | V1 API Queries (Username: datasets | Password: gfw_doc). + Within the V1 API Queries are the BQ source datasets.\nResources + Vessel Viewer FAQ in English and French + Vessel Viewer How-To Guide in English and French + Vessel Viewer basic video overview (audio in English with French subtitles)\nUpcoming/Future Plans + Add gaps to vessel viewer\nUpdates + TBD",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>BigQuery in products</span>"
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   },
   {
@@ -1707,6 +1707,86 @@
     "text": "2.3 Data Products\nGFW data are grouped into the following general categories, or data products, that are used for various analyses.\n\nFishing effort and vessel presences - Activity and fishing activity for all vessels\nFishing events - Activity by the world’s fishing vessels grouped into events\nVessel database and Vessel info tables - Database of vessel identity\nEncounters - Encounters between two vessels\nLoitering - Loitering events by potential transshipment vessels\nAnchorages & voyages - Database of ports and vessel voyages between ports\nCountry VMS - Country-specific VMS data\nSAR Detections - Vessel detections from Sentinel-1 SAR imagery\nAIS Gaps - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#api-overview",
+    "href": "BigQuery-in-Products.html#api-overview",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "",
+    "text": "API Name\nUsed In Products\n\n\n\n\nMap Visualization (4Wings API)\nAPI Portal, Map, Marine Manager\n\n\nVessels API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nEvents API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nInsights API\nAPI Portal, Map, Vessel Profile, Marine Manager\n\n\nDatasets API\nAPI Portal, Map\n\n\nBulk Download API\nAPI Portal",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#products-using-legacy-apis",
+    "href": "BigQuery-in-Products.html#products-using-legacy-apis",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.2 Products Using Legacy APIs",
+    "text": "6.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#accessing-api-logic",
+    "href": "BigQuery-in-Products.html#accessing-api-logic",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.2 Accessing API Logic",
+    "text": "6.2 Accessing API Logic\nAPI query logic is maintained in this central hub.\nTo view underlying queries and code for BigQuery tables:\n\nOpen the relevant table in BigQuery.\nClick the “Details” tab to find:\n\nSource tables\n(When available) links to the GitHub code that generates each table\n\n\n\n⚠️ If the logic in the API hub seems outdated or unclear, contact Gisela.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#caveats-and-considerations",
+    "href": "BigQuery-in-Products.html#caveats-and-considerations",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.3 Caveats and Considerations",
+    "text": "6.3 Caveats and Considerations\nPermissions\nAccess to API data may be restricted depending on your user role. Some datasets may only be available to:\n\nInternal GFW staff\nJAC members\nSpecific partners\n\nAs a result, data visible through the API can vary based on your credentials.\nData Filters\nWe’ve made our best effort to document all filters and permission scopes on each API. However, gaps may still exist.\nIf you’re uncertain about:\n\nWhy data may be missing or inconsistent\nWhat filters are applied\n\nPlease contact Gisela for clarification.",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#old-materials",
+    "href": "BigQuery-in-Products.html#old-materials",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.5 OLD MATERIALS",
+    "text": "6.5 OLD MATERIALS",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#current-gfw-apis",
+    "href": "BigQuery-in-Products.html#current-gfw-apis",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "",
+    "text": "API Name\nUsed In Products\n\n\n\n\nMap Visualization (4Wings API)\nAPI Portal, Map, Marine Manager\n\n\nVessels API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nEvents API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nInsights API\nAPI Portal, Map, Vessel Profile, Marine Manager\n\n\nDatasets API\nAPI Portal, Map\n\n\nBulk Download API\nAPI Portal",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#old-materials---to-be-deleted",
+    "href": "BigQuery-in-Products.html#old-materials---to-be-deleted",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.4 OLD MATERIALS - TO BE DELETED",
+    "text": "6.4 OLD MATERIALS - TO BE DELETED",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#gfw-apis",
+    "href": "BigQuery-in-Products.html#gfw-apis",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "",
+    "text": "6.1.1 Current GFW APIs\n\n\n\n\n\n\n\nAPI Name\nUsed In Products\n\n\n\n\nMap Visualization (4Wings API)\nAPI Portal, Map, Marine Manager\n\n\nVessels API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nEvents API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nInsights API\nAPI Portal, Map, Vessel Profile, Marine Manager\n\n\nDatasets API\nAPI Portal, Map\n\n\nBulk Download API\nAPI Portal\n\n\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
   }
 ]

@@ -1,7 +1,69 @@
-# BigQuery in products
+# BigQuery to APIs to Products
+<br>
+The flow of data from **BigQuery** to [**GFW Products**](https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit?tab=t.0)   is enabled through a set of **Application Programming Interfaces (APIs)**. This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.
 
-![GFW Product Map](https://github.com/willabrooksGFW/gfw_photos/blob/main/GFW%20Products3.png)[GFW Product Map](https://whimsical.com/gfw-products-7WiWeFz5KVMxndC8gaD7DS)
+## GFW APIs
 
+### [Current GFW APIs](https://globalfishingwatch.org/our-apis/documentation#introduction)
+
+| API Name                     | Used In Products                                                                 |
+|-----------------------------|-----------------------------------------------------------------------------------|
+| **Map Visualization (4Wings API)** | API Portal, Map, Marine Manager                                          |
+| **Vessels API**             | API Portal, Map, Vessel Profile, Marine Manager, `gfwR`, Python SDK              |
+| **Events API**              | API Portal, Map, Vessel Profile, Marine Manager, `gfwR`, Python SDK              |
+| **Insights API**            | API Portal, Map, Vessel Profile, Marine Manager                                 |
+| **Datasets API**            | API Portal, Map                                                                 |
+| **Bulk Download API**       | API Portal                                                                      |
+
+### Products Using Legacy APIs
+
+Some older products are still using legacy APIs:
+
+- **Legacy CVP**
+- **Vessel Profile Prototype**
+
+## Accessing API Logic
+
+API query logic is maintained in [this central hub](#).  
+
+To view underlying queries and code for BigQuery tables:
+
+- Open the relevant table in BigQuery.
+- Click the **"Details"** tab to find:
+  - Source tables
+  - (When available) links to the GitHub code that generates each table
+
+> ⚠️ If the logic in the API hub seems outdated or unclear, contact **Gisela**.
+
+## Caveats and Considerations
+
+**Permissions**
+
+Access to API data may be restricted depending on your user role. Some datasets may only be available to:
+
+- Internal GFW staff
+- JAC members
+- Specific partners
+
+As a result, data visible through the API can vary based on your credentials.
+
+**Data Filters**
+
+We’ve made our best effort to document all filters and permission scopes on each API. However, gaps may still exist.
+
+If you're uncertain about:
+
+- Why data may be missing or inconsistent
+- What filters are applied
+
+Please contact **Gisela** for clarification.
+
+<br>
+<br>
+<br>
+<br>
+
+## OLD MATERIALS - TO BE DELETED
 
 ## [Product Overview](https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit)
 
