@@ -1,19 +1,13 @@
 # BigQuery to APIs to Products
 <br>
-The flow of data from **BigQuery** to [**GFW Products**](https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit?tab=t.0)   is enabled through a set of **Application Programming Interfaces (APIs)**. This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.
+The flow of data into [**GFW Products**](https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit?tab=t.0)   is enabled through a set of **Application Programming Interfaces (APIs)**. This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.
 
-## GFW APIs
+## GFW APIs 
 
-### [Current GFW APIs](https://globalfishingwatch.org/our-apis/documentation#introduction)
+### Current GFW APIs
 
-| API Name                     | Used In Products                                                                 |
-|-----------------------------|-----------------------------------------------------------------------------------|
-| **Map Visualization (4Wings API)** | API Portal, Map, Marine Manager                                          |
-| **Vessels API**             | API Portal, Map, Vessel Profile, Marine Manager, `gfwR`, Python SDK              |
-| **Events API**              | API Portal, Map, Vessel Profile, Marine Manager, `gfwR`, Python SDK              |
-| **Insights API**            | API Portal, Map, Vessel Profile, Marine Manager                                 |
-| **Datasets API**            | API Portal, Map                                                                 |
-| **Bulk Download API**       | API Portal                                                                      |
+- [GFW API Portal](https://globalfishingwatch.org/our-apis/documentation#introduction)
+- A mapping of [Global Fishing Watch Data Availability](https://globalfishingwatch.org/global-fishing-watch-data-availability)                                                                     
 
 ### Products Using Legacy APIs
 

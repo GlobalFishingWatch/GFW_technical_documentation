@@ -264,7 +264,7 @@
     "href": "BigQuery-in-Products.html",
     "title": "6  BigQuery to APIs to Products",
     "section": "",
-    "text": "6.1 GFW APIs\nThe flow of data from BigQuery to GFW Products is enabled through a set of Application Programming Interfaces (APIs). This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.",
+    "text": "6.1 GFW APIs\nThe flow of data into GFW Products is enabled through a set of Application Programming Interfaces (APIs). This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
@@ -1784,7 +1784,7 @@
     "href": "BigQuery-in-Products.html#gfw-apis",
     "title": "6  BigQuery to APIs to Products",
     "section": "",
-    "text": "6.1.1 Current GFW APIs\n\n\n\n\n\n\n\nAPI Name\nUsed In Products\n\n\n\n\nMap Visualization (4Wings API)\nAPI Portal, Map, Marine Manager\n\n\nVessels API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nEvents API\nAPI Portal, Map, Vessel Profile, Marine Manager, gfwR, Python SDK\n\n\nInsights API\nAPI Portal, Map, Vessel Profile, Marine Manager\n\n\nDatasets API\nAPI Portal, Map\n\n\nBulk Download API\nAPI Portal\n\n\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
+    "text": "6.1.1 Current GFW APIs\n\nGFW API Portal\nA mapping of Global Fishing Watch Data Availability\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
