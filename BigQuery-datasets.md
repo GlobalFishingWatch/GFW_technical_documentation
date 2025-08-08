@@ -1,38 +1,36 @@
 # (PART) Big Query {-} 
 
-# Big Query datasets
+# BigQuery datasets
 
 GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW's data pipelines as well as manually generated tables from development and research projects.
 
-## Staging Process (2021 Updates)
+## Staging Process
 
 **Description:** In an effort to delineate new versions of datasets with those that are used in production we are currently developing a new staging process.
 ** 
 
 **Details:** The staging process includes the following:
 
- 1. **Proof-of-Concept data**: Staging dataset for new research ideas
+ 1. **Proof-of-Concept data**: 
  * Internal only and selected research partners
  * One-off or manually updated tables
  * Manual QA
+ * Stored in scratch, project specific, or `gfw_research` datasets
 
- 2. **Prototype data**: Staging dataset for new research ideas
+ 2. **Prototype data**: 
  * Intermediate and Prototype tables
  * Automated data runs (updated daily)
  * Semi-automated QA
- * Prototype tables should use convention of ‘proto_’
+ * Prototype tables should use convention of `proto_`
  * Can be used by researchers and analysts but proceed knowing that although QA'd all bugs may not have been solved
  * Basic documentation will exist for these datasets
+ * Stored in pipeline datasets (e.g. `pipe_ais_v3_published`) with the `proto_` prefix.
 
- 3. **Production data**: Staging dataset for new research ideas
+ 3. **Production data**: 
  * Production level ready datasets
  * Public/research partners
  * Automated_QA
- * When proto_ tables have been used and QA'd for a given period of time, have finalized documentation, and automated QA metrics they will 
-   move to 'production' data
-
-Note: This is an evolving process, but is noted in the wiki currently because we are releasing a series of updates to the AIS event datasets and some are considered 'proto type data' and therefore everyone should be aware that these tables may be used but are NOT considered 'production' level ready.
- 
+ * When `proto_` tables have been used and QA'd for a given period of time, have finalized documentation, and automated QA metrics they are considered production data and the `proto_` prefix is dropped.
 
 ## AIS PIPE-3
 
@@ -48,7 +46,7 @@ The dataset structure was entirely revamped in PIPE-3 and simplified by generati
 
 + **Description:** This dataset contains the final output from the AIS pipeline. The tables in this dataset are intended to be shared with GFW partners and the public.
 
-+ **When to use:** This dataset is the primary dataset to use for analysis by GFW staff and external users.
++ **When to use:** This dataset is the primary dataset to use for AIS-based analyses by GFW staff and external users.
 
 ## Non-AIS Pipelines
 
@@ -63,18 +61,14 @@ Besides AIS, we have a number of other pipelines that currently follow the same 
 
 ### `gfw_research`
 
-+ **Description:**  This dataset includes streamlined versions of the AIS tables in `pipe_production_vYYYYMMDD`, as well as an additional AIS table subset to only include fishing vessels; vessel info tables that combine identity information from `vessel_database` with AIS activity information from `pipe_production_vYYYYMMDD`; derived data products (encounters, loitering, ports, etc.) that are not yet fully automated; and various reference tables important for analysis (e.g. EEZ info, flags of convenience, country codes, etc.). The versions of the pipeline AIS tables in `gfw_research` have been thinned (only 1 point per minute) and further processed to include additional info relevant for analysis (e.g. hours and regions). 
++ **Description:**  This dataset is intended as a general location to store proof-of-concept (PoC) tables developed by the Research Team that have not yet been incorporated into an automated pipeline. Many PoC tables originate in specific project datasets (e.g. `prj_vessel_classification`) but not all users have access to all project datasets. Once a PoC has reached a level of stability, it can be copied to `gfw_research` to facilitate access, as most GFW users and research partners have access to `gfw_research`. This dataset also includes various reference tables useful for analysis (e.g. EEZ info, flags of convenience, country codes, ice masks, etc.). 
 
-+ **When to use:** This dataset is the primary dataset to use for research and analysis. The streamlined AIS tables are smaller and cheaper to query than those in `pipe_production_vYYYYMMDD` and the vessel info tables include important activity data not available in `vessel_database`
+A related dataset to `gfw_research` is the `gfw_research_precursors` dataset. Like the `_internal` datasets described above, `gfw_research_precursors` is intended simply as a storage location for intermediate tables that are generally not required for analysis.
 
-### `gfw_research_precursors`
++ **When to use:** Look to this dataset when interested in accessing the latest stable versions of PoC tables being developed by the Research Team. 
 
-TODO
-
-### `scratch_[GFW_USERNAME]_tll[x]`
-+ **Description:** Each GFW user has their own "scratch" dataset for development and testing. Tables in these datasets get deleted after a certain amount of days so for long-term projects you should create new datasets.
-
-
+### `scratch_[GFW_USERNAME]_ttl[x]`
++ **Description:** Each GFW user has their own "scratch" dataset for development and testing. Tables in these datasets are assigned a "time to live" (ttl) and get deleted after a certain amount of days, so for long-term projects you should create new project-specific datasets.
 
 ## Other Relevant Datasets
 
