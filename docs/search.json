@@ -264,7 +264,7 @@
     "href": "BigQuery-in-Products.html",
     "title": "6  BigQuery to APIs to Products",
     "section": "",
-    "text": "6.1 GFW APIs\nThe flow of data into GFW Products is enabled through a set of Application Programming Interfaces (APIs). This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.",
+    "text": "6.1 GFW APIs\nThe flow of data into GFW Products is enabled through a set of Application Programming Interfaces (APIs). This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.\nGFW Data Products Diagram link",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
@@ -1734,7 +1734,7 @@
     "href": "BigQuery-in-Products.html#accessing-api-logic",
     "title": "6  BigQuery to APIs to Products",
     "section": "6.2 Accessing API Logic",
-    "text": "6.2 Accessing API Logic\nAPI query logic is maintained in this central hub.\nTo view underlying queries and code for BigQuery tables:\n\nOpen the relevant table in BigQuery.\nClick the “Details” tab to find:\n\nSource tables\n(When available) links to the GitHub code that generates each table\n\n\n\n⚠️ If the logic in the API hub seems outdated or unclear, contact Gisela.",
+    "text": "6.2 Accessing API Logic\nTo expose data from BigQuery (BQ) in our products, we organize it into API datasets. These are our way of grouping all data required for the Map and API services.\n\n6.2.1 via API datasets site\nAPI query logic is maintained in this API datasets hub. The API datasets hub returns the list of API Datasets that are used in our API.\n\nUsername = gfw_doc\nPassword = datasets\n\n\n6.2.1.1 How to Use the API Datasets Hub\n\nSelect the Environment\nUse the dropdown in the top-right corner to select the environment.\n➤ Choose Production to view datasets currently used in our Public APIs and on the Map.\nSelect a Dataset Group\nOnce the environment is set, pick the dataset group you want to explore — for example, AIS.\nWithin each group, datasets are categorized (e.g., Events, Insights, etc.). All available versions are listed under each category.\nFind the Latest Versions\nDatasets linked to Pipe v3 typically include v3.0 in their version string.\nExample: public-global-fishing-events:v3.01\nReview Dataset Logic\nIn the final column of each dataset entry, Queries & sources you’ll find links to the API quieries.\n\nThese links let you review the logic applied during API publication.\n\n\n\n6.2.2 via the Map\nStaff can login to Map with GFW account and click in the info pop up. User will see a section “Queries used” where you can get the same links describe above to the API logic (see example of fishing effort below).\n\n\n\nGFW Internal Feature - BQ Query link",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
@@ -1743,8 +1743,8 @@
     "objectID": "BigQuery-in-Products.html#caveats-and-considerations",
     "href": "BigQuery-in-Products.html#caveats-and-considerations",
     "title": "6  BigQuery to APIs to Products",
-    "section": "6.3 Caveats and Considerations",
-    "text": "6.3 Caveats and Considerations\nPermissions\nAccess to API data may be restricted depending on your user role. Some datasets may only be available to:\n\nInternal GFW staff\nJAC members\nSpecific partners\n\nAs a result, data visible through the API can vary based on your credentials.\nData Filters\nWe’ve made our best effort to document all filters and permission scopes on each API. However, gaps may still exist.\nIf you’re uncertain about:\n\nWhy data may be missing or inconsistent\nWhat filters are applied\n\nPlease contact Gisela for clarification.",
+    "section": "6.4 Caveats and Considerations",
+    "text": "6.4 Caveats and Considerations\nPermissions\nAccess to API data may be restricted depending on your user role. Some datasets may only be available to:\n\nInternal GFW staff\nJAC members\nSpecific partners\n\nAs a result, data visible through the API can vary based on your credentials.\nData Filters\nWe’ve made our best effort to document all filters and permission scopes on each API. However, gaps may still exist.\nIf you’re uncertain about:\n\nWhy data may be missing or inconsistent\nWhat filters are applied\n\nPlease contact Gisela for clarification.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
@@ -1784,7 +1784,37 @@
     "href": "BigQuery-in-Products.html#gfw-apis",
     "title": "6  BigQuery to APIs to Products",
     "section": "",
-    "text": "6.1.1 Current GFW APIs\n\nGFW API Portal\nA mapping of Global Fishing Watch Data Availability\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
+    "text": "6.1.1 Current GFW APIs (v3)\n\nGFW API Portal - different end points and which products call different end points\n\nVessel Viewer API endpoints - Vessel Viewer specific API end points and examples\n\nA mapping of Global Fishing Watch Data Availability\n\nDocumentation on differences between GFW data when accessing in the API, the API wrappers, and Data Download Portal\n\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#accessing-api-logic-via-api-datasets-site",
+    "href": "BigQuery-in-Products.html#accessing-api-logic-via-api-datasets-site",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.2 Accessing API Logic via API datasets site",
+    "text": "6.2 Accessing API Logic via API datasets site\nAPI query logic is maintained in this central hub.\n\nUsername = gfw_doc\nPassword = datasets",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#accessing-api-logic-via-the-map",
+    "href": "BigQuery-in-Products.html#accessing-api-logic-via-the-map",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.3 Accessing API Logic via the Map",
+    "text": "6.3 Accessing API Logic via the Map\nStaff can login to Map with GFW account and click in the info pop up. User will see a section “Queries used” where you can get the same links describe above to the API logic (see example of fishing effort below).",
+    "crumbs": [
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
+    ]
+  },
+  {
+    "objectID": "BigQuery-in-Products.html#accessing-bigquery-table-logic",
+    "href": "BigQuery-in-Products.html#accessing-bigquery-table-logic",
+    "title": "6  BigQuery to APIs to Products",
+    "section": "6.3 Accessing BigQuery Table logic",
+    "text": "6.3 Accessing BigQuery Table logic\nTo view underlying BigQuery table logic:\n\nOpen the relevant table in BigQuery.\nClick the “Details” tab to find:\n\nSource tables\n(When available) links to the GitHub code that generates each table\n\nClick the “Lineage” tab for a flux diagram of the source tables that feed into the BQ table\n\n\n⚠️ If the logic in the API hub seems outdated or unclear, contact Gisela.",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]

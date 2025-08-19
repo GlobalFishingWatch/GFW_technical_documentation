@@ -361,11 +361,16 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#gfw-apis" id="toc-gfw-apis" class="nav-link active" data-scroll-target="#gfw-apis"><span class="header-section-number">6.1</span> GFW APIs</a>
   <ul class="collapse">
-  <li><a href="#current-gfw-apis" id="toc-current-gfw-apis" class="nav-link" data-scroll-target="#current-gfw-apis"><span class="header-section-number">6.1.1</span> Current GFW APIs</a></li>
+  <li><a href="#current-gfw-apis-v3" id="toc-current-gfw-apis-v3" class="nav-link" data-scroll-target="#current-gfw-apis-v3"><span class="header-section-number">6.1.1</span> Current GFW APIs (v3)</a></li>
   <li><a href="#products-using-legacy-apis" id="toc-products-using-legacy-apis" class="nav-link" data-scroll-target="#products-using-legacy-apis"><span class="header-section-number">6.1.2</span> Products Using Legacy APIs</a></li>
   </ul></li>
-  <li><a href="#accessing-api-logic" id="toc-accessing-api-logic" class="nav-link" data-scroll-target="#accessing-api-logic"><span class="header-section-number">6.2</span> Accessing API Logic</a></li>
-  <li><a href="#caveats-and-considerations" id="toc-caveats-and-considerations" class="nav-link" data-scroll-target="#caveats-and-considerations"><span class="header-section-number">6.3</span> Caveats and Considerations</a></li>
+  <li><a href="#accessing-api-logic" id="toc-accessing-api-logic" class="nav-link" data-scroll-target="#accessing-api-logic"><span class="header-section-number">6.2</span> Accessing API Logic</a>
+  <ul class="collapse">
+  <li><a href="#via-api-datasets-site" id="toc-via-api-datasets-site" class="nav-link" data-scroll-target="#via-api-datasets-site"><span class="header-section-number">6.2.1</span> via API datasets site</a></li>
+  <li><a href="#via-the-map" id="toc-via-the-map" class="nav-link" data-scroll-target="#via-the-map"><span class="header-section-number">6.2.2</span> via the Map</a></li>
+  </ul></li>
+  <li><a href="#accessing-bigquery-table-logic" id="toc-accessing-bigquery-table-logic" class="nav-link" data-scroll-target="#accessing-bigquery-table-logic"><span class="header-section-number">6.3</span> Accessing BigQuery Table logic</a></li>
+  <li><a href="#caveats-and-considerations" id="toc-caveats-and-considerations" class="nav-link" data-scroll-target="#caveats-and-considerations"><span class="header-section-number">6.4</span> Caveats and Considerations</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -394,11 +399,18 @@ ul.task-list li input[type="checkbox"] {
 <p><br> The flow of data into <a href="https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit?tab=t.0"><strong>GFW Products</strong></a> is enabled through a set of <strong>Application Programming Interfaces (APIs)</strong>. This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.</p>
 <section id="gfw-apis" class="level2" data-number="6.1">
 <h2 data-number="6.1" class="anchored" data-anchor-id="gfw-apis"><span class="header-section-number">6.1</span> GFW APIs</h2>
-<section id="current-gfw-apis" class="level3" data-number="6.1.1">
-<h3 data-number="6.1.1" class="anchored" data-anchor-id="current-gfw-apis"><span class="header-section-number">6.1.1</span> Current GFW APIs</h3>
+<p><img src="figures/GFWDataProducts.png" class="img-fluid" alt="GFW Data Products"> <a href="https://whimsical.com/gfw-data-products-7WiWeFz5KVMxndC8gaD7DS">GFW Data Products Diagram link</a></p>
+<section id="current-gfw-apis-v3" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="current-gfw-apis-v3"><span class="header-section-number">6.1.1</span> Current GFW APIs (v3)</h3>
 <ul>
-<li><a href="https://globalfishingwatch.org/our-apis/documentation#introduction">GFW API Portal</a></li>
-<li>A mapping of <a href="https://globalfishingwatch.org/global-fishing-watch-data-availability">Global Fishing Watch Data Availability</a></li>
+<li><a href="https://globalfishingwatch.org/our-apis/documentation#data-available">GFW API Portal</a> - different end points and which products call different end points
+<ul>
+<li><a href="https://globalfishingwatch.org/our-apis/assets/2024_Vessel_Viewer_and_APIs_behind_It.pdf">Vessel Viewer API endpoints</a> - Vessel Viewer specific API end points and examples</li>
+</ul></li>
+<li>A mapping of <a href="https://globalfishingwatch.org/global-fishing-watch-data-availability">Global Fishing Watch Data Availability</a>
+<ul>
+<li><a href="https://globalfishingwatch.org/our-apis/assets/APIs_gfwr_and_Data_Downloads_Products_Differences.pdf">Documentation on differences between GFW data when accessing in the API, the API wrappers, and Data Download Portal</a></li>
+</ul></li>
 </ul>
 </section>
 <section id="products-using-legacy-apis" class="level3" data-number="6.1.2">
@@ -412,8 +424,46 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="accessing-api-logic" class="level2" data-number="6.2">
 <h2 data-number="6.2" class="anchored" data-anchor-id="accessing-api-logic"><span class="header-section-number">6.2</span> Accessing API Logic</h2>
-<p>API query logic is maintained in <a href="#">this central hub</a>.</p>
-<p>To view underlying queries and code for BigQuery tables:</p>
+<p>To expose data from <strong>BigQuery (BQ)</strong> in our products, we organize it into <strong>API datasets</strong>. These are our way of grouping all data required for the Map and API services.</p>
+<section id="via-api-datasets-site" class="level3" data-number="6.2.1">
+<h3 data-number="6.2.1" class="anchored" data-anchor-id="via-api-datasets-site"><span class="header-section-number">6.2.1</span> via API datasets site</h3>
+<p><strong>API query logic</strong> is maintained in this <a href="https://datasets.globalfishingwatch.org/datasets/">API datasets hub</a>. The API datasets hub returns the list of API Datasets that are used in our API.</p>
+<ul>
+<li>Username = <code>gfw_doc</code></li>
+<li>Password = <code>datasets</code></li>
+</ul>
+<section id="how-to-use-the-api-datasets-hub" class="level4" data-number="6.2.1.1">
+<h4 data-number="6.2.1.1" class="anchored" data-anchor-id="how-to-use-the-api-datasets-hub"><span class="header-section-number">6.2.1.1</span> How to Use the API Datasets Hub</h4>
+<ol type="1">
+<li><p><strong>Select the Environment</strong><br>
+Use the dropdown in the top-right corner to select the environment.</p>
+<p>➤ Choose <strong><code>Production</code></strong> to view datasets currently used in our <strong>Public APIs</strong> and on the <strong>Map</strong>.</p></li>
+<li><p><strong>Select a Dataset Group</strong><br>
+Once the environment is set, pick the dataset group you want to explore — for example, <code>AIS</code>.</p>
+<p>Within each group, datasets are categorized (e.g., <code>Events</code>, <code>Insights</code>, etc.). All available versions are listed under each category.</p></li>
+<li><p><strong>Find the Latest Versions</strong><br>
+Datasets linked to <strong>Pipe v3</strong> typically include <code>v3.0</code> in their version string.</p>
+<p>Example: <code>public-global-fishing-events:v3.01</code></p></li>
+<li><p><strong>Review Dataset Logic</strong><br>
+In the final column of each dataset entry, <code>Queries &amp; sources</code> you’ll find links to the API quieries.</p></li>
+</ol>
+<p>These links let you review the logic applied during API publication.</p>
+</section>
+</section>
+<section id="via-the-map" class="level3" data-number="6.2.2">
+<h3 data-number="6.2.2" class="anchored" data-anchor-id="via-the-map"><span class="header-section-number">6.2.2</span> via the Map</h3>
+<p>Staff can login to Map with GFW account and click in the info pop up. User will see a section “Queries used” where you can get the same links describe above to the API logic (see example of fishing effort below).</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/GFWMapInternalFeatureBQQuieries.png" class="img-fluid figure-img"></p>
+<figcaption>GFW Internal Feature - BQ Query link</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="accessing-bigquery-table-logic" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="accessing-bigquery-table-logic"><span class="header-section-number">6.3</span> Accessing BigQuery Table logic</h2>
+<p>To view underlying <strong>BigQuery table logic</strong>:</p>
 <ul>
 <li>Open the relevant table in BigQuery.</li>
 <li>Click the <strong>“Details”</strong> tab to find:
@@ -421,13 +471,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Source tables</li>
 <li>(When available) links to the GitHub code that generates each table</li>
 </ul></li>
+<li>Click the <strong>“Lineage”</strong> tab for a flux diagram of the source tables that feed into the BQ table</li>
 </ul>
 <blockquote class="blockquote">
 <p>⚠️ If the logic in the API hub seems outdated or unclear, contact <strong>Gisela</strong>.</p>
 </blockquote>
 </section>
-<section id="caveats-and-considerations" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="caveats-and-considerations"><span class="header-section-number">6.3</span> Caveats and Considerations</h2>
+<section id="caveats-and-considerations" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="caveats-and-considerations"><span class="header-section-number">6.4</span> Caveats and Considerations</h2>
 <p><strong>Permissions</strong></p>
 <p>Access to API data may be restricted depending on your user role. Some datasets may only be available to:</p>
 <ul>
