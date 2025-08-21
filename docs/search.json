@@ -154,7 +154,7 @@
     "href": "BigQuery-datasets.html",
     "title": "(PART) Big Query",
     "section": "",
-    "text": "Big Query datasets\nGFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipeline (pipe_production_vYYYYMMDD), vessel identity information pulled from vessel registries (vessel_database), and streamlined versions of these tables and other derived data products relevant for research and analysis (gfw_research).",
+    "text": "BigQuery datasets\nGFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipelines as well as manually generated tables from development and research projects.",
     "crumbs": [
       "(PART) Big Query"
     ]
@@ -184,7 +184,7 @@
     "href": "BigQuery-datasets.html#other-relevant-datasets",
     "title": "(PART) Big Query",
     "section": "Other Relevant Datasets",
-    "text": "Other Relevant Datasets\n\nanchorages",
+    "text": "Other Relevant Datasets\n\npipe_ais_sources_v20201001 and pipe_ais_sources_v20220628\nThese two datasets contain the raw AIS data that is used to run any AIS pipeline. The only processing that has been applied to tables in these datasets is: 1. parsing (decoding) of raw nmea data; and 2. normalization of the data to a common schema as well as deduplication of messages from different data providers.\nHistorically, they have not been part of the AIS pipeline itself since they are usually not being regenerated upon a new AIS pipeline release.\n\n\nanchorages\nThe anchorages pipeline generates tables based on AIS data as well as static datasources of anchorages and their names. This dataset is used across different pipelines, like AIS and VMS.\n\n\npipe_static\nThis dataset contains static tables that are being generated based on static data sources. This data is being used across most pipelines to add geographical information like distance from shore or depth. WARNING: for some tables it is unclear what the underlying data source is!\n\n\npipe_regions_layers\nThis dataset contains region lookup tables that define the shape of each region. Those are occasionally updated due to corrections, regional disputes, and new or shifting regions. Like the static tables, this dataset is used across most pipelines to provide information in which regions a certain coordinate is located.\n\n\ntech_dq_monitoring and tech_anomaly_detection\nThese two datasets contain tables that are used to monitor the data quality of all GFW data. The data may be used for debugging or adhoc analyses but since their primary purpose is to power dashboards and anomaly alerts the data does not follow the same reliability standards we have for other pipelines. Therefore, data might be outdated or unavailable at times.",
     "crumbs": [
       "(PART) Big Query"
     ]
@@ -1737,6 +1737,46 @@
     "text": "GFW Data Training Materials\nhttps://docs.google.com/document/d/1mvpQa01gRTvEKKCcrqCwinapJ_NKB66MlLmxa1RGQrM/edit?tab=t.0\nPurpose: The GFW Data Training Shared Drive contains training materials for using GFW data.\nUses:\n\nReference for current GFW staff and partners\n\nOnboarding for new GFW staff and partners\n\nPeriodic training meetings and workshops\n\nContents:\n\nTraining Slide Decks: This folder contains numerous slide decks focused on different GFW datasets. The most up-to-date training slide decks are in training_slides_current. Quarterly versions of the complete training slide deck set are saved in training_slides_archive following the naming convention training_slides_YYYY_Q\nExample Queries: This folder contains a Google Doc with descriptions and links to the most current example queries for working with GFW data.\n\nAll queries are saved as SQL files on GitHub in the queries/examples/current folder in the bigquery-documentation-wf827 repo.\n\nOld versions of example queries are stored in the queries/examples/archive folder\n\n\nBigQuery Table Reference: Table containing current best list of datasets and tables to use for analysis\nTraining Workshops: This folder contains various admin materials for planning GFW training workshops\n\nUpdating: As new versions of datasets and tables are produced, GFW staff should periodically update the GFW data training materials for their assigned datasets (see Assignments) accordingly. This process includes the following:\n\nGFW staff add/update example queries.\n\nThe old versions of the queries should be moved to the queries/examples/archive folder in the bigquery-documentation-wf827 repo.\n\nThe new versions of the queries should be added to the queries/examples/current folder using the options below. Queries should be clearly named according to what they do and be date-versioned with the vYYYYMMDD format (e.g. vessel_track_with_fishing_hours_vYYYYMMDD.sql).\n\n\n\nOption A: Clone the bigquery-documentation-wf827 repo and push new queries to the correct folder (make sure to pull first if not cloning for the first time!)\n\nOption B: Upload files to the bigquery-documentation-wf827 repo\n\nStep 1: Save example query locally as a .sql file\n\nStep 2: Navigate to the current example query folder bigquery-documentation-wf827/queries/examples/current\n\nStep 3: Click Upload files\n\nStep 4: Drag/drop file, add a commit message, and press Commit\n\n\nOption C: Create a new file directly in the bigquery-documentation-wf827 repo on github.com\n\nStep 1: Navigate to the example query folder for the current quarter in bigquery-documentation-wf827/queries/examples/current\n\nStep 2: Click Create new file\n\nStep 3: Name query in the Name your file… box (make sure to use .sql suffix)\n\nStep 4: Copy/paste query into the &lt;&gt;Edit new file window\n\nStep 5: Add a commit message and press Commit\n\n\n\nGFW staff update their assigned slide decks in training_slides_current. Links to example queries should be updated to reference the correct version of the query stored in bigquery-documentation-wf827.\nAll slide decks are combined into a single, versioned slide deck and saved in training_slides_archive (Tyler).\n\nAssignments: GFW staff are responsible for updating the training materials for certain datasets. These assignments are generally based on that staff member’s expertise in the subject/dataset.\n\nBigQuery: Tyler, David\n\nIntro to AIS: David\n\nPipeline: Enrique, Andres, Matias, Tim\n\nResearch tables: Tyler\n\nFishing effort: Tyler\n\nVessel database: Jaeyoon\n\nVessel info tables: Tyler\n\nPorts and voyages: Nate, Tim\n\nTransshipment: Hannah, Nate\n\nVIIRS: Masaki\n\nSAR: Fernando, David\n\nVMS: Bjorn, Tim W",
     "crumbs": [
       "(PART) Training materials"
+    ]
+  },
+  {
+    "objectID": "BigQuery-datasets.html#staging-process",
+    "href": "BigQuery-datasets.html#staging-process",
+    "title": "(PART) Big Query",
+    "section": "Staging Process",
+    "text": "Staging Process\nDescription: In an effort to delineate new versions of datasets with those that are used in production we are currently developing a new staging process. **\nDetails: The staging process includes the following:\n\nProof-of-Concept data:\n\n\nInternal only and selected research partners\nOne-off or manually updated tables\nManual QA\nStored in scratch, project specific, or gfw_research datasets\n\n\nPrototype data:\n\n\nIntermediate and Prototype tables\nAutomated data runs (updated daily)\nSemi-automated QA\nPrototype tables should use convention of proto_\nCan be used by researchers and analysts but proceed knowing that although QA’d all bugs may not have been solved\nBasic documentation will exist for these datasets\nStored in pipeline datasets (e.g. pipe_ais_v3_published) with the proto_ prefix.\n\n\nProduction data:\n\n\nProduction level ready datasets\nPublic/research partners\nAutomated_QA\nWhen proto_ tables have been used and QA’d for a given period of time, have finalized documentation, and automated QA metrics they are considered production data and the proto_ prefix is dropped.",
+    "crumbs": [
+      "(PART) Big Query"
+    ]
+  },
+  {
+    "objectID": "BigQuery-datasets.html#ais-pipe-3",
+    "href": "BigQuery-datasets.html#ais-pipe-3",
+    "title": "(PART) Big Query",
+    "section": "AIS PIPE-3",
+    "text": "AIS PIPE-3\nThe dataset structure was entirely revamped in PIPE-3 and simplified by generating all AIS tables in two datasets.\n\npipe_ais_v3_internal\n\nDescription: This dataset contains all intermediate tables that are generated by the AIS pipeline. These tables are used to generate the final tables in pipe_ais_v3_published. The tables in this dataset are not intended to be shared outside of GFW and usage within GFW should be limited to those who are working on the pipeline.\nWhen to use: Only use this dataset if you are working on the AIS pipeline, e.g. as a researcher or data engineer. The intermediate tables in this dataset can also be used for debugging purposes.\n\n\n\npipe_ais_v3_published\n\nDescription: This dataset contains the final output from the AIS pipeline. The tables in this dataset are intended to be shared with GFW partners and the public.\nWhen to use: This dataset is the primary dataset to use for AIS-based analyses by GFW staff and external users.",
+    "crumbs": [
+      "(PART) Big Query"
+    ]
+  },
+  {
+    "objectID": "BigQuery-datasets.html#non-ais-pipelines",
+    "href": "BigQuery-datasets.html#non-ais-pipelines",
+    "title": "(PART) Big Query",
+    "section": "Non-AIS Pipelines",
+    "text": "Non-AIS Pipelines\nBesides AIS, we have a number of other pipelines that currently follow the same structure as the AIS pipeline:\n\nSentinel-1: pipe_sar_v1_internal and pipe_sar_v1_published\nSentinel-2: TBD (currently under development)\nVMS: pipe_vms_v3_internal and pipe_vms_v3_published",
+    "crumbs": [
+      "(PART) Big Query"
+    ]
+  },
+  {
+    "objectID": "BigQuery-datasets.html#development-datasets",
+    "href": "BigQuery-datasets.html#development-datasets",
+    "title": "(PART) Big Query",
+    "section": "Development Datasets",
+    "text": "Development Datasets\n\ngfw_research\n\nDescription: This dataset is intended as a general location to store proof-of-concept (PoC) tables developed by the Research Team that have not yet been incorporated into an automated pipeline. Many PoC tables originate in specific project datasets (e.g. prj_vessel_classification) but not all users have access to all project datasets. Once a PoC has reached a level of stability, it can be copied to gfw_research to facilitate access, as most GFW users and research partners have access to gfw_research. This dataset also includes various reference tables useful for analysis (e.g. EEZ info, flags of convenience, country codes, ice masks, etc.).\n\nA related dataset to gfw_research is the gfw_research_precursors dataset. Like the _internal datasets described above, gfw_research_precursors is intended simply as a storage location for intermediate tables that are generally not required for analysis.\n\nWhen to use: Look to this dataset when interested in accessing the latest stable versions of PoC tables being developed by the Research Team.\n\n\n\nscratch_[GFW_USERNAME]_ttl[x]\n\nDescription: Each GFW user has their own “scratch” dataset for development and testing. Tables in these datasets are assigned a “time to live” (ttl) and get deleted after a certain amount of days, so for long-term projects you should create new project-specific datasets.",
+    "crumbs": [
+      "(PART) Big Query"
     ]
   }
 ]
