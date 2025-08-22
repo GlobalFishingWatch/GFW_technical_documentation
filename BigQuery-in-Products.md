@@ -13,6 +13,7 @@ The flow of data into [**GFW Products**](https://docs.google.com/document/d/1JY0
   - [Vessel Viewer API endpoints](https://globalfishingwatch.org/our-apis/assets/2024_Vessel_Viewer_and_APIs_behind_It.pdf) - Vessel Viewer specific API end points and examples
 - A mapping of [Global Fishing Watch Data Availability](https://globalfishingwatch.org/global-fishing-watch-data-availability) 
   - [Documentation on differences between GFW data when accessing in the API, the API wrappers, and Data Download Portal](https://globalfishingwatch.org/our-apis/assets/APIs_gfwr_and_Data_Downloads_Products_Differences.pdf)
+  - [Note on Product Event Tables Vs Map](https://www.notion.so/globalfishingwatch/Note-on-Product-Event-Tables-Vs-Map-1d1740e47d9180d8b94af8ecbd30dfc2) Notion page last updated by Hannah H in April 2025 covering differences between published versions of AIS-based event data.
 
 ### Products Using Legacy APIs
 

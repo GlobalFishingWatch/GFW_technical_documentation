@@ -1784,7 +1784,7 @@
     "href": "BigQuery-in-Products.html#gfw-apis",
     "title": "6  BigQuery to APIs to Products",
     "section": "",
-    "text": "6.1.1 Current GFW APIs (v3)\n\nGFW API Portal - different end points and which products call different end points\n\nVessel Viewer API endpoints - Vessel Viewer specific API end points and examples\n\nA mapping of Global Fishing Watch Data Availability\n\nDocumentation on differences between GFW data when accessing in the API, the API wrappers, and Data Download Portal\n\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
+    "text": "6.1.1 Current GFW APIs (v3)\n\nGFW API Portal - different end points and which products call different end points\n\nVessel Viewer API endpoints - Vessel Viewer specific API end points and examples\n\nA mapping of Global Fishing Watch Data Availability\n\nDocumentation on differences between GFW data when accessing in the API, the API wrappers, and Data Download Portal\nNote on Product Event Tables Vs Map Notion page last updated by Hannah H in April 2025 covering differences between published versions of AIS-based event data.\n\n\n\n\n6.1.2 Products Using Legacy APIs\nSome older products are still using legacy APIs:\n\nLegacy CVP\nVessel Profile Prototype",
     "crumbs": [
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>BigQuery to APIs to Products</span>"
     ]
