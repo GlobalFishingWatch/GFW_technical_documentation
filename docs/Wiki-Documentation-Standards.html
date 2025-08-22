@@ -117,6 +117,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Data-Updates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(PART) Data updates</span></a>
   </div>
@@ -130,25 +136,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-Table-Reference----PIPE-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-Table-Reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Big Query table reference</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Key-concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Big Query Key concepts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Big Query Key concepts</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-in-Products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">BigQuery in products</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">BigQuery in products</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,25 +172,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Product-Vessel-Info-Summary-PVIS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Vessel-database.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vessel database</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Vessel database</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Vessel-info-tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Vessel info tables</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Annual-carrier-vessel-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Annual carrier vessel list</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel info tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -387,11 +387,11 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p><code>Key Tables</code></p>
 <ul>
-<li>Current output table(s)</li>
-<li>Previous output table version (at least one version previous with any important notes on pipeline version or other table versioning that fed into the table)</li>
-<li>Precursor tables (when appropriate) - These are intermediate tables used in the production of the output tables</li>
+<li>Current output table(s) and version</li>
+<li>To understand what table is related to this one in the previous pipeline version, please refer to the specific version mapping page</li>
+<li>In order to undertand which are the Precursor tables (when appropriate), meaning the intermediate tables used in the production of the output tables, pleae refer to Lineage tab in BQ, more information <a href="https://cloud.google.com/dataplex/docs/track-lineage#view_graph">here</a>.</li>
 </ul></li>
-<li><p><code>Data Description</code> - Detailed but concise description of the data and methods. Should be written to an analyst or advanced user but someone totally unfamiliar with the dataset. However, in-depth explanation should be expanded upon in training slides</p>
+<li><p><code>Data Description</code> - Detailed but concise description of the data and methods. Should be written to an analyst or advanced user but someone totally unfamiliar with the dataset. This documentation should be also in BQ, if you can’t find that this needs to be reported to the Data team.</p>
 <ul>
 <li>Definition of output table - what is it, and what is it used for</li>
 <li>Explanation of any restrictions on the data (e.g., if there are confidence values involved, specific vessel types, etc.)</li>
@@ -405,7 +405,8 @@ ul.task-list li input[type="checkbox"] {
 <li>GitHub repo for data source code (if pertinent)</li>
 <li>Links to related wiki pages</li>
 </ul></li>
-<li><p><code>Updates</code> - Dated list of updates to the key table(s)</p></li>
+<li><p><code>Updates</code> - Dated list of updates to the key table(s).</p></li>
+<li><p><code>Difference with data in API, Data Download Portal or Map</code> - Add links or describe what is the difference with the data in any of the public products. For example for Sentinel 2, we can link to the <a href="https://docs.google.com/document/d/1uBobfopK7c12GnDOhKzNvYM9kHPRYO4P9NCl_bGztvM/edit?tab=t.0#heading=h.vasy5zi4hwfb">future DDP page</a>.</p></li>
 </ul>
 <section id="data-ownership-requirements" class="level1" data-number="32">
 <h1 data-number="32"><span class="header-section-number">32</span> Data Ownership Requirements</h1>
@@ -417,7 +418,7 @@ ul.task-list li input[type="checkbox"] {
 <li>This process should be automated whenever possible</li>
 </ul></li>
 <li><p>Owner must update current version in the wiki page that lists current versions of primary datasets</p></li>
-<li><p>Owner is responsible for maintaining up-to-date example queries and training slides for the dataset</p></li>
+<li><p>Owner is responsible for maintaining up-to-date example queries for the dataset</p></li>
 </ul>
 
 

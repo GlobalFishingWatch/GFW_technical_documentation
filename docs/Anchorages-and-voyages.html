@@ -117,6 +117,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Data-Updates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(PART) Data updates</span></a>
   </div>
@@ -130,25 +136,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-Table-Reference----PIPE-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-Table-Reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Big Query table reference</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Key-concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Big Query Key concepts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Big Query Key concepts</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-in-Products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">BigQuery in products</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">BigQuery in products</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,25 +172,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Product-Vessel-Info-Summary-PVIS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Vessel-database.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vessel database</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Vessel database</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Vessel-info-tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Vessel info tables</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Annual-carrier-vessel-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Annual carrier vessel list</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel info tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -394,7 +394,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <blockquote class="blockquote">
-<p><strong>Update</strong> <em>As a result of the All Vessels v2 table, all AIS published event tables now have a new v2 version which should be used moving forward, <code>pipe_production_v20201001.published_events_port_visits_v2</code>, until we switch to using pipeline 3.0, where all v2 published event tables will become the only maintained versions of the tables. The logic for the events themselves haven’t changed, but due to the change in how shiptype is determined in products, the published events tables have been re-run and ingested into products with the updated shtipetype designation. All example queries referencing published events tables should use the v2 versions of the tables.</em></p>
+<p><strong>Update</strong> *Within the release of pipe3, the new product_events_port_visit_v2_v* has been added while maintaining the previous version as a compatibility layer. In the new version the definition of the port visit location has changed:</p>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>Previously, this used to be the average location of a vessel’s position during the port visit. This was different from the port visit label, which was based on the “intermediate anchorage” of the port visit. The “intermediate anchorage” is the PORT_GAP or PORT_STOP of the port visit that has the longest duration. This behaviour led to 1. port visit locations being different from the port visit label, and 2. port visit locations possibly not being representative of the port visit at all, especially for long port visits where entrance and exit were in entirely different locations.</li>
+</ul>
+</blockquote>
+<blockquote class="blockquote">
+<ul>
+<li>In the new version, the port visit location as well as label are based on the “port visit start” of the port visit, which is the <em>anchorage</em> of the first <code>PORT_STOP_BEGIN</code> - if it exists - or otherwise the first <code>PORT_STOP_END</code>, the first <code>PORT_GAP_BEGIN</code>, or the first <code>PORT_GAP_END</code> if none of the others exist.</li>
+</ul>
 </blockquote>
 <p>GFW maintains a database of <code>anchorages</code> and identifies when vessels enter/exit these locations (<code>port visits</code>). By connecting a vessel’s port EXIT and next port ENTRY it is also possible to identify vessel <code>voyages</code>.</p>
 <p><code>Port events</code> serve as the fundamental units used to create <code>port visits</code> or <code>voyages</code>. There are four types of port events:</p>
@@ -420,17 +430,16 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><code>anchorages.named_anchorages_vYYYYMMDD</code> - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats regarding anchorage at the time of creation.</li>
 <li><code>gfw_research.named_anchorages</code> - View of most the recent version of <code>anchorages.named_anchorages_vYYYYMMDD</code></li>
-<li><code>pipe_production_vYYYYMMDD.proto_raw_port_events_*</code> - Port events by seg_id. Each port activity by a vessel (e.g.&nbsp;port entry, port exit) recorded in a single row.</li>
-<li><code>pipe_production_vYYYYMMDD.proto_port_visits</code> - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the <code>events</code> array.</li>
-<li><code>pipe_production_vYYYYMMDD.published_events_port_visits</code> - Proto_port_visits table version, limited to confidence &gt;=2, that is used in API (different scheme than original proto_port_visits table). Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.</li>
-<li><code>pipe_production_vYYYYMMDD.proto_voyages_c2</code> - Voyages by vessels with a port visit confidence of &gt;=2. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.</li>
-<li><code>pipe_production_vYYYYMMDD.proto_voyages_c3</code> - Voyages by vessels with a port visit confidence of &gt;=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.</li>
-<li><code>pipe_production_vYYYYMMDD.proto_voyages_c4</code> - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.</li>
+<li><code>pipe_ais_v{PIPE_VERSION}_internal.raw_port_events_*</code> - Port events by seg_id. Each port activity by a vessel (e.g.&nbsp;port entry, port exit) recorded in a single row.</li>
+<li><code>pipe_ais_v{PIPE_VERSION}_published.port_visits</code> - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the <code>events</code> array.</li>
+<li><code>pipe_ais_v{PIPE_VERSION}_published.product_events_port_visit_v2</code> - Port visits table used in the API and map, limited to confidence &gt;=2. Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.</li>
+<li><code>pipe_ais_v{PIPE_VERSION}_internal.voyages_c2</code> - Voyages by vessels with a port visit confidence of &gt;=2. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.</li>
+<li><code>pipe_ais_v{PIPE_VERSION}_published.voyages_c3</code> - Voyages by vessels with a port visit confidence of &gt;=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.</li>
+<li><code>pipe_ais_v{PIPE_VERSION}_published.voyages_c4</code> - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.</li>
 </ul>
 <blockquote class="blockquote">
-<p><strong>Note</strong> Always use the <code>published_events_x</code> or <code>proto_events_x</code> (if still considered a prototype) view version of a table rather than <code>published_events_x_v</code> (for example, if you want to use <code>pipe_production_v20201001.published_events_port_visits</code> then use that view table rather than <code>pipe_production_v20201001.published_events_port_visits_v</code>. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the <code>published_events</code>. The _v form of a table is created for this calculation, but is not to be used by anyone.</p>
+<p><strong>Note</strong> Always use the <code>product_events_x</code> view version of a table rather than <code>published_events_x_v</code> (for example, if you want to use <code>pipe_ais_v3_published.product_events_port_visit_v2</code> then use that view rather than <code>pipe_ais_v3_published.product_events_port_visit_v2_20250611</code>. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the <code>product_events</code>. The _v form of a table is created for this calculation, but is not to be used by anyone.</p>
 </blockquote>
-<p><strong>Original data tables still available</strong> + <code>pipe_production_vYYYYMMDD.port_visits_</code> - Previously used port_visits table, which can still be used now if you do not want to shift to the ‘proto_’ data. This data includes port visits with a confidence of 4 only. + <code>pipe_production_vYYYYMMDD.voyages</code> - Previously used voyages table, which can still be used now. Creates voyages from <code>pipe_production_vYYYYMMDD.port_visits_</code>.</p>
 </section>
 <section id="data-description" class="level2" data-number="13.2">
 <h2 data-number="13.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">13.2</span> Data Description</h2>
@@ -438,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Note that all data points involve <code>anchorage_points</code> for visits and to convert to what more broadly would be considered “ports” additional aggregation will be needed, likely by grouping using <code>gfw_research.named_anchorages</code>, specifically the <code>label</code> and <code>iso3</code> fields.</p>
 <section id="port-events" class="level3" data-number="13.2.1">
 <h3 data-number="13.2.1" class="anchored" data-anchor-id="port-events"><span class="header-section-number">13.2.1</span> Port Events:</h3>
-<p>Port events data are stored in <code>pipe_production_vYYYYMMDD.proto_raw_port_events_*</code>. There are four different types of port events: <code>PORT_ENTRY</code>, <code>PORT_STOP</code>, <code>PORT_GAP</code>, <code>PORT_EXIT</code>.</p>
+<p>Port events data are stored in the <code>raw_port_events</code> table. There are four different types of port events: <code>PORT_ENTRY</code>, <code>PORT_STOP</code>, <code>PORT_GAP</code>, <code>PORT_EXIT</code>.</p>
 <p>A <code>PORT_ENTRY</code> event occurs when a vessel gets within 3 km of an anchorage point and a <code>PORT_EXIT</code> event occurs when it exceeds 4 km. These points can be considered changes in state, between “AT SEA” and “IN PORT”. The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.</p>
 <p>Nested between a <code>PORT_ENTRY</code> and a <code>PORT_EXIT</code>, a vessel may have a <code>PORT_STOP</code> or <code>PORT_GAP</code> or both (these events require a state = “in port”), though these events don’t necessarily occur. A <code>PORT_STOP_BEGIN</code> occurs when the vessel is “in port” and the vessel’s speed drops under 0.2 knots and <code>PORT_STOP_END</code> occurs when the speed climbs over 0.5 (thus <code>PORT_STOP</code>s may a start and an end.</p>
 <p>A <code>GAP_EVENT</code> occurs when a vessel is in “in_port” and has a &gt;4 hour AIS gap. The start (<code>GAP_EVENT_BEGIN</code>) of the gap is recorded at 4 hours after the last message before the gap and the end (<code>GAP_EVENT_END</code>) is recorded at the time of the message that ends the gap.</p>
@@ -450,7 +459,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="voyages" class="level3" data-number="13.2.3">
 <h3 data-number="13.2.3" class="anchored" data-anchor-id="voyages"><span class="header-section-number">13.2.3</span> Voyages:</h3>
-<p>Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two <strong>Port Visits</strong> (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit <code>confidence &gt;= 2</code>, then you should use the <code>pipe_production_vYYYYMMDD.proto_voyages_c2</code> table that shows voyages where both the start and end port visit had a confidence of <code>&gt;=2</code>.</p>
+<p>Voyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two <strong>Port Visits</strong> (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit <code>confidence &gt;= 3</code>, then you should use the <code>voyages_c3</code> table that shows voyages where both the start and end port visit had a confidence of <code>&gt;=3</code>.</p>
 </section>
 </section>
 <section id="caveats-known-issues" class="level2" data-number="13.3">
@@ -458,13 +467,13 @@ ul.task-list li input[type="checkbox"] {
 <section id="port-events-1" class="level3" data-number="13.3.1">
 <h3 data-number="13.3.1" class="anchored" data-anchor-id="port-events-1"><span class="header-section-number">13.3.1</span> Port Events:</h3>
 <ul>
-<li>These events use <code>seg_id</code> as the vessel identifier and may need to be mapped to <code>SSVID</code> for broader use.</li>
+<li>These events use <code>seg_id</code> as the vessel identifier and may need to be mapped to <code>vessel_id</code> for broader use.</li>
 </ul>
 </section>
 <section id="port-visits-1" class="level3" data-number="13.3.2">
 <h3 data-number="13.3.2" class="anchored" data-anchor-id="port-visits-1"><span class="header-section-number">13.3.2</span> Port Visits:</h3>
 <ul>
-<li><p>Port visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. *Generally confidence of 4 will capture most port visits (see notes below)</p>
+<li><p>Port visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives where a vessel transits nearby an anchorage. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. *Generally confidence of 4 will capture most port visits (see notes below)</p>
 <p>Looking at all confidence <code>&gt;=2</code>port visits:<br>
 13.4% - confidence 2<br>
 8.6% - confidence 3<br>
@@ -474,7 +483,8 @@ ul.task-list li input[type="checkbox"] {
 0.05% - confidence 3<br>
 99.3% - confidence 4</p>
 <p>There are more low confidence visits when looking at all data, because ‘noisy’ vessels dominate the results, but when filtering to a tidier vessel list there is considerably less ‘noise’. However, even small percentages can provide key insight into voyage history.</p></li>
-<li><p>These events use <code>vessel_id</code> as vessel identifier and may need to be mapped to <code>SSVID</code> for broader use.</p></li>
+<li><p>These events use <code>vessel_id</code> as vessel identifier and may need to be mapped to <code>SSVID</code> for broader use by using for example <code>PVIS (product_vessel_info_summary)</code>.</p></li>
+<li><p>Port visits are regenerated daily, so a vessel’s historical port visits may change as new data is added, the way the assignment of <code>seg_id</code> to <code>vessel_id</code> changes over time, or noise filters mutate (e.g.&nbsp;from <code>overlapping_and_short = FALSE</code> to <code>overlapping_and_short = TRUE</code> or vice versa). This means that port visits may change over time so it is recommended to use the most recent version of the port visits table. This happens particularly during the first few days or even weeks of a new port visit and much more often for lower confidence port visits than confidence 4 port visits (which by definition have ended).</p></li>
 </ul>
 </section>
 <section id="voyages-1" class="level3" data-number="13.3.3">

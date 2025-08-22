@@ -117,6 +117,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Home.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Data Documentation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Data-Updates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">(PART) Data updates</span></a>
   </div>
@@ -130,25 +136,25 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-Table-Reference----PIPE-3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-Table-Reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Big Query table reference</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Key-concepts.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Big Query Key concepts</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Big Query Key concepts</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./BigQuery-in-Products.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">BigQuery in products</span></span></a>
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">BigQuery in products</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -166,25 +172,19 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Product-Vessel-Info-Summary-PVIS.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Vessel-database.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vessel database</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Vessel database</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./Vessel-info-tables.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Vessel info tables</span></span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./Annual-carrier-vessel-list.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Annual carrier vessel list</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel info tables</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -353,18 +353,27 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#big-query-datasets" id="toc-big-query-datasets" class="nav-link active" data-scroll-target="#big-query-datasets">Big Query datasets</a>
+  <li><a href="#bigquery-datasets" id="toc-bigquery-datasets" class="nav-link active" data-scroll-target="#bigquery-datasets">BigQuery datasets</a>
   <ul class="collapse">
-  <li><a href="#staging-process-2021-updates" id="toc-staging-process-2021-updates" class="nav-link" data-scroll-target="#staging-process-2021-updates">Staging Process (2021 Updates)</a></li>
-  <li><a href="#key-datasets" id="toc-key-datasets" class="nav-link" data-scroll-target="#key-datasets">Key Datasets</a>
+  <li><a href="#staging-process" id="toc-staging-process" class="nav-link" data-scroll-target="#staging-process">Staging Process</a></li>
+  <li><a href="#ais-pipe-3" id="toc-ais-pipe-3" class="nav-link" data-scroll-target="#ais-pipe-3">AIS PIPE-3</a>
   <ul class="collapse">
-  <li><a href="#pipe_production_vyyyymmdd" id="toc-pipe_production_vyyyymmdd" class="nav-link" data-scroll-target="#pipe_production_vyyyymmdd"><code>pipe_production_vYYYYMMDD</code></a></li>
-  <li><a href="#vessel_database" id="toc-vessel_database" class="nav-link" data-scroll-target="#vessel_database"><code>vessel_database</code></a></li>
+  <li><a href="#pipe_ais_v3_internal" id="toc-pipe_ais_v3_internal" class="nav-link" data-scroll-target="#pipe_ais_v3_internal"><code>pipe_ais_v3_internal</code></a></li>
+  <li><a href="#pipe_ais_v3_published" id="toc-pipe_ais_v3_published" class="nav-link" data-scroll-target="#pipe_ais_v3_published"><code>pipe_ais_v3_published</code></a></li>
+  </ul></li>
+  <li><a href="#non-ais-pipelines" id="toc-non-ais-pipelines" class="nav-link" data-scroll-target="#non-ais-pipelines">Non-AIS Pipelines</a></li>
+  <li><a href="#development-datasets" id="toc-development-datasets" class="nav-link" data-scroll-target="#development-datasets">Development Datasets</a>
+  <ul class="collapse">
   <li><a href="#gfw_research" id="toc-gfw_research" class="nav-link" data-scroll-target="#gfw_research"><code>gfw_research</code></a></li>
+  <li><a href="#scratch_gfw_username_ttlx" id="toc-scratch_gfw_username_ttlx" class="nav-link" data-scroll-target="#scratch_gfw_username_ttlx"><code>scratch_[GFW_USERNAME]_ttl[x]</code></a></li>
   </ul></li>
   <li><a href="#other-relevant-datasets" id="toc-other-relevant-datasets" class="nav-link" data-scroll-target="#other-relevant-datasets">Other Relevant Datasets</a>
   <ul class="collapse">
+  <li><a href="#pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628" id="toc-pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628" class="nav-link" data-scroll-target="#pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628"><code>pipe_ais_sources_v20201001</code> and <code>pipe_ais_sources_v20220628</code></a></li>
   <li><a href="#anchorages" id="toc-anchorages" class="nav-link" data-scroll-target="#anchorages"><code>anchorages</code></a></li>
+  <li><a href="#pipe_static" id="toc-pipe_static" class="nav-link" data-scroll-target="#pipe_static"><code>pipe_static</code></a></li>
+  <li><a href="#pipe_regions_layers" id="toc-pipe_regions_layers" class="nav-link" data-scroll-target="#pipe_regions_layers"><code>pipe_regions_layers</code></a></li>
+  <li><a href="#tech_dq_monitoring-and-tech_anomaly_detection" id="toc-tech_dq_monitoring-and-tech_anomaly_detection" class="nav-link" data-scroll-target="#tech_dq_monitoring-and-tech_anomaly_detection"><code>tech_dq_monitoring</code> and <code>tech_anomaly_detection</code></a></li>
   </ul></li>
   </ul></li>
   </ul>
@@ -392,71 +401,112 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="big-query-datasets" class="level1">
-<h1>Big Query datasets</h1>
-<p>GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipeline (<code>pipe_production_vYYYYMMDD</code>), vessel identity information pulled from vessel registries (<code>vessel_database</code>), and streamlined versions of these tables and other derived data products relevant for research and analysis (<code>gfw_research</code>).</p>
-<section id="staging-process-2021-updates" class="level2">
-<h2 class="anchored" data-anchor-id="staging-process-2021-updates">Staging Process (2021 Updates)</h2>
+<section id="bigquery-datasets" class="level1">
+<h1>BigQuery datasets</h1>
+<p>GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipelines as well as manually generated tables from development and research projects.</p>
+<section id="staging-process" class="level2">
+<h2 class="anchored" data-anchor-id="staging-process">Staging Process</h2>
 <p><strong>Description:</strong> In an effort to delineate new versions of datasets with those that are used in production we are currently developing a new staging process. **</p>
 <p><strong>Details:</strong> The staging process includes the following:</p>
 <ol type="1">
-<li><strong>Proof-of-Concept data</strong>: Staging dataset for new research ideas</li>
+<li><strong>Proof-of-Concept data</strong>:</li>
 </ol>
 <ul>
 <li>Internal only and selected research partners</li>
 <li>One-off or manually updated tables</li>
 <li>Manual QA</li>
+<li>Stored in scratch, project specific, or <code>gfw_research</code> datasets</li>
 </ul>
 <ol start="2" type="1">
-<li><strong>Prototype data</strong>: Staging dataset for new research ideas</li>
+<li><strong>Prototype data</strong>:</li>
 </ol>
 <ul>
 <li>Intermediate and Prototype tables</li>
 <li>Automated data runs (updated daily)</li>
 <li>Semi-automated QA</li>
-<li>Prototype tables should use convention of ‘proto_’</li>
+<li>Prototype tables should use convention of <code>proto_</code></li>
 <li>Can be used by researchers and analysts but proceed knowing that although QA’d all bugs may not have been solved</li>
 <li>Basic documentation will exist for these datasets</li>
+<li>Stored in pipeline datasets (e.g.&nbsp;<code>pipe_ais_v3_published</code>) with the <code>proto_</code> prefix.</li>
 </ul>
 <ol start="3" type="1">
-<li><strong>Production data</strong>: Staging dataset for new research ideas</li>
+<li><strong>Production data</strong>:</li>
 </ol>
 <ul>
 <li>Production level ready datasets</li>
 <li>Public/research partners</li>
 <li>Automated_QA</li>
-<li>When proto_ tables have been used and QA’d for a given period of time, have finalized documentation, and automated QA metrics they will move to ‘production’ data</li>
+<li>When <code>proto_</code> tables have been used and QA’d for a given period of time, have finalized documentation, and automated QA metrics they are considered production data and the <code>proto_</code> prefix is dropped.</li>
 </ul>
-<p>Note: This is an evolving process, but is noted in the wiki currently because we are releasing a series of updates to the AIS event datasets and some are considered ‘proto type data’ and therefore everyone should be aware that these tables may be used but are NOT considered ‘production’ level ready.</p>
 </section>
-<section id="key-datasets" class="level2">
-<h2 class="anchored" data-anchor-id="key-datasets">Key Datasets</h2>
-<section id="pipe_production_vyyyymmdd" class="level3">
-<h3 class="anchored" data-anchor-id="pipe_production_vyyyymmdd"><code>pipe_production_vYYYYMMDD</code></h3>
+<section id="ais-pipe-3" class="level2">
+<h2 class="anchored" data-anchor-id="ais-pipe-3">AIS PIPE-3</h2>
+<p>The dataset structure was entirely revamped in PIPE-3 and simplified by generating all AIS tables in two datasets.</p>
+<section id="pipe_ais_v3_internal" class="level3">
+<h3 class="anchored" data-anchor-id="pipe_ais_v3_internal"><code>pipe_ais_v3_internal</code></h3>
 <ul>
-<li><p><strong>Description:</strong> This is the dataset for the AIS pipeline and includes tables processed by the GFW fishing algorithms and derived event tables (e.g.&nbsp;encounters, loitering, port visits). All tables in <code>pipe_production_vYYYYMMDD</code> are automated by the pipeline and <strong>should not be modified manually.</strong></p></li>
-<li><p><strong>When to use:</strong> The tables in the pipeline dataset contain the most up-to-date event data (encounters, port visits, port visits, etc.) and should also be used whenever access to the full AIS data is desired (e.g.&nbsp;every AIS position).</p></li>
+<li><p><strong>Description:</strong> This dataset contains all intermediate tables that are generated by the AIS pipeline. These tables are used to generate the final tables in <code>pipe_ais_v3_published</code>. The tables in this dataset are not intended to be shared outside of GFW and usage within GFW should be limited to those who are working on the pipeline.</p></li>
+<li><p><strong>When to use:</strong> Only use this dataset if you are working on the AIS pipeline, e.g.&nbsp;as a researcher or data engineer. The intermediate tables in this dataset can also be used for debugging purposes.</p></li>
 </ul>
 </section>
-<section id="vessel_database" class="level3">
-<h3 class="anchored" data-anchor-id="vessel_database"><code>vessel_database</code></h3>
+<section id="pipe_ais_v3_published" class="level3">
+<h3 class="anchored" data-anchor-id="pipe_ais_v3_published"><code>pipe_ais_v3_published</code></h3>
 <ul>
-<li><p><strong>Description:</strong> The Global Fishing Watch vessel database contains identity and authorization information about vessels that is/was recorded in various formats of vessel registries, including RFMO vessel lists and national vessel registers that are publicly available. It also includes lists of vessels that have been obtained through groups of researchers and analyzed by analysts from GFW and its partners.</p></li>
-<li><p><strong>When to use:</strong> The vessel database should be used when searching for identity information about an MMSI, particularly if interested in when/if/where an MMSI is authorized to fish.</p></li>
+<li><p><strong>Description:</strong> This dataset contains the final output from the AIS pipeline. The tables in this dataset are intended to be shared with GFW partners and the public.</p></li>
+<li><p><strong>When to use:</strong> This dataset is the primary dataset to use for AIS-based analyses by GFW staff and external users.</p></li>
 </ul>
 </section>
+</section>
+<section id="non-ais-pipelines" class="level2">
+<h2 class="anchored" data-anchor-id="non-ais-pipelines">Non-AIS Pipelines</h2>
+<p>Besides AIS, we have a number of other pipelines that currently follow the same structure as the AIS pipeline:</p>
+<ul>
+<li>Sentinel-1: <code>pipe_sar_v1_internal</code> and <code>pipe_sar_v1_published</code></li>
+<li>Sentinel-2: TBD (currently under development)</li>
+<li>VMS: <code>pipe_vms_v3_internal</code> and <code>pipe_vms_v3_published</code></li>
+</ul>
+</section>
+<section id="development-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="development-datasets">Development Datasets</h2>
 <section id="gfw_research" class="level3">
 <h3 class="anchored" data-anchor-id="gfw_research"><code>gfw_research</code></h3>
 <ul>
-<li><p><strong>Description:</strong> This dataset includes streamlined versions of the AIS tables in <code>pipe_production_vYYYYMMDD</code>, as well as an additional AIS table subset to only include fishing vessels; vessel info tables that combine identity information from <code>vessel_database</code> with AIS activity information from <code>pipe_production_vYYYYMMDD</code>; derived data products (encounters, loitering, ports, etc.) that are not yet fully automated; and various reference tables important for analysis (e.g.&nbsp;EEZ info, flags of convenience, country codes, etc.). The versions of the pipeline AIS tables in <code>gfw_research</code> have been thinned (only 1 point per minute) and further processed to include additional info relevant for analysis (e.g.&nbsp;hours and regions).</p></li>
-<li><p><strong>When to use:</strong> This dataset is the primary dataset to use for research and analysis. The streamlined AIS tables are smaller and cheaper to query than those in <code>pipe_production_vYYYYMMDD</code> and the vessel info tables include important activity data not available in <code>vessel_database</code></p></li>
+<li><strong>Description:</strong> This dataset is intended as a general location to store proof-of-concept (PoC) tables developed by the Research Team that have not yet been incorporated into an automated pipeline. Many PoC tables originate in specific project datasets (e.g.&nbsp;<code>prj_vessel_classification</code>) but not all users have access to all project datasets. Once a PoC has reached a level of stability, it can be copied to <code>gfw_research</code> to facilitate access, as most GFW users and research partners have access to <code>gfw_research</code>. This dataset also includes various reference tables useful for analysis (e.g.&nbsp;EEZ info, flags of convenience, country codes, ice masks, etc.).</li>
+</ul>
+<p>A related dataset to <code>gfw_research</code> is the <code>gfw_research_precursors</code> dataset. Like the <code>_internal</code> datasets described above, <code>gfw_research_precursors</code> is intended simply as a storage location for intermediate tables that are generally not required for analysis.</p>
+<ul>
+<li><strong>When to use:</strong> Look to this dataset when interested in accessing the latest stable versions of PoC tables being developed by the Research Team.</li>
+</ul>
+</section>
+<section id="scratch_gfw_username_ttlx" class="level3">
+<h3 class="anchored" data-anchor-id="scratch_gfw_username_ttlx"><code>scratch_[GFW_USERNAME]_ttl[x]</code></h3>
+<ul>
+<li><strong>Description:</strong> Each GFW user has their own “scratch” dataset for development and testing. Tables in these datasets are assigned a “time to live” (ttl) and get deleted after a certain amount of days, so for long-term projects you should create new project-specific datasets.</li>
 </ul>
 </section>
 </section>
 <section id="other-relevant-datasets" class="level2">
 <h2 class="anchored" data-anchor-id="other-relevant-datasets">Other Relevant Datasets</h2>
+<section id="pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628" class="level3">
+<h3 class="anchored" data-anchor-id="pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628"><code>pipe_ais_sources_v20201001</code> and <code>pipe_ais_sources_v20220628</code></h3>
+<p>These two datasets contain the raw AIS data that is used to run any AIS pipeline. The only processing that has been applied to tables in these datasets is: 1. parsing (decoding) of raw nmea data; and 2. normalization of the data to a common schema as well as deduplication of messages from different data providers.</p>
+<p>Historically, they have not been part of the AIS pipeline itself since they are usually not being regenerated upon a new AIS pipeline release.</p>
+</section>
 <section id="anchorages" class="level3">
 <h3 class="anchored" data-anchor-id="anchorages"><code>anchorages</code></h3>
+<p>The <a href="https://github.com/GlobalFishingWatch/anchorages_pipeline">anchorages pipeline</a> generates tables based on AIS data as well as static datasources of anchorages and their names. This dataset is used across different pipelines, like AIS and VMS.</p>
+</section>
+<section id="pipe_static" class="level3">
+<h3 class="anchored" data-anchor-id="pipe_static"><code>pipe_static</code></h3>
+<p>This dataset contains static tables that are being generated based on static data sources. This data is being used across most pipelines to add geographical information like distance from shore or depth. WARNING: for some tables it is unclear what the underlying data source is!</p>
+</section>
+<section id="pipe_regions_layers" class="level3">
+<h3 class="anchored" data-anchor-id="pipe_regions_layers"><code>pipe_regions_layers</code></h3>
+<p>This dataset contains region lookup tables that define the shape of each region. Those are occasionally updated due to corrections, regional disputes, and new or shifting regions. Like the static tables, this dataset is used across most pipelines to provide information in which regions a certain coordinate is located.</p>
+</section>
+<section id="tech_dq_monitoring-and-tech_anomaly_detection" class="level3">
+<h3 class="anchored" data-anchor-id="tech_dq_monitoring-and-tech_anomaly_detection"><code>tech_dq_monitoring</code> and <code>tech_anomaly_detection</code></h3>
+<p>These two datasets contain tables that are used to monitor the data quality of all GFW data. The data may be used for debugging or adhoc analyses but since their primary purpose is to power dashboards and anomaly alerts the data does not follow the same reliability standards we have for other pipelines. Therefore, data might be outdated or unavailable at times.</p>
 
 
 </section>
@@ -892,7 +942,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
   <div class="nav-page nav-page-next">
       <a href="./BigQuery-Table-Reference----PIPE-3.html" class="pagination-link" aria-label="Big Query table reference PIPE 3">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Big Query table reference PIPE 3</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -35,7 +35,6 @@ book:
     - Product-Vessel-Info-Summary-PVIS.md
     - Vessel-database.md 
     - Vessel-info-tables.md
-    - Annual-carrier-vessel-list.md
     - Fishing-events.md #(PART) Events
     - Encounters.md
     - Loitering.md

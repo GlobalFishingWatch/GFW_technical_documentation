@@ -20,6 +20,36 @@
     ]
   },
   {
+    "objectID": "Home.html",
+    "href": "Home.html",
+    "title": "2  GFW Data Documentation",
+    "section": "",
+    "text": "2.1 Data Updates\nCheck the Data updates for new changes to GFW data.\nSee the BigQuery Table Reference for checking the latest version of key tables to use.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "Home.html#bigquery-key-concepts",
+    "href": "Home.html#bigquery-key-concepts",
+    "title": "2  GFW Data Documentation",
+    "section": "2.2 BigQuery Key Concepts",
+    "text": "2.2 BigQuery Key Concepts\nRead the BigQuery Key Concepts page for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+    ]
+  },
+  {
+    "objectID": "Home.html#data-products",
+    "href": "Home.html#data-products",
+    "title": "2  GFW Data Documentation",
+    "section": "2.3 Data Products",
+    "text": "2.3 Data Products\nGFW data are grouped into the following general categories, or data products, that are used for various analyses.\n\nFishing effort and vessel presences - Activity and fishing activity for all vessels\nFishing events - Activity by the world’s fishing vessels grouped into events\nVessel database and Vessel info tables - Database of vessel identity\nEncounters - Encounters between two vessels\nLoitering - Loitering events by potential transshipment vessels\nAnchorages & voyages - Database of ports and vessel voyages between ports\nCountry VMS - Country-specific VMS data\nSAR Detections - Vessel detections from Sentinel-1 SAR imagery\nAIS Gaps - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+    ]
+  },
+  {
     "objectID": "Data-Updates.html",
     "href": "Data-Updates.html",
     "title": "(PART) Data updates",
@@ -124,7 +154,7 @@
     "href": "BigQuery-datasets.html",
     "title": "(PART) Big Query",
     "section": "",
-    "text": "Big Query datasets\nGFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipeline (pipe_production_vYYYYMMDD), vessel identity information pulled from vessel registries (vessel_database), and streamlined versions of these tables and other derived data products relevant for research and analysis (gfw_research).",
+    "text": "BigQuery datasets\nGFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipelines as well as manually generated tables from development and research projects.",
     "crumbs": [
       "(PART) Big Query"
     ]
@@ -154,7 +184,7 @@
     "href": "BigQuery-datasets.html#other-relevant-datasets",
     "title": "(PART) Big Query",
     "section": "Other Relevant Datasets",
-    "text": "Other Relevant Datasets\n\nanchorages",
+    "text": "Other Relevant Datasets\n\npipe_ais_sources_v20201001 and pipe_ais_sources_v20220628\nThese two datasets contain the raw AIS data that is used to run any AIS pipeline. The only processing that has been applied to tables in these datasets is: 1. parsing (decoding) of raw nmea data; and 2. normalization of the data to a common schema as well as deduplication of messages from different data providers.\nHistorically, they have not been part of the AIS pipeline itself since they are usually not being regenerated upon a new AIS pipeline release.\n\n\nanchorages\nThe anchorages pipeline generates tables based on AIS data as well as static datasources of anchorages and their names. This dataset is used across different pipelines, like AIS and VMS.\n\n\npipe_static\nThis dataset contains static tables that are being generated based on static data sources. This data is being used across most pipelines to add geographical information like distance from shore or depth. WARNING: for some tables it is unclear what the underlying data source is!\n\n\npipe_regions_layers\nThis dataset contains region lookup tables that define the shape of each region. Those are occasionally updated due to corrections, regional disputes, and new or shifting regions. Like the static tables, this dataset is used across most pipelines to provide information in which regions a certain coordinate is located.\n\n\ntech_dq_monitoring and tech_anomaly_detection\nThese two datasets contain tables that are used to monitor the data quality of all GFW data. The data may be used for debugging or adhoc analyses but since their primary purpose is to power dashboards and anomaly alerts the data does not follow the same reliability standards we have for other pipelines. Therefore, data might be outdated or unavailable at times.",
     "crumbs": [
       "(PART) Big Query"
     ]
@@ -162,101 +192,101 @@
   {
     "objectID": "BigQuery-Table-Reference----PIPE-3.html",
     "href": "BigQuery-Table-Reference----PIPE-3.html",
-    "title": "2  Big Query table reference PIPE 3",
+    "title": "3  Big Query table reference PIPE 3",
     "section": "",
     "text": "This page contains the published tables of AIS Pipeline 3 pipe_ais_v3_published. and their previous names in the AIS Pipeline 2.5 pipe_production_v20201001. If you do NOT see a table listed below it has either been archived or placed in the internal bucket within BQ. This page does NOT contain the description of the internal tables of AIS Pipeline 3 pipe_ais_v3_internal. Please contact the engineers and pipeline manager if you request to use an internal table for your work.\nTable Development:\n\nAndres Arana: lead engineer\nMatias Piano: core engineer\nJenn Van Osdel: Researcher lead - Identity and Review of Segmenter\nTim Hochberg: Researcher lead - Segmenter\nChris Homberg: QA Analyst\nHannah Linder: AIS Pipeline Manager\n\nData pipeline ownership falls with the pipeline engineering team, currently Andres Arana and Matias Piano. This means they operate, maintain, develop and deprecate the core pipeline data outputs. The naming, security, versioning control of these tables is decided upon across all engineers, Pipeline Manager, and CTO. Development of the pipeline logic and methodology was originally created outside of the pipeline team that developed Pipeline 3. In the future the pipeline methodology is developed by partnership between the Research team and Engineering team.\nLast update: * Date: 2024-04-18 * By: Hannah Linder\nAIS Pipe 3 – Published\n\n\n\n\n\n\n\n\nDescription\nBQ Table\nPrevious BQ Table\n\n\n\n\nAIS pipeline dataset to use\npipe_ais_v3\npipe_production_v20201001\n\n\nSummary of AIS information on a segment level, includes ssvid and vessel id\npipe_ais_v3_published.segment_info\npipe_production_v20201001.segment_info\n\n\nAggregated vessel identity information by vessel id and ssvid\npipe_ais_v3_published.vessel_info\npipe_production_v20201001.vessel_info\n\n\nEncounter events\npipe_ais_v3_published.encounters\npipe_production_v20201001.encounters\n\n\nEncounter events used in products (adjustment to schema and additional fields compared to encounters)\npipe_ais_v3_published.product_events_encounter_v\npipe_production_v20201001.published_events_encounters_v\n\n\nLoitering events\npipe_ais_v3_published.loitering\npipe_production_v20201001.loitering\n\n\nLoitering events used in products (adjustment to schema and additional fields compared to encounters)\npipe_ais_v3_published.product_events_loitering_v\npipe_production_v20201001.published_events_loitering_v\n\n\nFishing events (consistent list of fishing vessels in previous versions)\npipe_ais_v3_published.fishing_events_v\npipe_production_v20201001.published_events_fishing\n\n\nFishing events updated in product to restrict to only prod_shiptype = ‘fishing’\npipe_ais_v3_published.product_events_fishing_v\n–Same Table not Previously Developed—-\n\n\nPort visits by vessels\npipe_ais_v3_published.port_visits\npipe_production_v20201001.proto_port_visits\n\n\nPort visits by vessels used in products (adjustment to schema and additional fields compared to port visits\npipe_ais_v3_published.product_events_port_visit_v\npipe_production_v20201001.published_events_port_visits_v\n\n\nConfidence 3 vessel voyages\npipe_ais_v3_published.voyages_c3\npipe_production_v20201001.proto_voyages_c3\n\n\nConfidence 4 vessel voyages\npipe_ais_v3_published.voyages_c4\npipe_production_v20201001.proto_voyages_c4\n\n\nVessel database (registry) table aggregated authorization records\npipe_ais_v3_published.identity_authorization_v\nvessel_identity.identity_authorization_v\n\n\nVessel database (registry) table aggregated owner records\npipe_ais_v3_published.identity_owner_v\nvessel_identity.identity_owner_v\n\n\nVessel database (registry) table core identity matched\npipe_ais_v3_published.identity_core_v\nvessel_identity.identity_core_v\n\n\nMerged identity and class summary table used in products\npipe_ais_v3_published.product_vessel_info_summary\npipe_production_v20201001.all_vessels_byyear_v2_v\n\n\nVessel identity match between pipe vessel info and registry table\npipe_ais_v3_published.product_vessel_info_match\npipe_production_v20201001.base_vessel_identity_info_match_v\n\n\nAggregated vessel classification and activity summaries across all time by ssvid\npipe_ais_v3_published.vi_ssvid_v\npipe_production_v20201001.vi_ssvid_v\n\n\nAggregated vessel classification and activity summaries (difference from vi_ssvid_v is AIS based summaries by year) by ssvid\npipe_ais_v3_published.vi_ssvid_byyear_v\npipe_production_v20201001.vi_ssvid_byyear_v\n\n\nPrototype gaps\npipe_ais_v3_published.product_events_ais_gaps\npipe_production_v20201001.proto_ais_gap_events\n\n\nPrototype disabling events\npipe_ais_v3_published.product_events_ais_disabling\npipe_production_v20201001.proto_published_events_ais_gaps\n\n\nSatellite timing offsets\npipe_ais_v3_published.satellite_timing_offsets\npipe_production_v20201001.research_satellite_timing\n\n\nAIS activity aggregated at the segment level with noise indicators\npipe_ais_v3_published.segs_activity\npipe_production_v20201001.research_segs\n\n\nAIS activity aggregated at the daily segment level with noise indicators\npipe_ais_v3_published.segs_activity_daily\npipe_production_v20201001.research_segs_daily\n\n\nAggregated raw AIS identity information by ssvid\npipe_ais_v3_published.ssvids_identities\npipe_production_v20201001.research_ids\n\n\nDaily raw AIS identity information by ssvid\npipe_ais_v3_published.ssvids_identities_daily\npipe_production_v20201001.research_ids_daily\n\n\nStats on AIS data daily\npipe_ais_v3_published.stats_daily\npipe_production_v20201001.research_stats",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Big Query table reference PIPE 3</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Big Query table reference PIPE 3</span>"
     ]
   },
   {
     "objectID": "BigQuery-Table-Reference.html",
     "href": "BigQuery-Table-Reference.html",
-    "title": "3  Big Query table reference",
+    "title": "4  Big Query table reference",
     "section": "",
     "text": "This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis.\nLast update: * Date: 2022-08-19 * By: Tyler Clavelle\n\n\n\nSubject\nDescription\nBQ Dataset\nBQ Table\nPipeline version\nOwner\n\n\n\n\nAIS\nAIS pipeline dataset to use\npipe_production_v20201001\n\n2.5\nAndres\n\n\nAIS\nAIS position table (all messages)\npipe_production_v20201001\nmessages_scored_\n2.5\nAndres\n\n\nAIS\nAIS position table (thinned)\npipe_production_v20201001\nresearch_messages\n2.5\nTyler\n\n\nVessel identity\nVessel registry database\nvessel_database\nall_vessels_vYYYYMMDD\n2.5\nJaeyoon\n\n\nVessel identity\nVessel info tables\ngfw_research\nvi_ssvid_[byyear]_vYYYYMMDD\n2.5\nTyler\n\n\nVessel identity\nAnnual fishing vessel list\ngfw_research\nfishing_vessels_ssvid_vYYYYMMDD\n2.5\nTyler\n\n\nVessel identity\nAnnual carrier vessel list\nvessel_database\ncarrier_vessels_byyear_v20220101\n2.5\nJaeyoon\n\n\nEncounters\nEncounter events no speed restrictions\npipe_production_v20201001\nencounters\n2.5\nNate\n\n\nEncounters\nEncounter events in Published format for Products\npipe_production_v20201001\npublished_events_encounters\n2.5\nNate\n\n\nLoitering\nLoitering events\npipe_production_v20201001\nloitering published_events_loitering\n2.5\nPete\n\n\nLoitering\nLoitering events in Published format for Products\npipe_production_v20201001\npublished_events_loitering\n2.5\nHannah\n\n\nPorts\nAnchorage locations\nanchorages\nnamed_anchorages_v20211026\n2.5\nNate\n\n\nPorts\nIndividual port events (entry, start, gap, stop, exit)\npipe_production_v20201001\nproto_raw_port_events_*\n2.5\nTim H\n\n\nPorts\nArchived original individual port events (entry, start, gap, stop, exit)\npipe_production_v20201001\narchive_20201001_port_events_*\n2.5\nTim H\n\n\nPorts\nPort visits (grouped port events)\npipe_production_v20201001\nproto_port_visits\n2.5\nTim H\n\n\nPorts\nPort visits (grouped port events) in Published format for Products\npipe_production_v20201001\npublished_events_port_visits\n2.5\nHannah\n\n\nPorts\nPrevious version of Port visits version (grouped port events)\npipe_production_v20201001\nport_visits_\n2.5\nTim H\n\n\nPorts\nVessel voyages between anchorages\npipe_production_v20201001\nproto_voyages_c2 proto_voyages_c3 proto_voyages_c4\n2.5\nTim H\n\n\nPorts\nPrevious version of Vessel voyages between anchorages\npipe_production_v20201001\nvoyages\n2.5\nTim H\n\n\nVIIRS\nVIIRS vessel detections\npipe_viirs_production_v20220112\nraw_vbd_global raw_vbd_global_without_noise\n\nMasaki\n\n\nVIIRS\nVIIRS vessel detections that matched/unmatched with AIS/VMS\npipe_production_v20201001\nproto_matches_raw_vbd_global_3top_v20210514\n2.5\nMasaki\n\n\nAIS gaps\nAIS gaps and suspected disabling events\npipe_production_v20201001\nproto_ais_gap_events\n2.5\nTyler\n\n\nAIS offsetting\nAIS offsetting by seg_id\ngfw_research_precursors\noffsetting_year_seg_v20220609\n2.5\nPete\n\n\nVMS\nPeru VMS\npipe_peru_production_v20211126\n\n2.5\nAndres\n\n\nVMS\nPanama VMS\npipe_panama_production_v20211126\n\n2.5\nAndres\n\n\nVMS\nChile VMS\npipe_chile_production_v20211126\n\n2.5\nAndres\n\n\nVMS\nIndonesia VMS\npipe_indonesia_production_v20200320\n\n2.5\nAndres\n\n\nVMS\nBrazil VMS\npipe_brazil_production_v20211126\n\n2.5\nClaudino\n\n\nVMS\nMexico VMS\npipe_mexico_oceana_production_v20210811\n\n2.5\nAndres\n\n\nVMS\nCosta Rica VMS\npipe_costarica_production_v20211126\n\n2.5\nAndres\n\n\nVMS\nEcuador VMS\npipe_ecuador_production_v20211126\n\n2.5\nAndres\n\n\nVMS\nBelize VMS\npipe_belize_production_v20220304\n\n2.5\nMatias",
     "crumbs": [
-      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Big Query table reference</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query table reference</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html",
     "href": "Key-concepts.html",
-    "title": "4  Big Query Key concepts",
+    "title": "5  Big Query Key concepts",
     "section": "",
-    "text": "4.1 BigQuery access and billing",
+    "text": "5.1 BigQuery access and billing",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#bigquery-access-and-billing",
     "href": "Key-concepts.html#bigquery-access-and-billing",
-    "title": "4  Big Query Key concepts",
+    "title": "5  Big Query Key concepts",
     "section": "",
-    "text": "4.1.1 Access\nWorking in BigQuery requires two forms of access:\n\nGoogle Cloud billing project: Using BigQuery incurs costs and BigQuery requires users be connected to a GCP billing project before running queries.\n\nThe enabled billing project will be listed in the top menu bar of the BigQuery console\nThe billing project for GFW staff is gfw-google\nResearch partners cannot be added to gfw-google and must create their own GCP billing project. GFW can help with this process and partners can generally receive ~$5,000 in free Google Credits through the Google for Good program. Contact Tyler (tyler@globalfishingwatch.org) for details\n\nBigQuery project: Data in BigQuery is organized in projects, which in turn contain datasets and tables. To access GFW data, users must be granted access to the GFW BigQuery project.\n\nGFW data lives in two primary BigQuery projects:\n\nworld-fishing-827: Primary GFW project containing all internal GFW datasets\n\nglobal-fishing-watch: Contains GFW public fishing effort tables\n\nThe project will appear in the left menu bar of the BigQuery console and clicking on the project name will expand to show the list of datasets the user can access.\n\nIf you don’t see a BigQuery project in your console: Click on ADD DATA -&gt; Pin a project -&gt; Enter project name -&gt; type world-fishing-827 -&gt; select PIN\n\n\n\n\n\n4.1.2 Billing\nBigQuery costs are incurred in two ways - storing and querying data. + Queries cost $5 per terabyte of data scanned + Queries are “free” for GFW staff, but we need to be careful\n\n4.1.2.1 The BigQuery validator\nThe BigQuery validator is a built-in query debugger that also estimates query cost. The validator will turn green when a query is valid and be red otherwise. Always use the validator to check the cost of a query before running it!",
+    "text": "5.1.1 Access\nWorking in BigQuery requires two forms of access:\n\nGoogle Cloud billing project: Using BigQuery incurs costs and BigQuery requires users be connected to a GCP billing project before running queries.\n\nThe enabled billing project will be listed in the top menu bar of the BigQuery console\nThe billing project for GFW staff is gfw-google\nResearch partners cannot be added to gfw-google and must create their own GCP billing project. GFW can help with this process and partners can generally receive ~$5,000 in free Google Credits through the Google for Good program. Contact Tyler (tyler@globalfishingwatch.org) for details\n\nBigQuery project: Data in BigQuery is organized in projects, which in turn contain datasets and tables. To access GFW data, users must be granted access to the GFW BigQuery project.\n\nGFW data lives in two primary BigQuery projects:\n\nworld-fishing-827: Primary GFW project containing all internal GFW datasets\n\nglobal-fishing-watch: Contains GFW public fishing effort tables\n\nThe project will appear in the left menu bar of the BigQuery console and clicking on the project name will expand to show the list of datasets the user can access.\n\nIf you don’t see a BigQuery project in your console: Click on ADD DATA -&gt; Pin a project -&gt; Enter project name -&gt; type world-fishing-827 -&gt; select PIN\n\n\n\n\n\n5.1.2 Billing\nBigQuery costs are incurred in two ways - storing and querying data. + Queries cost $5 per terabyte of data scanned + Queries are “free” for GFW staff, but we need to be careful\n\n5.1.2.1 The BigQuery validator\nThe BigQuery validator is a built-in query debugger that also estimates query cost. The validator will turn green when a query is valid and be red otherwise. Always use the validator to check the cost of a query before running it!",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#gfw-datasets",
     "href": "Key-concepts.html#gfw-datasets",
-    "title": "4  Big Query Key concepts",
-    "section": "4.2 GFW datasets",
-    "text": "4.2 GFW datasets\nWithin a BigQuery project, data is stored in tables and organized in datasets. There are many datasets in the world-fishing-827 project, but the following are the primary datasets for research and analysis:\n\npipe_production_vYYYYMMDD: AIS pipeline dataset\n\npipe_[country]_production_vYYYYMMDD: Country-specific VMS pipeline datasets &gt; + VMS data can only be used by partners with written permission from the relevant national authorities (see VMS for more info).\n\ngfw_research: Contains a variety of static tables useful for analysis and early versions of new research concepts\nvessel_database: Contains tables related to vessel registry information\nanchorages: Contains the GFW anchorages dataset\n\nIf you don’t see at least the pipe_production_vYYYYMMDD, gfw_research, vessel_database, and anchorages dataset let Tyler or Enrique know.",
+    "title": "5  Big Query Key concepts",
+    "section": "5.2 GFW datasets",
+    "text": "5.2 GFW datasets\nWithin a BigQuery project, data is stored in tables and organized in datasets. There are many datasets in the world-fishing-827 project, but the following are the primary datasets for research and analysis:\n\npipe_production_vYYYYMMDD: AIS pipeline dataset\n\npipe_[country]_production_vYYYYMMDD: Country-specific VMS pipeline datasets &gt; + VMS data can only be used by partners with written permission from the relevant national authorities (see VMS for more info).\n\ngfw_research: Contains a variety of static tables useful for analysis and early versions of new research concepts\nvessel_database: Contains tables related to vessel registry information\nanchorages: Contains the GFW anchorages dataset\n\nIf you don’t see at least the pipe_production_vYYYYMMDD, gfw_research, vessel_database, and anchorages dataset let Tyler or Enrique know.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#naming-conventions",
     "href": "Key-concepts.html#naming-conventions",
-    "title": "4  Big Query Key concepts",
-    "section": "4.3 Naming conventions",
-    "text": "4.3 Naming conventions\nMany datasets and tables in the world-fishing-827 project follow several key naming conventions. Abiding by these conventions will help make it easier for everyone to navigate the large amount of data in world-fishing-827. It is beyond the scope of this document and unnecessary to prescribe naming conventions for every table. However, tables within a dataset should use clear and self-explanatory names.\n\n4.3.1 General guidelines\n\nUnderscores not dashes\nLowercase\nBe clear, concise, and consistent\nSet a “time to live” (TTL) on all scratch_ datasets. TTL’s should be used with other datasets and tables when appropriate (see BigQuery docs).\n\n\n\n4.3.2 Dataset names\nDatasets are the top level containers of our data in BigQuery. They should have standardized names that are easy to understand and navigate. Before creating a new dataset, consider whether the tables could be placed in an existing dataset.\n\n4.3.2.1 Prefixes\nThe following prefixes are used to organize datasets into groups:\n\npipe_: These datasets contain automated tables that are consumed or produced by a GFW pipeline.\ngfw_: Datasets related to GFW’s research work and public data\nproj_: Project-specific datasets. Each project should receive its own dataset clearly named with the project topic and/or client (e.g. proj_[topic]_[client])\nscratch_: These datasets are for preliminary tables generated during early development and should be user specific (e.g. scratch_tyler)\nVMS: Datasets containing raw national VMS data.\n\nWhen processed by the GFW VMS pipeline, data is saved in a pipe_[country] dataset\n\nmachine_learning_: These datasets contain inputs/outputs of our machine learning models\n\nNote: Some datasets may end with the suffix _ttl_[days]. This indicates that the dataset has a “time to live” (TTL) set and tables in the dataset will be automatically deleted after the set period.",
+    "title": "5  Big Query Key concepts",
+    "section": "5.3 Naming conventions",
+    "text": "5.3 Naming conventions\nMany datasets and tables in the world-fishing-827 project follow several key naming conventions. Abiding by these conventions will help make it easier for everyone to navigate the large amount of data in world-fishing-827. It is beyond the scope of this document and unnecessary to prescribe naming conventions for every table. However, tables within a dataset should use clear and self-explanatory names.\n\n5.3.1 General guidelines\n\nUnderscores not dashes\nLowercase\nBe clear, concise, and consistent\nSet a “time to live” (TTL) on all scratch_ datasets. TTL’s should be used with other datasets and tables when appropriate (see BigQuery docs).\n\n\n\n5.3.2 Dataset names\nDatasets are the top level containers of our data in BigQuery. They should have standardized names that are easy to understand and navigate. Before creating a new dataset, consider whether the tables could be placed in an existing dataset.\n\n5.3.2.1 Prefixes\nThe following prefixes are used to organize datasets into groups:\n\npipe_: These datasets contain automated tables that are consumed or produced by a GFW pipeline.\ngfw_: Datasets related to GFW’s research work and public data\nproj_: Project-specific datasets. Each project should receive its own dataset clearly named with the project topic and/or client (e.g. proj_[topic]_[client])\nscratch_: These datasets are for preliminary tables generated during early development and should be user specific (e.g. scratch_tyler)\nVMS: Datasets containing raw national VMS data.\n\nWhen processed by the GFW VMS pipeline, data is saved in a pipe_[country] dataset\n\nmachine_learning_: These datasets contain inputs/outputs of our machine learning models\n\nNote: Some datasets may end with the suffix _ttl_[days]. This indicates that the dataset has a “time to live” (TTL) set and tables in the dataset will be automatically deleted after the set period.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#versioning",
     "href": "Key-concepts.html#versioning",
-    "title": "4  Big Query Key concepts",
-    "section": "4.4 Versioning",
-    "text": "4.4 Versioning\nGFW receives new data every day and is constantly working to improve our algorithms and models. As a result, there can be multiple versions of a data product in BigQuery at the same time (e.g. the vessel database). To differentiate versions, GFW uses the _v[YYYYMMDD] naming convention for the suffix of a dataset or table, where the YYYYMMDD indicates the date the table was created. When multiple tables have the same name but end in different date strings, BigQuery will “stack” them together with the table name followed by a number in parentheses (e.g. vi_ssvid_v(13)).\nWhen a dataset or table ends in _v followed by a date string (_v20201001), the date refers to the version of the table.",
+    "title": "5  Big Query Key concepts",
+    "section": "5.4 Versioning",
+    "text": "5.4 Versioning\nGFW receives new data every day and is constantly working to improve our algorithms and models. As a result, there can be multiple versions of a data product in BigQuery at the same time (e.g. the vessel database). To differentiate versions, GFW uses the _v[YYYYMMDD] naming convention for the suffix of a dataset or table, where the YYYYMMDD indicates the date the table was created. When multiple tables have the same name but end in different date strings, BigQuery will “stack” them together with the table name followed by a number in parentheses (e.g. vi_ssvid_v(13)).\nWhen a dataset or table ends in _v followed by a date string (_v20201001), the date refers to the version of the table.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#table-formats",
     "href": "Key-concepts.html#table-formats",
-    "title": "4  Big Query Key concepts",
-    "section": "4.5 Table formats",
-    "text": "4.5 Table formats\nBigQuery tables can have several important formats that are used to organize data and minimize query cost and execution time. In particular, GFW creates tables that may be date sharded or date partitioned. Additionally, tables may be clustered on certain fields. Date sharded and date partitioned tables behave in similar ways but, crucially, require different filtering syntax to limit query size. Therefore, understanding how to recognize if a table is date sharded, partitioned, and/or clustered, and how to query them properly, is critical.\n\n4.5.1 Date sharded tables\nDate sharded tables are actually a collection of tables, one for each date, where the data for a given date is stored in its own table where the table name ends in a date string (e.g. messages_scored_20180101). When there is data for more than one date, the table name will be followed by a number in parentheses, with the number indicating how many days of data are in the sharded table (e.g. messages_scored_(3248)).\nThere are two main ways to restrict queries of date sharded tables depending on whether you’re querying one or multiple dates:\nFor a single date, you can specify the table directly using the full table name:\nSELECT *\nFROM pipe_production_v20201001.messages_scored_20180101\nWhen querying multiple dates, you use a wildcard character (*) in the table name and then use the _TABLE_SUFFIX argument in the WHERE statement to specify the date range:\nSELECT * \nFROM `world-fishing-827.pipe_production_v20201001.messages_scored_*` \nWHERE _TABLE_SUFFIX BETWEEN '20180101' AND '20180102'\nNote: When using the * wildcard you must surround the table name in backticks.\n\n\n4.5.2 Date partitioned tables\nSimilar to date sharded tables, many GFW tables are date partitioned. These are single tables where data is stored in invisible partitions. If a table is partitioned, you will see This is a partitioned table when viewing the table’s info in BigQuery. Tables can be partitioned on an actual field in the table (e.g. date) or on the _partitiontime field, which is a “psuedo colum” that is not actually in the table. You can check the partitioning specification by viewing the table’s details.\nQueries against date partitioned tables can filter on the partitioned column using a WHERE statement, limiting the amount of data scanned and thus the cost.\nSELECT *\nFROM gfw_research.pipe_v20201001\nWHERE _partitiontime = \"2019-01-01\"\nNote: Unlike date sharded tables, use the YYYY-MM-DD format when filtering date partitioned tables.\n\n\n4.5.3 Clustered tables\nBigQuery tables can be clustered on certain fields. Similar to partitioning, clustering allows table data to be grouped together based on one or more table fields and improve query performance and cost when filtering on the clustered fields. You can check the clustering specification by viewing the table’s details.\nNote: Queries that filter on a clustered field may be cheaper than what is estimated by the BigQuery validator.",
+    "title": "5  Big Query Key concepts",
+    "section": "5.5 Table formats",
+    "text": "5.5 Table formats\nBigQuery tables can have several important formats that are used to organize data and minimize query cost and execution time. In particular, GFW creates tables that may be date sharded or date partitioned. Additionally, tables may be clustered on certain fields. Date sharded and date partitioned tables behave in similar ways but, crucially, require different filtering syntax to limit query size. Therefore, understanding how to recognize if a table is date sharded, partitioned, and/or clustered, and how to query them properly, is critical.\n\n5.5.1 Date sharded tables\nDate sharded tables are actually a collection of tables, one for each date, where the data for a given date is stored in its own table where the table name ends in a date string (e.g. messages_scored_20180101). When there is data for more than one date, the table name will be followed by a number in parentheses, with the number indicating how many days of data are in the sharded table (e.g. messages_scored_(3248)).\nThere are two main ways to restrict queries of date sharded tables depending on whether you’re querying one or multiple dates:\nFor a single date, you can specify the table directly using the full table name:\nSELECT *\nFROM pipe_production_v20201001.messages_scored_20180101\nWhen querying multiple dates, you use a wildcard character (*) in the table name and then use the _TABLE_SUFFIX argument in the WHERE statement to specify the date range:\nSELECT * \nFROM `world-fishing-827.pipe_production_v20201001.messages_scored_*` \nWHERE _TABLE_SUFFIX BETWEEN '20180101' AND '20180102'\nNote: When using the * wildcard you must surround the table name in backticks.\n\n\n5.5.2 Date partitioned tables\nSimilar to date sharded tables, many GFW tables are date partitioned. These are single tables where data is stored in invisible partitions. If a table is partitioned, you will see This is a partitioned table when viewing the table’s info in BigQuery. Tables can be partitioned on an actual field in the table (e.g. date) or on the _partitiontime field, which is a “psuedo colum” that is not actually in the table. You can check the partitioning specification by viewing the table’s details.\nQueries against date partitioned tables can filter on the partitioned column using a WHERE statement, limiting the amount of data scanned and thus the cost.\nSELECT *\nFROM gfw_research.pipe_v20201001\nWHERE _partitiontime = \"2019-01-01\"\nNote: Unlike date sharded tables, use the YYYY-MM-DD format when filtering date partitioned tables.\n\n\n5.5.3 Clustered tables\nBigQuery tables can be clustered on certain fields. Similar to partitioning, clustering allows table data to be grouped together based on one or more table fields and improve query performance and cost when filtering on the clustered fields. You can check the clustering specification by viewing the table’s details.\nNote: Queries that filter on a clustered field may be cheaper than what is estimated by the BigQuery validator.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#key-concepts",
     "href": "Key-concepts.html#key-concepts",
-    "title": "4  Big Query Key concepts",
-    "section": "4.6 Key concepts",
-    "text": "4.6 Key concepts\nBigQuery is powerful but complex tool and understanding certain key concepts can help get the most out of BigQuery.\n\n4.6.1 User Defined Functions\nUser-defined functions (UDF) are functions created using another SQL expression or JavaScript. These functions accept columns of input, perform actions, and return a value. UDFs can be defined directly at the top of a query or stored as functions in a special type of dataset. GFW maintains a collection of helpful UDFs in the udfs dataset in world-fishing-827. These queries can be called in any query using the udfs.function() syntax.\n\n\n4.6.2 STRUCTS and ARRAYS\nTwo key BigQuery data types used by GFW are ARRAYS and STRUCTS, which allow for nesting and/or repeating data.\nAn ARRAY is an ordered list of zero or more elements of non-ARRAY values (e.g. STRING, INT64). An ARRAY is listed as having a REPEATED mode. GFW uses arrays to store multiple types of information, such as the list of identities (e.g. callsigns) broadcast by each MMSI over AIS.\nA STRUCT is a container of ordered fields each with a type (required) and field name (optional). A STRUCT is listed as having a RECORD type. Fields are nested within a STRUCT - e.g. struct_field.nested_field. In general, GFW uses STRUCTs to group together information from different sources. For example, the vessel info tables use organize vessel identities from AIS and registries in separate STRUCTs.\n\n\n4.6.3 Spatial BigQuery\nBigQuery now supports a suite of powerful spatial analysis tools. These functions use the GEOGRAPHY data type, which represents a pointset (points, lines, polygons) on WGS84. Single points can be described by a (longitude, latitude) pair. For describing more complex geographies (lines, polygons), BigQuery supports GeoJSON, Well-known text (WKT), and well-known binary (WKB) data formats in the GEOGRAPHY column. GFW uses GEOGRAPHY data types to represent several data types, including the location of “events” (e.g. encounters, port visits, fishing).\n\n\n4.6.4 Data definition language\nBigQuery supports the use of data definition language (DDL), which allow you to create, alter, and delete tables directly in your query statement. This is a particularly helpful way to create partitioned and clustered tables.",
+    "title": "5  Big Query Key concepts",
+    "section": "5.6 Key concepts",
+    "text": "5.6 Key concepts\nBigQuery is powerful but complex tool and understanding certain key concepts can help get the most out of BigQuery.\n\n5.6.1 User Defined Functions\nUser-defined functions (UDF) are functions created using another SQL expression or JavaScript. These functions accept columns of input, perform actions, and return a value. UDFs can be defined directly at the top of a query or stored as functions in a special type of dataset. GFW maintains a collection of helpful UDFs in the udfs dataset in world-fishing-827. These queries can be called in any query using the udfs.function() syntax.\n\n\n5.6.2 STRUCTS and ARRAYS\nTwo key BigQuery data types used by GFW are ARRAYS and STRUCTS, which allow for nesting and/or repeating data.\nAn ARRAY is an ordered list of zero or more elements of non-ARRAY values (e.g. STRING, INT64). An ARRAY is listed as having a REPEATED mode. GFW uses arrays to store multiple types of information, such as the list of identities (e.g. callsigns) broadcast by each MMSI over AIS.\nA STRUCT is a container of ordered fields each with a type (required) and field name (optional). A STRUCT is listed as having a RECORD type. Fields are nested within a STRUCT - e.g. struct_field.nested_field. In general, GFW uses STRUCTs to group together information from different sources. For example, the vessel info tables use organize vessel identities from AIS and registries in separate STRUCTs.\n\n\n5.6.3 Spatial BigQuery\nBigQuery now supports a suite of powerful spatial analysis tools. These functions use the GEOGRAPHY data type, which represents a pointset (points, lines, polygons) on WGS84. Single points can be described by a (longitude, latitude) pair. For describing more complex geographies (lines, polygons), BigQuery supports GeoJSON, Well-known text (WKT), and well-known binary (WKB) data formats in the GEOGRAPHY column. GFW uses GEOGRAPHY data types to represent several data types, including the location of “events” (e.g. encounters, port visits, fishing).\n\n\n5.6.4 Data definition language\nBigQuery supports the use of data definition language (DDL), which allow you to create, alter, and delete tables directly in your query statement. This is a particularly helpful way to create partitioned and clustered tables.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
     "objectID": "Key-concepts.html#best-practices",
     "href": "Key-concepts.html#best-practices",
-    "title": "4  Big Query Key concepts",
-    "section": "4.7 Best Practices",
-    "text": "4.7 Best Practices\n\nAlways use standard SQL - first line of your query should be #standardSQL\nWrite subqueries using WITH statement – avoid overly nested queries\nComment between queries to give space visually.\nPut all tables referenced at the top of the query.\nWhen using UDFs, try to use SQL based instead of JavaScript\nFor numerical parameters that will be used in multiple places, you can use a UDF at the top of the query that returns the value\nTo limit costs when developing or debugging queries:\n\nRestrict the date range or partitioned or sharded tables\nUse a LIMIT 1000 clause at the end of a query. Comment this out when running for real\n\nFor complex queries, consider including a (commented out) test query that does a sanity check",
+    "title": "5  Big Query Key concepts",
+    "section": "5.7 Best Practices",
+    "text": "5.7 Best Practices\n\nAlways use standard SQL - first line of your query should be #standardSQL\nWrite subqueries using WITH statement – avoid overly nested queries\nComment between queries to give space visually.\nPut all tables referenced at the top of the query.\nWhen using UDFs, try to use SQL based instead of JavaScript\nFor numerical parameters that will be used in multiple places, you can use a UDF at the top of the query that returns the value\nTo limit costs when developing or debugging queries:\n\nRestrict the date range or partitioned or sharded tables\nUse a LIMIT 1000 clause at the end of a query. Comment this out when running for real\n\nFor complex queries, consider including a (commented out) test query that does a sanity check",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Big Query Key concepts</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Big Query Key concepts</span>"
     ]
   },
   {
@@ -412,261 +442,221 @@
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html",
     "href": "Product-Vessel-Info-Summary-PVIS.html",
-    "title": "6  Product Vessel Info Summary (PVIS)",
+    "title": "7  Product Vessel Info Summary (PVIS)",
     "section": "",
-    "text": "6.1 Key Tables",
+    "text": "7.1 Key Tables",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#key-tables",
     "href": "Product-Vessel-Info-Summary-PVIS.html#key-tables",
-    "title": "6  Product Vessel Info Summary (PVIS)",
+    "title": "7  Product Vessel Info Summary (PVIS)",
     "section": "",
     "text": "pipe_ais_v3_published.product_vessel_info_summary\npipe_production_v20201001.all_vessels_byyear_v2 - the previous version of the table table, maintained in pipeline 2.5.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#source-tables",
     "href": "Product-Vessel-Info-Summary-PVIS.html#source-tables",
-    "title": "6  Product Vessel Info Summary (PVIS)",
-    "section": "6.2 Source Tables",
-    "text": "6.2 Source Tables\nThe Product Vessel Info Summary table uses the following source tables, below. For more information on how these source tables are utilized to populate the Product Vessel Info Summary table, please see the Product Vessel Info Summary Data Template. The documentation for All Vessels v2, the previous version of the Product Vessel Info Summary Table can be found here.\n\npipe_ais_v3_published.product_vessel_info_match - internal table not to be used outside of products. This table was created to match our vessel_id (AIS transmitted data) to our registry matched table (identity core) so that Products automatically connect vessel_id (AIS records) to any existing registry records.\n\n\n\npipe_ais_v3_published.identity_core\npipe_ais_v3_published.vessel_info\npipe_ais_v3_published.segs_activity\npipe_ais_v3_published.segment_info\n\n\n\npipe_ais_v3_published.vi_ssvid\npipe_ais_v3_published.vi_ssvid_byyear\npipe_ais_v3_internal.purse_seine_support_vessels_byyear",
+    "title": "7  Product Vessel Info Summary (PVIS)",
+    "section": "7.2 Source Tables",
+    "text": "7.2 Source Tables\nThe Product Vessel Info Summary table uses the following source tables, below. For more information on how these source tables are utilized to populate the Product Vessel Info Summary table, please see the Product Vessel Info Summary Data Template. The documentation for All Vessels v2, the previous version of the Product Vessel Info Summary Table can be found here.\n\npipe_ais_v3_published.product_vessel_info_match - internal table not to be used outside of products. This table was created to match our vessel_id (AIS transmitted data) to our registry matched table (identity core) so that Products automatically connect vessel_id (AIS records) to any existing registry records.\n\n\n\npipe_ais_v3_published.identity_core\npipe_ais_v3_published.vessel_info\npipe_ais_v3_published.segs_activity\npipe_ais_v3_published.segment_info\n\n\n\npipe_ais_v3_published.vi_ssvid\npipe_ais_v3_published.vi_ssvid_byyear\npipe_ais_v3_internal.purse_seine_support_vessels_byyear",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#data-description",
     "href": "Product-Vessel-Info-Summary-PVIS.html#data-description",
-    "title": "6  Product Vessel Info Summary (PVIS)",
-    "section": "6.3 Data Description",
-    "text": "6.3 Data Description\nThe Product Vessel Info Summary table is a step in the Vessels API, which links AIS records to registry records and is intended to act as a one stop shop for vessel identity for GFW Products. At the product level we want to provide the cleanest information we have on vessel identity, which is why there is an extra layer of logic to lay out a hierarchy for how to represent a vessel in Products when there is conflicting information.\nWe want to be transparent on this hierarchy and the logic behind it, internally, but also externally for all users. As a result, the table includes numerous summary fields on vessel activity, noise, and identity. While these extra details are not featured in Products, the information is intended to provide context for internal staff to understand why a vessel is represented the way it is. Further these fields allow analysts to use the Product Vessel Info Summary table more flexibly than how it is included in Products, to meet broader uses cases. Being able to use the Product Vessel Info Summary table for analysis that are separate from Products is valuable, as it is still easy to link analysis back to what is in Products and allows analysts to easily identify how the vessels in their reports reflect what is in Product, what is miss from Product, and what is represented differently from what is in Product, and why.\nHow the Vessels API is populated is highlighted in the diagram below; specifically how the Product Vessel Info Summary table fits into the Vessels API.\n  Vessels API diagram link\n  Whimsical for how prod_shiptype and prod_geartype are populated\nPlease see the Product Vessel Info Summary Data Template for field definitions of all fields in table.",
+    "title": "7  Product Vessel Info Summary (PVIS)",
+    "section": "7.3 Data Description",
+    "text": "7.3 Data Description\nThe Product Vessel Info Summary table is a step in the Vessels API, which links AIS records to registry records and is intended to act as a one stop shop for vessel identity for GFW Products. At the product level we want to provide the cleanest information we have on vessel identity, which is why there is an extra layer of logic to lay out a hierarchy for how to represent a vessel in Products when there is conflicting information.\nWe want to be transparent on this hierarchy and the logic behind it, internally, but also externally for all users. As a result, the table includes numerous summary fields on vessel activity, noise, and identity. While these extra details are not featured in Products, the information is intended to provide context for internal staff to understand why a vessel is represented the way it is. Further these fields allow analysts to use the Product Vessel Info Summary table more flexibly than how it is included in Products, to meet broader uses cases. Being able to use the Product Vessel Info Summary table for analysis that are separate from Products is valuable, as it is still easy to link analysis back to what is in Products and allows analysts to easily identify how the vessels in their reports reflect what is in Product, what is miss from Product, and what is represented differently from what is in Product, and why.\nHow the Vessels API is populated is highlighted in the diagram below; specifically how the Product Vessel Info Summary table fits into the Vessels API.\n  Vessels API diagram link\n  Whimsical for how prod_shiptype and prod_geartype are populated\nPlease see the Product Vessel Info Summary Data Template for field definitions of all fields in table.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#caveats-and-known-issues",
     "href": "Product-Vessel-Info-Summary-PVIS.html#caveats-and-known-issues",
-    "title": "6  Product Vessel Info Summary (PVIS)",
-    "section": "6.4 Caveats and Known Issues",
-    "text": "6.4 Caveats and Known Issues\n\nPlease see the Product Vessel Info Summary Data Template Caveats section and FAQs section for more on the following topics.\nCaveats\nInaccuracies in inferred (neural net) class information\nPossibility of error between ssvid and vessel id merger\nFAQs\n\nWhy is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?\nWhat if a vessel is considered multiple gear types?\nWhat should I do if I think a vessel type has been incorrectly assigned?\nWhy is my vessel_id NOT included in the Product Vessel Info Summary table (and thus in Products)?\nMultiple Vessel IDs for a single unique hull\nWhy am I only seeing a short track segment when I search for a vessel that I know is transmitting on AIS across years?\nMaking sense of vessels with shiptype ‘Discrepancy’\nWhat is the difference between core_geartype and registry_vessel_class fields?\n\nNoise filter: Products only include non-noisy segments, and subsequently vessel_id’s with at least one non-noisy seg_id (eg passes the WHERE good_seg and NOT overlapping_and_short filter) are excluded from Products.",
+    "title": "7  Product Vessel Info Summary (PVIS)",
+    "section": "7.4 Caveats and Known Issues",
+    "text": "7.4 Caveats and Known Issues\n\nPlease see the Product Vessel Info Summary Data Template Caveats section and FAQs section for more on the following topics.\nCaveats\nInaccuracies in inferred (neural net) class information\nPossibility of error between ssvid and vessel id merger\nFAQs\n\nWhy is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?\nWhat if a vessel is considered multiple gear types?\nWhat should I do if I think a vessel type has been incorrectly assigned?\nWhy is my vessel_id NOT included in the Product Vessel Info Summary table (and thus in Products)?\nMultiple Vessel IDs for a single unique hull\nWhy am I only seeing a short track segment when I search for a vessel that I know is transmitting on AIS across years?\nMaking sense of vessels with shiptype ‘Discrepancy’\nWhat is the difference between core_geartype and registry_vessel_class fields?\n\nNoise filter: Products only include non-noisy segments, and subsequently vessel_id’s with at least one non-noisy seg_id (eg passes the WHERE good_seg and NOT overlapping_and_short filter) are excluded from Products.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#example-queries",
     "href": "Product-Vessel-Info-Summary-PVIS.html#example-queries",
-    "title": "6  Product Vessel Info Summary (PVIS)",
-    "section": "6.5 Example Queries",
-    "text": "6.5 Example Queries\n\nPlease see the Product Vessel Info Summary Data Template Use cases section for example Queries expanding on the following questions:\nHow do I use the activity summary fields to understand vessel activity?\nHow do I compare what the current product ship and gear type is in the product vessel info summary table to what was in the previous version of the table (all vessels v2)?\nDiscrepancy vessel example\nWhy is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?\nHow can the Product Vessel Info Summary table be used to identify all possible fishing vessels?\nvessel_id_connected_to_noisy_segment_check - if a vessel_id does not appear in the Product Vessel Info Summary table, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the Product Vessel Info Summary table.",
+    "title": "7  Product Vessel Info Summary (PVIS)",
+    "section": "7.5 Example Queries",
+    "text": "7.5 Example Queries\n\nPlease see the Product Vessel Info Summary Data Template Use cases section for example Queries expanding on the following questions:\nHow do I use the activity summary fields to understand vessel activity?\nHow do I compare what the current product ship and gear type is in the product vessel info summary table to what was in the previous version of the table (all vessels v2)?\nDiscrepancy vessel example\nWhy is a vessel I know to be a fishing vessel, not indicated as fishing on the Map?\nHow can the Product Vessel Info Summary table be used to identify all possible fishing vessels?\nvessel_id_connected_to_noisy_segment_check - if a vessel_id does not appear in the Product Vessel Info Summary table, the only reason this should happen is because the vessel_id is connected to only noisy segments. The example query allows users to input a vessel_id or ssvid and verify if the vessel_ids connected to the vessel have at least one non-noisy segment and should thus be included in the Product Vessel Info Summary table.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#links",
     "href": "Product-Vessel-Info-Summary-PVIS.html#links",
-    "title": "6  Product Vessel Info Summary (PVIS)",
-    "section": "6.6 Links",
-    "text": "6.6 Links\n\nProduct Vessel Info Summary table data template documentation: redundant in many ways to the GitWiki. Intended to flesh out field definitions and other data tables in a format accessible by non-github using staff.\n[Outdated] All Vessels v2 resources &gt; * Vessel API link to All vessels: Diagram showing how All Vessels v2 fits within the work flow of the Vessel Identity API &gt; * All Vessels v2 Confluence: Includes source tables and code used to populated All Vessels v2 table. &gt; * All Vessels v2 Tech Call slides: from bi weekly tech call presentation on July 27th 2023",
+    "title": "7  Product Vessel Info Summary (PVIS)",
+    "section": "7.6 Links",
+    "text": "7.6 Links\n\nProduct Vessel Info Summary table data template documentation: redundant in many ways to the GitWiki. Intended to flesh out field definitions and other data tables in a format accessible by non-github using staff.\n[Outdated] All Vessels v2 resources &gt; * Vessel API link to All vessels: Diagram showing how All Vessels v2 fits within the work flow of the Vessel Identity API &gt; * All Vessels v2 Confluence: Includes source tables and code used to populated All Vessels v2 table. &gt; * All Vessels v2 Tech Call slides: from bi weekly tech call presentation on July 27th 2023",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Product-Vessel-Info-Summary-PVIS.html#updates",
     "href": "Product-Vessel-Info-Summary-PVIS.html#updates",
-    "title": "6  Product Vessel Info Summary (PVIS)",
-    "section": "6.7 Updates",
-    "text": "6.7 Updates\nLast updated on September 30th, 2024\n\n[Aug 2024] Pipeline 3.0 released in Products alongside DeckGL release. This marks official shift to using product_vessel_info_summary table, and retiring all_vessels_v2 for both internal/staff and external users.\n[2024 - Pipeline 3.0] In Pipeline 3.0, all_vessels_byyear_v2 renamed to product_vessel_info_summary\n[Oct 26 2023] all_vessels_byyear_v2 released in Products as part of public Vessel Viewer (VV 2.0) release, with updates from internal feedback survey. &gt; Updates to table: &gt; * added most frequent imo transmitted on AIS &gt; * added most frequent callsign transmitted on AIS &gt; * renamed flag field to mmsi_flag to make it clear that this flag is populated based on the first 3 digits of the MMSI transmitted on AIS &gt; * added gfw_best_flag field, which is pulled from vi_ssvid_byyear table and considers AIS and registry information &gt; * added core_flag, which is the flag information in the identity core table if an AIS records is high confidence matched (eg based on MMSI and another identity value) to a hull id. &gt; * Within prod_shiptype field, added ‘gear’ as a shiptype. &gt; * Within prod_shiptype field, eliminated the ‘potential_fishing’ shiptype option, and reclassified those vessels to ‘fishing’ to reduce confusion. We maintained the potential_fishing boolean field (see data template for field definition). See whimsical in data template on how shiptype and geartype are designated for clarity on what this means for how shiptype is determined. (shout out to Matt for spearheading the whimsical) &gt; * changed how prod_geartype field is populated, to reflect exactly what is expected to be seen in Products. &gt; * added potential_fishing_source field. This indicates the highest confidence field used to inform the potential_fishing boolean field.\n\n\nImpacts on other datasets: For engineering reasons (mainly the maintenance of Vessel Viewer (prototype)), we need to maintain All Vessels v1 and the AIS Published Event datasets along side All Vessels v2. That said, for the time being there are two sets of published event tables. Please use the following tables moving forward for analysis. If you have any questions about this, please reach out. * all_vessels: pipe_production_v20201001.all_vessels_byyear_v2 * coverage: pipe_v20201001_api.indicators_coverage_blocks_v2 * encounters: pipe_production_v20201001.published_events_encounters_v2 - carriers and fishing vessels are identified differently in All Vessels v2. Thus which encounters are flagged as carrier-fishing and support-fishing and thus included publicly in map are different. See below for more details. &gt; * Carrier vessels (and bunker vessels) require a match to a hull_id in the identity core table to be flagged. The process for matching carrier vessel records to AIS records is more precise than what was originally implemented. As a result there are fewer carriers in products. Based on initial analysis, this change is a good one and should make our identification of carriers more accurate. I am still investigating this to make sure we aren’t systematically losing legitimate carrier vessels, and from the analysis so far, things look good. &gt; * Fishing vessels: The long standing bug which classified known fishing vessels to ‘other’ vessel type due to noise should now be fixed in the All Vessels v2 table. Further the list of vessels flagged as fishing is expanded. In addition to vessels that are flagged as on_fishing_list_best (the original filter for identifying fishing vessels) in the vi_ssvid_byyear table, vessels that are flagged as a fishing vessel in a registry on by the neural net are included as fishing vessels in Product if the vessel isn’t already flagged as a support, carrier, bunker, or discrepancy vessel (see whimsical in data template for visual flow diagram of what this looks like). * fishing events: pipe_production_v20201001.published_events_fishing_v2 &gt; * fishing events query has been re-run on an expanded list of fishing vessels using the All Vessels v2 table as the source, where if a vessel is potential_fishing or on_fishing_list_sr (see data template for field definitions), then the vessel has fishing events populated for it. In Products, a narrower set of vessels have fishing events displayed (eg only vessels where prod_shiptype = ‘fishing’). This provided, depending on the use case, analysts may need to add an extra filter when using the published events fishing table. If you have any questions on this, please reach out. * loitering: pipe_production_v20201001.published_events_loitering_v2 * port visits: pipe_production_v20201001.published_events_port_visits_v2 + [July 2023] The all_vessels_byyear_v2 table is shared internally.",
+    "title": "7  Product Vessel Info Summary (PVIS)",
+    "section": "7.7 Updates",
+    "text": "7.7 Updates\nLast updated on September 30th, 2024\n\n[Aug 2024] Pipeline 3.0 released in Products alongside DeckGL release. This marks official shift to using product_vessel_info_summary table, and retiring all_vessels_v2 for both internal/staff and external users.\n[2024 - Pipeline 3.0] In Pipeline 3.0, all_vessels_byyear_v2 renamed to product_vessel_info_summary\n[Oct 26 2023] all_vessels_byyear_v2 released in Products as part of public Vessel Viewer (VV 2.0) release, with updates from internal feedback survey. &gt; Updates to table: &gt; * added most frequent imo transmitted on AIS &gt; * added most frequent callsign transmitted on AIS &gt; * renamed flag field to mmsi_flag to make it clear that this flag is populated based on the first 3 digits of the MMSI transmitted on AIS &gt; * added gfw_best_flag field, which is pulled from vi_ssvid_byyear table and considers AIS and registry information &gt; * added core_flag, which is the flag information in the identity core table if an AIS records is high confidence matched (eg based on MMSI and another identity value) to a hull id. &gt; * Within prod_shiptype field, added ‘gear’ as a shiptype. &gt; * Within prod_shiptype field, eliminated the ‘potential_fishing’ shiptype option, and reclassified those vessels to ‘fishing’ to reduce confusion. We maintained the potential_fishing boolean field (see data template for field definition). See whimsical in data template on how shiptype and geartype are designated for clarity on what this means for how shiptype is determined. (shout out to Matt for spearheading the whimsical) &gt; * changed how prod_geartype field is populated, to reflect exactly what is expected to be seen in Products. &gt; * added potential_fishing_source field. This indicates the highest confidence field used to inform the potential_fishing boolean field.\n\n\nImpacts on other datasets: For engineering reasons (mainly the maintenance of Vessel Viewer (prototype)), we need to maintain All Vessels v1 and the AIS Published Event datasets along side All Vessels v2. That said, for the time being there are two sets of published event tables. Please use the following tables moving forward for analysis. If you have any questions about this, please reach out. * all_vessels: pipe_production_v20201001.all_vessels_byyear_v2 * coverage: pipe_v20201001_api.indicators_coverage_blocks_v2 * encounters: pipe_production_v20201001.published_events_encounters_v2 - carriers and fishing vessels are identified differently in All Vessels v2. Thus which encounters are flagged as carrier-fishing and support-fishing and thus included publicly in map are different. See below for more details. &gt; * Carrier vessels (and bunker vessels) require a match to a hull_id in the identity core table to be flagged. The process for matching carrier vessel records to AIS records is more precise than what was originally implemented. As a result there are fewer carriers in products. Based on initial analysis, this change is a good one and should make our identification of carriers more accurate. I am still investigating this to make sure we aren’t systematically losing legitimate carrier vessels, and from the analysis so far, things look good. &gt; * Fishing vessels: The long standing bug which classified known fishing vessels to ‘other’ vessel type due to noise should now be fixed in the All Vessels v2 table. Further the list of vessels flagged as fishing is expanded. In addition to vessels that are flagged as on_fishing_list_best (the original filter for identifying fishing vessels) in the vi_ssvid_byyear table, vessels that are flagged as a fishing vessel in a registry on by the neural net are included as fishing vessels in Product if the vessel isn’t already flagged as a support, carrier, bunker, or discrepancy vessel (see whimsical in data template for visual flow diagram of what this looks like). * fishing events: pipe_production_v20201001.published_events_fishing_v2 &gt; * fishing events query has been re-run on an expanded list of fishing vessels using the All Vessels v2 table as the source, where if a vessel is potential_fishing or on_fishing_list_sr (see data template for field definitions), then the vessel has fishing events populated for it. In Products, a narrower set of vessels have fishing events displayed (eg only vessels where prod_shiptype = ‘fishing’). This provided, depending on the use case, analysts may need to add an extra filter when using the published events fishing table. If you have any questions on this, please reach out. * loitering: pipe_production_v20201001.published_events_loitering_v2 * port visits: pipe_production_v20201001.published_events_port_visits_v2 + [July 2023] The all_vessels_byyear_v2 table is shared internally.",
     "crumbs": [
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Product Vessel Info Summary (PVIS)</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html",
     "href": "Vessel-database.html",
-    "title": "7  Vessel database",
+    "title": "8  Vessel database",
     "section": "",
-    "text": "7.1 Data Overview\nThe Global Fishing Watch vessel database contains information about vessels that is/was recorded in various formats of vessel registries, including RFMO vessel lists and national vessel registers that are publicly available. It also includes lists of vessels that have been obtained through groups of researchers and analyzed by analysts from GFW and its partners. The collected registry data are matched to AIS data to assign further identity, authorization, and owner information among others to the vessel found in AIS. For further reading about the matching, go to the link. Owner: Jaeyoon",
+    "text": "8.1 Data Overview\nThe Global Fishing Watch vessel database contains information about vessels that is/was recorded in various formats of vessel registries, including RFMO vessel lists and national vessel registers that are publicly available. It also includes lists of vessels that have been obtained through groups of researchers and analyzed by analysts from GFW and its partners. The collected registry data are matched to AIS data to assign further identity, authorization, and owner information among others to the vessel found in AIS. For further reading about the matching, go to the link. Owner: Jaeyoon",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html#key-tables",
     "href": "Vessel-database.html#key-tables",
-    "title": "7  Vessel database",
-    "section": "7.2 Key Tables",
-    "text": "7.2 Key Tables\n\nvessel_database.all_vessels_vYYYYMMDD - This table contains all identity information for a vessel available from AIS and vessel registries, including where a vessel is authorized to operate, and who owns the vessel. The table is automatically created with the latest update on the 1st day of the month, and contains data until the date YYYYMMDD. For instance, vessel_database.all_vessels_v20211101 is created on the Dec 1, 2021, and includes AIS/registry data up to 2020-10-31 23:59:59. You can see the current status of the latest database in this dashboard.\nvessel_database_staging.registry_[registry_code]_vYYYYMMDD - These tables represent raw registries scraped monthly. You may replace [registry_code] with the registry code to be found in the registry sources. The tables include data obtained from each registry before they go through the process of matching registry to AIS.\nsingle_mmsi_matched_vessels_byyear_vYYYYMMDD - This table includes the most representative vessel per MMSI by year from the vessel database. Therefore, a single MMSI represents one row (vessel) in the given year in this table. The fields are identical to the vessel database except this table has year column.",
+    "title": "8  Vessel database",
+    "section": "8.2 Key Tables",
+    "text": "8.2 Key Tables\n\nvessel_database.all_vessels_vYYYYMMDD - This table contains all identity information for a vessel available from AIS and vessel registries, including where a vessel is authorized to operate, and who owns the vessel. The table is automatically created with the latest update on the 1st day of the month, and contains data until the date YYYYMMDD. For instance, vessel_database.all_vessels_v20211101 is created on the Dec 1, 2021, and includes AIS/registry data up to 2020-10-31 23:59:59. You can see the current status of the latest database in this dashboard.\nvessel_database_staging.registry_[registry_code]_vYYYYMMDD - These tables represent raw registries scraped monthly. You may replace [registry_code] with the registry code to be found in the registry sources. The tables include data obtained from each registry before they go through the process of matching registry to AIS.\nsingle_mmsi_matched_vessels_byyear_vYYYYMMDD - This table includes the most representative vessel per MMSI by year from the vessel database. Therefore, a single MMSI represents one row (vessel) in the given year in this table. The fields are identical to the vessel database except this table has year column.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html#data-description",
     "href": "Vessel-database.html#data-description",
-    "title": "7  Vessel database",
-    "section": "7.3 Data Description",
-    "text": "7.3 Data Description\nThe vessel database uses a multi-step process to match identity information from AIS data with identity information from vessel registries. Vessels are matched according to shipname, callsign, IMO number, and MMSI. These matches are then summarized by MMSI to show all identities associated with each MMSI. For more detailed information on the identity matching process, see this document.\n\nmatched: TRUE if the AIS identity standard-matches to one or more registries. The standard match indicates that the records from AIS and registry sufficiently close in multiple fields among name, callsign, IMO, MMSI number, and flag. In most cases, you would only need the standard matches.\nloose-match: TRUE if the AIS identity loose-matches to one or more registries. The loose-match represents the records that matched between AIS and registry through only name and flag. This is sometimes useful for investigating additional Chinese/Taiwanese vessels as some do only broadcast ship name. Not broadcasting other identity fields prevents the more confident standard-match, but if they use distinct ship name, it is possible to identify them through loose-match. Beware that loose-matches may present wrong matches if more than one vessel from the same country exist (e.g. There are &gt;20 vessels that are US-flagged and named FREEDOM)\nidentity: This STRUCT includes identity fields that are MMSI number, shipname, callsign, IMO number, and flag. It relies on data recorded in AIS data if a match was not perfect but good enough to pass the matching process. (e.g. AIS: ACONCAGUA vs Registry: ACONCAGOUA → In this case, normalized value from AIS (ACONCAGUA) remains in final database)\n\n\nssvid: The source-specific vessel ID which is equivalent to MMSI number in this dataset\n\n\nn_: This prefix represents “normalized” for shipname and callsign\n\n\nflag: The flag of a vessel is represented by ISO-3 country code\n\n\nfeature: This STRUCT presents representative (or best) value of vessel characteristics (length, tonnage, power, geartype, and crew number) derived from corresponding values registered in multiple registries. All raw values that are 2 standard deviations away from the average are discarded as an outlier. Each registry has only one vote for the calculation so as to avoid double counts for multiple scrapes of a registry. If some registries have higher levels of confidence (4 being the highest, 1 being the lowest), then they override the lower ones.\n\n\ngeartype: It represents the classification of a vessel. All (distinct) gears recorded in registries for a given vessel are stored in a form of ARRAY. Gears that can be merged will be merged to more fine-grained values (e.g. fishing | tuna_purse_seines | purse_seines → merged to only tuna_purse_seines)\n\n\nis_fishing, is_carrier, is_bunker: TRUE if the given vessel is categorized into the corresponding type based on feature.geartype values, FALSE otherwise\nactivity: It is an ARRAY of STRUCT of time blocks (including first_timestamp, last_timestamp, messages). Time blocks are AIS activities of the given vessel separated by &gt;90 days of gap from one another. For instance, if a vessel is AIS-active from 2020-01-01 to 2020-08-31, and then active again from 2021-01-01 to 2021-10-31, the activity field includes two elements in its ARRAY of the activity range in 2020 and 2021. However, if the first activity was up to 2020-11-30, then the two activity ranges are merged as from 2020-01-01 to 2021-10-31.\nregistry: It is an ARRAY of STRUCT of all relevant raw values from source registries. Often, this ARRAY includes a number of rows because a vessel may be registered to multiple registries, and those registries are scraped every month for a long period.\n\n\nlist_uvi: A unique vessel identifier within a given registry, it starts with registry code followed by ID code (e.g. WCPFC-1079)\n\n\nauthorized_from, authorized_to: Information about authorization period (mostly from RFMO registries). If one of the fields is NULL, it means no authorization information is available publicly, not that it is unauthorized.\n\n\nis_active: TRUE if a given vessel is active in AIS (at least 1 day) during the authorized period, FALSE otherwise.\n\n\nlast_modified: Date of known update made in registry\n\n\nscraped: Date of scraping (usually the 1st day of month)\n\n\nowner: Name of the owner (usually a company name). The owner is as indicated in a registry, which means it could be only registered owner instead of beneficial owner. We try to pull the beneficial owner if that information is available in the given registry.\n\n\nowner_flag: Nationality of the owner, based on the available information found in the given registry",
+    "title": "8  Vessel database",
+    "section": "8.3 Data Description",
+    "text": "8.3 Data Description\nThe vessel database uses a multi-step process to match identity information from AIS data with identity information from vessel registries. Vessels are matched according to shipname, callsign, IMO number, and MMSI. These matches are then summarized by MMSI to show all identities associated with each MMSI. For more detailed information on the identity matching process, see this document.\n\nmatched: TRUE if the AIS identity standard-matches to one or more registries. The standard match indicates that the records from AIS and registry sufficiently close in multiple fields among name, callsign, IMO, MMSI number, and flag. In most cases, you would only need the standard matches.\nloose-match: TRUE if the AIS identity loose-matches to one or more registries. The loose-match represents the records that matched between AIS and registry through only name and flag. This is sometimes useful for investigating additional Chinese/Taiwanese vessels as some do only broadcast ship name. Not broadcasting other identity fields prevents the more confident standard-match, but if they use distinct ship name, it is possible to identify them through loose-match. Beware that loose-matches may present wrong matches if more than one vessel from the same country exist (e.g. There are &gt;20 vessels that are US-flagged and named FREEDOM)\nidentity: This STRUCT includes identity fields that are MMSI number, shipname, callsign, IMO number, and flag. It relies on data recorded in AIS data if a match was not perfect but good enough to pass the matching process. (e.g. AIS: ACONCAGUA vs Registry: ACONCAGOUA → In this case, normalized value from AIS (ACONCAGUA) remains in final database)\n\n\nssvid: The source-specific vessel ID which is equivalent to MMSI number in this dataset\n\n\nn_: This prefix represents “normalized” for shipname and callsign\n\n\nflag: The flag of a vessel is represented by ISO-3 country code\n\n\nfeature: This STRUCT presents representative (or best) value of vessel characteristics (length, tonnage, power, geartype, and crew number) derived from corresponding values registered in multiple registries. All raw values that are 2 standard deviations away from the average are discarded as an outlier. Each registry has only one vote for the calculation so as to avoid double counts for multiple scrapes of a registry. If some registries have higher levels of confidence (4 being the highest, 1 being the lowest), then they override the lower ones.\n\n\ngeartype: It represents the classification of a vessel. All (distinct) gears recorded in registries for a given vessel are stored in a form of ARRAY. Gears that can be merged will be merged to more fine-grained values (e.g. fishing | tuna_purse_seines | purse_seines → merged to only tuna_purse_seines)\n\n\nis_fishing, is_carrier, is_bunker: TRUE if the given vessel is categorized into the corresponding type based on feature.geartype values, FALSE otherwise\nactivity: It is an ARRAY of STRUCT of time blocks (including first_timestamp, last_timestamp, messages). Time blocks are AIS activities of the given vessel separated by &gt;90 days of gap from one another. For instance, if a vessel is AIS-active from 2020-01-01 to 2020-08-31, and then active again from 2021-01-01 to 2021-10-31, the activity field includes two elements in its ARRAY of the activity range in 2020 and 2021. However, if the first activity was up to 2020-11-30, then the two activity ranges are merged as from 2020-01-01 to 2021-10-31.\nregistry: It is an ARRAY of STRUCT of all relevant raw values from source registries. Often, this ARRAY includes a number of rows because a vessel may be registered to multiple registries, and those registries are scraped every month for a long period.\n\n\nlist_uvi: A unique vessel identifier within a given registry, it starts with registry code followed by ID code (e.g. WCPFC-1079)\n\n\nauthorized_from, authorized_to: Information about authorization period (mostly from RFMO registries). If one of the fields is NULL, it means no authorization information is available publicly, not that it is unauthorized.\n\n\nis_active: TRUE if a given vessel is active in AIS (at least 1 day) during the authorized period, FALSE otherwise.\n\n\nlast_modified: Date of known update made in registry\n\n\nscraped: Date of scraping (usually the 1st day of month)\n\n\nowner: Name of the owner (usually a company name). The owner is as indicated in a registry, which means it could be only registered owner instead of beneficial owner. We try to pull the beneficial owner if that information is available in the given registry.\n\n\nowner_flag: Nationality of the owner, based on the available information found in the given registry",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html#caveats-known-issues",
     "href": "Vessel-database.html#caveats-known-issues",
-    "title": "7  Vessel database",
-    "section": "7.4 Caveats & Known Issues",
-    "text": "7.4 Caveats & Known Issues\nThe database may contain information that is out of date or incorrect due to wrong information available in one or multiple registries on which the database relies. Users may want to double-check the validity of the information found in the database. Users can provide the correct information in this spreadsheet which will override the current data in the table. In case of any questions or suggestions, please contact jaeyoon@globalfishingwatch.org",
+    "title": "8  Vessel database",
+    "section": "8.4 Caveats & Known Issues",
+    "text": "8.4 Caveats & Known Issues\nThe database may contain information that is out of date or incorrect due to wrong information available in one or multiple registries on which the database relies. Users may want to double-check the validity of the information found in the database. Users can provide the correct information in this spreadsheet which will override the current data in the table. In case of any questions or suggestions, please contact jaeyoon@globalfishingwatch.org",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html#example-queries",
     "href": "Vessel-database.html#example-queries",
-    "title": "7  Vessel database",
-    "section": "7.5 Example Queries",
-    "text": "7.5 Example Queries\nYou can find some example queries for the vessel database in this link",
+    "title": "8  Vessel database",
+    "section": "8.5 Example Queries",
+    "text": "8.5 Example Queries\nYou can find some example queries for the vessel database in this link",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html#links",
     "href": "Vessel-database.html#links",
-    "title": "7  Vessel database",
-    "section": "7.6 Links",
-    "text": "7.6 Links\n\nTraining slides\nGitHub repo\nData dashboard\nRegistry sources\nUser guide",
+    "title": "8  Vessel database",
+    "section": "8.6 Links",
+    "text": "8.6 Links\n\nTraining slides\nGitHub repo\nData dashboard\nRegistry sources\nUser guide",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-database.html#updates",
     "href": "Vessel-database.html#updates",
-    "title": "7  Vessel database",
-    "section": "7.7 Updates",
-    "text": "7.7 Updates\n\nAll documents are updated on 2021-11-18\nAll key tables are automatically updated every 1st day of the month.\n\nIn the process in Nov 2021, some duplicates (mostly Chinese vessels) were merged together. It was due to some minor discrepancies that were not automatically detected/merged. For instance, two rows that have the same name but different call signs such as B4X80 and B4X8O, or two rows that have the same identity except different suffix numbers (which is important to separate vessels) such as LURONGYUANYU107 and LURONGYUANYU1O7. These cases are manually corrected and merged.",
+    "title": "8  Vessel database",
+    "section": "8.7 Updates",
+    "text": "8.7 Updates\n\nAll documents are updated on 2021-11-18\nAll key tables are automatically updated every 1st day of the month.\n\nIn the process in Nov 2021, some duplicates (mostly Chinese vessels) were merged together. It was due to some minor discrepancies that were not automatically detected/merged. For instance, two rows that have the same name but different call signs such as B4X80 and B4X8O, or two rows that have the same identity except different suffix numbers (which is important to separate vessels) such as LURONGYUANYU107 and LURONGYUANYU1O7. These cases are manually corrected and merged.",
     "crumbs": [
-      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Vessel database</span>"
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel database</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html",
     "href": "Vessel-info-tables.html",
-    "title": "8  Vessel info tables",
+    "title": "9  Vessel info tables",
     "section": "",
-    "text": "8.1 Key Tables",
+    "text": "9.1 Key Tables",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html#key-tables",
     "href": "Vessel-info-tables.html#key-tables",
-    "title": "8  Vessel info tables",
+    "title": "9  Vessel info tables",
     "section": "",
     "text": "gfw_research.vi_ssvid_vYYYYMMDD - This table includes the best activity and identity information available for the vessel based on its full AIS timeseries.\ngfw_research.vi_ssvid_byyear_vYYYYMMDD - This table includes annual best activity and identity information for the vessel based only on data in each year. As a result, the information for a given year in gfw_research.vi_ssvid_byyear_vYYYYMMDD may not match that in gfw_research.vi_ssvid_vYYYYMMDD (e.g. the vessel recently re-flagged).\n\ngfw_research.fishing_vessels_ssvid_vYYYYMMDD - This table includes the GFW yearly list of active non spoofing/offsetting fishing vessels. It is GFW’s most restrictive list of fishing vessels and the default list to use in research/analysis.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html#data-description",
     "href": "Vessel-info-tables.html#data-description",
-    "title": "8  Vessel info tables",
-    "section": "8.2 Data Description",
-    "text": "8.2 Data Description\n\n8.2.1 vi_ssvid and vi_ssvid_byyear tables\nThe information in the main vessel info tables (vi_ssvid_vYYYYMMDD; vi_ssvid_byyear_vYYYYMMDD) is organized into multiple STRUCT that summarize the MMSI’s activity, ais_identity, inferred characteristics, registry_info, and best info to be used by GFW.\n\nactivity: Fields summarizing the amount and location of the MMSI’s AIS activity - positions, hours, fishing_hours, spoofing etc.\n\n\neez: Helpful summary of the MMSI’s activity (hours, fishing_hours) by EEZ. Useful for quick, non-spatial summaries of activity by EEZ\n\n\noffsetting: Whether the MMSI offsetting its position\n\n\noverlap_hours_multinames: Spoofing flag. Indicates how many hours the MMSI has overlapping segments with multiple identities. MMSI with overlap_hours_multinames &gt; 24 in a given year are considered to be spoofed.\n\n\nais_identity: Fields summarizing the identities (ship name, callsign, IMO, flag, etc.) broadcast by that MMSI in AIS messages. Each identity type includes a mostcommon field providing the most-common value for that identity type.\n\n\nFields prefixed with n_ are normalized versions of the original values.\n\n\nlikely_gear: Whether the MMSI’s most common shipname (n_shipname_mostcommon) suggests the MMSI is attached to fishing gear (e.g. BUOY16).\n\n\ninferred: Fields summarizing vessel characteristics (length, tonnage, geartype) inferred by the neural net for the MMSI.\n\n\nGFW uses a nested vessel class hierarchy and only “leaf” classes are scored by the neural net, which are recorded in inferred.inferred_vessel_class. However, the final inferred vessel class assigned to an MMSI is recorded in inferred.inferred_vessel_class_ag and corresponds to the lowest level vessel class with a cumulative neural net score &gt; 0.5.\n\n\nregistry_info: The identity information associated with the MMSI sourced from vessel registries\n\n\nValues correspond to the feature STRUCT in the vessel database.\n\n\nbest: GFW’s assigned “best” vessel characteristics after considering all info from AIS, the neural net, and vessel registries\n\n\nregistry_net_disagreement: Do the neural net (inferred.inferred_vessel_class_ag) and vessel registries (registry_info.best_known_vessel_class) disagree about the vessel class of the MMSI\n\n\n\n\n8.2.1.1 on_fishing_list_ fields\nGFW assigns MMSI to four types of fishing lists in the vessel info tables. Three lists indicate whether the MMSI is potentially a fishing vessel according to different sources. The fourth list, on_fishing_list_best combines the results of the previous three lists to make a final determination of whether each MMSI is likely a fishing vessel.\n\non_fishing_list_known - Listed as a fishing vessel on 1+ registries\non_fishing_list_sr - Consistently self reports as fishing in AIS messages &gt;98% of messages; minimum 50 positions\non_fishing_list_nn - The neural net believes the vessel is more likely a fishing vessel than a non-fishing vessel (e.g. combined neural net score for fishing classes inferred.fishing_class_score &gt; 0.5)\non_fishing_list_best - GFW’s best list of likely fishing MMSI. True in the following cases:\n\nThe vessel is on_fishing_list_known\nThe vessel is on_fishing_list_sr and on_fishing_list_nn\nThe vessel’s highest inferred.inferred_vessel_class_score is for a fishing vessel class and exceeds 0.85\nThe vessel is on_fishing_list_nn and on_fishing_list_known is not False\n\n\n\n\n\n8.2.2 fishing_vessels_ssvid table\nThe on_fishing_list_best field in the vessel info tables indicates whether GFW believes an MMSI is likely a fishing vessel. However, many of these MMSI are spoofing, offsetting, likely gear, or simply highly inactive and including them in analyses can introduce a lot of noise. For this reason, GFW produces the fishing_vessels_ssvid table, which takes the MMSI listed as on_fishing_list_best and applies a set of filters to fields in the activity struct of the vi_ssvid_byyear table to create a yearly list of likely fishing vessels.",
+    "title": "9  Vessel info tables",
+    "section": "9.2 Data Description",
+    "text": "9.2 Data Description\n\n9.2.1 vi_ssvid and vi_ssvid_byyear tables\nThe information in the main vessel info tables (vi_ssvid_vYYYYMMDD; vi_ssvid_byyear_vYYYYMMDD) is organized into multiple STRUCT that summarize the MMSI’s activity, ais_identity, inferred characteristics, registry_info, and best info to be used by GFW.\n\nactivity: Fields summarizing the amount and location of the MMSI’s AIS activity - positions, hours, fishing_hours, spoofing etc.\n\n\neez: Helpful summary of the MMSI’s activity (hours, fishing_hours) by EEZ. Useful for quick, non-spatial summaries of activity by EEZ\n\n\noffsetting: Whether the MMSI offsetting its position\n\n\noverlap_hours_multinames: Spoofing flag. Indicates how many hours the MMSI has overlapping segments with multiple identities. MMSI with overlap_hours_multinames &gt; 24 in a given year are considered to be spoofed.\n\n\nais_identity: Fields summarizing the identities (ship name, callsign, IMO, flag, etc.) broadcast by that MMSI in AIS messages. Each identity type includes a mostcommon field providing the most-common value for that identity type.\n\n\nFields prefixed with n_ are normalized versions of the original values.\n\n\nlikely_gear: Whether the MMSI’s most common shipname (n_shipname_mostcommon) suggests the MMSI is attached to fishing gear (e.g. BUOY16).\n\n\ninferred: Fields summarizing vessel characteristics (length, tonnage, geartype) inferred by the neural net for the MMSI.\n\n\nGFW uses a nested vessel class hierarchy and only “leaf” classes are scored by the neural net, which are recorded in inferred.inferred_vessel_class. However, the final inferred vessel class assigned to an MMSI is recorded in inferred.inferred_vessel_class_ag and corresponds to the lowest level vessel class with a cumulative neural net score &gt; 0.5.\n\n\nregistry_info: The identity information associated with the MMSI sourced from vessel registries\n\n\nValues correspond to the feature STRUCT in the vessel database.\n\n\nbest: GFW’s assigned “best” vessel characteristics after considering all info from AIS, the neural net, and vessel registries\n\n\nregistry_net_disagreement: Do the neural net (inferred.inferred_vessel_class_ag) and vessel registries (registry_info.best_known_vessel_class) disagree about the vessel class of the MMSI\n\n\n\n\n9.2.1.1 on_fishing_list_ fields\nGFW assigns MMSI to four types of fishing lists in the vessel info tables. Three lists indicate whether the MMSI is potentially a fishing vessel according to different sources. The fourth list, on_fishing_list_best combines the results of the previous three lists to make a final determination of whether each MMSI is likely a fishing vessel.\n\non_fishing_list_known - Listed as a fishing vessel on 1+ registries\non_fishing_list_sr - Consistently self reports as fishing in AIS messages &gt;98% of messages; minimum 50 positions\non_fishing_list_nn - The neural net believes the vessel is more likely a fishing vessel than a non-fishing vessel (e.g. combined neural net score for fishing classes inferred.fishing_class_score &gt; 0.5)\non_fishing_list_best - GFW’s best list of likely fishing MMSI. True in the following cases:\n\nThe vessel is on_fishing_list_known\nThe vessel is on_fishing_list_sr and on_fishing_list_nn\nThe vessel’s highest inferred.inferred_vessel_class_score is for a fishing vessel class and exceeds 0.85\nThe vessel is on_fishing_list_nn and on_fishing_list_known is not False\n\n\n\n\n\n9.2.2 fishing_vessels_ssvid table\nThe on_fishing_list_best field in the vessel info tables indicates whether GFW believes an MMSI is likely a fishing vessel. However, many of these MMSI are spoofing, offsetting, likely gear, or simply highly inactive and including them in analyses can introduce a lot of noise. For this reason, GFW produces the fishing_vessels_ssvid table, which takes the MMSI listed as on_fishing_list_best and applies a set of filters to fields in the activity struct of the vi_ssvid_byyear table to create a yearly list of likely fishing vessels.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html#caveats-known-issues",
     "href": "Vessel-info-tables.html#caveats-known-issues",
-    "title": "8  Vessel info tables",
-    "section": "8.3 Caveats & Known Issues",
-    "text": "8.3 Caveats & Known Issues\n\n8.3.1 Fishing hours incorrect for squid jiggers\nCurrently, the vessel info table summarizes fishing_hours from the pipe_v20201001_segs_daily table. Fishing hours in this table are calculated solely from nnet_score and are therefore incorrect for squid_jiggers, which should be calculated using night_loitering.",
+    "title": "9  Vessel info tables",
+    "section": "9.3 Caveats & Known Issues",
+    "text": "9.3 Caveats & Known Issues\n\n9.3.1 Fishing hours incorrect for squid jiggers\nCurrently, the vessel info table summarizes fishing_hours from the pipe_v20201001_segs_daily table. Fishing hours in this table are calculated solely from nnet_score and are therefore incorrect for squid_jiggers, which should be calculated using night_loitering.",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html#example-queries",
     "href": "Vessel-info-tables.html#example-queries",
-    "title": "8  Vessel info tables",
-    "section": "8.4 Example Queries",
-    "text": "8.4 Example Queries\n\nvessel_info_examples_1_v20211128.sql\nvessel_info_examples_2_v20211128.sql",
+    "title": "9  Vessel info tables",
+    "section": "9.4 Example Queries",
+    "text": "9.4 Example Queries\n\nvessel_info_examples_1_v20211128.sql\nvessel_info_examples_2_v20211128.sql",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html#links",
     "href": "Vessel-info-tables.html#links",
-    "title": "8  Vessel info tables",
-    "section": "8.5 Links",
-    "text": "8.5 Links\n\nVessel info training slides\nVessel class definitions",
+    "title": "9  Vessel info tables",
+    "section": "9.5 Links",
+    "text": "9.5 Links\n\nVessel info training slides\nVessel class definitions",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
     "objectID": "Vessel-info-tables.html#updates",
     "href": "Vessel-info-tables.html#updates",
-    "title": "8  Vessel info tables",
-    "section": "8.6 Updates",
-    "text": "8.6 Updates",
+    "title": "9  Vessel info tables",
+    "section": "9.6 Updates",
+    "text": "9.6 Updates",
     "crumbs": [
-      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Vessel info tables</span>"
-    ]
-  },
-  {
-    "objectID": "Annual-carrier-vessel-list.html",
-    "href": "Annual-carrier-vessel-list.html",
-    "title": "9  Annual carrier vessel list",
-    "section": "",
-    "text": "9.1 Key Tables",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annual carrier vessel list</span>"
-    ]
-  },
-  {
-    "objectID": "Annual-carrier-vessel-list.html#key-tables",
-    "href": "Annual-carrier-vessel-list.html#key-tables",
-    "title": "9  Annual carrier vessel list",
-    "section": "",
-    "text": "vessel_database.carrier_vessels_byyear_vYYYYMMDD - This table contains the list of annual carrier vessels that are active in AIS and matched to vessel registries, extracted from the vessel database. The table includes year, mmsi, flag, and vessel class, and is automatically created on the 1st day of the month with the up-to-date information. The creation of the table has a lag time of one month (e.g. vessel_database.carrier_vessels_byyear_v20211101 is created on the Dec 1, 2021, and includes the carrier list using data up to 2020-10-31 23:59:59.",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annual carrier vessel list</span>"
-    ]
-  },
-  {
-    "objectID": "Annual-carrier-vessel-list.html#data-description",
-    "href": "Annual-carrier-vessel-list.html#data-description",
-    "title": "9  Annual carrier vessel list",
-    "section": "9.2 Data Description",
-    "text": "9.2 Data Description\nThe annual carrier vessel list extracts the information about likely carrier vessels by year from the vessel database (only AIS-registry matched vessels), therefore all likely carrier vessels (based on is_carrier fields in the vessel database) for each year. It includes year, mmsi, flag, and vessel class in the table. Some carrier vessels may appear in multiple years.\n\nyear: Year in which the given MMSI number is likely associated with a carrier vessel\nmmsi: MMSI number likely assigned to a carrier vessel at the given year\nflag: Flag of a vessel represented by ISO-3 country code\nvessel_class: It represents the classification of a carrier vessels, which is one of reefer, specialized_reefer, container_reefer, fish_factory, well_boat, and fish_tender",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annual carrier vessel list</span>"
-    ]
-  },
-  {
-    "objectID": "Annual-carrier-vessel-list.html#caveats-known-issues",
-    "href": "Annual-carrier-vessel-list.html#caveats-known-issues",
-    "title": "9  Annual carrier vessel list",
-    "section": "9.3 Caveats & Known Issues",
-    "text": "9.3 Caveats & Known Issues\nThe database may contain information that is out of date or incorrect due to wrong information available in one or multiple registries on which the database relies, or a carrier vessel misuses AIS. The MMSI numbers are not cleaned up so there may be noisy MMSIs that are shared by multiple vessels (not necessarily only by carriers) in the dataset. Users are expected to apply appropriate filters to remove noisy MMSIs according to their goals. In case of any questions or suggestions, please contact jaeyoon@globalfishingwatch.org",
-    "crumbs": [
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Annual carrier vessel list</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Vessel info tables</span>"
     ]
   },
   {
@@ -954,7 +944,7 @@
     "href": "Anchorages-and-voyages.html",
     "title": "13  Anchorages, voyages and port visits",
     "section": "",
-    "text": "13.1 Key Tables\nThe tables associated with ports and voyages include the following:\nOriginal data tables still available + pipe_production_vYYYYMMDD.port_visits_ - Previously used port_visits table, which can still be used now if you do not want to shift to the ‘proto_’ data. This data includes port visits with a confidence of 4 only. + pipe_production_vYYYYMMDD.voyages - Previously used voyages table, which can still be used now. Creates voyages from pipe_production_vYYYYMMDD.port_visits_.",
+    "text": "13.1 Key Tables\nThe tables associated with ports and voyages include the following:",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Anchorages, voyages and port visits</span>"
     ]
@@ -964,7 +954,7 @@
     "href": "Anchorages-and-voyages.html#key-tables",
     "title": "13  Anchorages, voyages and port visits",
     "section": "",
-    "text": "anchorages.named_anchorages_vYYYYMMDD - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats regarding anchorage at the time of creation.\ngfw_research.named_anchorages - View of most the recent version of anchorages.named_anchorages_vYYYYMMDD\npipe_production_vYYYYMMDD.proto_raw_port_events_* - Port events by seg_id. Each port activity by a vessel (e.g. port entry, port exit) recorded in a single row.\npipe_production_vYYYYMMDD.proto_port_visits - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the events array.\npipe_production_vYYYYMMDD.published_events_port_visits - Proto_port_visits table version, limited to confidence &gt;=2, that is used in API (different scheme than original proto_port_visits table). Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.\npipe_production_vYYYYMMDD.proto_voyages_c2 - Voyages by vessels with a port visit confidence of &gt;=2. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.\npipe_production_vYYYYMMDD.proto_voyages_c3 - Voyages by vessels with a port visit confidence of &gt;=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.\npipe_production_vYYYYMMDD.proto_voyages_c4 - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.\n\n\nNote Always use the published_events_x or proto_events_x (if still considered a prototype) view version of a table rather than published_events_x_v (for example, if you want to use pipe_production_v20201001.published_events_port_visits then use that view table rather than pipe_production_v20201001.published_events_port_visits_v. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the published_events. The _v form of a table is created for this calculation, but is not to be used by anyone.",
+    "text": "anchorages.named_anchorages_vYYYYMMDD - GFW database of ports/anchorages. Includes the name and location of all ports/anchorages as well as summary stats regarding anchorage at the time of creation.\ngfw_research.named_anchorages - View of most the recent version of anchorages.named_anchorages_vYYYYMMDD\npipe_ais_v{PIPE_VERSION}_internal.raw_port_events_* - Port events by seg_id. Each port activity by a vessel (e.g. port entry, port exit) recorded in a single row.\npipe_ais_v{PIPE_VERSION}_published.port_visits - Port visits by vessel. Includes confidence value to filter by port visits of interest. All events in a port visit are included in the events array.\npipe_ais_v{PIPE_VERSION}_published.product_events_port_visit_v2 - Port visits table used in the API and map, limited to confidence &gt;=2. Does not include nested information on individual port events, but does have information on start, intermediate, and end anchorage within the port visit.\npipe_ais_v{PIPE_VERSION}_internal.voyages_c2 - Voyages by vessels with a port visit confidence of &gt;=2. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.\npipe_ais_v{PIPE_VERSION}_published.voyages_c3 - Voyages by vessels with a port visit confidence of &gt;=3. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.\npipe_ais_v{PIPE_VERSION}_published.voyages_c4 - Voyages by vessels with a port visit confidence of 4. Includes the departure time and id for the departure anchorage and the arrival time and id for the destination anchorage.\n\n\nNote Always use the product_events_x view version of a table rather than published_events_x_v (for example, if you want to use pipe_ais_v3_published.product_events_port_visit_v2 then use that view rather than pipe_ais_v3_published.product_events_port_visit_v2_20250611. The _v form of a published events table only exists for internal engineering purposes. When the tables are updated daily we must calculate if any events have changed from yesterday to today and to add those into the product_events. The _v form of a table is created for this calculation, but is not to be used by anyone.",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Anchorages, voyages and port visits</span>"
     ]
@@ -974,7 +964,7 @@
     "href": "Anchorages-and-voyages.html#data-description",
     "title": "13  Anchorages, voyages and port visits",
     "section": "13.2 Data Description",
-    "text": "13.2 Data Description\nThere are three primary forms of port activity data - events, visits, and voyages. They are described here briefly from the rawest to the most processed form.\nNote that all data points involve anchorage_points for visits and to convert to what more broadly would be considered “ports” additional aggregation will be needed, likely by grouping using gfw_research.named_anchorages, specifically the label and iso3 fields.\n\n13.2.1 Port Events:\nPort events data are stored in pipe_production_vYYYYMMDD.proto_raw_port_events_*. There are four different types of port events: PORT_ENTRY, PORT_STOP, PORT_GAP, PORT_EXIT.\nA PORT_ENTRY event occurs when a vessel gets within 3 km of an anchorage point and a PORT_EXIT event occurs when it exceeds 4 km. These points can be considered changes in state, between “AT SEA” and “IN PORT”. The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.\nNested between a PORT_ENTRY and a PORT_EXIT, a vessel may have a PORT_STOP or PORT_GAP or both (these events require a state = “in port”), though these events don’t necessarily occur. A PORT_STOP_BEGIN occurs when the vessel is “in port” and the vessel’s speed drops under 0.2 knots and PORT_STOP_END occurs when the speed climbs over 0.5 (thus PORT_STOPs may a start and an end.\nA GAP_EVENT occurs when a vessel is in “in_port” and has a &gt;4 hour AIS gap. The start (GAP_EVENT_BEGIN) of the gap is recorded at 4 hours after the last message before the gap and the end (GAP_EVENT_END) is recorded at the time of the message that ends the gap.\nAs stated previously, not every PORT_ENTRY/PORT_EXIT pair will exhibit a PORT_GAP or a PORT_STOP. These events may not occur if an AIS signal is not seen in port (the AIS may be turned off such that we cannot detect a PORT_STOP or an AIS gap in port may be less than 4 hours).\n\n\n13.2.2 Port Visits:\nPort visits represents a second dataset built on the Port Events. Port Visits differ in that visits are generated based on the series of port events for a given vessel. This processed dataset is valuable because the events it contains require some evidence that the vessel actually spent time within the port. Vessels can have variable AIS transmission when entering port. For example, a vessel may have a series of PORT_ENTRY/PORT_EXIT events when transiting along a coastline, but never actually visit those ports. However, a PORT_ENTRY/PORT_EXIT event may also indicate a real port visit of interest where perhaps the vessel’s speed didn’t drop enough to trigger a PORT_STOP. The use of confidence levels in Port Visits allows a user to view all possible grouped port events, but also decipher what type of visits they want to eliminate from the analysis. In the past, all Port Visits had a confidence of 4 to eliminate possible false positives.\n\n\n13.2.3 Voyages:\nVoyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two Port Visits (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit confidence &gt;= 2, then you should use the pipe_production_vYYYYMMDD.proto_voyages_c2 table that shows voyages where both the start and end port visit had a confidence of &gt;=2.",
+    "text": "13.2 Data Description\nThere are three primary forms of port activity data - events, visits, and voyages. They are described here briefly from the rawest to the most processed form.\nNote that all data points involve anchorage_points for visits and to convert to what more broadly would be considered “ports” additional aggregation will be needed, likely by grouping using gfw_research.named_anchorages, specifically the label and iso3 fields.\n\n13.2.1 Port Events:\nPort events data are stored in the raw_port_events table. There are four different types of port events: PORT_ENTRY, PORT_STOP, PORT_GAP, PORT_EXIT.\nA PORT_ENTRY event occurs when a vessel gets within 3 km of an anchorage point and a PORT_EXIT event occurs when it exceeds 4 km. These points can be considered changes in state, between “AT SEA” and “IN PORT”. The use of two different limits for entry and exit, prevents a vessel from sitting at a single entry/exit boundary and repeatedly falsely entering and exiting the port.\nNested between a PORT_ENTRY and a PORT_EXIT, a vessel may have a PORT_STOP or PORT_GAP or both (these events require a state = “in port”), though these events don’t necessarily occur. A PORT_STOP_BEGIN occurs when the vessel is “in port” and the vessel’s speed drops under 0.2 knots and PORT_STOP_END occurs when the speed climbs over 0.5 (thus PORT_STOPs may a start and an end.\nA GAP_EVENT occurs when a vessel is in “in_port” and has a &gt;4 hour AIS gap. The start (GAP_EVENT_BEGIN) of the gap is recorded at 4 hours after the last message before the gap and the end (GAP_EVENT_END) is recorded at the time of the message that ends the gap.\nAs stated previously, not every PORT_ENTRY/PORT_EXIT pair will exhibit a PORT_GAP or a PORT_STOP. These events may not occur if an AIS signal is not seen in port (the AIS may be turned off such that we cannot detect a PORT_STOP or an AIS gap in port may be less than 4 hours).\n\n\n13.2.2 Port Visits:\nPort visits represents a second dataset built on the Port Events. Port Visits differ in that visits are generated based on the series of port events for a given vessel. This processed dataset is valuable because the events it contains require some evidence that the vessel actually spent time within the port. Vessels can have variable AIS transmission when entering port. For example, a vessel may have a series of PORT_ENTRY/PORT_EXIT events when transiting along a coastline, but never actually visit those ports. However, a PORT_ENTRY/PORT_EXIT event may also indicate a real port visit of interest where perhaps the vessel’s speed didn’t drop enough to trigger a PORT_STOP. The use of confidence levels in Port Visits allows a user to view all possible grouped port events, but also decipher what type of visits they want to eliminate from the analysis. In the past, all Port Visits had a confidence of 4 to eliminate possible false positives.\n\n\n13.2.3 Voyages:\nVoyages are a further processed dataset as they represent two port visits that bracket a transit or voyage. Voyages connect two Port Visits (as described above), but have no other requirements. Thus voyages can vary significantly in length as well as the time a vessel spends in either the starting or ending port. Note that you should use the voyages table that corresponds to the confidence level you have restricted port visits to. For instance, if you set port visit confidence &gt;= 3, then you should use the voyages_c3 table that shows voyages where both the start and end port visit had a confidence of &gt;=3.",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Anchorages, voyages and port visits</span>"
     ]
@@ -984,7 +974,7 @@
     "href": "Anchorages-and-voyages.html#caveats-known-issues",
     "title": "13  Anchorages, voyages and port visits",
     "section": "13.3 Caveats & Known Issues",
-    "text": "13.3 Caveats & Known Issues\n\n13.3.1 Port Events:\n\nThese events use seg_id as the vessel identifier and may need to be mapped to SSVID for broader use.\n\n\n\n13.3.2 Port Visits:\n\nPort visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. *Generally confidence of 4 will capture most port visits (see notes below)\nLooking at all confidence &gt;=2port visits:\n13.4% - confidence 2\n8.6% - confidence 3\n78.0% - confidence 4\nExamining all confidence &gt;=2 ports visits by carrier/fishing vessels within the last 3 years to Abidjan, Côte d’Ivoire:\n0.02% - confidence 2\n0.05% - confidence 3\n99.3% - confidence 4\nThere are more low confidence visits when looking at all data, because ‘noisy’ vessels dominate the results, but when filtering to a tidier vessel list there is considerably less ‘noise’. However, even small percentages can provide key insight into voyage history.\nThese events use vessel_id as vessel identifier and may need to be mapped to SSVID for broader use.\n\n\n\n13.3.3 Voyages\n\nThese events use port visits and have similar caveats.\n\nThere are three tables of voyages based on a minimum confidence value for the start or end port visits of a voyage.\nThese tables require a minimum port visit confidence of 2",
+    "text": "13.3 Caveats & Known Issues\n\n13.3.1 Port Events:\n\nThese events use seg_id as the vessel identifier and may need to be mapped to vessel_id for broader use.\n\n\n\n13.3.2 Port Visits:\n\nPort visits with a confidence of 1 may identify port entry/exit for vessels transiting near anchorages, without stopping, and thus are largely false positives where a vessel transits nearby an anchorage. Therefore, it is recommended that unless you are in a very exploratory stage, you should set confidence to at least 2. *Generally confidence of 4 will capture most port visits (see notes below)\nLooking at all confidence &gt;=2port visits:\n13.4% - confidence 2\n8.6% - confidence 3\n78.0% - confidence 4\nExamining all confidence &gt;=2 ports visits by carrier/fishing vessels within the last 3 years to Abidjan, Côte d’Ivoire:\n0.02% - confidence 2\n0.05% - confidence 3\n99.3% - confidence 4\nThere are more low confidence visits when looking at all data, because ‘noisy’ vessels dominate the results, but when filtering to a tidier vessel list there is considerably less ‘noise’. However, even small percentages can provide key insight into voyage history.\nThese events use vessel_id as vessel identifier and may need to be mapped to SSVID for broader use by using for example PVIS (product_vessel_info_summary).\nPort visits are regenerated daily, so a vessel’s historical port visits may change as new data is added, the way the assignment of seg_id to vessel_id changes over time, or noise filters mutate (e.g. from overlapping_and_short = FALSE to overlapping_and_short = TRUE or vice versa). This means that port visits may change over time so it is recommended to use the most recent version of the port visits table. This happens particularly during the first few days or even weeks of a new port visit and much more often for lower confidence port visits than confidence 4 port visits (which by definition have ended).\n\n\n\n13.3.3 Voyages\n\nThese events use port visits and have similar caveats.\n\nThere are three tables of voyages based on a minimum confidence value for the start or end port visits of a voyage.\nThese tables require a minimum port visit confidence of 2",
     "crumbs": [
       "<span class='chapter-number'>13</span>  <span class='chapter-title'>Anchorages, voyages and port visits</span>"
     ]
@@ -1244,7 +1234,17 @@
     "href": "Areas-EEZ-Boundaries.html",
     "title": "17  EEZ Boundaries",
     "section": "",
-    "text": "Owner: Hannah Linder Last edited time: 1 de marzo de 2024 13:30 Created time: 1 de marzo de 2024 13:13\n\n17.0.1 Key Attributes\n\n\n\nLayer name\neez\n\n\n\n\nUnique id field\nMRGID_EEZ\n\n\nShort description\nMaritime exclusive economic zones (200 nautical mile boundary) for all coastal nations.\n\n\nSource\nhttps://www.marineregions.org/downloads.php\n\n\nCitation\nFlanders Marine Institute (2019). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 11. Available online at https://www.marineregions.org/. https://doi.org/10.14284/386\n\n\nAttribution\nCopyright Flanders Marine Institute (2020) - marineregions.org.\n\n\nLast updated\n2020-03-17\n\n\nLicense\nCC-BY\n\n\n\n\n\n17.0.2 Description\nWe use EEZ boundaries that are freely available from Marine Regions\nNote that we use the product Marine and land zones: the union of world country boundaries and EEZ’s version 3 2020-03-17. This dataset combines the boundaries of the world countries and the Exclusive Economic Zones of the world. It was created by combining the ESRI world country database and the EEZ V11 dataset. [Known Issues]\n\n\n17.0.3 Modifications to Original\nThe original file from Marine Regions contains all countries, even those that have no coast, and therefore no EEZ. It also contains the entire area of each country. This creates some problems for us because EEZ-based activity picks up in-shore activity in rivers, and this is confusing when we expect things to be limited to just the EEZ marine area. So what we do is clip the final polygons in the layer to include only a 0.1 degree (about 10km) buffer in from the coastline for each country. Countries with no coastline are filtered out. We include the buffer because if we only include the EEZ polygon, the lack of precision at the coastline causes some activity that is in the marine area to be excluded.\n\nThe buffering is done using a land mask from the Natural Earth 10m Land data set. The file used for this is in GCS and the script that does the buffering, clipping and filtering is in github https://github.com/GlobalFishingWatch/pipe-regions/blob/master/layer-preprocessing/eez-land-buffered.sh\n\n\n17.0.4 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/eez/original/EEZ_land_union_v3_202003.zip\nLand Mask: gs://pipe-regions-layers-us-central1/eez/original/ne_10m_land.zip\nNormalized, buffered and clipped: gs://pipe-regions-layers-us-central1/eez/EEZ_land_union_v3_202003_buffered.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.EEZ_land_union_v3_202003_buffered\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.EEZ_land_union_v3_202003_buffered_marine_s2_10",
+    "text": "17.0.1 Key Attributes",
+    "crumbs": [
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>EEZ Boundaries</span>"
+    ]
+  },
+  {
+    "objectID": "Areas-EEZ-Boundaries.html#old-versions",
+    "href": "Areas-EEZ-Boundaries.html#old-versions",
+    "title": "17  EEZ Boundaries",
+    "section": "17.1 Old versions",
+    "text": "17.1 Old versions\nNote that we use the product Marine and land zones: the union of world country boundaries and EEZ’s version 3 2020-03-17. This dataset combines the boundaries of the world countries and the Exclusive Economic Zones of the world. It was created by combining the ESRI world country database and the EEZ V11 dataset. [Known Issues]\nCitation: Flanders Marine Institute (2019). Maritime Boundaries Geodatabase: Maritime Boundaries and Exclusive Economic Zones (200NM), version 11. Available online at https://www.marineregions.org/. https://doi.org/10.14284/386\n\n17.1.1 Modifications to Original\nThe original file from Marine Regions contains all countries, even those that have no coast, and therefore no EEZ. It also contains the entire area of each country. This creates some problems for us because EEZ-based activity picks up in-shore activity in rivers, and this is confusing when we expect things to be limited to just the EEZ marine area. So what we do is clip the final polygons in the layer to include only a 0.1 degree (about 10km) buffer in from the coastline for each country. Countries with no coastline are filtered out. We include the buffer because if we only include the EEZ polygon, the lack of precision at the coastline causes some activity that is in the marine area to be excluded. The buffering is done using a land mask from the Natural Earth 10m Land data set. The file used for this is in GCS and the script that does the buffering, clipping and filtering is in github https://github.com/GlobalFishingWatch/pipe-regions/blob/master/layer-preprocessing/eez-land-buffered.sh\n\n\n17.1.2 Old Version Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/eez/original/EEZ_land_union_v3_202003.zip\nLand Mask: gs://pipe-regions-layers-us-central1/eez/original/ne_10m_land.zip\nNormalized, buffered and clipped: gs://pipe-regions-layers-us-central1/eez/EEZ_land_union_v3_202003_buffered.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.EEZ_land_union_v3_202003_buffered\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.EEZ_land_union_v3_202003_buffered_marine_s2_10",
     "crumbs": [
       "<span class='chapter-number'>17</span>  <span class='chapter-title'>EEZ Boundaries</span>"
     ]
@@ -1254,7 +1254,7 @@
     "href": "Areas-12-NM-Boundary.html",
     "title": "18  12 NM Boundary",
     "section": "",
-    "text": "Owner: Hannah Linder Last edited time: 1 de marzo de 2024 13:38 Created time: 1 de marzo de 2024 13:02\nWorld 12 Nautical Miles Zone (Territorial Seas)\n\n18.0.1 Key Attributes\n\n\n\nLayer name\neez12nm\n\n\n\n\nUnique id field\nMRGID_EEZ\n\n\nShort description\nWorld 12 Nautical Miles Zone (Territorial Seas) v3\n\n\nSource\nhttps://www.marineregions.org/downloads.php\n\n\nCitation\nFlanders Marine Institute (2019). Maritime Boundaries Geodatabase: Territorial Seas (12NM), version 3. Available online at https://www.marineregions.org/. https://doi.org/10.14284/387\n\n\nAttribution\nCopyright Flanders Marine Institute - marineregions.org\n\n\nLast updated\n2019-11-18\n\n\nLicense\nCC-BY\n\n\n\n\n\n18.0.2 Description\n12 Nautical Mile boundary that is the limit of a nation’s territorial waters. From Marine Regions\n[Known Issues]\n\n\n18.0.3 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/eez_12nm/original/World_12NM_v3_20191118.zip\nNormalized: gs://pipe-regions-layers-us-central1/eez_12nm/eez_12nm_v3.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.eez_12nm_v3\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.eez_12nm_v3_s2_10",
+    "text": "Owner: Hannah Linder Last edited time: 1 de marzo de 2024 13:38 Created time: 1 de marzo de 2024 13:02\nWorld 12 Nautical Miles Zone (Territorial Seas)\n\n18.0.1 Key Attributes\n\n\n\nLayer name\neez12nm\n\n\n\n\nUnique id field\nMRGID_EEZ\n\n\nShort description\nWorld 12 Nautical Miles Zone (Territorial Seas) v3\n\n\nSource\nhttps://www.marineregions.org/downloads.php\n\n\nCitation\nFlanders Marine Institute (2024). Union of the ESRI Country shapefile and the Exclusive Economic Zones (version 4). Available online at https://www.marineregions.org/. https://doi.org/10.14284/698. Consulted on 2025-05-26.\n\n\nAttribution\nCopyright Flanders Marine Institute - marineregions.org\n\n\nLast updated\n2023-10-25\n\n\nLicense\nCC-BY\n\n\n\n\n\n18.0.2 Description\n12 Nautical Mile boundary that is the limit of a nation’s territorial waters. From Marine Regions\n[Known Issues]\n\n\n18.0.3 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/eez_12nm/original/World_12NM_v4_20231025.zip\nNormalized: gs://pipe-regions-layers-us-central1/eez_12nm/eez_12nm_v4.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.eez_12nm_v4\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.eez_12nm_v4_S2_10",
     "crumbs": [
       "<span class='chapter-number'>18</span>  <span class='chapter-title'>12 NM Boundary</span>"
     ]
@@ -1284,7 +1284,17 @@
     "href": "Areas-High-Seas-Pockets.html",
     "title": "21  High Seas Pockets",
     "section": "",
-    "text": "Owner: Hannah Linder Last edited time: 11 de febrero de 2025 19:16 Created time: 1 de marzo de 2024 13:14\nWorld High Seas (Areas outside EEZs), Including only the small pockets of isolated, non-contiguous high seas area\n\n21.0.1 Key Attributes\n\n\n\nLayer name\nhsp\n\n\n\n\nUnique id field\nname\n\n\nShort description\nHigh Seas Pockets\n\n\nSource\nExceprted from https://www.marineregions.org/downloads.php\n\n\nCitation\nFlanders Marine Institute (2020). Maritime Boundaries Geodatabase: High Seas, version 1. Available online at https://www.marineregions.org/ https://doi.org/10.14284/418.\n\n\nAttribution\nCopyright Flanders Marine Institute - http://marineregions.org\n\n\nLast updated\n2020-08-26 (marine regions), 2022-12-16 (GFW)\n\n\nLicense\nCC-BY\n\n\n\n\n\n21.0.2 Description\nThe regions of the high seas excluding the major contiguous area of high seas and the arctic ocean.\n\nThis data set is derived from the Marine Regions high-seas data set by extracting just the polygons corresponding to the 15 high seas pockets that GFW has labeled from HSP-1 to HSP-15. Note that HSP-15 is split across the anti-meridian, so it appears in two pieces that have the same label. Naming of the pockets is consistent with the naming that WCPFC uses to identify HSP 1-4. The rest of the pockets are enumerated in arbitrary order by GFW.\nThe script used to create the layer is here: https://github.com/GlobalFishingWatch/pipe-regions/blob/PIPELINE-1049/layer-preprocessing/high-seas-pockets.sh\n\n\n21.0.3 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/high_seas/original/World_High_Seas_v1_20200826.zip\nGFW Labels: gs://pipe-regions-layers-us-central1/hsp/original/hsp_centroids.shp.zip\nNormalized: gs://pipe-regions-layers-us-central1/hsp/high_seas_pockets_v20221216.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.high_seas_pockets_v20221216\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.high_seas_pockets_v20221216_s2_10",
+    "text": "21.0.1 Key Attributes",
+    "crumbs": [
+      "<span class='chapter-number'>21</span>  <span class='chapter-title'>High Seas Pockets</span>"
+    ]
+  },
+  {
+    "objectID": "Areas-High-Seas-Pockets.html#old-versions",
+    "href": "Areas-High-Seas-Pockets.html#old-versions",
+    "title": "21  High Seas Pockets",
+    "section": "21.1 Old Versions",
+    "text": "21.1 Old Versions\n\n21.1.1 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/high_seas/original/World_High_Seas_v1_20200826.zip\nGFW Labels: gs://pipe-regions-layers-us-central1/hsp/original/hsp_centroids.shp.zip\nNormalized: gs://pipe-regions-layers-us-central1/hsp/high_seas_pockets_v20221216.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.high_seas_pockets_v20221216\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.high_seas_pockets_v20221216_s2_10",
     "crumbs": [
       "<span class='chapter-number'>21</span>  <span class='chapter-title'>High Seas Pockets</span>"
     ]
@@ -1294,7 +1304,17 @@
     "href": "Areas-High-Seas.html",
     "title": "22  High Seas",
     "section": "",
-    "text": "Owner: Hannah Linder Last edited time: 1 de marzo de 2024 13:39 Created time: 1 de marzo de 2024 13:09\nWorld High Seas (Areas outside EEZs)\n\n22.0.1 Key Attributes\n\n\n\nLayer name\nhigh_seas\n\n\n\n\nUnique id field\nmrgid\n\n\nShort description\nWorld High Seas v1\n\n\nSource\nhttps://www.marineregions.org/downloads.php\n\n\nCitation\nFlanders Marine Institute (2020). Maritime Boundaries Geodatabase: High Seas, version 1. Available online at https://www.marineregions.org/ https://doi.org/10.14284/418.\n\n\nAttribution\nCopyright Flanders Marine Institute - http://marineregions.org\n\n\nLast updated\n2020-08-26\n\n\nLicense\nCC-BY\n\n\n\n\n\n22.0.2 Description\nThe area of the seas that is not included in the exclusive economic zone, in the territorial sea or in the internal waters of a State, or in the archipelagic waters of an archipelagic State.\nFrom Marine Regions\n\n\n\n22.0.3 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/high_seas/original/World_High_Seas_v1_20200826.zip\nNormalized: gs://pipe-regions-layers-us-central1/high_seas/High_Seas_v1.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.High_Seas_v1\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.High_Seas_v1_s2_10",
+    "text": "22.0.1 Key Attributes",
+    "crumbs": [
+      "<span class='chapter-number'>22</span>  <span class='chapter-title'>High Seas</span>"
+    ]
+  },
+  {
+    "objectID": "Areas-High-Seas.html#data-access-1",
+    "href": "Areas-High-Seas.html#data-access-1",
+    "title": "22  High Seas",
+    "section": "22.2 Data access",
+    "text": "22.2 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/high_seas/original/World_High_Seas_v1_20200826.zip\nNormalized: gs://pipe-regions-layers-us-central1/high_seas/High_Seas_v1.shp.zip\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.High_Seas_v1\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.High_Seas_v1_s2_10",
     "crumbs": [
       "<span class='chapter-number'>22</span>  <span class='chapter-title'>High Seas</span>"
     ]
@@ -1304,7 +1324,7 @@
     "href": "Areas-Protected-Seas.html",
     "title": "23  Protected Seas",
     "section": "",
-    "text": "Owner: Hannah Linder Last edited time: 1 de marzo de 2024 13:38 Created time: 1 de marzo de 2024 13:07\nProtected Seas\n\n23.0.1 Key Attributes\n\n\n\nLayer name\nprotectedseas\n\n\n\n\nUnique id field\nsite_id\n\n\nShort description\nProtected Seas\n\n\nSource\nhttps://map.navigatormap.org/resources/downloads/NavigatorGlobal.2023.5.1.json\n\n\nCitation\n\n\n\nAttribution\n\n\n\nLast updated\n2023-05-03\n\n\nLicense\n\n\n\n\n\n\n23.0.2 Description\n\nContains the regions with category IUCN MPAs\n\n\n23.0.3 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/protectedseas/original/NavigatorGlobal_May2023.json\nShapefile: gs://pipe-regions-layers-us-central1/protectedseas/NavigatorGlobal_May2023.shp.zip`\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.NavigatorGlobal_May2023\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.NavigatorGlobal_May2023_S2_10",
+    "text": "Owner: Hannah Linder Last edited time: 1 de marzo de 2024 13:38 Created time: 1 de marzo de 2024 13:07\nProtected Seas\n\n23.0.1 Key Attributes\n\n\n\nLayer name\nprotectedseas\n\n\n\n\nUnique id field\nsite_id\n\n\nShort description\nProtected Seas\n\n\nSource\nhttps://map.navigatormap.org/resources/downloads/NavigatorGlobal_030325.json\n\n\nCitation\n\n\n\nAttribution\n\n\n\nLast updated\n2025-03-03\n\n\nLicense\n\n\n\n\n\n\n23.0.2 Description\n\nContains the regions with category IUCN MPAs\n\n\n23.0.3 Data access\nGCS\n\nOriginal: gs://pipe-regions-layers-us-central1/protectedseas/original/NavigatorGlobal_030325.json\nShapefile: gs://pipe-regions-layers-us-central1/protectedseas/NavigatorGlobal_030325.shp.zip`\n\nBigquery\n\nNormalized: world-fishing-827.pipe_regions_layers.NavigatorGlobal_030325\nProcessed for S2 lookup:: world-fishing-827.pipe_regions_layers.NavigatorGlobal_030325_S2_10",
     "crumbs": [
       "<span class='chapter-number'>23</span>  <span class='chapter-title'>Protected Seas</span>"
     ]
@@ -1492,31 +1512,31 @@
   {
     "objectID": "Pipeline.html",
     "href": "Pipeline.html",
-    "title": "31  GFW Pipelines",
+    "title": "30  GFW Pipelines",
     "section": "",
-    "text": "31.1 AIS pipeline\nThe AIS pipeline is GFW’s primary pipeline and includes the following processes:\nAIS data tables and AIS event tables produced by a given version of the AIS pipeline are stored within a BigQuery dataset named pipe_production_vYYYYMMDD, where the YYYYMMDD refers to the date the pipeline was created. Additionally, AIS research tables, which are designed for research and analysis, are stored in gfw_research, with each table including the AIS pipeline version (YYYYMMDD) in its name (e.g. pipe_vYYYYMMDD).",
+    "text": "30.1 AIS pipeline\nThe AIS pipeline is GFW’s primary pipeline and includes the following processes:\nAIS data tables and AIS event tables produced by a given version of the AIS pipeline are stored within a BigQuery dataset named pipe_production_vYYYYMMDD, where the YYYYMMDD refers to the date the pipeline was created. Additionally, AIS research tables, which are designed for research and analysis, are stored in gfw_research, with each table including the AIS pipeline version (YYYYMMDD) in its name (e.g. pipe_vYYYYMMDD).",
     "crumbs": [
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>GFW Pipelines</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>GFW Pipelines</span>"
     ]
   },
   {
     "objectID": "Pipeline.html#ais-pipeline",
     "href": "Pipeline.html#ais-pipeline",
-    "title": "31  GFW Pipelines",
+    "title": "30  GFW Pipelines",
     "section": "",
-    "text": "Normalize and combine raw AIS data from Orbcomm and Spire\nRemove noise and group positions into segments (e.g. the “segmenter”)\nPredict which positions are likely fishing positions\nIdentify various event types (e.g. transshipment, port visits, fishing, AIS gaps, etc.)\n\n\n\n31.1.1 AIS data tables\nAIS data tables are tables produced by the AIS pipeline that contain a version or summary of the entire AIS dataset. The first type of AIS data tables are those that contain a complete copy of the AIS data output during various steps in the pipeline:\n\nposition_messages_YYYYMMDD\nmessages_segmented_YYYYMMDD\nspatial_measures_YYYYMMDD\nfeatures_YYYYMMDD\nfishing_score_YYYYMMDD\nmessages_scored_YYYYMMDD\n\nFor example, the position_messages_YYYYMMDD table is output following data normalization, and the messages_segmented_YYYYMMDD table is the output of the segmenter stage of the AIS pipeline. The final output is the messages_scored_ table, which contains all AIS position messages and their fishing score.\nThe other group of AIS data tables include tables that summarize the complete AIS data by segment or vessel. These tables may be further organized into daily date sharded tables and overall tables. Daily summary tables are considered “static”, meaning their data is fixed, while overall summary tables are considered dynamic because their data is subject to change over time as new data are incorporated.\n\nsegment_vessel_daily_YYYYMMDD and segment_vessel\nsegment_info\nsegment_identity_daily_YYYYMMDD\nvessel_info\n\n\n31.1.1.1 vessel_id\nA key feature of the AIS data tables is vessel_id, which is intended as a unique ID for an identity in the AIS data and is used to link AIS positions to an identity and AIS events…[EXPAND].\n\n\n\n31.1.2 AIS research tables\nBecause AIS data tables, specifically messages_scored_, contain all AIS positions, they are extremely large tables and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. Therefore, the GFW AIS pipeline produces a series of “research tables” designed specifically to be more efficient for research/analysis. These tables start with the prefix research_.\nKey details of the research tables include the following: + AIS positions in the main research table (research_messages) are thinned to one position per minute per segment + Every AIS position is assigned an amount of time (hours), which is equal to the time since the previous position in the segment + There are two different fishing score variables - nnet_score and night_loitering. Use night_loitering for squid_jiggers and nnet_score for all other fishing classes.\n\n\n31.1.3 AIS event tables\nLastly, the AIS pipeline includes a series of algorithms that identify certain vessel behaviors, referred to as events: + Encounters + Loitering + Port visits and voyages + Fishing events",
+    "text": "Normalize and combine raw AIS data from Orbcomm and Spire\nRemove noise and group positions into segments (e.g. the “segmenter”)\nPredict which positions are likely fishing positions\nIdentify various event types (e.g. transshipment, port visits, fishing, AIS gaps, etc.)\n\n\n\n30.1.1 AIS data tables\nAIS data tables are tables produced by the AIS pipeline that contain a version or summary of the entire AIS dataset. The first type of AIS data tables are those that contain a complete copy of the AIS data output during various steps in the pipeline:\n\nposition_messages_YYYYMMDD\nmessages_segmented_YYYYMMDD\nspatial_measures_YYYYMMDD\nfeatures_YYYYMMDD\nfishing_score_YYYYMMDD\nmessages_scored_YYYYMMDD\n\nFor example, the position_messages_YYYYMMDD table is output following data normalization, and the messages_segmented_YYYYMMDD table is the output of the segmenter stage of the AIS pipeline. The final output is the messages_scored_ table, which contains all AIS position messages and their fishing score.\nThe other group of AIS data tables include tables that summarize the complete AIS data by segment or vessel. These tables may be further organized into daily date sharded tables and overall tables. Daily summary tables are considered “static”, meaning their data is fixed, while overall summary tables are considered dynamic because their data is subject to change over time as new data are incorporated.\n\nsegment_vessel_daily_YYYYMMDD and segment_vessel\nsegment_info\nsegment_identity_daily_YYYYMMDD\nvessel_info\n\n\n30.1.1.1 vessel_id\nA key feature of the AIS data tables is vessel_id, which is intended as a unique ID for an identity in the AIS data and is used to link AIS positions to an identity and AIS events…[EXPAND].\n\n\n\n30.1.2 AIS research tables\nBecause AIS data tables, specifically messages_scored_, contain all AIS positions, they are extremely large tables and expensive to query. However, AIS messages are often broadcast every few seconds, which is much finer temporal resolution than needed for most research and analysis work. Therefore, the GFW AIS pipeline produces a series of “research tables” designed specifically to be more efficient for research/analysis. These tables start with the prefix research_.\nKey details of the research tables include the following: + AIS positions in the main research table (research_messages) are thinned to one position per minute per segment + Every AIS position is assigned an amount of time (hours), which is equal to the time since the previous position in the segment + There are two different fishing score variables - nnet_score and night_loitering. Use night_loitering for squid_jiggers and nnet_score for all other fishing classes.\n\n\n30.1.3 AIS event tables\nLastly, the AIS pipeline includes a series of algorithms that identify certain vessel behaviors, referred to as events: + Encounters + Loitering + Port visits and voyages + Fishing events",
     "crumbs": [
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>GFW Pipelines</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>GFW Pipelines</span>"
     ]
   },
   {
     "objectID": "Pipeline.html#vms-pipeline",
     "href": "Pipeline.html#vms-pipeline",
-    "title": "31  GFW Pipelines",
-    "section": "31.2 VMS pipeline",
-    "text": "31.2 VMS pipeline\nGFW also creates individual VMS pipelines to process national VMS data. The output tables of the VMS pipelines mirror the data and event tables from the AIS pipeline and are stored in datasets named pipe_[country]_production_vYYYYMMDD. The VMS pipeline does not (yet) output VMS research tables.",
+    "title": "30  GFW Pipelines",
+    "section": "30.2 VMS pipeline",
+    "text": "30.2 VMS pipeline\nGFW also creates individual VMS pipelines to process national VMS data. The output tables of the VMS pipelines mirror the data and event tables from the AIS pipeline and are stored in datasets named pipe_[country]_production_vYYYYMMDD. The VMS pipeline does not (yet) output VMS research tables.",
     "crumbs": [
-      "<span class='chapter-number'>31</span>  <span class='chapter-title'>GFW Pipelines</span>"
+      "<span class='chapter-number'>30</span>  <span class='chapter-title'>GFW Pipelines</span>"
     ]
   },
   {
@@ -1524,7 +1544,7 @@
     "href": "Wiki-Documentation-Standards.html",
     "title": "31  Wiki Page Requirements",
     "section": "",
-    "text": "Each unique wiki page describing a GFW dataset must include the below sections. For long sections, the use of sub-headers within is encouraged to improve organization.\n\nData Overview - Short paragraph providing a high level description of the dataset\n\nThis section should include the Owner name - the GFW staff member responsible for the relevant dataset (see Data Ownership Requirements)\n\nKey Tables\n\nCurrent output table(s)\nPrevious output table version (at least one version previous with any important notes on pipeline version or other table versioning that fed into the table)\nPrecursor tables (when appropriate) - These are intermediate tables used in the production of the output tables\n\nData Description - Detailed but concise description of the data and methods. Should be written to an analyst or advanced user but someone totally unfamiliar with the dataset. However, in-depth explanation should be expanded upon in training slides\n\nDefinition of output table - what is it, and what is it used for\nExplanation of any restrictions on the data (e.g., if there are confidence values involved, specific vessel types, etc.)\nKey fields - Specific data fields in the key tables that are particularly important (e.g. on_fishing_list_best, nnet_score, good_seg, etc.)\n\nCaveats and Known Issues - Descriptions of any important caveats, limitations, or known issues (e.g. minor bugs) to be aware of when using the data.\nExample Queries - Bulleted list of links to .sql files stored in the queries/examples/current folder of this same GitHub repo\nLinks\n\nTraining slides / loom videos / other training material on the subject (for which the owner is responsible to maintain)\nGitHub repo for data source code (if pertinent)\nLinks to related wiki pages\n\nUpdates - Dated list of updates to the key table(s)\n\n\n32 Data Ownership Requirements\n\nAny changes to key tables must be reflected in the GitHub wiki.\nThe owner must ensure the that key tables all have informative schemas and descriptions\n\nInclude all source tables in the table description. See pipe_production_v20201001.published_events_port_visits_ for an example\nThis process should be automated whenever possible\n\nOwner must update current version in the wiki page that lists current versions of primary datasets\nOwner is responsible for maintaining up-to-date example queries and training slides for the dataset",
+    "text": "Each unique wiki page describing a GFW dataset must include the below sections. For long sections, the use of sub-headers within is encouraged to improve organization.\n\nData Overview - Short paragraph providing a high level description of the dataset\n\nThis section should include the Owner name - the GFW staff member responsible for the relevant dataset (see Data Ownership Requirements)\n\nKey Tables\n\nCurrent output table(s) and version\nTo understand what table is related to this one in the previous pipeline version, please refer to the specific version mapping page\nIn order to undertand which are the Precursor tables (when appropriate), meaning the intermediate tables used in the production of the output tables, pleae refer to Lineage tab in BQ, more information here.\n\nData Description - Detailed but concise description of the data and methods. Should be written to an analyst or advanced user but someone totally unfamiliar with the dataset. This documentation should be also in BQ, if you can’t find that this needs to be reported to the Data team.\n\nDefinition of output table - what is it, and what is it used for\nExplanation of any restrictions on the data (e.g., if there are confidence values involved, specific vessel types, etc.)\nKey fields - Specific data fields in the key tables that are particularly important (e.g. on_fishing_list_best, nnet_score, good_seg, etc.)\n\nCaveats and Known Issues - Descriptions of any important caveats, limitations, or known issues (e.g. minor bugs) to be aware of when using the data.\nExample Queries - Bulleted list of links to .sql files stored in the queries/examples/current folder of this same GitHub repo\nLinks\n\nTraining slides / loom videos / other training material on the subject (for which the owner is responsible to maintain)\nGitHub repo for data source code (if pertinent)\nLinks to related wiki pages\n\nUpdates - Dated list of updates to the key table(s).\nDifference with data in API, Data Download Portal or Map - Add links or describe what is the difference with the data in any of the public products. For example for Sentinel 2, we can link to the future DDP page.\n\n\n32 Data Ownership Requirements\n\nAny changes to key tables must be reflected in the GitHub wiki.\nThe owner must ensure the that key tables all have informative schemas and descriptions\n\nInclude all source tables in the table description. See pipe_production_v20201001.published_events_port_visits_ for an example\nThis process should be automated whenever possible\n\nOwner must update current version in the wiki page that lists current versions of primary datasets\nOwner is responsible for maintaining up-to-date example queries for the dataset",
     "crumbs": [
       "<span class='chapter-number'>31</span>  <span class='chapter-title'>Wiki Page Requirements</span>"
     ]
@@ -1604,7 +1624,7 @@
     "href": "Data-products-page-TEMPLATE.html",
     "title": "33  Data products page template",
     "section": "",
-    "text": "33.1 Key Tables\nNEW version + NEW TABLE\nCurrent version + CURRENT TABLE\nPrevious version + PREVIOUS TABLE",
+    "text": "33.1 Key Tables\nCurrent version + CURRENT TABLE\nPrevious version + For previous version, refer to the mapping page.",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1614,7 +1634,7 @@
     "href": "Data-products-page-TEMPLATE.html#source-tables",
     "title": "33  Data products page template",
     "section": "33.2 Source Tables",
-    "text": "33.2 Source Tables\n\ntable name - context on table and how it is a source table for the Key Table\ntable name - context on table and how it is a source table for the Key Table",
+    "text": "33.2 Source Tables\nIn order to undertand whatare the sources tables, we recommend you check directly in Lineage tab in Big Query , more information here. If that is not giving enough information, we can clarify manually which are the tables. + table name - context on table and how it is a source table for the Key Table + table name - context on table and how it is a source table for the Key Table",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1624,7 +1644,27 @@
     "href": "Data-products-page-TEMPLATE.html#data-description",
     "title": "33  Data products page template",
     "section": "33.3 Data Description",
-    "text": "33.3 Data Description\n\nDescription of data",
+    "text": "33.3 Data Description\n\nDescription of data. Please make sure to include what it includes, Why is this dataset important? How can it further our mission and work?",
+    "crumbs": [
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
+    ]
+  },
+  {
+    "objectID": "Data-products-page-TEMPLATE.html#metadata",
+    "href": "Data-products-page-TEMPLATE.html#metadata",
+    "title": "33  Data products page template",
+    "section": "33.4 Metadata",
+    "text": "33.4 Metadata\n\nA summary of the source(s) of the data, including spatial resolution and satellite frequency etc.\nSensor: to be completed\nLifetime: to be completed\nWavelength/Frequency: to be completed\nPolarisation: to be completed\nResolution: to be completed\nFrame Size: to be completed\nRepeat Cycle: to be completed",
+    "crumbs": [
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
+    ]
+  },
+  {
+    "objectID": "Data-products-page-TEMPLATE.html#use-cases",
+    "href": "Data-products-page-TEMPLATE.html#use-cases",
+    "title": "33  Data products page template",
+    "section": "33.5 Use Cases",
+    "text": "33.5 Use Cases\n\nDescribe some scenarios where this data could be applied.\nhow the date can be used with other data that we have\nwhat analysis can be conducted using the data",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1633,8 +1673,28 @@
     "objectID": "Data-products-page-TEMPLATE.html#caveats-and-known-issues",
     "href": "Data-products-page-TEMPLATE.html#caveats-and-known-issues",
     "title": "33  Data products page template",
-    "section": "33.4 Caveats and Known Issues",
-    "text": "33.4 Caveats and Known Issues\n\nKnown issues",
+    "section": "33.6 Caveats and Known Issues",
+    "text": "33.6 Caveats and Known Issues\n\nKnown issues as detailed as possible following a format: Title and description for each caveat.",
+    "crumbs": [
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
+    ]
+  },
+  {
+    "objectID": "Data-products-page-TEMPLATE.html#methodology",
+    "href": "Data-products-page-TEMPLATE.html#methodology",
+    "title": "33  Data products page template",
+    "section": "33.7 Methodology",
+    "text": "33.7 Methodology\n\nA step-by-step narrative explaining how the data is processed",
+    "crumbs": [
+      "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
+    ]
+  },
+  {
+    "objectID": "Data-products-page-TEMPLATE.html#code",
+    "href": "Data-products-page-TEMPLATE.html#code",
+    "title": "33  Data products page template",
+    "section": "33.8 Code",
+    "text": "33.8 Code\nLink to repo code. See an example here: https://globalfishingwatch.org/data-download/datasets/public-welch-et-al-disabling-events:v20221102",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1643,8 +1703,8 @@
     "objectID": "Data-products-page-TEMPLATE.html#example-queries",
     "href": "Data-products-page-TEMPLATE.html#example-queries",
     "title": "33  Data products page template",
-    "section": "33.5 Example Queries",
-    "text": "33.5 Example Queries\n\nLink or copy and paste example queries",
+    "section": "38.1 Example Queries",
+    "text": "38.1 Example Queries\n\nLink or copy and paste example queries",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1653,8 +1713,8 @@
     "objectID": "Data-products-page-TEMPLATE.html#links",
     "href": "Data-products-page-TEMPLATE.html#links",
     "title": "33  Data products page template",
-    "section": "33.6 Links",
-    "text": "33.6 Links\n\nList of relevant links with context on use of link",
+    "section": "38.2 Links",
+    "text": "38.2 Links\n\nList of relevant links with context on use of link",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1663,8 +1723,8 @@
     "objectID": "Data-products-page-TEMPLATE.html#updates",
     "href": "Data-products-page-TEMPLATE.html#updates",
     "title": "33  Data products page template",
-    "section": "33.7 Updates",
-    "text": "33.7 Updates\nLast updated on ENTER DATE\n\n[DATE] The table name update update update.",
+    "section": "38.3 Updates",
+    "text": "38.3 Updates\nLast updated on ENTER DATE\n\n[DATE] The table name update update update.",
     "crumbs": [
       "<span class='chapter-number'>33</span>  <span class='chapter-title'>Data products page template</span>"
     ]
@@ -1680,33 +1740,43 @@
     ]
   },
   {
-    "objectID": "Home.html",
-    "href": "Home.html",
-    "title": "2  GFW Data Documentation",
-    "section": "",
-    "text": "2.1 Data Updates\nCheck the Data updates for new changes to GFW data.\nSee the BigQuery Table Reference for checking the latest version of key tables to use.",
+    "objectID": "BigQuery-datasets.html#staging-process",
+    "href": "BigQuery-datasets.html#staging-process",
+    "title": "(PART) Big Query",
+    "section": "Staging Process",
+    "text": "Staging Process\nDescription: In an effort to delineate new versions of datasets with those that are used in production we are currently developing a new staging process. **\nDetails: The staging process includes the following:\n\nProof-of-Concept data:\n\n\nInternal only and selected research partners\nOne-off or manually updated tables\nManual QA\nStored in scratch, project specific, or gfw_research datasets\n\n\nPrototype data:\n\n\nIntermediate and Prototype tables\nAutomated data runs (updated daily)\nSemi-automated QA\nPrototype tables should use convention of proto_\nCan be used by researchers and analysts but proceed knowing that although QA’d all bugs may not have been solved\nBasic documentation will exist for these datasets\nStored in pipeline datasets (e.g. pipe_ais_v3_published) with the proto_ prefix.\n\n\nProduction data:\n\n\nProduction level ready datasets\nPublic/research partners\nAutomated_QA\nWhen proto_ tables have been used and QA’d for a given period of time, have finalized documentation, and automated QA metrics they are considered production data and the proto_ prefix is dropped.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+      "(PART) Big Query"
     ]
   },
   {
-    "objectID": "Home.html#bigquery-key-concepts",
-    "href": "Home.html#bigquery-key-concepts",
-    "title": "2  GFW Data Documentation",
-    "section": "2.2 BigQuery Key Concepts",
-    "text": "2.2 BigQuery Key Concepts\nRead the BigQuery Key Concepts page for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.",
+    "objectID": "BigQuery-datasets.html#ais-pipe-3",
+    "href": "BigQuery-datasets.html#ais-pipe-3",
+    "title": "(PART) Big Query",
+    "section": "AIS PIPE-3",
+    "text": "AIS PIPE-3\nThe dataset structure was entirely revamped in PIPE-3 and simplified by generating all AIS tables in two datasets.\n\npipe_ais_v3_internal\n\nDescription: This dataset contains all intermediate tables that are generated by the AIS pipeline. These tables are used to generate the final tables in pipe_ais_v3_published. The tables in this dataset are not intended to be shared outside of GFW and usage within GFW should be limited to those who are working on the pipeline.\nWhen to use: Only use this dataset if you are working on the AIS pipeline, e.g. as a researcher or data engineer. The intermediate tables in this dataset can also be used for debugging purposes.\n\n\n\npipe_ais_v3_published\n\nDescription: This dataset contains the final output from the AIS pipeline. The tables in this dataset are intended to be shared with GFW partners and the public.\nWhen to use: This dataset is the primary dataset to use for AIS-based analyses by GFW staff and external users.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+      "(PART) Big Query"
     ]
   },
   {
-    "objectID": "Home.html#data-products",
-    "href": "Home.html#data-products",
-    "title": "2  GFW Data Documentation",
-    "section": "2.3 Data Products",
-    "text": "2.3 Data Products\nGFW data are grouped into the following general categories, or data products, that are used for various analyses.\n\nFishing effort and vessel presences - Activity and fishing activity for all vessels\nFishing events - Activity by the world’s fishing vessels grouped into events\nVessel database and Vessel info tables - Database of vessel identity\nEncounters - Encounters between two vessels\nLoitering - Loitering events by potential transshipment vessels\nAnchorages & voyages - Database of ports and vessel voyages between ports\nCountry VMS - Country-specific VMS data\nSAR Detections - Vessel detections from Sentinel-1 SAR imagery\nAIS Gaps - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.",
+    "objectID": "BigQuery-datasets.html#non-ais-pipelines",
+    "href": "BigQuery-datasets.html#non-ais-pipelines",
+    "title": "(PART) Big Query",
+    "section": "Non-AIS Pipelines",
+    "text": "Non-AIS Pipelines\nBesides AIS, we have a number of other pipelines that currently follow the same structure as the AIS pipeline:\n\nSentinel-1: pipe_sar_v1_internal and pipe_sar_v1_published\nSentinel-2: TBD (currently under development)\nVMS: pipe_vms_v3_internal and pipe_vms_v3_published",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>GFW Data Documentation</span>"
+      "(PART) Big Query"
+    ]
+  },
+  {
+    "objectID": "BigQuery-datasets.html#development-datasets",
+    "href": "BigQuery-datasets.html#development-datasets",
+    "title": "(PART) Big Query",
+    "section": "Development Datasets",
+    "text": "Development Datasets\n\ngfw_research\n\nDescription: This dataset is intended as a general location to store proof-of-concept (PoC) tables developed by the Research Team that have not yet been incorporated into an automated pipeline. Many PoC tables originate in specific project datasets (e.g. prj_vessel_classification) but not all users have access to all project datasets. Once a PoC has reached a level of stability, it can be copied to gfw_research to facilitate access, as most GFW users and research partners have access to gfw_research. This dataset also includes various reference tables useful for analysis (e.g. EEZ info, flags of convenience, country codes, ice masks, etc.).\n\nA related dataset to gfw_research is the gfw_research_precursors dataset. Like the _internal datasets described above, gfw_research_precursors is intended simply as a storage location for intermediate tables that are generally not required for analysis.\n\nWhen to use: Look to this dataset when interested in accessing the latest stable versions of PoC tables being developed by the Research Team.\n\n\n\nscratch_[GFW_USERNAME]_ttl[x]\n\nDescription: Each GFW user has their own “scratch” dataset for development and testing. Tables in these datasets are assigned a “time to live” (ttl) and get deleted after a certain amount of days, so for long-term projects you should create new project-specific datasets.",
+    "crumbs": [
+      "(PART) Big Query"
     ]
   },
   {
