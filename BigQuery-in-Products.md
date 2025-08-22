@@ -28,7 +28,7 @@ To expose data from **BigQuery (BQ)** in our products, we organize it into **API
 
 ### via API datasets site
 
-**API query logic** is maintained in this [API datasets hub](https://datasets.globalfishingwatch.org/datasets/). The API datasets hub returns the list of API Datasets that are used in our API.
+**API query logic** is maintained in this [API datasets hub](https://datasets.globalfishingwatch.org/). The API datasets hub returns the list of API Datasets that are used in our API.
 
 - Username = `gfw_doc`
 - Password = `datasets`
