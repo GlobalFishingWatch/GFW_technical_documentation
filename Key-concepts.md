@@ -33,7 +33,7 @@ Working in BigQuery requires two forms of access:
 ### Billing
 
 BigQuery costs are incurred in two ways - storing and querying data. 
-    + Queries cost $5 per terabyte of data scanned
+    + Queries cost $6.25 per terabyte of data scanned
     + GFW staff can use the `gfw-google` billing project. Queries using this project are "free" for GFW staff, but we need to be careful.
 
 #### The BigQuery validator
@@ -85,13 +85,19 @@ GFW is constantly receiving and processing new data. As a result, certain tables
 
 **When a dataset or table ends in `_v` followed by a date string (`_v20201001`), the date refers to the version of the table. However, when there is no `_v` preceeding a date string, the date indicates that that table includes data for that specific date, as explained in the next section on table formats**. 
 
+> **Note: Using the latest view versus versioned tables**
+> For `product_events_{EVENT_TYPE}` tables we only preserve the most recent version and it is recommended to use the view version of the table rather than a specific dated version. In a future pipeline release we will remove the specific dated versions of these tables. It is generally recommended to use the latest view instead of versioned tables and the way tables are versioned may change in the future. Furthermore, access to versioned tables may be restricted to certain users in future pipeline releases.
+
+### Compatability tables
+Occasionally, we need to apply breaking changes within a pipeline version. E.g. during the pipe3 lifetime we had to make a breaking change to the definition of `product_events_port_visits`. When this happens, we add a versioning suffix, in this case `product_events_port_visits_v2`. This "compatability table" will be maintained for the lifetime of the pipeline version and will replace the original table in the next pipeline version. In this case, `product_events_port_visits_v2` will become `product_events_port_visits` in pipe4 and the original `product_events_port_visits` table will be removed.
+
 ## Table formats
 
 BigQuery tables can have several important formats that are used to organize data and minimize query cost and execution time. In particular, GFW creates tables that may be *date sharded* or *date partitioned*. Additionally, tables may be *clustered* on certain fields. Date sharded and date partitioned tables behave in similar ways but, crucially, require different filtering syntax to limit query size. Therefore, understanding how to recognize if a table is date sharded, partitioned, and/or clustered, and how to query them properly, is critical.
 
 ### Date partitioned tables
 
-Many GFW tables are date partitioned. These are single tables where data is stored in invisible partitions. If a table is partitioned, you will see `This is a partitioned table` when viewing the table's info in BigQuery. Tables are generall partitioned on an actual field in the table (e.g. `date`) but may also be partitioned on the `_partitiontime` field, which is a "psuedo colum" that is not actually in the table. You can check the partitioning specification by viewing the table's details.
+Many GFW tables are date partitioned. These are single tables where data is stored in invisible partitions. If a table is partitioned, you will see `This is a partitioned table` when viewing the table's info in BigQuery. Tables are generally partitioned on an actual field in the table (e.g. `date` or `event_start`). You can check the partitioning specification by viewing the table's details.
 
 Queries against date partitioned tables can filter on the partitioned column using a `WHERE` statement, limiting the amount of data scanned and thus the cost. 
 

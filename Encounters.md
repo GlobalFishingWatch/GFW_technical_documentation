@@ -4,15 +4,9 @@ Vessels meet at sea for a variety of reasons, including transshipment (transferr
 
 ## Key Tables
 
-+ `pipe_ais_v3_published.product_events_encounter` - A view of `product_events_encounter_vYYYYMMDD` that always provides data from the latest version (`vYYYYMMDD`) of the table.
-+ `pipe_ais_v3_published.product_events_encounter_vYYYYMMDD` - Same as the `encounters` table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This table also includes information on vessel authorization status. This table may contain multiple versions, indicated by the `_vYYYYMMDD` and should be used instead of the `product_events_encounter` view for analyses that need to be reproducible.
++ `pipe_ais_v3_published.product_events_encounter` - Same as the `encounters` table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples).  This is a view of `product_events_encounter_vYYYYMMDD` that always provides data from the latest version (`vYYYYMMDD`) of the table but using the underlying table is deprecated and will be removed in a future pipeline release. Instead, the `product_events_encounter` view should be used.
++ `pipe_ais_v3_published.product_events_encounter_vYYYYMMDD` (deprecated) - This is the underlying table that `pipe_ais_v3_published.product_events_encounter` is based on. The `YYYYMMDD` suffix indicates the date of the version of the table. Usage of this table is deprecated and will be removed in a future pipeline release. Instead, the `product_events_encounter` view should be used.
 + `pipe_ais_v3_published.encounters` - Source table for the `product_events_encounter_vYYYYMMDD` table. This is not filtered by speed and has one row per encounter.
-
-> **Note: Using event views**   
-> Use the `product_events_{EVENT_TYPE}` view version of rather than a specific `product_events_{EVENT_TYPE}_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table (e.g. `product_events_{EVENT_TYPE}_vYYYYMMDD`) so that it's clear what data was used in the query. 
-
-> **Note: Compatability views** 
-> When event tables are updated daily, we must calculate if any events have changed from yesterday to today and to add those into the `published_events_{EVENT_TYPE}` table. The `_v` form of a table is created for this calculation. This "compatability view" is not to be used by anyone as it only exists for internal engineering purposes. Always use the `published_events_{EVENT_TYPE}` or `proto_events_{EVENT_TYPE}` (if still considered a prototype) view table rather than the `published_events_{EVENT_TYPE}_v` view. For example, if you want to look at port visits, use the `published_events_port_visits` view table rather than the `published_events_port_visits_v` view table.
 
 ### Source Tables
 

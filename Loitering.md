@@ -4,15 +4,11 @@ Vessels meet up at sea for a variety of reasons, including transshipment (transf
 
 ## Key Tables
  
-+ `pipe_ais_v3_published.product_events_loitering` - A view of `product_events_loitering_vYYYYMMDD` that always provides data from the latest version (`vYYYYMMDD`) of the table.
-+ `pipe_ais_v3_published.product_events_loitering_vYYYYMMDD` - Similar to `loitering` table, however the schema is modified to be consistent with the other `product_events_` tables largely used in products APIs This table may contain multiple versions, indicated by the `_vYYYYMMDD` and should be used instead of the `product_events_loitering` view for analyses that need to be reproducible.
++ `pipe_ais_v3_published.product_events_loitering` - A view of `product_events_loitering_vYYYYMMDD` that always provides data from the latest version (`vYYYYMMDD`) of the table. Similar to `loitering` table, however the schema is modified to be consistent with the other `product_events_` tables largely used in products APIs. The table applies the following two filters on top of the source `loitering` table:
+    + good_seg AND NOT overlapping_and_short
+    + avg_distance_from_shore_nm >= 20
++ `pipe_ais_v3_published.product_events_loitering_vYYYYMMDD` (deprecated) - This is the underlying table that `pipe_ais_v3_published.product_events_loitering` is based on. The `YYYYMMDD` suffix indicates the date of the version of the table. Usage of this table is deprecated and will be removed in a future pipeline release. Instead, the `product_events_loitering` view should be used.
 + `pipe_ais_v3_published.loitering` - Source loitering table for `product_events_loitering_vYYYYMMDD` that includes all vessels types with no constraints on distance from shore and duration, and has not been filtered to good seg or overlapping and short. - analysts need to add restrictions.
-
-> **Note: Using event views**   
-> Use the `product_events_{EVENT_TYPE}` view version of rather than a specific `product_events_{EVENT_TYPE}_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table (e.g. `product_events_{EVENT_TYPE}_vYYYYMMDD`) so that it's clear what data was used in the query. 
-
-> **Note: Compatability views** 
-> When event tables are updated daily, we must calculate if any events have changed from yesterday to today and to add those into the `published_events_{EVENT_TYPE}` table. The `_v` form of a table is created for this calculation. This "compatability view" is not to be used by anyone as it only exists for internal engineering purposes. Always use the `published_events_{EVENT_TYPE}` or `proto_events_{EVENT_TYPE}` (if still considered a prototype) view table rather than the `published_events_{EVENT_TYPE}_v` view. For example, if you want to look at port visits, use the `published_events_loitering` view table rather than the `published_events_loitering_v` view table.
 
 ## Source Tables
 
