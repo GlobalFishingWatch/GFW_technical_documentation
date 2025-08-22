@@ -1,20 +1,24 @@
 # Gaps
 
-GFW's AIS gaps dataset catalogues instances of long gaps in vessel's AIS signal and identifies which gaps are likely due to intentional AIS disabling. 
+GFW's AIS gaps dataset catalogues instances of long gaps in a vessel's AIS signal and identifies which gaps are likely due to intentional AIS disabling. 
 
 ## Key Tables
 
-+ `world-fishing-827.pipe_production_v20201001.proto_published_events_ais_gaps`: Date-partitioned table of AIS gap events of 12+ hours in duration. Includes the boolean field `intentional_disabling` to indicate gaps that are likely due to suspected disabling. Presently, however, only intentional disabling events (`intentional_disabling = 'true'`) are included in this table. **This is the primary table for analyses of AIS gaps.**
++ `pipe_ais_v3_published.product_events_ais_disabling`: Date-partitioned table of AIS intentional disabling events. This is a subset of the `product_events_ais_gaps` table that has a modified schema consistent with the other `product_events_` tables largely used in products APIs. **This is the primary table for analyses of AIS disabling.**
 
-+ `world-fishing-827.pipe_production_v20201001.proto_ais_gap_events`: Date-partitioned table of AIS gap events of 6+ hours in duration. This table can be used to identify gap events that are currently ongoing (`is_closed = False`) but must be filtered to select AIS disabling events.
++ `pipe_ais_v3_published.product_events_ais_gaps`: Date-partitioned table of AIS gap events of 6+ hours in duration. This table can be used to identify gap events that are currently ongoing (`is_closed = False`) but must be filtered to select AIS disabling events. **Note: this table does not currently conform to the same schema of other `product_event` tables.**
+
+> **Note: Using event views**   
+> Use the `product_events_{EVENT_TYPE}` view version of rather than a specific `product_events_{EVENT_TYPE}_vYYYYMMDD` table if you want the most recent available date. However, if it's important that an analysis be reproducible, you should use a specific version of the events table (e.g. `product_events_{EVENT_TYPE}_vYYYYMMDD`) so that it's clear what data was used in the query. 
+
+> **Note: Compatability views** 
+> When event tables are updated daily, we must calculate if any events have changed from yesterday to today and to add those into the `published_events_{EVENT_TYPE}` table. The `_v` form of a table is created for this calculation. This "compatability view" is not to be used by anyone as it only exists for internal engineering purposes. Always use the `published_events_{EVENT_TYPE}` or `proto_events_{EVENT_TYPE}` (if still considered a prototype) view table rather than the `published_events_{EVENT_TYPE}_v` view. For example, if you want to look at port visits, use the `published_events_gaps` view table rather than the `published_events_gaps_v` view table.
 
 ### Secondary Tables
 
-+ `world-fishing-827.pipe_production_v20201001.proto_ais_off_events`: Date-partitioned table of AIS positions that are followed by a 6+ hour gap in AIS signal 
++ `pipe_ais_v3_internal.proto_ais_off_events`: Date-partitioned table of AIS positions that are followed by a 6+ hour gap in AIS signal 
 
-+ `world-fishing-827.pipe_production_v20201001.proto_published_events_ais_off`: Date-partitioned table of AIS off events, formatted to match the GFW events schema. Includes the boolean field `intentional_disabling` to indicate off events that are likely due to suspected disabling. This table can be used to identify AIS disabling events as soon as they occur. 
-
-+ `world-fishing-827.pipe_production_v20201001.proto_ais_on_events`: Date-partitioned table of AIS positions that are preceeded by a 6+ hour gap in AIS signal 
++ `pipe_ais_v3_internal.proto_ais_on_events`: Date-partitioned table of AIS positions that are preceeded by a 6+ hour gap in AIS signal 
 
 + `gfw_research.sat_reception_smoothed_one_degree_v20210722`: Monthly satellite AIS reception quality (modeled) for 2017-2020. This table is used to exclude AIS gaps from areas with unreliable AIS reception.
 
@@ -24,7 +28,7 @@ AIS devices were designed to continually broadcast a vessel's position in order 
 
 ### AIS gap events ("naive gaps")
 
-The `proto_ais_gap_events` table contains all 6+ hour gaps in the AIS data. These gap events are created by combining all events in the two precursor tables - `proto_ais_off_events` and `proto_ais_on_events`. The `proto_ais_gap_events` table includes all fields in each precursor table, as well as the `is_closed` field to indicate whether an AIS gap is currently ongoing. The `proto_ais_gap_events` table is date-partitioned on the `gap_start` field, allowing it to be filtered for AIS gap events that started on a specific date. Gaps in this table are considered "naive gaps" because additional filtering is required to identify gaps due to intentional disabling.
+The `product_events_ais_gaps` table contains all 6+ hour gaps in the AIS data. These gap events are created by combining all events in the two internal precursor tables - `proto_ais_off_events` and `proto_ais_on_events`. The `product_events_ais_gaps` table includes all fields in each precursor table, as well as the `is_closed` field to indicate whether an AIS gap is currently ongoing. The table is date-partitioned on the `gap_start` field, allowing it to be filtered for AIS gap events that started on a specific date. Gaps in this table are considered "naive gaps" because additional filtering is required to identify gaps due to intentional disabling.
 
 #### AIS off/on events
 
@@ -39,9 +43,13 @@ To identify AIS gaps that are most likely due to intentional disabling rather th
 4. The gap must start in an area with a satellite reception quality greater than 10 positions per day
 5. The vessel must have at least 14 satellite positions in the 12 hours prior to the gap 
 
-The `proto_published_events_ais_gaps` and `proto_published_events_ais_off` tables apply these filters and include a boolean `intentional_disabling` field to flag likely AIS disabling events. These filters are not perfect, however, and analysts may consider slightly relaxing certain filters (e.g. distance from shore) if they want to capture potential disabling events of lower confidence.
+The `product_events_ais_disabling` table applies these filters to restrict to AIS gaps that are likely AIS disabling events. These filters are not perfect, however, and analysts may consider slightly relaxing certain filters (e.g. distance from shore) if they want to capture potential disabling events of lower confidence.
 
 ## Caveats and Known Issues
+
+### Reception quality for disabling events not updated past 2020
+
+The layer of satellite reception quality used to identify potential AIS disabling events has not been updated for data past 2020. AIS satellite reception has improved significantly in recent years, and dynamic AIS data has further complicated our understanding of AIS reception in relation to AIS disabling.
 
 ### Gap events less than 50 nautical miles from shore are unreliable due to differences in satellite and terrestrial AIS
 
@@ -56,12 +64,11 @@ The number of satellites over the horizon at different places on earth varies co
 
 ## Example Queries
 
-+ [ais_disabling_published_events.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/ais_disabling_published_events.sql): Get all (completed) likely AIS disabling events during a certain period.
++ [ais_disabling_published_events.sql](): Get all (completed) likely AIS disabling events during a certain period.
 
-+ [ais_disabling_published_events_fishing_vessels.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/ais_disabling_published_events_fishing_vessels.sql): Get all (completed) likely AIS disabling events by fishing vessels during a certain period.
++ [ais_disabling_published_events_fishing_vessels.sql](): Get all (completed) likely AIS disabling events by fishing vessels during a certain period.
 
-+ [ais_disabling_ongoing_events.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/ais_disabling_ongoing_events.sql): Get all likely AIS disabling events that are currently ongoing (e.g. `is_closed = false`). This query demonstrates how to combine naive gap events with reception quality
-to identify likely disabling events in a way similar to how the `intentional_disabling` field is added to the `published_events_ais_gaps` table.
++ [ais_disabling_ongoing_events.sql](): Get all likely AIS disabling events that are currently ongoing (e.g. `is_closed = false`). This query demonstrates how to combine naive gap events with reception quality to identify likely disabling events in the way gaps in the `product_events_ais_gaps` table are added to the `product_events_ais_disabling` table.
 
 ## Links
 

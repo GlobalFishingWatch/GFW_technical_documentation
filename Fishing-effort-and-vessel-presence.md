@@ -4,40 +4,44 @@
 
 ## Data Overview
 
-The flagship datasets of Global Fishing Watch are vessel presences and apparent fishing effort based on transmissions from vessel tracking datasets. These datasets represent the amount of time vessels are present in an area and, for fishing vessels, how much of that time is spent fishing. Using cloud computing, machine learning, and public vessel registry information, GFW analyzes tens of millions of AIS positions each day to map global apparent fishing effort.
+The flagship datasets of Global Fishing Watch are vessel presences and apparent fishing effort based on transmissions from vessel tracking datasets, including the automatic identification system (AIS) and vessel monitoring systems (VMS). These datasets represent the amount of time vessels are present in an area and, for fishing vessels, how much of that time is spent fishing. Using cloud computing, machine learning, and public vessel registry information, GFW analyzes tens of millions of AIS and VMS positions each day to map global apparent fishing effort.
 
 Producing such a dataset involves two key steps:
 
-1. Identification of fishing vessels in the AIS data
+1. Identification of fishing vessels in the AIS and VMS data
 
 2. Detection of fishing activity
 
-We combine our comprehensive database of vessels with a known vessel type from vessel registries with two convolutional neural networks (CNN)—a cutting edge form of machine learning model—to help us classify vessels and predict when they are fishing. The resulting output are a list of vessels by type (e.g. trawler, drifting_longline, cargo, etc.) and a dataset of AIS positions, where each position is labeled as a fishing/non-fishing position. These datasets can then be combined to evaluate the presence and fishing activity of individual vessels or make rasters of aggregate vessel presence or fishing activity.
+We combine our comprehensive database of vessels with a known vessel type from vessel registries with two convolutional neural network (CNN) models to help us classify vessels and predict when they are fishing. The resulting output are a list of vessels by type (e.g. trawler, drifting_longline, cargo, etc.) and a dataset of AIS positions, where each position is labeled as a fishing/non-fishing position. These datasets can then be combined to evaluate the presence and fishing activity of individual vessels or make rasters of aggregate vessel presence or fishing activity.
 
->**Note**: Every AIS position receives a fishing score (or NULL if the model can't make a prediction), regardless of whether that MMSI is classified as a fishing vessel.
+>**Note**: Every AIS position receives a fishing score (or NULL if the model can't make a prediction), regardless of whether that MMSI is classified as a fishing vessel. As non-fishing vessels can often move in ways similar to fishing vessels, it is not uncommon for their positions to be scored as fishing positions. This is why it is critical to filter to fishing vessels before calculating and summarizing fishing hours.
 
 ## Key Tables
 
-+ `pipe_ais_v3.research_messages` - AIS positions, thinned to one minute per segment, for all vessels.
++ `pipe_ais_v3_published.messages` - AIS positions, thinned to one minute per segment, for all vessels. **This is the primary table for use in research, analysis, and products.**
 
-+ `pipe_production_vYYYYMMDD.research_segs` - Summaries of vessel activity by segment (`seg_id`). Includes fields indicating which segments are likely noise (e.g. `good_seg`, `good_seg2`, `overlapping_and_short`) and should be filtered out.
++ `pipe_ais_v3_internal.messages_regions` - AIS positions, thinned to one minute per segment, for all vessels. This table is stored in the internal pipe 3 dataset.
 
-+ `pipe_production_vYYYYMMDD.research_segs_daily` - Daily summaries of vessel activity and fishing by segment (`seg_id`), including by EEZ. This table can be used for non-spatial analyses that summarize vessel activity over specific time periods and/or by EEZ.
++ `pipe_ais_v3_published.segs_activity` - Summaries of vessel activity by segment (`seg_id`). Includes fields indicating which segments are likely noise (e.g. `good_seg`, `good_seg2`, `overlapping_and_short`) and should be filtered out.
+
++ `pipe_ais_v3_published.segs_activity_daily` - Daily summaries of vessel activity and fishing by segment (`seg_id`). This table can be used for non-spatial analyses that summarize vessel activity over specific time periods.
 
 ### Public Fishing Effort Tables
 
-GFW's public fishing effort and vessel presence datasets (2012-2020) are gridded at 100th degree resolution by flag state and geartype and at 10th degree resolution by MMSI, respectively. These tables are available in a public BigQuery project (`global-fishing-watch`) and are inexpensive ways to quickly map fishing effort and vessel presence.
+GFW's public fishing effort and vessel presence datasets (2012-2024) are gridded at 100th degree resolution by flag state and geartype and at 10th degree resolution by MMSI, respectively. These tables are available in a public BigQuery project (`global-fishing-watch`) and are inexpensive ways to quickly map fishing effort and vessel presence.
+
+There are three public versions of the GFW fishing effort data.
+
+#### Current version (v3)
++ `global-fishing-watch.fishing_effort_v3`: Public daily fishing effort by flag state and geartype (2012-2024) at 0.01 degree resolution.
++ `global-fishing-watch.fishing_effort_v3`: Public daily fishing effort by MMSI (2012-2024) at 0.1 degree resolution.
+
+#### Archived versions (v1-v2)
 
 + `global-fishing-watch.gfw_public_data.fishing_effort_v2`: Public daily fishing effort by flag state and geartype (2012-2020) at 0.01 degree resolution.
 + `global-fishing-watch.gfw_public_data.fishing_effort_byvessel_v2`: Public daily fishing effort by MMSI (2012-2020) at 0.1 degree resolution.
 
 ## Data Description
-
-### `is_fishing_vessel`
-
-The `research_messages` table includes positions for all vessels, of which ~75% are non-fishing vessels. Therefore, it can be expensive and inefficient to query the whole table for fishing analyses. To compensate for this, the table is clustered on the boolean `is_fishing_vessel` field, which indicates positions belonging to potential fishing vessels - any `ssvid` on one of the [fishing lists in the vessel info tables](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables#on_fishing_list_-fields).  
-
-**For fishing analyses, include a `WHERE is_fishing_vessel` filter statement to reduce query size by approximately 80%**
 
 ### `hours` and `fishing_hours`
 
@@ -55,13 +59,7 @@ While AIS provides a revolutionary way to monitor global commercial fishing acti
 
 ### Many fishing vessels are not trackable via AIS
 
-AIS data includes only a small fraction—approximately 70,000—of the world’s estimated 2.8 million fishing vessels. Coverage is much higher for larger vessels with less than 1 percent of vessels under 12 meters represented, 14-19 percent for vessels between 12-24 meters, and 52-85 percent for vessels larger than 24 meters. The International Maritime Organization mandates AIS for most vessels larger than 36 meters, and vessels broadcasting AIS are predominantly from upper and upper-middle income countries.
-
-### `is_fishing_vessel` outdated over time
-
-The `is_fishing_vessel` field indicates positions for potential fishing vessels in order to make fishing-related queries considerably cheaper. In order to do so, however, the table is created from the list of all `ssvid` on one of the [fishing lists](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables#on_fishing_list_-fields) using the most current vessel info table *at the time the `research_messages` table is created* (which you can see in the `DETAILS` tab of the `research_messages` table). As a result, over time as new MMSI appear in the AIS data, or vessel classifications change for existing MMSI, not all fishing vessels may have positions marked as `is_fishing_vessel = True`.
-
-**If you are using concerned about missing vessels, simply omit the `is_fishing_vessel` filter and join on the most up-to-date fishing vessel list.**    
+AIS data includes only a small fraction — approximately 100,000 — of the world’s estimated 2.8 million fishing vessels. Coverage is much higher for larger vessels with less than 1 percent of vessels under 12 meters represented, 14-19 percent for vessels between 12-24 meters, and 52-85 percent for vessels larger than 24 meters. The International Maritime Organization mandates AIS for most vessels larger than 36 meters, and vessels broadcasting AIS are predominantly from upper and upper-middle income countries.
 
 ### GFW identifies _apparent_ fishing effort
 
@@ -73,11 +71,9 @@ For various technical reasons, not every AIS message that is broadcast is record
 
 ## Example Queries
 
-+ [fishing_hours_by_position.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/fishing_hours_by_position.sql): Basic query to pull AIS positions for fishing vessels and calculate fishing hours.
++ fishing_hours_by_position.sql: Basic query to pull AIS positions for fishing vessels and calculate fishing hours.
 
-+ [fishing_hours_gridded.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/fishing_hours_gridded.sql): Query to create a raster of fishing hours, including fishing hours per square kilometer.
-
-+ [fishing_hours_by_eez.sql](https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/fishing_hours_by_eez.sql): Query to quickly calculate fishing hours per EEZ over a specific date range using the daily segments research table (`research_segs_daily`)
++ fishing_hours_gridded.sql: Query to create a raster of fishing hours, including fishing hours per square kilometer.
 
 ## Links
 
