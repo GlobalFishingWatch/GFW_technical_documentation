@@ -5,11 +5,11 @@ project:
 book:
   title: "Global Fishing Watch documentation"
   date: last-modified
-  # announcement: 
+  # announcement:
   #   content: "**Alert** - this is some information that you should pay attention to"
   repo-url: https://github.com/GlobalFishingWatch/GFW_technical_documentation
   repo-actions: [issue]
-  
+
   sidebar:
     title: "Documentation Materials"
     style: "floating"
@@ -20,7 +20,7 @@ book:
         href: https://globalfishingwatch.org/
     # - icon: twitter
     #   href: [link to bluesky?]
-  
+
   chapters:
     - index.md
     - Home.md
@@ -31,10 +31,11 @@ book:
     - Key-concepts.md #(BigQuery Key Concepts)
     - BigQuery-in-Products.md
     - Fishing-effort-and-vessel-presence.md #(PART Global Fishing Watch Datasets)
-    - Vessel-Identity.md #(PART) Vessel Identity
-    - Product-Vessel-Info-Summary-PVIS.md
-    - Vessel-database.md 
+    - Vessel-Identity.md
+    - Identity-tables.md
+    - Vessel-database.md
     - Vessel-info-tables.md
+    - Product-Vessel-Info-Summary-PVIS.md
     - Fishing-events.md #(PART) Events
     - Encounters.md
     - Loitering.md
