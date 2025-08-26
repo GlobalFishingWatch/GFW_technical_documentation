@@ -10,7 +10,7 @@ book:
   repo-url: https://github.com/GlobalFishingWatch/GFW_technical_documentation
   repo-actions: [issue]
   
-  favicon: figures/GFW_logo.png
+  favicon: figures/GFW_logo.png ##proportions are not quite right
 
   sidebar:
     title: "Documentation Materials"
@@ -25,44 +25,44 @@ book:
 
   chapters:
     - index.md
-    - Home.md
-    - Data-Updates.md #(PART) Data Updates
-    - BigQuery-datasets.md #(PART) Big Query
-    - BigQuery-Table-Reference----PIPE-3.md
-    - BigQuery-Table-Reference.md
-    - Key-concepts.md #(BigQuery Key Concepts)
-    - BigQuery-in-Products.md
-    - Fishing-effort-and-vessel-presence.md #(PART Global Fishing Watch Datasets)
-    - Vessel-Identity.md
-    - Identity-tables.md
-    - Vessel-database.md
-    - Vessel-info-tables.md
-    - Product-Vessel-Info-Summary-PVIS.md
-    - Fishing-events.md #(PART) Events
-    - Encounters.md
-    - Loitering.md
-    - Gaps.md
-    - Anchorages-and-voyages.md # Anchorages, voyages and port visits
-    - SAR-object-detections.md
-    - VMS.md #VMS Data Sources
-    - Spatial-Regions-Sources-and-Methodology.md
-    - Areas-EEZ-Boundaries.md
-    - Areas-12-NM-Boundary.md
-    - Areas-RFMOs.md
-    - Areas-FAO-Areas.md
-    - Areas-High-Seas-Pockets.md
-    - Areas-High-Seas.md
-    - Areas-Protected-Seas.md
-    - Areas-WDPA-Marine-MPAs.md
-    - Areas-HOW-TO---Do-point-in-polygon-test-in-BigQuery.md
-    - Areas-HOW-TO---Update-layer-in-pipe-regions.md
-    - Country-Codes.md
-    - Coverage.md
-    - Satellite-Timing-Offset-Table.md
-    - Pipeline.md
-    - Wiki-Documentation-Standards.md #Wiki Page Requirements
-    - Useful-links.md #Internal materials
-    - Data-products-page-TEMPLATE.md
+    # - Home.md -- REMOVE
+    - data-updates.md #(PART) Data Updates
+    - bigquery-datasets.md #(PART) Big Query
+    - bigquery-pipe3-table-reference.md
+    - bigquery-pipe2.5-table-reference.md
+    - key-concepts.md #(BigQuery Key Concepts)
+    - bigquery-in-products.md
+    - fishing-effort-and-vessel-presence.md #(PART Global Fishing Watch Datasets)
+    - vessel-identity.md
+    - identity-tables.md
+    - vessel-database.md
+    - vessel-info-tables.md
+    - product-vessel-info-summary-pvis.md
+    - fishing-events.md #(PART) Events
+    - encounters.md
+    - loitering.md
+    - gaps.md
+    - anchorages-and-voyages.md # Anchorages, voyages and port visits
+    - sar-object-detections.md
+    - vms.md #VMS Data Sources
+    - spatial-regions-sources-and-methodology.md
+    - areas-eez-boundaries.md
+    - areas-12-nm-boundary.md
+    - areas-rfmos.md
+    - areas-fao-areas.md
+    - areas-high-seas-pockets.md
+    - areas-high-seas.md
+    - areas-protected-seas.md
+    - areas-wdpa-marine-mpas.md
+    - areas-how-to-point-in-polygon-in-bigquery.md
+    - areas-how-to-update-layer-in-pipe-regions.md
+    - country-codes.md
+    - coverage.md
+    - satellite-timing-offset-table.md
+    - pipeline.md
+    - wiki-documentation-standards.md #Wiki Page Requirements
+    - helpful-resources.md #Internal materials
+    - data-products-page-template.md
     - training-materials-README.md #(PART) Training materials
 
 
