@@ -1,5 +1,3 @@
-# (PART) Global Fishing Watch Datasets {-} 
-
 # Fishing effort and vessel presence
 
 ## Data Overview

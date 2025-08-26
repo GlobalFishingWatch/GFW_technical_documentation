@@ -24,20 +24,26 @@ book:
     #   href: [link to bluesky?]
 
   chapters:
-    - index.md
-    # - Home.md -- REMOVE
-    - data-updates.md #(PART) Data Updates
-    - bigquery-datasets.md #(PART) Big Query
-    - bigquery-pipe3-table-reference.md
-    - bigquery-pipe2.5-table-reference.md
-    - key-concepts.md #(BigQuery Key Concepts)
-    - bigquery-in-products.md
-    - fishing-effort-and-vessel-presence.md #(PART Global Fishing Watch Datasets)
-    - vessel-identity.md
-    - identity-tables.md
-    - vessel-database.md
-    - vessel-info-tables.md
-    - product-vessel-info-summary-pvis.md
+    - index.md # intorduction
+    
+    - part: "Data Reference"
+      chapters: 
+        - data-updates.md #(PART) Data Updates
+        - bigquery-datasets.md #(PART) Big Query
+        - bigquery-pipe3-table-reference.md
+        - bigquery-pipe2.5-table-reference.md
+        - key-concepts.md #(BigQuery Key Concepts)
+        - bigquery-in-products.md
+      
+     - part: "Vessel Identity"
+      chapters: 
+        - vessel-identity.md
+        - identity-tables.md
+        - vessel-database.md
+        - vessel-info-tables.md
+        - product-vessel-info-summary-pvis.md
+    - fishing-effort-and-vessel-presence.md
+    
     - fishing-events.md #(PART) Events
     - encounters.md
     - loitering.md
