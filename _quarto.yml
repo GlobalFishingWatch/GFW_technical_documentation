@@ -9,6 +9,8 @@ book:
   #   content: "**Alert** - this is some information that you should pay attention to"
   repo-url: https://github.com/GlobalFishingWatch/GFW_technical_documentation
   repo-actions: [issue]
+  
+  favicon: figures/GFW_logo.png
 
   sidebar:
     title: "Documentation Materials"
