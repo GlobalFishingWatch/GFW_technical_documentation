@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-26">
 
-<title>Global Fishing Watch documentation</title>
+<title>2&nbsp; BigQuery Datasets – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./files/data-updates.html" rel="next">
-<link href="./figures/GFW_logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/bigquery-pipe3-table-reference.html" rel="next">
+<link href="../files/data-updates.html" rel="prev">
+<link href="../figures/GFW_logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome!</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/data-updates.html">Data Reference</a></li><li class="breadcrumb-item"><a href="../files/bigquery-datasets.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Documentation Materials</a> 
+      <a href="../">Documentation Materials</a> 
         <div class="sidebar-tools-main">
     <a href="https://globalfishingwatch.org/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-door-fill"></i></a>
     <a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
@@ -127,37 +127,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/data-updates.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/data-updates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-key-concepts.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-key-concepts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">BigQuery Key Concepts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-in-products.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-in-products.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">BigQuery to APIs to Products</span></span></a>
   </div>
 </li>
@@ -174,31 +174,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vessel-identity.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vessel-identity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vessel Identity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/identity-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/identity-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Indentity Tables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vessel-database.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vessel-database.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel Database</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vessel-info-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vessel-info-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/product-vessel-info-summary-pvis.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/product-vessel-info-summary-pvis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
   </div>
 </li>
@@ -215,61 +215,61 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/fishing-effort-and-vessel-presence.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/fishing-effort-and-vessel-presence.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fishing Effort and Vessel Presence</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/fishing-events.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/encounters.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/loitering.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/gaps.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/country-codes.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/coverage.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/pipeline.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
   </div>
 </li>
@@ -286,13 +286,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
   </div>
 </li>
@@ -309,67 +309,67 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
   </div>
 </li>
@@ -386,25 +386,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/helpful-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/helpful-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/gfw-data-training-materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/gfw-data-training-materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">GFW Data Training Materials</span></span></a>
   </div>
 </li>
@@ -420,11 +420,25 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a>
+  <li><a href="#staging-process" id="toc-staging-process" class="nav-link active" data-scroll-target="#staging-process"><span class="header-section-number">2.1</span> Staging Process</a></li>
+  <li><a href="#ais-pipe-3" id="toc-ais-pipe-3" class="nav-link" data-scroll-target="#ais-pipe-3"><span class="header-section-number">2.2</span> AIS PIPE-3</a>
   <ul class="collapse">
-  <li><a href="#data-updates" id="toc-data-updates" class="nav-link" data-scroll-target="#data-updates">Data Updates</a></li>
-  <li><a href="#bigquery-key-concepts" id="toc-bigquery-key-concepts" class="nav-link" data-scroll-target="#bigquery-key-concepts">BigQuery Key Concepts</a></li>
-  <li><a href="#data-products" id="toc-data-products" class="nav-link" data-scroll-target="#data-products">Data Products</a></li>
+  <li><a href="#pipe_ais_v3_internal" id="toc-pipe_ais_v3_internal" class="nav-link" data-scroll-target="#pipe_ais_v3_internal"><span class="header-section-number">2.2.1</span> <code>pipe_ais_v3_internal</code></a></li>
+  <li><a href="#pipe_ais_v3_published" id="toc-pipe_ais_v3_published" class="nav-link" data-scroll-target="#pipe_ais_v3_published"><span class="header-section-number">2.2.2</span> <code>pipe_ais_v3_published</code></a></li>
+  </ul></li>
+  <li><a href="#non-ais-pipelines" id="toc-non-ais-pipelines" class="nav-link" data-scroll-target="#non-ais-pipelines"><span class="header-section-number">2.3</span> Non-AIS Pipelines</a></li>
+  <li><a href="#development-datasets" id="toc-development-datasets" class="nav-link" data-scroll-target="#development-datasets"><span class="header-section-number">2.4</span> Development Datasets</a>
+  <ul class="collapse">
+  <li><a href="#gfw_research" id="toc-gfw_research" class="nav-link" data-scroll-target="#gfw_research"><span class="header-section-number">2.4.1</span> <code>gfw_research</code></a></li>
+  <li><a href="#scratch_gfw_username_ttlx" id="toc-scratch_gfw_username_ttlx" class="nav-link" data-scroll-target="#scratch_gfw_username_ttlx"><span class="header-section-number">2.4.2</span> <code>scratch_[GFW_USERNAME]_ttl[x]</code></a></li>
+  </ul></li>
+  <li><a href="#other-relevant-datasets" id="toc-other-relevant-datasets" class="nav-link" data-scroll-target="#other-relevant-datasets"><span class="header-section-number">2.5</span> Other Relevant Datasets</a>
+  <ul class="collapse">
+  <li><a href="#pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628" id="toc-pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628" class="nav-link" data-scroll-target="#pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628"><span class="header-section-number">2.5.1</span> <code>pipe_ais_sources_v20201001</code> and <code>pipe_ais_sources_v20220628</code></a></li>
+  <li><a href="#anchorages" id="toc-anchorages" class="nav-link" data-scroll-target="#anchorages"><span class="header-section-number">2.5.2</span> <code>anchorages</code></a></li>
+  <li><a href="#pipe_static" id="toc-pipe_static" class="nav-link" data-scroll-target="#pipe_static"><span class="header-section-number">2.5.3</span> <code>pipe_static</code></a></li>
+  <li><a href="#pipe_regions_layers" id="toc-pipe_regions_layers" class="nav-link" data-scroll-target="#pipe_regions_layers"><span class="header-section-number">2.5.4</span> <code>pipe_regions_layers</code></a></li>
+  <li><a href="#tech_dq_monitoring-and-tech_anomaly_detection" id="toc-tech_dq_monitoring-and-tech_anomaly_detection" class="nav-link" data-scroll-target="#tech_dq_monitoring-and-tech_anomaly_detection"><span class="header-section-number">2.5.5</span> <code>tech_dq_monitoring</code> and <code>tech_anomaly_detection</code></a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -432,9 +446,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/data-updates.html">Data Reference</a></li><li class="breadcrumb-item"><a href="../files/bigquery-datasets.html"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Global Fishing Watch documentation</h1>
+<h1 class="title"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></h1>
 </div>
 
 
@@ -442,13 +456,13 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+  
     <div>
-    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 26, 2025</p>
+      <p class="date-modified">August 26, 2025</p>
     </div>
   </div>
-  
     
   </div>
   
@@ -457,47 +471,110 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>WORK IN PROGRESS</strong>. Information on this book is not up to date. We are currently working on improving GFW documentation.</p>
-</div>
-</div>
-<p><br></p>
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome!</h1>
-<p>This book includes the primary documentation of Global Fishing Watch’s data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g.&nbsp;fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.</p>
-<p>GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, and VIIRS. These data are processed by GFW’s automated <a href="./files/pipeline.html">pipelines</a>. These raw and processed data are stored as tables and organized in a handful of <a href="./files/bigquery-datasets.html">key BigQuery datasets</a>.</p>
-<section id="data-updates" class="level2">
-<h2 class="anchored" data-anchor-id="data-updates">Data Updates</h2>
-<p>Check the <a href="./files/data-updates.html">Data updates</a> for new changes to GFW data.</p>
-<p>See the <a href="./files/bigquery-pipe3-table-reference.html">BigQuery Table Reference</a> for checking the latest version of key tables to use.</p>
-</section>
-<section id="bigquery-key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="bigquery-key-concepts">BigQuery Key Concepts</h2>
-<p>Read the <a href="./files/bigquery-key-concepts.html">BigQuery Key Concepts page</a> for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.</p>
-</section>
-<section id="data-products" class="level2">
-<h2 class="anchored" data-anchor-id="data-products">Data Products</h2>
-<p>GFW data are grouped into the following general categories, or data products, that are used for various analyses.</p>
+<p>GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW’s data pipelines as well as manually generated tables from development and research projects.</p>
+<section id="staging-process" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="staging-process"><span class="header-section-number">2.1</span> Staging Process</h2>
+<p><strong>Description:</strong> In an effort to delineate new versions of datasets with those that are used in production we are currently developing a new staging process. **</p>
+<p><strong>Details:</strong> The staging process includes the following:</p>
 <ol type="1">
-<li><a href="./files/fishing-effort-and-vessel-presence.html">Fishing effort and vessel presences</a> - Activity and fishing activity for all vessels</li>
-<li><a href="./files/fishing-events.html">Fishing events</a> - Activity by the world’s fishing vessels grouped into events</li>
-<li><a href="./files/vessel-database.html">Vessel database</a> and <a href="./files/vessel-info-tables.html">Vessel info tables</a> - Database of vessel identity</li>
-<li><a href="./files/encounters.html">Encounters</a> - Encounters between two vessels</li>
-<li><a href="./files/loitering.html">Loitering</a> - Loitering events by potential transshipment vessels</li>
-<li><a href="./files/anchorages-voyages-port-visits.html">Anchorages &amp; voyages</a> - Database of ports and vessel voyages between ports</li>
-<li><a href="./files/vms-data-sources.html">Country VMS</a> - Country-specific VMS data</li>
-<li><a href="./files/sar-object-detections.html">SAR Detections</a> - Vessel detection from Sentinel-1 SAR imagery</li>
-<li><a href="./files/gaps.html">AIS Gaps</a> - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.</li>
+<li><strong>Proof-of-Concept data</strong>:</li>
 </ol>
+<ul>
+<li>Internal only and selected research partners</li>
+<li>One-off or manually updated tables</li>
+<li>Manual QA</li>
+<li>Stored in scratch, project specific, or <code>gfw_research</code> datasets</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Prototype data</strong>:</li>
+</ol>
+<ul>
+<li>Intermediate and Prototype tables</li>
+<li>Automated data runs (updated daily)</li>
+<li>Semi-automated QA</li>
+<li>Prototype tables should use convention of <code>proto_</code></li>
+<li>Can be used by researchers and analysts but proceed knowing that although QA’d all bugs may not have been solved</li>
+<li>Basic documentation will exist for these datasets</li>
+<li>Stored in pipeline datasets (e.g.&nbsp;<code>pipe_ais_v3_published</code>) with the <code>proto_</code> prefix.</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Production data</strong>:</li>
+</ol>
+<ul>
+<li>Production level ready datasets</li>
+<li>Public/research partners</li>
+<li>Automated_QA</li>
+<li>When <code>proto_</code> tables have been used and QA’d for a given period of time, have finalized documentation, and automated QA metrics they are considered production data and the <code>proto_</code> prefix is dropped.</li>
+</ul>
+</section>
+<section id="ais-pipe-3" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="ais-pipe-3"><span class="header-section-number">2.2</span> AIS PIPE-3</h2>
+<p>The dataset structure was entirely revamped in PIPE-3 and simplified by generating all AIS tables in two datasets.</p>
+<section id="pipe_ais_v3_internal" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="pipe_ais_v3_internal"><span class="header-section-number">2.2.1</span> <code>pipe_ais_v3_internal</code></h3>
+<ul>
+<li><p><strong>Description:</strong> This dataset contains all intermediate tables that are generated by the AIS pipeline. These tables are used to generate the final tables in <code>pipe_ais_v3_published</code>. The tables in this dataset are not intended to be shared outside of GFW and usage within GFW should be limited to those who are working on the pipeline.</p></li>
+<li><p><strong>When to use:</strong> Only use this dataset if you are working on the AIS pipeline, e.g.&nbsp;as a researcher or data engineer. The intermediate tables in this dataset can also be used for debugging purposes.</p></li>
+</ul>
+</section>
+<section id="pipe_ais_v3_published" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="pipe_ais_v3_published"><span class="header-section-number">2.2.2</span> <code>pipe_ais_v3_published</code></h3>
+<ul>
+<li><p><strong>Description:</strong> This dataset contains the final output from the AIS pipeline. The tables in this dataset are intended to be shared with GFW partners and the public.</p></li>
+<li><p><strong>When to use:</strong> This dataset is the primary dataset to use for AIS-based analyses by GFW staff and external users.</p></li>
+</ul>
+</section>
+</section>
+<section id="non-ais-pipelines" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="non-ais-pipelines"><span class="header-section-number">2.3</span> Non-AIS Pipelines</h2>
+<p>Besides AIS, we have a number of other pipelines that currently follow the same structure as the AIS pipeline:</p>
+<ul>
+<li>Sentinel-1: <code>pipe_sar_v1_internal</code> and <code>pipe_sar_v1_published</code></li>
+<li>Sentinel-2: TBD (currently under development)</li>
+<li>VMS: <code>pipe_vms_v3_internal</code> and <code>pipe_vms_v3_published</code></li>
+</ul>
+</section>
+<section id="development-datasets" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="development-datasets"><span class="header-section-number">2.4</span> Development Datasets</h2>
+<section id="gfw_research" class="level3" data-number="2.4.1">
+<h3 data-number="2.4.1" class="anchored" data-anchor-id="gfw_research"><span class="header-section-number">2.4.1</span> <code>gfw_research</code></h3>
+<ul>
+<li><strong>Description:</strong> This dataset is intended as a general location to store proof-of-concept (PoC) tables developed by the Research Team that have not yet been incorporated into an automated pipeline. Many PoC tables originate in specific project datasets (e.g.&nbsp;<code>prj_vessel_classification</code>) but not all users have access to all project datasets. Once a PoC has reached a level of stability, it can be copied to <code>gfw_research</code> to facilitate access, as most GFW users and research partners have access to <code>gfw_research</code>. This dataset also includes various reference tables useful for analysis (e.g.&nbsp;EEZ info, flags of convenience, country codes, ice masks, etc.).</li>
+</ul>
+<p>A related dataset to <code>gfw_research</code> is the <code>gfw_research_precursors</code> dataset. Like the <code>_internal</code> datasets described above, <code>gfw_research_precursors</code> is intended simply as a storage location for intermediate tables that are generally not required for analysis.</p>
+<ul>
+<li><strong>When to use:</strong> Look to this dataset when interested in accessing the latest stable versions of PoC tables being developed by the Research Team.</li>
+</ul>
+</section>
+<section id="scratch_gfw_username_ttlx" class="level3" data-number="2.4.2">
+<h3 data-number="2.4.2" class="anchored" data-anchor-id="scratch_gfw_username_ttlx"><span class="header-section-number">2.4.2</span> <code>scratch_[GFW_USERNAME]_ttl[x]</code></h3>
+<ul>
+<li><strong>Description:</strong> Each GFW user has their own “scratch” dataset for development and testing. Tables in these datasets are assigned a “time to live” (ttl) and get deleted after a certain amount of days, so for long-term projects you should create new project-specific datasets.</li>
+</ul>
+</section>
+</section>
+<section id="other-relevant-datasets" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="other-relevant-datasets"><span class="header-section-number">2.5</span> Other Relevant Datasets</h2>
+<section id="pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628" class="level3" data-number="2.5.1">
+<h3 data-number="2.5.1" class="anchored" data-anchor-id="pipe_ais_sources_v20201001-and-pipe_ais_sources_v20220628"><span class="header-section-number">2.5.1</span> <code>pipe_ais_sources_v20201001</code> and <code>pipe_ais_sources_v20220628</code></h3>
+<p>These two datasets contain the raw AIS data that is used to run any AIS pipeline. The only processing that has been applied to tables in these datasets is: 1. parsing (decoding) of raw nmea data; and 2. normalization of the data to a common schema as well as deduplication of messages from different data providers.</p>
+<p>Historically, they have not been part of the AIS pipeline itself since they are usually not being regenerated upon a new AIS pipeline release.</p>
+</section>
+<section id="anchorages" class="level3" data-number="2.5.2">
+<h3 data-number="2.5.2" class="anchored" data-anchor-id="anchorages"><span class="header-section-number">2.5.2</span> <code>anchorages</code></h3>
+<p>The <a href="https://github.com/GlobalFishingWatch/anchorages_pipeline">anchorages pipeline</a> generates tables based on AIS data as well as static datasources of anchorages and their names. This dataset is used across different pipelines, like AIS and VMS.</p>
+</section>
+<section id="pipe_static" class="level3" data-number="2.5.3">
+<h3 data-number="2.5.3" class="anchored" data-anchor-id="pipe_static"><span class="header-section-number">2.5.3</span> <code>pipe_static</code></h3>
+<p>This dataset contains static tables that are being generated based on static data sources. This data is being used across most pipelines to add geographical information like distance from shore or depth. WARNING: for some tables it is unclear what the underlying data source is!</p>
+</section>
+<section id="pipe_regions_layers" class="level3" data-number="2.5.4">
+<h3 data-number="2.5.4" class="anchored" data-anchor-id="pipe_regions_layers"><span class="header-section-number">2.5.4</span> <code>pipe_regions_layers</code></h3>
+<p>This dataset contains region lookup tables that define the shape of each region. Those are occasionally updated due to corrections, regional disputes, and new or shifting regions. Like the static tables, this dataset is used across most pipelines to provide information in which regions a certain coordinate is located.</p>
+</section>
+<section id="tech_dq_monitoring-and-tech_anomaly_detection" class="level3" data-number="2.5.5">
+<h3 data-number="2.5.5" class="anchored" data-anchor-id="tech_dq_monitoring-and-tech_anomaly_detection"><span class="header-section-number">2.5.5</span> <code>tech_dq_monitoring</code> and <code>tech_anomaly_detection</code></h3>
+<p>These two datasets contain tables that are used to monitor the data quality of all GFW data. The data may be used for debugging or adhoc analyses but since their primary purpose is to power dashboards and anomaly alerts the data does not follow the same reliability standards we have for other pipelines. Therefore, data might be outdated or unavailable at times.</p>
 
 
 </section>
@@ -926,10 +1003,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../files/data-updates.html" class="pagination-link" aria-label="Data Updates">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./files/data-updates.html" class="pagination-link" aria-label="Data Updates">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files/bigquery-pipe3-table-reference.html" class="pagination-link" aria-label="BigQuery Pipe 3 Table Reference">
+        <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-08-26">
 
-<title>Global Fishing Watch documentation</title>
+<title>4&nbsp; BigQuery Pipe 2.5 Table Reference – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,23 +23,24 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./files/data-updates.html" rel="next">
-<link href="./figures/GFW_logo.png" rel="icon" type="image/png">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../files/bigquery-key-concepts.html" rel="next">
+<link href="../files/bigquery-pipe3-table-reference.html" rel="prev">
+<link href="../figures/GFW_logo.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Welcome!</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/data-updates.html">Data Reference</a></li><li class="breadcrumb-item"><a href="../files/bigquery-pipe2.5-table-reference.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">Documentation Materials</a> 
+      <a href="../">Documentation Materials</a> 
         <div class="sidebar-tools-main">
     <a href="https://globalfishingwatch.org/" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-house-door-fill"></i></a>
     <a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
@@ -112,7 +112,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Welcome!</span></a>
   </div>
 </li>
@@ -127,37 +127,37 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/data-updates.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/data-updates.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-key-concepts.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-key-concepts.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">BigQuery Key Concepts</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/bigquery-in-products.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/bigquery-in-products.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">BigQuery to APIs to Products</span></span></a>
   </div>
 </li>
@@ -174,31 +174,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vessel-identity.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vessel-identity.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Vessel Identity</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/identity-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/identity-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Indentity Tables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vessel-database.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vessel-database.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel Database</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vessel-info-tables.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vessel-info-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/product-vessel-info-summary-pvis.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/product-vessel-info-summary-pvis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span></a>
   </div>
 </li>
@@ -215,61 +215,61 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/fishing-effort-and-vessel-presence.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/fishing-effort-and-vessel-presence.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Fishing Effort and Vessel Presence</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/fishing-events.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/encounters.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/loitering.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/gaps.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/country-codes.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/coverage.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/pipeline.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
   </div>
 </li>
@@ -286,13 +286,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
   </div>
 </li>
@@ -309,67 +309,67 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
   </div>
 </li>
@@ -386,25 +386,25 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/helpful-resources.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/helpful-resources.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./files/gfw-data-training-materials.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/gfw-data-training-materials.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">GFW Data Training Materials</span></span></a>
   </div>
 </li>
@@ -415,26 +415,15 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome!</a>
-  <ul class="collapse">
-  <li><a href="#data-updates" id="toc-data-updates" class="nav-link" data-scroll-target="#data-updates">Data Updates</a></li>
-  <li><a href="#bigquery-key-concepts" id="toc-bigquery-key-concepts" class="nav-link" data-scroll-target="#bigquery-key-concepts">BigQuery Key Concepts</a></li>
-  <li><a href="#data-products" id="toc-data-products" class="nav-link" data-scroll-target="#data-products">Data Products</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/data-updates.html">Data Reference</a></li><li class="breadcrumb-item"><a href="../files/bigquery-pipe2.5-table-reference.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Global Fishing Watch documentation</h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></h1>
 </div>
 
 
@@ -442,12 +431,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 26, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -457,51 +440,280 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Warning
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p><strong>WORK IN PROGRESS</strong>. Information on this book is not up to date. We are currently working on improving GFW documentation.</p>
-</div>
-</div>
-<p><br></p>
-<section id="welcome" class="level1 unnumbered">
-<h1 class="unnumbered">Welcome!</h1>
-<p>This book includes the primary documentation of Global Fishing Watch’s data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g.&nbsp;fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.</p>
-<p>GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, and VIIRS. These data are processed by GFW’s automated <a href="./files/pipeline.html">pipelines</a>. These raw and processed data are stored as tables and organized in a handful of <a href="./files/bigquery-datasets.html">key BigQuery datasets</a>.</p>
-<section id="data-updates" class="level2">
-<h2 class="anchored" data-anchor-id="data-updates">Data Updates</h2>
-<p>Check the <a href="./files/data-updates.html">Data updates</a> for new changes to GFW data.</p>
-<p>See the <a href="./files/bigquery-pipe3-table-reference.html">BigQuery Table Reference</a> for checking the latest version of key tables to use.</p>
-</section>
-<section id="bigquery-key-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="bigquery-key-concepts">BigQuery Key Concepts</h2>
-<p>Read the <a href="./files/bigquery-key-concepts.html">BigQuery Key Concepts page</a> for important things to understand when working with GFW data in BigQuery, including BigQuery best practices.</p>
-</section>
-<section id="data-products" class="level2">
-<h2 class="anchored" data-anchor-id="data-products">Data Products</h2>
-<p>GFW data are grouped into the following general categories, or data products, that are used for various analyses.</p>
-<ol type="1">
-<li><a href="./files/fishing-effort-and-vessel-presence.html">Fishing effort and vessel presences</a> - Activity and fishing activity for all vessels</li>
-<li><a href="./files/fishing-events.html">Fishing events</a> - Activity by the world’s fishing vessels grouped into events</li>
-<li><a href="./files/vessel-database.html">Vessel database</a> and <a href="./files/vessel-info-tables.html">Vessel info tables</a> - Database of vessel identity</li>
-<li><a href="./files/encounters.html">Encounters</a> - Encounters between two vessels</li>
-<li><a href="./files/loitering.html">Loitering</a> - Loitering events by potential transshipment vessels</li>
-<li><a href="./files/anchorages-voyages-port-visits.html">Anchorages &amp; voyages</a> - Database of ports and vessel voyages between ports</li>
-<li><a href="./files/vms-data-sources.html">Country VMS</a> - Country-specific VMS data</li>
-<li><a href="./files/sar-object-detections.html">SAR Detections</a> - Vessel detection from Sentinel-1 SAR imagery</li>
-<li><a href="./files/gaps.html">AIS Gaps</a> - Dataset of all 6+ hour gaps in AIS signal by MMSI for all vessels.</li>
-</ol>
+<p>This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis.</p>
+<p>Last update: * Date: <code>2022-08-19</code> * By: <code>Tyler Clavelle</code></p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Subject</th>
+<th>Description</th>
+<th>BQ Dataset</th>
+<th>BQ Table</th>
+<th>Pipeline version</th>
+<th>Owner</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline">AIS</a></td>
+<td>AIS pipeline dataset to use</td>
+<td><code>pipe_production_v20201001</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline">AIS</a></td>
+<td>AIS position table (all messages)</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>messages_scored_</code></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Pipeline">AIS</a></td>
+<td>AIS position table (thinned)</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>research_messages</code></td>
+<td>2.5</td>
+<td>Tyler</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity">Vessel identity</a></td>
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-database">Vessel registry database</a></td>
+<td><code>vessel_database</code></td>
+<td><code>all_vessels_vYYYYMMDD</code></td>
+<td>2.5</td>
+<td>Jaeyoon</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity">Vessel identity</a></td>
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-info-tables">Vessel info tables</a></td>
+<td><code>gfw_research</code></td>
+<td><code>vi_ssvid_[byyear]_vYYYYMMDD</code></td>
+<td>2.5</td>
+<td>Tyler</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity">Vessel identity</a></td>
+<td>Annual fishing vessel list</td>
+<td><code>gfw_research</code></td>
+<td><code>fishing_vessels_ssvid_vYYYYMMDD</code></td>
+<td>2.5</td>
+<td>Tyler</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Vessel-identity">Vessel identity</a></td>
+<td>Annual carrier vessel list</td>
+<td><code>vessel_database</code></td>
+<td><code>carrier_vessels_byyear_v20220101</code></td>
+<td>2.5</td>
+<td>Jaeyoon</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters">Encounters</a></td>
+<td>Encounter events no speed restrictions</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>encounters</code></td>
+<td>2.5</td>
+<td>Nate</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Encounters">Encounters</a></td>
+<td>Encounter events in Published format for Products</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>published_events_encounters</code></td>
+<td>2.5</td>
+<td>Nate</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering">Loitering</a></td>
+<td>Loitering events</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>loitering</code> <code>published_events_loitering</code></td>
+<td>2.5</td>
+<td>Pete</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Loitering">Loitering</a></td>
+<td>Loitering events in Published format for Products</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>published_events_loitering</code></td>
+<td>2.5</td>
+<td>Hannah</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Anchorage locations</td>
+<td><code>anchorages</code></td>
+<td><code>named_anchorages_v20211026</code></td>
+<td>2.5</td>
+<td>Nate</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Individual port events (entry, start, gap, stop, exit)</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>proto_raw_port_events_*</code></td>
+<td>2.5</td>
+<td>Tim H</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Archived original individual port events (entry, start, gap, stop, exit)</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>archive_20201001_port_events_*</code></td>
+<td>2.5</td>
+<td>Tim H</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Port visits (grouped port events)</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>proto_port_visits</code></td>
+<td>2.5</td>
+<td>Tim H</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Port visits (grouped port events) in Published format for Products</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>published_events_port_visits</code></td>
+<td>2.5</td>
+<td>Hannah</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Previous version of Port visits version (grouped port events)</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>port_visits_</code></td>
+<td>2.5</td>
+<td>Tim H</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Vessel voyages between anchorages</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>proto_voyages_c2</code> <code>proto_voyages_c3</code> <code>proto_voyages_c4</code></td>
+<td>2.5</td>
+<td>Tim H</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Ports-and-voyages">Ports</a></td>
+<td>Previous version of Vessel voyages between anchorages</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>voyages</code></td>
+<td>2.5</td>
+<td>Tim H</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections">VIIRS</a></td>
+<td>VIIRS vessel detections</td>
+<td><code>pipe_viirs_production_v20220112</code></td>
+<td><code>raw_vbd_global</code> <code>raw_vbd_global_without_noise</code></td>
+<td></td>
+<td>Masaki</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VIIRS-boat-detections">VIIRS</a></td>
+<td><a href="VIIRS-AIS-matching">VIIRS vessel detections that matched/unmatched with AIS/VMS</a></td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>proto_matches_raw_vbd_global_3top_v20210514</code></td>
+<td>2.5</td>
+<td>Masaki</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/Gaps">AIS gaps</a></td>
+<td>AIS gaps and suspected disabling events</td>
+<td><code>pipe_production_v20201001</code></td>
+<td><code>proto_ais_gap_events</code></td>
+<td>2.5</td>
+<td>Tyler</td>
+</tr>
+<tr class="odd">
+<td>AIS offsetting</td>
+<td>AIS offsetting by <code>seg_id</code></td>
+<td><code>gfw_research_precursors</code></td>
+<td><code>offsetting_year_seg_v20220609</code></td>
+<td>2.5</td>
+<td>Pete</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Peru VMS</td>
+<td><code>pipe_peru_production_v20211126</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Panama VMS</td>
+<td><code>pipe_panama_production_v20211126</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Chile VMS</td>
+<td><code>pipe_chile_production_v20211126</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Indonesia VMS</td>
+<td><code>pipe_indonesia_production_v20200320</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Brazil VMS</td>
+<td><code>pipe_brazil_production_v20211126</code></td>
+<td></td>
+<td>2.5</td>
+<td>Claudino</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Mexico VMS</td>
+<td><code>pipe_mexico_oceana_production_v20210811</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Costa Rica VMS</td>
+<td><code>pipe_costarica_production_v20211126</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="odd">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Ecuador VMS</td>
+<td><code>pipe_ecuador_production_v20211126</code></td>
+<td></td>
+<td>2.5</td>
+<td>Andres</td>
+</tr>
+<tr class="even">
+<td><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/VMS">VMS</a></td>
+<td>Belize VMS</td>
+<td><code>pipe_belize_production_v20220304</code></td>
+<td></td>
+<td>2.5</td>
+<td>Matias</td>
+</tr>
+</tbody>
+</table>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -926,10 +1138,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="../files/bigquery-pipe3-table-reference.html" class="pagination-link" aria-label="BigQuery Pipe 3 Table Reference">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./files/data-updates.html" class="pagination-link" aria-label="Data Updates">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files/bigquery-key-concepts.html" class="pagination-link" aria-label="BigQuery Key Concepts">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">BigQuery Key Concepts</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -938,4 +1153,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div></div></footer></body></html>
