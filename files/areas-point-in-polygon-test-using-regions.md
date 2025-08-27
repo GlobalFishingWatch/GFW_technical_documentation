@@ -1,4 +1,4 @@
-## HOW TO - Do point-in-polygon test in BigQuery (BQ) using regions
+## Point-in-polygon Test Using Regions
 
 Owner: Hannah Linder
 Last edited time: 23 de mayo de 2024 2:14

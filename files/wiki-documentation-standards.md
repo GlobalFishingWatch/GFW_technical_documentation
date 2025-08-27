@@ -1,4 +1,6 @@
-# Wiki Page Requirements
+# Wiki Documentation Standard
+
+## Page Requirements
 
 Each unique wiki page describing a GFW dataset must include the below sections. For long sections, the use of sub-headers within  is encouraged to improve organization.
 

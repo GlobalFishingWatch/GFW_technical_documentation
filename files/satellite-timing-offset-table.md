@@ -1,4 +1,4 @@
-# Satellite timing offset 
+# Satellite Timing Offset 
 
 The satellite timing offset table contains estimates of how far off the satellite clocks are for each Spire satellite. It's only Spire at present, because that is the only set of satellites we have IDs for. Exact Earth satellite's are reputed to have very stable clocks so it may not be necessary there, but might be useful for shore based AIS if we ever get IDs for individual stations.
 

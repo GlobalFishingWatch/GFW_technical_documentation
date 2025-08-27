@@ -28,48 +28,61 @@ book:
     
     - part: "Data Reference"
       chapters: 
-        - data-updates.md #(PART) Data Updates
-        - bigquery-datasets.md #(PART) Big Query
-        - bigquery-pipe3-table-reference.md
-        - bigquery-pipe2.5-table-reference.md
-        - key-concepts.md #(BigQuery Key Concepts)
-        - bigquery-in-products.md
+        - files/data-updates.md
+        - files/bigquery-datasets.md
+        - files/bigquery-pipe3-table-reference.md
+        - files/bigquery-pipe2.5-table-reference.md
+        - files/bigquery-key-concepts.md
+        - files/bigquery-in-products.md
       
-     - part: "Vessel Identity"
+    - part: "Vessel Identity"
       chapters: 
-        - vessel-identity.md
-        - identity-tables.md
-        - vessel-database.md
-        - vessel-info-tables.md
-        - product-vessel-info-summary-pvis.md
-    - fishing-effort-and-vessel-presence.md
-    
-    - fishing-events.md #(PART) Events
-    - encounters.md
-    - loitering.md
-    - gaps.md
-    - anchorages-and-voyages.md # Anchorages, voyages and port visits
-    - sar-object-detections.md
-    - vms.md #VMS Data Sources
-    - spatial-regions-sources-and-methodology.md
-    - areas-eez-boundaries.md
-    - areas-12-nm-boundary.md
-    - areas-rfmos.md
-    - areas-fao-areas.md
-    - areas-high-seas-pockets.md
-    - areas-high-seas.md
-    - areas-protected-seas.md
-    - areas-wdpa-marine-mpas.md
-    - areas-how-to-point-in-polygon-in-bigquery.md
-    - areas-how-to-update-layer-in-pipe-regions.md
-    - country-codes.md
-    - coverage.md
-    - satellite-timing-offset-table.md
-    - pipeline.md
-    - wiki-documentation-standards.md #Wiki Page Requirements
-    - helpful-resources.md #Internal materials
-    - data-products-page-template.md
-    - training-materials-README.md #(PART) Training materials
+        - files/vessel-identity.md
+        - files/identity-tables.md
+        - files/vessel-database.md
+        - files/vessel-info-tables.md
+        - files/product-vessel-info-summary-pvis.md
+        
+    - part: "SECTION TITLE??"
+      chapters: 
+      - files/fishing-effort-and-vessel-presence.md
+      - files/fishing-events.md
+      - files/encounters.md
+      - files/loitering.md
+      - files/gaps.md
+      - files/anchorages-voyages-port-visits.md 
+      - files/vms-data-sources.md
+      - files/country-codes.md
+      - files/coverage.md
+      - files/pipeline.md
+        
+    - part: "Imagery"
+      chapters: 
+      - files/sar-object-detections.md
+      - files/satellite-timing-offset-table.md
+  
+  
+    - part: "Reference Layers"
+      chapters:
+      - files/spatial-regions-sources-and-methodology.md
+      - files/areas-eez-boundaries.md
+      - files/areas-12-nm-boundary.md
+      - files/areas-rfmos.md
+      - files/areas-fao-areas.md
+      - files/areas-high-seas-pockets.md
+      - files/areas-high-seas.md
+      - files/areas-protected-seas.md
+      - files/areas-wdpa-marine-mpas.md
+      - files/areas-point-in-polygon-test-using-regions.md
+      - files/areas-updating-layers-in-pipe_regions.md
+  
+  
+    - part: "Resources"
+      chapters:
+      - files/wiki-documentation-standards.md
+      - files/helpful-resources.md
+      - files/data-products-page-template.md
+      - files/gfw-data-training-materials.md
 
 
 # bibliography: references.bib

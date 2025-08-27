@@ -1,4 +1,4 @@
-# Big Query Pipe 2.5 table reference
+# BigQuery Pipe 2.5 Table Reference
 
 This page contains the list and location of the most current BigQuery datasets and tables for the various GFW data products. The BQ tables in the below table are the default tables to be used when starting a new analysis. 
 

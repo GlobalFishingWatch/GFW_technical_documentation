@@ -1,4 +1,4 @@
-# Data products page template
+# Data Products Page Template
 
 Description of table
 

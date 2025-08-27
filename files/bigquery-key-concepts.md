@@ -1,4 +1,4 @@
-# Big Query Key concepts
+# BigQuery Key Concepts
 
 This page provides an overview and key concepts for working with GFW data in BigQuery, Google's serverless, highly scalable enterprise data warehouse. 
 

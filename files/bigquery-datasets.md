@@ -1,6 +1,4 @@
-# (PART) Big Query {-} 
-
-# BigQuery datasets
+# BigQuery Datasets
 
 GFW data is stored as BigQuery tables and organized in a handful of key datasets. These datasets contain the automated output of GFW's data pipelines as well as manually generated tables from development and research projects.
 

@@ -1,4 +1,4 @@
-# (PART) Data updates {-} 
+# Data Updates
 
 # Running list of updates to note in regard to Global Fishing Watch data and data changes
 

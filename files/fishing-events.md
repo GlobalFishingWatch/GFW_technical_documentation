@@ -1,5 +1,4 @@
-# (PART) Events {-} 
-# Fishing events
+# Fishing Events
 
 Fishing Events is a GFW data product which groups AIS fishing positions together into events. In addition to grouping fishing positions together, the Fishing Events table also has a set of minimally restrictive rules applied to separate large fishing events and to remove fishing events considered to be likely noise. 
 

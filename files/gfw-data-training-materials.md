@@ -1,4 +1,3 @@
-# (PART) Training materials {-} 
 # GFW Data Training Materials
 
 https://docs.google.com/document/d/1mvpQa01gRTvEKKCcrqCwinapJ_NKB66MlLmxa1RGQrM/edit?tab=t.0

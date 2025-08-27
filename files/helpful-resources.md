@@ -1,4 +1,4 @@
-# Internal materials
+# Helpful Resources
 
 ## Training materials
 
