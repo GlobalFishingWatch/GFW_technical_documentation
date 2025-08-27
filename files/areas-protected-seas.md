@@ -1,13 +1,14 @@
-## Protected Seas
+---
+date-modified: last-modified
+---
 
-Owner: Hannah Linder
+<!--Owner: Hannah Linder
 Last edited time: 1 de marzo de 2024 13:38
-Created time: 1 de marzo de 2024 13:07
+Created time: 1 de marzo de 2024 13:07-->
 
+# Protected Seas
 
-Protected Seas
-
-### Key Attributes
+## Key Attributes
 
 | **Layer name** | protectedseas |
 | --- | --- |
@@ -19,13 +20,13 @@ Protected Seas
 | **Last updated** | 2025-03-03 |
 | **License** | <TODO> |
 
-### Description
+## Description
 
 <TODO>
 
 Contains the regions with category IUCN MPAs
 
-### Data access
+## Data access
 
 **GCS**
 

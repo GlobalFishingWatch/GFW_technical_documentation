@@ -1,3 +1,8 @@
+---
+date-modified: last-modified
+---
+
+
 # BigQuery Pipe 3 Table Reference 
 
 This page contains the published tables of AIS Pipeline 3 `pipe_ais_v3_published.` and their previous names in the AIS Pipeline 2.5 `pipe_production_v20201001.` If you do NOT see a table listed below it has either been archived or placed in the `internal` bucket within BQ. This page does NOT contain the description of the internal tables of AIS Pipeline 3 `pipe_ais_v3_internal.` Please contact the engineers and pipeline manager if you request to use an internal table for your work. 
@@ -15,9 +20,9 @@ Table Development:
 Data pipeline ownership falls with the pipeline engineering team, currently Andres Arana and Matias Piano. This means they operate, maintain, develop and deprecate the core pipeline data outputs. The naming, security, versioning control of these tables is decided upon across all engineers, Pipeline Manager, and CTO. Development of the pipeline logic and methodology was originally created outside of the pipeline team that developed Pipeline 3. In the future the pipeline methodology is developed by partnership between the Research team and Engineering team. 
 
 
-Last update:
+<!--Last update:
    * Date: `2024-04-18`
-   * By: `Hannah Linder`
+   * By: `Hannah Linder`-->
 
 
 __AIS Pipe 3 -- Published__

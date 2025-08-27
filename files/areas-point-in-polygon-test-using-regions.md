@@ -1,23 +1,26 @@
-## Point-in-polygon Test Using Regions
-
-Owner: Hannah Linder
+---
+date-modified: 2024-05-23
+---
+<!--Owner: Hannah Linder
 Last edited time: 23 de mayo de 2024 2:14
-Created time: 1 de marzo de 2024 13:10
+Created time: 1 de marzo de 2024 13:10-->
 
+
+# Point-in-polygon Test Using Regions
 
 [WORK IN PROGRESS]
 
 This guide describes how to use the regions tables that are present in bigquery to do ad-hoc analysis to determine which of a set of lat/lon values are inside the set of regions.
 
-### Architecture
+## Architecture
 
 We use sets of polygons in the data pipeline to determine when events (fishing events, encounter events, etc) are located inside pre-determined polygons, such as MPAs, EEZs and the like. These sets of polygons are called “regions” and all the code that is used to create and use them is in the pipe-regions [github repo](https://github.com/GlobalFishingWatch/pipe-regions).
 
 Each layer is loaded into bigquery in a separate layer. The production dataset is `world-fishing-827.pipe_regions_layers`. For example, the WDPA layer containing all the marine MPAs is in `world-fishing-827.pipe_regions_layers.WDPA_Mar_2022_Marine`. All the associated fields from the original source are present in that table, so if you want to filter to a subset you could do something like `WHERE status="Proposed"`.
 
-BTW documentation for all these layers is  [right here in notion](../Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e.md).
+See documentation for all these layers is previous chapters of this book.
 
-### Adding Regions
+## Adding Regions
 
 Let’s say you have a big query table full of records with positions (lat, lon) and for each position record you want to get all of the region polygons that contain the position and put that in a new big query table
 

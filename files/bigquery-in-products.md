@@ -1,10 +1,14 @@
+---
+date-modified: last-modified
+---
+
 # BigQuery to APIs to Products
 <br>
 The flow of data into [**GFW Products**](https://docs.google.com/document/d/1JY0umwJ5j8qFpOb90OuaUOo43y45yExaenNWzUlbkCo/edit?tab=t.0)   is enabled through a set of **Application Programming Interfaces (APIs)**. This page documents the key APIs, the underlying queries powering them, and how they support user-facing products.
 
 ## GFW APIs 
 
-![GFW Data Products](figures/GFWDataProducts.png)
+![GFW Data Products](../figures/GFWDataProducts.png)
 [GFW Data Products Diagram link](https://whimsical.com/gfw-data-products-7WiWeFz5KVMxndC8gaD7DS)
 
 ### Current GFW APIs (v3)

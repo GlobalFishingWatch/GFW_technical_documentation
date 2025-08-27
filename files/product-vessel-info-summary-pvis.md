@@ -32,10 +32,13 @@ We want to be transparent on this hierarchy and the logic behind it, internally,
 
 How the Vessels API is populated is highlighted in the diagram below; specifically how the Product Vessel Info Summary table fits into the Vessels API. 
 
-![Vessels API diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/vessel_api_3_steps.drawio_3.png) <br>
+![Vessels API diagram](../figures/vessel-api-steps.png) 
+<br>
 [Vessels API diagram link](https://drive.google.com/file/d/1w-H8JawKDdjj0bikUXlXpZ-I8vNvPccm/view?usp=sharing)
 
-![Product Vessel Info Summary vessel and gear type diagram](https://github.com/willabrooksGFW/gfw_photos/blob/main/All%20vessels%402x.png) <br>
+![Product Vessel Info Summary vessel and gear type diagram](../figures/vesseltype-geartype-diagram.png) 
+<br>
+
 [Whimsical for how prod_shiptype and prod_geartype are populated](https://whimsical.com/all-vessels-7mpjsDLTutacKzUn4jPtHA)
 
 Please see the [Product Vessel Info Summary Data Template](https://docs.google.com/document/d/1YwEFUtSAIujy8j8BO1DFkg6kqu3xcP8T5yZW_SsBH1Q/edit) for field definitions of all fields in table. 

@@ -1,13 +1,14 @@
-## 12 NM Boundary
-
-Owner: Hannah Linder
+---
+date-modified: last-modified
+---
+<!--Owner: Hannah Linder
 Last edited time: 1 de marzo de 2024 13:38
-Created time: 1 de marzo de 2024 13:02
-
+Created time: 1 de marzo de 2024 13:02-->
+# 12 NM Boundary
 
 World 12 Nautical Miles Zone (Territorial Seas)
 
-### Key Attributes
+## Key Attributes
 
 | **Layer name** | eez12nm |
 | --- | --- |
@@ -19,13 +20,17 @@ World 12 Nautical Miles Zone (Territorial Seas)
 | **Last updated** | 2023-10-25 |
 | **License** | [CC-BY](https://creativecommons.org/licenses/by/4.0/) |
 
-### Description
+## Description
 
 12 Nautical Mile boundary that is the limit of a nation’s territorial waters. From [Marine Regions](https://www.marineregions.org/)
 
+
+![](../figures/12-nautical-miles.png){fig-align="center" width=80%}
+
+
 [[Known Issues]](https://www.marineregions.org/files/World_12NM_v3_20191118_known_issues.txt)
 
-### Data access
+## Data access
 
 **GCS**
 

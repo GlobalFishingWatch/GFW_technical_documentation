@@ -1,13 +1,17 @@
-## High Seas
+---
+date-modified: last-modified
+---
 
-Owner: Hannah Linder
+# High Seas
+
+<!--Owner: Hannah Linder
 Last edited time: 1 de marzo de 2024 13:39
-Created time: 1 de marzo de 2024 13:09
+Created time: 1 de marzo de 2024 13:09-->
 
 
 World High Seas (Areas outside EEZs)
 
-### Key Attributes
+## Key Attributes
 
 | **Layer name** | high_seas |
 | --- | --- |
@@ -19,15 +23,15 @@ World High Seas (Areas outside EEZs)
 | **Last updated** | 2024-10-10 |
 | **License** | [CC-BY](https://creativecommons.org/licenses/by/4.0/) |
 
-### Description
+## Description
 
 The area of the seas that is not included in the exclusive economic zone, in the territorial sea or in the internal waters of a State, or in the archipelagic waters of an archipelagic State.
 
 From [Marine Regions](https://www.marineregions.org/)
 
-![](High%20Seas%204cfe42cc9f6f4dc1954613c1534fe737/image1.png)
+![](../figures/high-seas.png){fig-align="center" width=80%}
 
-### Data access
+## Data access
 
 **GCS**
 

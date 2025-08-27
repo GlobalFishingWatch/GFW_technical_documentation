@@ -1,4 +1,8 @@
-## RFMOs
+---
+date-modified: last-modified
+---
+
+# RFMOs
 
 Owner: Hannah Linder
 Last edited time: 11 de febrero de 2025 12:35
@@ -7,7 +11,7 @@ Created time: 1 de marzo de 2024 13:14
 
 Regional Fisheries Management Organizations (RFMOs)
 
-### Key Attributes
+## Key Attributes
 
 | **Layer name** | rfmo |
 | --- | --- |
@@ -21,7 +25,7 @@ For individual RFMOs, use this URL template
 | **Last updated** | 2019-02-21 |
 | **License** | Public |
 
-### Description
+## Description
 
 42 RFMOs are included in one table. See below for a complete list. All RFMOS stem from the FAO geonetwork. Some RFMO shapefiles go to land, and there is a possibility of coastline issues. However, not quite sure there is an easy solution for RFMOs (since it is region-specific) so currently (Summer 2022) have not conducted any adjustments.
 
@@ -33,7 +37,7 @@ There are several RFMOs where we do not use the shapefile published in geonetwor
 
 See the linked pages for more on these. For the rest, see below.
 
-### Data access
+## Data access
 
 **GCS**
 
@@ -45,11 +49,11 @@ See the linked pages for more on these. For the rest, see below.
 - Normalized: world-fishing-827.pipe_regions_layers.fao_rfb_rfmos
 - Processed for S2 lookup:: world-fishing-827.pipe_regions_layers.fao_rfb_rfmos_s2_10
 
-### Updating
+## Updating
 
 There is a script in pipe-regions that will download original shapefiles, merge them and store in gcs. To use this, see the section on FAO RFMOs in [https://github.com/GlobalFishingWatch/pipe-regions/blob/master/USAGE.md](https://github.com/GlobalFishingWatch/pipe-regions/blob/master/USAGE.md)
 
-#### List of RFMOs
+## List of RFMOs
 
 | ACAP | [Agreement on the Conservation of Albatrosses and Petrels](https://geonetwork.d4science.org/geonetwork/srv/en/metadata.show?uuid=fao-rfb-map-acap) |
 | --- | --- |
@@ -95,14 +99,18 @@ There is a script in pipe-regions that will download original shapefiles, merge 
 | SWIOFC | [Southwest Indian Ocean Fisheries Commission](https://geonetwork.d4science.org/geonetwork/srv/en/metadata.show?uuid=fao-rfb-map-swiofc) |
 | WCPFC | [Western and Central Pacific Fisheries Commission](https://geonetwork.d4science.org/geonetwork/srv/en/metadata.show?uuid=fao-rfb-map-wcpfc) |
 
-[NPFC](RFMOs%204516ced0f92b41a29da446c9593a1dfc/NPFC%204b67c4ebf64e49429ed87730d956115e.md)
+<!--TODO: Add this as separate pages?-->
 
-[IATTC](RFMOs%204516ced0f92b41a29da446c9593a1dfc/IATTC%20031392aed43642b2bc52c968d530e078.md)
 
-[ICCAT](RFMOs%204516ced0f92b41a29da446c9593a1dfc/ICCAT%20dd2c4c550f1f4a39807a95fd32823f6e.md)
 
-[SPRFMO](RFMOs%204516ced0f92b41a29da446c9593a1dfc/SPRFMO%20405e2e7f77f740e39943813b8e8f8d6e.md)
+[NPFC](https://www.notion.so/globalfishingwatch/NPFC-4b67c4ebf64e49429ed87730d956115e)
 
-[CCSBT](RFMOs%204516ced0f92b41a29da446c9593a1dfc/CCSBT%203bcd1a10e9534556a02a0cfcf5503e5a.md)
+[IATTC](https://www.notion.so/globalfishingwatch/IATTC-031392aed43642b2bc52c968d530e078)
 
-[IOTC](RFMOs%204516ced0f92b41a29da446c9593a1dfc/IOTC%201d8c46f6fd644f1993f137b4f54a0bb4.md)
+[ICCAT](https://www.notion.so/globalfishingwatch/ICCAT-dd2c4c550f1f4a39807a95fd32823f6e)
+
+[SPRFMO](https://www.notion.so/globalfishingwatch/SPRFMO-405e2e7f77f740e39943813b8e8f8d6e)
+
+[CCSBT](https://www.notion.so/globalfishingwatch/CCSBT-3bcd1a10e9534556a02a0cfcf5503e5a)
+
+[IOTC](https://www.notion.so/globalfishingwatch/IOTC-1d8c46f6fd644f1993f137b4f54a0bb4)

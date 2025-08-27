@@ -1,3 +1,8 @@
+---
+date-modified: last-modified
+---
+
+
 # BigQuery Key Concepts
 
 This page provides an overview and key concepts for working with GFW data in BigQuery, Google's serverless, highly scalable enterprise data warehouse. 
@@ -42,7 +47,7 @@ The BigQuery validator is a built-in query debugger that also estimates query co
 
 ## GFW datasets
 
-Within a BigQuery project, data is stored in tables and organized in datasets. There are many datasets in the `world-fishing-827` and `global-fishing-watch` projects. See the [BigQuery Table Reference page (add link)]() for the list of key datasets.
+Within a BigQuery project, data is stored in tables and organized in datasets. There are many datasets in the `world-fishing-827` and `global-fishing-watch` projects. See the [BigQuery Table Reference page](bigquery-pipe3-table-reference.md) for the list of key datasets.
 
 ## Naming conventions
 

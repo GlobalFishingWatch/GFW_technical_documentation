@@ -1,16 +1,20 @@
-## Updating Layers in pipe_regions
+---
+date-modified: last-modified
+---
+
+# Updating Layers in pipe_regions
 
 
-Owner: Hannah Linder
+<!--Owner: Hannah Linder
 Last edited time: 23 de mayo de 2024 2:14
-Created time: 1 de marzo de 2024 13:10
+Created time: 1 de marzo de 2024 13:10-->
 
 
 Use Case: Replacing a region layer with a different version of the shapefile. See: [ENG-395](https://globalfishingwatch.atlassian.net/browse/ENG-395) - CCSBT region for events Done
 
-We will be updating this layer: [CCSBT](RFMOs%204516ced0f92b41a29da446c9593a1dfc/CCSBT%203bcd1a10e9534556a02a0cfcf5503e5a.md)
+We will be updating this layer: [CCSBT](https://www.notion.so/globalfishingwatch/CCSBT-3bcd1a10e9534556a02a0cfcf5503e5a)
 
-### Steps
+## Steps
 
 1. get the new shapefile. We want this one. [https://drive.google.com/drive/folders/17ZlvqBEaLDBsUmq-QjdPvD6ge3sNj-k1?usp=sharing](https://drive.google.com/drive/folders/17ZlvqBEaLDBsUmq-QjdPvD6ge3sNj-k1?usp=sharing) . Looks like there are two versions in there, let’s look at them in QGIS
 2. Look at the shapefile in qgis. Check for edge cases - latitude values outside -90, 90. Lon values outside -180, 180, really big polygons that are more than 180 degrees wide, anything out of place. Might need to clip and/or split into multiple pieces. Looks like CCSBT_all_SA is one big polygon and CCSBT_SA_multi covers the same area but is split into multiple polygons. For pipe-regions, more small polygons is better than one big one, since we are going to be chopping them up into small pieces anyway.
@@ -128,6 +132,6 @@ docker compose run --rm pipeline \
 
 CCSBT which is the new one, and one with id CCSBT-proposed which is the old one.
 
-Edit this page: [CCSBT](RFMOs%204516ced0f92b41a29da446c9593a1dfc/CCSBT%203bcd1a10e9534556a02a0cfcf5503e5a.md)
+Edit this page: [CCSBT](https://www.notion.so/globalfishingwatch/CCSBT-3bcd1a10e9534556a02a0cfcf5503e5a)
 
 And then we’re done!

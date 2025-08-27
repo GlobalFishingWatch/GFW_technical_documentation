@@ -1,14 +1,17 @@
+---
+date-modified: 2025-02-20
+---
+<!--Owner: Hannah Linder
+Last edited time: 20 de febrero de 2025 11:49
+Created time: 28 de febrero de 2024 15:14 -->
+
 # Spatial Region Sources
 
-Owner: Hannah Linder
-Last edited time: 20 de febrero de 2025 11:49
-Created time: 28 de febrero de 2024 15:14
-
-# Raster information
+## Raster information
 
 Raster Information can be found in `pipe_static.spatial_measures_clustered_20230307`
 
-# Regions
+## Regions
 
 Regions are polygon layers that are used in the later stages of the pipeline to determine whether a given position (such as the location of a fishing event) is inside or outside the individual polygons in the layer. Example layers are WDPA marine protected areas, EEZs, RFMO regions, etc.
 
@@ -20,17 +23,16 @@ Each set of region layers comes from a different source and is composed of a set
 
 **Pipeline bucket: pipe_regions_layers**
 
-- [12 NM Boundary](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/12%20NM%20Boundary%2058fd490280ff4a20a8442d978eb40bb0.md)
-- [EEZ Boundaries](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/EEZ%20Boundaries%20c9d7f29231374691b9647a4120231be5.md)
-- [FAO Areas](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/FAO%20Areas%20d88199bc7cf048e497ca9450225370b2.md)
-- [High Seas](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/High%20Seas%204cfe42cc9f6f4dc1954613c1534fe737.md)
-- [High Seas Pockets](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/High%20Seas%20Pockets%20245bd906a21842a3af217ae7acca17ef.md)
-- [Oceans and Seas](https://www.notion.so/Ocean-and-Seas-33055608a7e94b6587354537d73f06fd?pvs=21)
-- [Protected Seas](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/Protected%20Seas%2029ecb337972e4c91a65edcb7bd0fdfe9.md)
-- [RFMOs](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/RFMOs%204516ced0f92b41a29da446c9593a1dfc.md)
-- [WDPA Marine MPAs](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/WDPA%20Marine%20MPAs%20d03a66feed5649e4b15faa5c3f28a457.md)
-- [HOWTO: Do point in polygon test in bigquery using regions](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/HOW%20TO%20-%20Do%20point-in-polygon%20test%20in%20BigQuery%20(BQ)%203ce81b2b246047719a9effdbd4bee72e.md)
-- [HOWTO: Update a layer in pipe_regions](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/HOW%20TO%20-%20Update%20layer%20in%20pipe_regions%20bfcbdf4501ba415686253c04d8f0600b.md)
+- [12 NM Boundary]
+- [EEZ Boundaries]
+- [FAO Areas]
+- [High Seas]
+- [High Seas Pockets]
+- [Oceans and Seas]
+- [Protected Seas]
+- [WDPA Marine MPAs]
+- [HOWTO: Do point in polygon test in bigquery using regions]
+- [HOWTO: Update a layer in pipe_regions]
 
 ## Data Access
 
@@ -266,26 +268,6 @@ WCPFC
 
 ---
 
-Design Issues
+## Design Issues
 
 [https://github.com/GlobalFishingWatch/pipe-regions/blob/master/DESIGN.md](https://github.com/GlobalFishingWatch/pipe-regions/blob/master/DESIGN.md)
-
-[EEZ Boundaries](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/EEZ%20Boundaries%20c9d7f29231374691b9647a4120231be5.md)
-
-[WDPA Marine MPAs](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/WDPA%20Marine%20MPAs%20d03a66feed5649e4b15faa5c3f28a457.md)
-
-[RFMOs](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/RFMOs%204516ced0f92b41a29da446c9593a1dfc.md)
-
-[12 NM Boundary](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/12%20NM%20Boundary%2058fd490280ff4a20a8442d978eb40bb0.md)
-
-[Protected Seas](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/Protected%20Seas%2029ecb337972e4c91a65edcb7bd0fdfe9.md)
-
-[FAO Areas](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/FAO%20Areas%20d88199bc7cf048e497ca9450225370b2.md)
-
-[High Seas](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/High%20Seas%204cfe42cc9f6f4dc1954613c1534fe737.md)
-
-[                                                                                  High Seas Pockets](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/High%20Seas%20Pockets%20245bd906a21842a3af217ae7acca17ef.md)
-
-[HOW TO - Update layer in pipe_regions](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/HOW%20TO%20-%20Update%20layer%20in%20pipe_regions%20bfcbdf4501ba415686253c04d8f0600b.md)
-
-[HOW TO - Do point-in-polygon test in BigQuery (BQ) using regions](Spatial%20Region%20Sources%20f8a8713c76e541bf93859581a271d10e/HOW%20TO%20-%20Do%20point-in-polygon%20test%20in%20BigQuery%20(BQ)%203ce81b2b246047719a9effdbd4bee72e.md)

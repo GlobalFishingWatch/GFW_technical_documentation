@@ -1,13 +1,17 @@
-## FAO Areas
+---
+date-modified: last-modified
+---
 
-Owner: Hannah Linder
+# FAO Areas
+
+<!--Owner: Hannah Linder
 Last edited time: 1 de marzo de 2024 13:39
-Created time: 1 de marzo de 2024 13:08
+Created time: 1 de marzo de 2024 13:08-->
 
 
 FAO Statistical Areas
 
-### Key Attributes
+## Key Attributes
 
 | **Layer names** | fao, major_fao |
 | --- | --- |
@@ -19,9 +23,9 @@ FAO Statistical Areas
 | **Last updated** | Manual update 2022-01-19, original source revision date 2014-04-17 |
 | **License** | Public |
 
-### Description
+## Description
 
-![](FAO%20Areas%20d88199bc7cf048e497ca9450225370b2/image1.png)
+![](../figures/fao-fishing-areas.png){fig-align="center" width=80%}
 
 FAO Major Fishing Areas for Statistical Purposes are arbitrary areas, the boundaries of which were determined in consultation with international fishery agencies on various considerations, including (i) the boundary of natural regions and the natural divisions of oceans and seas; (ii) the boundaries of adjacent statistical fisheries bodies already established in inter-governmental conventions and treaties; (iii) existing national practices; (iv) national boundaries; (v) the longitude and latitude grid system; (vi) the distribution of the aquatic fauna; and (vii) the distribution of the resources and the environmental conditions within an area.
 
@@ -37,7 +41,7 @@ FAO_MAJOR_AREAS_NOCOASTLINE.shp.zip \
 
 FAO_MAJOR_AREAS_NOCOASTLINE.geojson
 
-### FAO Areas
+## FAO Areas
 
 This is the full data set
 

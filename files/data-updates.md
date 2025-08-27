@@ -1,9 +1,9 @@
 # Data Updates
 
-# Running list of updates to note in regard to Global Fishing Watch data and data changes
+### Running list of updates to note in regard to Global Fishing Watch data and data changes {.unnumbered}
 
 > **Note**
-> Do not forget to update the version of the tables in the [BigQuery Table Reference](BigQuery-Table-Reference).
+> Do not forget to update the version of the tables in the [BigQuery Table Reference](bigquery-pipe3-table-reference.md).
 
 ## December 15, 2023
 
