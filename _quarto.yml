@@ -64,7 +64,8 @@ book:
   
     - part: "Reference Layers"
       chapters:
-      - files/spatial-regions-sources-and-methodology.md
+      - files/areas-spatial-region-sources.md
+      # - files/spatial-region-sources-and-methodology.md
       - files/areas-eez-boundaries.md
       - files/areas-12-nm-boundary.md
       - files/areas-rfmos.md
