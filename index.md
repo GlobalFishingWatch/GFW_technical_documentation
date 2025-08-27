@@ -1,16 +1,13 @@
----
-title: "Introduction"
-format: html
----
-
-## Welcome to GFW Documentation{.unnumbered}
-
 
 ::: {.callout-warning}
 
 **WORK IN PROGRESS**. Information on this book is not up to date. We are currently working on improving GFW documentation.
 
 :::
+
+<br>
+
+# Welcome! {-}
 
 This book includes the primary documentation of Global Fishing Watch's data and infrastructure. It outlines how data are processed, where data are located, and the key data products (e.g. fishing effort, encounters, ports, etc.) and how/when to use the associated BigQuery tables.
 
