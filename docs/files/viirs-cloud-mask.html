@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; vi_ssvid tables – Global Fishing Watch documentation</title>
+<title>27&nbsp; VIIRS cloud mask – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files/product-vessel-info-summary-pvis.html" rel="next">
-<link href="../files/vessel-database.html" rel="prev">
+<link href="../files/viirs-excluding-overlapping-detection-to-AIS-matching-table.html" rel="next">
+<link href="../files/viirs-boat-detections.html" rel="prev">
 <link href="../figures/GFW_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/vessel-identity.html">Vessel Identity</a></li><li class="breadcrumb-item"><a href="../files/vessel-info-tables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/viirs-cloud-mask.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/vessel-info-tables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../files/vessel-info-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></span></a>
   </div>
 </li>
@@ -316,7 +316,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-cloud-mask.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/viirs-cloud-mask.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></span></a>
   </div>
 </li>
@@ -468,26 +468,21 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-tables" id="toc-key-tables" class="nav-link active" data-scroll-target="#key-tables"><span class="header-section-number">10.1</span> Key Tables</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">10.2</span> Data Description</a>
-  <ul class="collapse">
-  <li><a href="#vi_ssvid-and-vi_ssvid_byyear-tables" id="toc-vi_ssvid-and-vi_ssvid_byyear-tables" class="nav-link" data-scroll-target="#vi_ssvid-and-vi_ssvid_byyear-tables"><span class="header-section-number">10.2.1</span> <code>vi_ssvid</code> and <code>vi_ssvid_byyear</code> tables</a></li>
-  </ul></li>
-  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">10.3</span> Caveats &amp; Known Issues</a>
-  <ul class="collapse">
-  <li><a href="#fishing-hours-incorrect-for-squid-jiggers" id="toc-fishing-hours-incorrect-for-squid-jiggers" class="nav-link" data-scroll-target="#fishing-hours-incorrect-for-squid-jiggers"><span class="header-section-number">10.3.1</span> Fishing hours incorrect for squid jiggers</a></li>
-  </ul></li>
-  <li><a href="#example-queries-need-updating" id="toc-example-queries-need-updating" class="nav-link" data-scroll-target="#example-queries-need-updating"><span class="header-section-number">10.4</span> Example Queries (need updating)</a></li>
-  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links"><span class="header-section-number">10.5</span> Links</a></li>
+  <li><a href="#repository" id="toc-repository" class="nav-link active" data-scroll-target="#repository"><span class="header-section-number">28</span> Repository</a></li>
+  <li><a href="#key-tables" id="toc-key-tables" class="nav-link" data-scroll-target="#key-tables"><span class="header-section-number">29</span> Key tables</a></li>
+  <li><a href="#data-descriptions" id="toc-data-descriptions" class="nav-link" data-scroll-target="#data-descriptions"><span class="header-section-number">30</span> Data descriptions</a></li>
+  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">31</span> Caveats &amp; Known Issues</a></li>
+  <li><a href="#example-queries" id="toc-example-queries" class="nav-link" data-scroll-target="#example-queries"><span class="header-section-number">32</span> Example queries</a></li>
+  <li><a href="#related-tables" id="toc-related-tables" class="nav-link" data-scroll-target="#related-tables"><span class="header-section-number">33</span> Related tables</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/vessel-identity.html">Vessel Identity</a></li><li class="breadcrumb-item"><a href="../files/vessel-info-tables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/viirs-cloud-mask.html"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></h1>
+<h1 class="title"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></h1>
 </div>
 
 
@@ -504,102 +499,47 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>An intermediate step of the vessel identity pipeline combines AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.) to produce summary information by vessel. In their current form, these tables treat <code>ssvid</code> as the unit of a vessel and are thus commonly referred to as the <code>vi_ssvid</code> tables.</p>
-<p>A key purpose of the <code>vi_ssvid</code> tables is to evaluate these multiple and potentially conflicting sources of information to determine the “best” values for various fields (e.g.&nbsp;vessel class, flag, dimensions) to be used by GFW. The vessel info tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.</p>
-<blockquote class="blockquote">
-<p>Note: Ongoing work is adding a new step, referred to as the secondary classifier, to the <code>vi_ssvid</code> tables. This step improves upon our previous rule-based approach to combining information from multiple sources by using a Random Forest model. When this process is completed and integrated into production we will update the information below accordingly.</p>
-</blockquote>
-<section id="key-tables" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">10.1</span> Key Tables</h2>
+<p>This table contains information on the Cloud presence/absence data derived from VIIRS satellite (Suomi-NPP). The data was obtained from <a href="https://ladsweb.modaps.eosdis.nasa.gov/missions-and-measurements/products/CLDMSK_L2_VIIRS_SNPP/">CLDMSK_L2_VIIRS_SNPP</a>. The table is aggregated into a 0.1-degree grid (represented by <code>lat_bin</code>, <code>lon_bin</code>).</p>
+<p>Each record of this table represents a grid cell of a granule (i.e.&nbsp;this table will be unique using fields <code>GranuleId</code>, <code>lat_bin</code>and <code>lon_bin</code>).</p>
+<section id="repository" class="level1" data-number="28">
+<h1 data-number="28"><span class="header-section-number">28</span> Repository</h1>
+<p>Non but the codes exist in the VM instance <code>viirs-cloud-mask</code>.</p>
+</section>
+<section id="key-tables" class="level1" data-number="29">
+<h1 data-number="29"><span class="header-section-number">29</span> Key tables</h1>
+<p>Current version</p>
 <ul>
-<li><code>pipe_ais_v3_published.vi_ssvid_vYYYYMMDD</code> - This table includes the best activity and identity information available for the vessel based on its full AIS timeseries.</li>
-<li><code>pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD</code> - This table includes annual best activity and identity information for the vessel based only on data in each year. As a result, the information for a given year in <code>pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD</code> may not match that in <code>pipe_ais_v3_published.vi_ssvid_vYYYYMMDD</code> (e.g.&nbsp;the vessel recently re-flagged).</li>
+<li><code>scratch_masaki.cloud_mask_10th_degree_grid</code></li>
+</ul>
+<p>Older version</p>
+<p>non</p>
+</section>
+<section id="data-descriptions" class="level1" data-number="30">
+<h1 data-number="30"><span class="header-section-number">30</span> Data descriptions</h1>
+<ul>
+<li><code>GranuleID</code> : ID of this granule. See <a href="VIIRS-footprint">VIIRS footprint</a> for the explanation of granule.</li>
+<li><code>lat_bin</code> : 0.1-degree grid latitude. <code>round(lat*10)</code></li>
+<li><code>lon_bin</code> : 0.1-degree grid longitude. <code>round(lon*10)</code></li>
+<li><code>OrbitNumber</code> : ID of this orbit.</li>
+<li><code>StartDateTime</code> : Start datetime of this granule.</li>
+<li><code>mean_integer_cloud_mask</code> : Cloud condition of this pixel (0 = cloudy, 1= probably cloudy, 2 = probably clear, 3 = confident clear). The original VIIRS CLOUD MASK have integer value, but the value is averaged for each 0.1-degree grid in this table. Thus, this field contains real number from 0 to 3.</li>
+<li><code>mean_sensor_zenith</code> : Mean zenith angle of VIIRS satelite in this pixel.</li>
+<li><code>lat</code> : 0.1-degree grid latitude. <code>0.1*round(lat*10)</code></li>
+<li><code>lon</code> : 0.1-degree grid longitude. <code>0.1*round(lat*10)</code></li>
 </ul>
 </section>
-<section id="data-description" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">10.2</span> Data Description</h2>
-<section id="vi_ssvid-and-vi_ssvid_byyear-tables" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="vi_ssvid-and-vi_ssvid_byyear-tables"><span class="header-section-number">10.2.1</span> <code>vi_ssvid</code> and <code>vi_ssvid_byyear</code> tables</h3>
-<p>The information in the main vessel info tables (<code>vi_ssvid_vYYYYMMDD</code>; <code>vi_ssvid_byyear_vYYYYMMDD</code>) is organized into multiple <code>STRUCT</code> that summarize the MMSI’s <code>activity</code>, <code>ais_identity</code>, <code>inferred</code> characteristics, <code>registry_info</code>, and <code>best</code> info to be used by GFW.</p>
+<section id="caveats-known-issues" class="level1" data-number="31">
+<h1 data-number="31"><span class="header-section-number">31</span> Caveats &amp; Known Issues</h1>
 <ul>
-<li><code>activity</code>: Fields summarizing the amount and location of the MMSI’s AIS activity - positions, hours, fishing_hours, spoofing etc.
-<ul>
-<li><blockquote class="blockquote">
-<p><code>eez</code>: Helpful summary of the MMSI’s activity (<code>hours</code>, <code>fishing_hours</code>) by EEZ. Useful for quick, non-spatial summaries of activity by EEZ</p>
-</blockquote></li>
-<li><blockquote class="blockquote">
-<p><code>offsetting</code>: Whether the MMSI offsetting its position</p>
-</blockquote></li>
-<li><blockquote class="blockquote">
-<p><code>overlap_hours_multinames</code>: Spoofing flag. Indicates how many hours the MMSI has overlapping segments with multiple identities. MMSI with <code>overlap_hours_multinames &gt; 24</code> in a given year are considered to be spoofed.</p>
-</blockquote></li>
-</ul></li>
-<li><code>ais_identity</code>: Fields summarizing the identities (ship name, callsign, IMO, flag, etc.) broadcast by that MMSI in AIS messages. Each identity type includes a <code>mostcommon</code> field providing the most-common value for that identity type.
-<ul>
-<li><blockquote class="blockquote">
-<p>Fields prefixed with <code>n_</code> are normalized versions of the original values.</p>
-</blockquote></li>
-<li><blockquote class="blockquote">
-<p><code>likely_gear</code>: Whether the MMSI’s most common shipname (<code>n_shipname_mostcommon</code>) suggests the MMSI is attached to fishing gear (e.g.&nbsp;<code>BUOY16</code>).</p>
-</blockquote></li>
-</ul></li>
-<li><code>inferred</code>: Fields summarizing vessel characteristics (length, tonnage, geartype) inferred by the neural net for the MMSI.
-<ul>
-<li><blockquote class="blockquote">
-<p>GFW uses a nested vessel class hierarchy and only “leaf” classes are scored by the neural net, which are recorded in <code>inferred.inferred_vessel_class</code>. However, the final inferred vessel class assigned to an MMSI is recorded in <code>inferred.inferred_vessel_class_ag</code> and corresponds to the lowest level vessel class with a cumulative neural net score &gt; 0.5.</p>
-</blockquote></li>
-</ul></li>
-<li><code>registry_info</code>: The identity information associated with the MMSI sourced from vessel registries
-<ul>
-<li><blockquote class="blockquote">
-<p>Values correspond to the <code>feature</code> <code>STRUCT</code> in the vessel database.</p>
-</blockquote></li>
-</ul></li>
-<li><code>best</code>: GFW’s assigned “best” vessel characteristics after considering all info from AIS, the neural net, and vessel registries
-<ul>
-<li><blockquote class="blockquote">
-<p><code>registry_net_disagreement</code>: Do the neural net (<code>inferred.inferred_vessel_class_ag</code>) and vessel registries (<code>registry_info.best_known_vessel_class</code>) disagree about the vessel class of the MMSI</p>
-</blockquote></li>
-</ul></li>
-</ul>
-<section id="on_fishing_list_-fields" class="level4" data-number="10.2.1.1">
-<h4 data-number="10.2.1.1" class="anchored" data-anchor-id="on_fishing_list_-fields"><span class="header-section-number">10.2.1.1</span> <code>on_fishing_list_</code> fields</h4>
-<p>GFW assigns MMSI to four types of fishing lists in the vessel info tables. Three lists indicate whether the MMSI is potentially a fishing vessel according to different sources. The fourth list, <code>on_fishing_list_best</code> combines the results of the previous three lists to make a final determination of whether each MMSI is likely a fishing vessel.</p>
-<ul>
-<li><p><code>on_fishing_list_known</code> - Listed as a fishing vessel on 1+ registries</p></li>
-<li><p><code>on_fishing_list_sr</code> - Consistently self reports as fishing in AIS messages &gt;98% of messages; minimum 50 positions</p></li>
-<li><p><code>on_fishing_list_nn</code> - The neural net believes the vessel is more likely a fishing vessel than a non-fishing vessel (e.g. combined neural net score for fishing classes <code>inferred.fishing_class_score</code> &gt; 0.5)</p></li>
-<li><p><code>on_fishing_list_best</code> - GFW’s best list of likely fishing MMSI. True in the following cases:</p>
-<ul>
-<li>The vessel is <code>on_fishing_list_known</code></li>
-<li>The vessel is <code>on_fishing_list_sr</code> and <code>on_fishing_list_nn</code></li>
-<li>The vessel’s highest <code>inferred.inferred_vessel_class_score</code> is for a fishing vessel class and exceeds 0.85</li>
-<li>The vessel is <code>on_fishing_list_nn</code> and <code>on_fishing_list_known</code> is <strong>not</strong> False</li>
-</ul></li>
+<li>This table does not include cloud information over land.</li>
+<li><code>mean_integer_cloud_mask</code> represents only presense/absence of the cloud, thus the cloud thickness is not taken into account.</li>
 </ul>
 </section>
+<section id="example-queries" class="level1" data-number="32">
+<h1 data-number="32"><span class="header-section-number">32</span> Example queries</h1>
 </section>
-</section>
-<section id="caveats-known-issues" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">10.3</span> Caveats &amp; Known Issues</h2>
-<section id="fishing-hours-incorrect-for-squid-jiggers" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="fishing-hours-incorrect-for-squid-jiggers"><span class="header-section-number">10.3.1</span> Fishing hours incorrect for squid jiggers</h3>
-<p>Currently, the vessel info table summarizes <code>fishing_hours</code> from the <code>pipe_ais_v3_published.segs_activity_daily</code> table. Fishing hours in this table are calculated solely from <code>nnet_score</code> and are therefore incorrect for <code>squid_jiggers</code>, which should be calculated using <code>night_loitering</code>.</p>
-</section>
-</section>
-<section id="example-queries-need-updating" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="example-queries-need-updating"><span class="header-section-number">10.4</span> Example Queries (need updating)</h2>
-<ul>
-<li><p>vessel_info_examples_1_v20211128.sql</p></li>
-<li><p>vessel_info_examples_2_v20211128.sql</p></li>
-</ul>
-</section>
-<section id="links" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="links"><span class="header-section-number">10.5</span> Links</h2>
-<ul>
-<li><p><a href="https://docs.google.com/presentation/d/1Eu3vVM2w2bhnbDYRgdNqV6fEMcC5AWX_5nnm6YRWqDw/edit?usp=sharing">Vessel info training slides</a></p></li>
-<li><p><a href="https://docs.google.com/document/d/1HCQbP_gU79CYjSL1qpSkS5q-W0Guw0W40q6rUL39GoQ/edit?usp=sharing">Vessel class definitions</a></p></li>
-</ul>
+<section id="related-tables" class="level1" data-number="33">
+<h1 data-number="33"><span class="header-section-number">33</span> Related tables</h1>
 
 
 </section>
@@ -1027,13 +967,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../files/vessel-database.html" class="pagination-link" aria-label="Vessel Database">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel Database</span></span>
+      <a href="../files/viirs-boat-detections.html" class="pagination-link" aria-label="VIIRS boat detections">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../files/product-vessel-info-summary-pvis.html" class="pagination-link" aria-label="Product Vessel Info Summary (PVIS)">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files/viirs-excluding-overlapping-detection-to-AIS-matching-table.html" class="pagination-link" aria-label="VIIRS - excluding overlappint detections">
+        <span class="nav-page-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">VIIRS - excluding overlappint detections</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

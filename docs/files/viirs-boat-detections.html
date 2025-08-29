@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>10&nbsp; vi_ssvid tables – Global Fishing Watch documentation</title>
+<title>26&nbsp; VIIRS boat detections – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -29,8 +29,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files/product-vessel-info-summary-pvis.html" rel="next">
-<link href="../files/vessel-database.html" rel="prev">
+<link href="../files/viirs-cloud-mask.html" rel="next">
+<link href="../files/viirs-ais-matching.html" rel="prev">
 <link href="../figures/GFW_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/vessel-identity.html">Vessel Identity</a></li><li class="breadcrumb-item"><a href="../files/vessel-info-tables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/viirs-boat-detections.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/vessel-info-tables.html" class="sidebar-item-text sidebar-link active">
+  <a href="../files/vessel-info-tables.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></span></a>
   </div>
 </li>
@@ -310,7 +310,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-boat-detections.html" class="sidebar-item-text sidebar-link">
+  <a href="../files/viirs-boat-detections.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></span></a>
   </div>
 </li>
@@ -468,26 +468,31 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-tables" id="toc-key-tables" class="nav-link active" data-scroll-target="#key-tables"><span class="header-section-number">10.1</span> Key Tables</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">10.2</span> Data Description</a>
+  <li><a href="#key-tables" id="toc-key-tables" class="nav-link active" data-scroll-target="#key-tables"><span class="header-section-number">26.1</span> Key Tables</a>
   <ul class="collapse">
-  <li><a href="#vi_ssvid-and-vi_ssvid_byyear-tables" id="toc-vi_ssvid-and-vi_ssvid_byyear-tables" class="nav-link" data-scroll-target="#vi_ssvid-and-vi_ssvid_byyear-tables"><span class="header-section-number">10.2.1</span> <code>vi_ssvid</code> and <code>vi_ssvid_byyear</code> tables</a></li>
+  <li><a href="#current-version" id="toc-current-version" class="nav-link" data-scroll-target="#current-version"><span class="header-section-number">26.1.1</span> Current version</a></li>
+  <li><a href="#older-version" id="toc-older-version" class="nav-link" data-scroll-target="#older-version"><span class="header-section-number">26.1.2</span> Older version</a></li>
   </ul></li>
-  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">10.3</span> Caveats &amp; Known Issues</a>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">26.2</span> Data Description</a></li>
+  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">26.3</span> Caveats &amp; Known Issues</a>
   <ul class="collapse">
-  <li><a href="#fishing-hours-incorrect-for-squid-jiggers" id="toc-fishing-hours-incorrect-for-squid-jiggers" class="nav-link" data-scroll-target="#fishing-hours-incorrect-for-squid-jiggers"><span class="header-section-number">10.3.1</span> Fishing hours incorrect for squid jiggers</a></li>
+  <li><a href="#eezfmzmpa" id="toc-eezfmzmpa" class="nav-link" data-scroll-target="#eezfmzmpa"><span class="header-section-number">26.3.1</span> EEZ/FMZ/MPA</a></li>
+  <li><a href="#the-south-atlantic-anomaly" id="toc-the-south-atlantic-anomaly" class="nav-link" data-scroll-target="#the-south-atlantic-anomaly"><span class="header-section-number">26.3.2</span> The South Atlantic Anomaly</a></li>
+  <li><a href="#overlapping-detection" id="toc-overlapping-detection" class="nav-link" data-scroll-target="#overlapping-detection"><span class="header-section-number">26.3.3</span> Overlapping detection</a></li>
+  <li><a href="#known-data-disruptions" id="toc-known-data-disruptions" class="nav-link" data-scroll-target="#known-data-disruptions"><span class="header-section-number">26.3.4</span> Known data disruptions</a></li>
   </ul></li>
-  <li><a href="#example-queries-need-updating" id="toc-example-queries-need-updating" class="nav-link" data-scroll-target="#example-queries-need-updating"><span class="header-section-number">10.4</span> Example Queries (need updating)</a></li>
-  <li><a href="#links" id="toc-links" class="nav-link" data-scroll-target="#links"><span class="header-section-number">10.5</span> Links</a></li>
+  <li><a href="#example-queries" id="toc-example-queries" class="nav-link" data-scroll-target="#example-queries"><span class="header-section-number">26.4</span> Example queries</a></li>
+  <li><a href="#related-tables" id="toc-related-tables" class="nav-link" data-scroll-target="#related-tables"><span class="header-section-number">26.5</span> Related tables</a></li>
+  <li><a href="#updates" id="toc-updates" class="nav-link" data-scroll-target="#updates"><span class="header-section-number">26.6</span> Updates</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/vessel-identity.html">Vessel Identity</a></li><li class="breadcrumb-item"><a href="../files/vessel-info-tables.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/viirs-boat-detections.html"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title"><code>vi_ssvid</code> tables</span></h1>
+<h1 class="title"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></h1>
 </div>
 
 
@@ -504,101 +509,151 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>An intermediate step of the vessel identity pipeline combines AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.) to produce summary information by vessel. In their current form, these tables treat <code>ssvid</code> as the unit of a vessel and are thus commonly referred to as the <code>vi_ssvid</code> tables.</p>
-<p>A key purpose of the <code>vi_ssvid</code> tables is to evaluate these multiple and potentially conflicting sources of information to determine the “best” values for various fields (e.g.&nbsp;vessel class, flag, dimensions) to be used by GFW. The vessel info tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.</p>
-<blockquote class="blockquote">
-<p>Note: Ongoing work is adding a new step, referred to as the secondary classifier, to the <code>vi_ssvid</code> tables. This step improves upon our previous rule-based approach to combining information from multiple sources by using a Random Forest model. When this process is completed and integrated into production we will update the information below accordingly.</p>
-</blockquote>
-<section id="key-tables" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">10.1</span> Key Tables</h2>
+<p>VIIRS, or Visible Infrared Imaging Radiometer Suite, is a sensor onboard the Suomi National Polar-orbiting Partnership and NOAA-20 weather satellites. VIIRS collects imagery and radiometric measurements that, among other applications, are used to detect bright lights at night. VIIRS can be used to detect vessels at night and <a href="https://www.ngdc.noaa.gov/eog/index.html">NOAA’s Earth Observation Group</a> produces a nightly VIIRS Boat Detection (VBD) dataset. The VBD reports the locations of boats detected based on lights and is directly used by GFW.</p>
+<section id="key-tables" class="level2" data-number="26.1">
+<h2 data-number="26.1" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">26.1</span> Key Tables</h2>
+<section id="current-version" class="level3" data-number="26.1.1">
+<h3 data-number="26.1.1" class="anchored" data-anchor-id="current-version"><span class="header-section-number">26.1.1</span> Current version</h3>
 <ul>
-<li><code>pipe_ais_v3_published.vi_ssvid_vYYYYMMDD</code> - This table includes the best activity and identity information available for the vessel based on its full AIS timeseries.</li>
-<li><code>pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD</code> - This table includes annual best activity and identity information for the vessel based only on data in each year. As a result, the information for a given year in <code>pipe_ais_v3_published.vi_ssvid_byyear_vYYYYMMDD</code> may not match that in <code>pipe_ais_v3_published.vi_ssvid_vYYYYMMDD</code> (e.g.&nbsp;the vessel recently re-flagged).</li>
+<li><code>pipe_viirs_production_v20220112.raw_vbd_global</code>
+<ul>
+<li>This table contains all the VBDs including non-vessel detections.</li>
+<li>partitioned by <code>Date_Mscan</code></li>
+</ul></li>
+<li><code>pipe_viirs_production_v20220112.raw_vbd_global_without_noise</code>
+<ul>
+<li>This table contains <strong>only true vessel detections</strong>. The noise removal query <a href="https://github.com/GlobalFishingWatch/pipe-viirs/blob/main/assets/load-vbd-without-noise.sql.j2#L51">can be found here</a>.</li>
+<li>partitioned by <code>Date_Mscan</code></li>
+<li>This table has a subset of columns from the <code>raw_vbd_global</code> table and some additional columns for the convenience of analysts. If you want columns not included in this table, you need to get it from <code>raw_vbd_global</code> table by joining with <code>id_Key</code> field.</li>
+</ul></li>
 </ul>
 </section>
-<section id="data-description" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">10.2</span> Data Description</h2>
-<section id="vi_ssvid-and-vi_ssvid_byyear-tables" class="level3" data-number="10.2.1">
-<h3 data-number="10.2.1" class="anchored" data-anchor-id="vi_ssvid-and-vi_ssvid_byyear-tables"><span class="header-section-number">10.2.1</span> <code>vi_ssvid</code> and <code>vi_ssvid_byyear</code> tables</h3>
-<p>The information in the main vessel info tables (<code>vi_ssvid_vYYYYMMDD</code>; <code>vi_ssvid_byyear_vYYYYMMDD</code>) is organized into multiple <code>STRUCT</code> that summarize the MMSI’s <code>activity</code>, <code>ais_identity</code>, <code>inferred</code> characteristics, <code>registry_info</code>, and <code>best</code> info to be used by GFW.</p>
+<section id="older-version" class="level3" data-number="26.1.2">
+<h3 data-number="26.1.2" class="anchored" data-anchor-id="older-version"><span class="header-section-number">26.1.2</span> Older version</h3>
 <ul>
-<li><code>activity</code>: Fields summarizing the amount and location of the MMSI’s AIS activity - positions, hours, fishing_hours, spoofing etc.
+<li><code>pipe_viirs_production_v20180723.raw_vbd_global</code>
 <ul>
-<li><blockquote class="blockquote">
-<p><code>eez</code>: Helpful summary of the MMSI’s activity (<code>hours</code>, <code>fishing_hours</code>) by EEZ. Useful for quick, non-spatial summaries of activity by EEZ</p>
-</blockquote></li>
-<li><blockquote class="blockquote">
-<p><code>offsetting</code>: Whether the MMSI offsetting its position</p>
-</blockquote></li>
-<li><blockquote class="blockquote">
-<p><code>overlap_hours_multinames</code>: Spoofing flag. Indicates how many hours the MMSI has overlapping segments with multiple identities. MMSI with <code>overlap_hours_multinames &gt; 24</code> in a given year are considered to be spoofed.</p>
-</blockquote></li>
+<li>Global VBD dataset.</li>
 </ul></li>
-<li><code>ais_identity</code>: Fields summarizing the identities (ship name, callsign, IMO, flag, etc.) broadcast by that MMSI in AIS messages. Each identity type includes a <code>mostcommon</code> field providing the most-common value for that identity type.
+<li><code>pipe_viirs_production_v20180723.raw_vbd_redacted</code>
 <ul>
-<li><blockquote class="blockquote">
-<p>Fields prefixed with <code>n_</code> are normalized versions of the original values.</p>
-</blockquote></li>
-<li><blockquote class="blockquote">
-<p><code>likely_gear</code>: Whether the MMSI’s most common shipname (<code>n_shipname_mostcommon</code>) suggests the MMSI is attached to fishing gear (e.g.&nbsp;<code>BUOY16</code>).</p>
-</blockquote></li>
-</ul></li>
-<li><code>inferred</code>: Fields summarizing vessel characteristics (length, tonnage, geartype) inferred by the neural net for the MMSI.
-<ul>
-<li><blockquote class="blockquote">
-<p>GFW uses a nested vessel class hierarchy and only “leaf” classes are scored by the neural net, which are recorded in <code>inferred.inferred_vessel_class</code>. However, the final inferred vessel class assigned to an MMSI is recorded in <code>inferred.inferred_vessel_class_ag</code> and corresponds to the lowest level vessel class with a cumulative neural net score &gt; 0.5.</p>
-</blockquote></li>
-</ul></li>
-<li><code>registry_info</code>: The identity information associated with the MMSI sourced from vessel registries
-<ul>
-<li><blockquote class="blockquote">
-<p>Values correspond to the <code>feature</code> <code>STRUCT</code> in the vessel database.</p>
-</blockquote></li>
-</ul></li>
-<li><code>best</code>: GFW’s assigned “best” vessel characteristics after considering all info from AIS, the neural net, and vessel registries
-<ul>
-<li><blockquote class="blockquote">
-<p><code>registry_net_disagreement</code>: Do the neural net (<code>inferred.inferred_vessel_class_ag</code>) and vessel registries (<code>registry_info.best_known_vessel_class</code>) disagree about the vessel class of the MMSI</p>
-</blockquote></li>
-</ul></li>
-</ul>
-<section id="on_fishing_list_-fields" class="level4" data-number="10.2.1.1">
-<h4 data-number="10.2.1.1" class="anchored" data-anchor-id="on_fishing_list_-fields"><span class="header-section-number">10.2.1.1</span> <code>on_fishing_list_</code> fields</h4>
-<p>GFW assigns MMSI to four types of fishing lists in the vessel info tables. Three lists indicate whether the MMSI is potentially a fishing vessel according to different sources. The fourth list, <code>on_fishing_list_best</code> combines the results of the previous three lists to make a final determination of whether each MMSI is likely a fishing vessel.</p>
-<ul>
-<li><p><code>on_fishing_list_known</code> - Listed as a fishing vessel on 1+ registries</p></li>
-<li><p><code>on_fishing_list_sr</code> - Consistently self reports as fishing in AIS messages &gt;98% of messages; minimum 50 positions</p></li>
-<li><p><code>on_fishing_list_nn</code> - The neural net believes the vessel is more likely a fishing vessel than a non-fishing vessel (e.g. combined neural net score for fishing classes <code>inferred.fishing_class_score</code> &gt; 0.5)</p></li>
-<li><p><code>on_fishing_list_best</code> - GFW’s best list of likely fishing MMSI. True in the following cases:</p>
-<ul>
-<li>The vessel is <code>on_fishing_list_known</code></li>
-<li>The vessel is <code>on_fishing_list_sr</code> and <code>on_fishing_list_nn</code></li>
-<li>The vessel’s highest <code>inferred.inferred_vessel_class_score</code> is for a fishing vessel class and exceeds 0.85</li>
-<li>The vessel is <code>on_fishing_list_nn</code> and <code>on_fishing_list_known</code> is <strong>not</strong> False</li>
+<li>VBD dataset without detections around South America (see Caveats).</li>
+<li><strong>No need to use this table</strong>. Use <a href="VIIRS-noise-filter">VIIRS noise filter</a> to avoid false detection around South America.</li>
+<li><strong>Not updated since <code>2019-11-30</code></strong></li>
 </ul></li>
 </ul>
 </section>
 </section>
-</section>
-<section id="caveats-known-issues" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">10.3</span> Caveats &amp; Known Issues</h2>
-<section id="fishing-hours-incorrect-for-squid-jiggers" class="level3" data-number="10.3.1">
-<h3 data-number="10.3.1" class="anchored" data-anchor-id="fishing-hours-incorrect-for-squid-jiggers"><span class="header-section-number">10.3.1</span> Fishing hours incorrect for squid jiggers</h3>
-<p>Currently, the vessel info table summarizes <code>fishing_hours</code> from the <code>pipe_ais_v3_published.segs_activity_daily</code> table. Fishing hours in this table are calculated solely from <code>nnet_score</code> and are therefore incorrect for <code>squid_jiggers</code>, which should be calculated using <code>night_loitering</code>.</p>
-</section>
-</section>
-<section id="example-queries-need-updating" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="example-queries-need-updating"><span class="header-section-number">10.4</span> Example Queries (need updating)</h2>
+<section id="data-description" class="level2" data-number="26.2">
+<h2 data-number="26.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">26.2</span> Data Description</h2>
+<p>The VBD dataset and underlying methods are outlined in the following publication:</p>
+<p><a href="https://www.mdpi.com/2072-4292/7/3/3020">Elvidge, C., Zhizhin, M., Baugh, K., &amp; Hsu, F. C. (2015). An automatic boat identification system for VIIRS low light imaging data. Remote Sensing, 7(3), 3020-3036.</a>.</p>
+<p>GFW retains all VBD, including the following key fields:</p>
 <ul>
-<li><p>vessel_info_examples_1_v20211128.sql</p></li>
-<li><p>vessel_info_examples_2_v20211128.sql</p></li>
+<li><p><code>Date_Mscan</code>: VBD pixel date-time at mid-point of DNB scan reported in Universal Time.</p></li>
+<li><p><code>id_Key</code>: Unique VBD ID.</p></li>
+<li><p><code>Lat_DNB</code>: VBD pixel latitude from VIIRS DNB geolocation file.</p></li>
+<li><p><code>Lon_DNB</code>: VBD pixel longitude from VIIRS DNB geolocation file.</p></li>
+<li><p><code>Date_LTZ</code>: VBD pixel date-time at mid-point of DNB scan adjusted to standard time in the local time zone (LTZ). No adjustments for Daylight Savings Time (DST) are made.</p></li>
+<li><p><code>EEZ</code>: Exclusive Economic Zone for VBD pixel.</p></li>
+<li><p><code>FMZ</code>: Fishery Management Zone for VBD pixel</p></li>
+<li><p><code>MPA</code>: Marine Protected Area for VBD pixel</p></li>
+<li><p><code>RAD_DNB</code> : The brightness (radiance) of the VBD pixel (Unit: nW/cm2/sr)</p></li>
+<li><p><code>QF_Detect</code>: Integer quality flag for VBD pixel, yielding information about quality and type of detection.</p>
+<ul>
+<li><code>1</code>: Strong detection. Detection surpassed all VBD threshold tests</li>
+<li><code>2</code>: Weak detection. Detection did not pass SHI threshold test.</li>
+<li><code>3</code>: Blurry detection. Detection did not pass SI threshold test.</li>
+<li><code>4</code>: Gas flare. Detection has a concurrent Nightfire detection or is in the location of a known gas flare.</li>
+<li><code>5</code>: False detection: Detection is from high-energy particles impacting the DNB sensor, usually due to the South Atlantic anomaly.</li>
+<li><code>6</code>: False detection: Detection is from lunar glint.</li>
+<li><code>7</code>: False detection: Detection is from atmospheric glow around bright sources.</li>
+<li><code>8</code>: Recurring detection. Detection is in locations where boats are known to recur.</li>
+<li><code>9</code>: False detection: Detection is from sensor crosstalk around extremely bright sources, usually flares.</li>
+<li><code>10</code>: Weak and blurry detection. Detection did not pass either the SHI or SI threshold tests.</li>
+<li><code>11</code>: Offshore platform. Detection is in the location of a known stable light.</li>
+</ul></li>
+<li><p><code>SATZ_GDNBO</code> : Satelite Zenith Angle</p></li>
+<li><p><code>SOLZ_GDNBO</code>: Sun Zenith Angle</p></li>
+<li><p><code>LUNZ_GDNBO</code>: Moon Zenith Angle</p>
+<p>(See <a href="https://eogdata.mines.edu/vbd/vbd_readme_v23_r20180824.xlsx">document on Colorado School of Mines: Earth Observation Group</a> for a description of all the columns.)</p></li>
+</ul>
+<p>Other useful fields you can create from this table:</p>
+<ul>
+<li><code>detect_id</code>
+<ul>
+<li>unique id for each record (VIIRS detection).</li>
+<li>Using this key, you can join with <a href="VIIRS-AIS-matching">VIIRS-AIS matching table</a>.</li>
+<li><code>concat(cast(Date_Mscan as string),concat(cast(Lat_DNB as string),cast(Lon_DNB as string))) as detect_id,</code></li>
+</ul></li>
+<li><code>OrbitNumber</code>
+<ul>
+<li>Single overpass of VIIRS satellite (from North to South at night) can be distinguishable by <code>OrbitNumber</code>.</li>
+<li>This field can be used to eliminate overlap between successive orbits.</li>
+<li><code>CAST(SUBSTR(File_DNB, 40,5) AS INT64) AS OrbitNumber,</code></li>
+</ul></li>
+<li><code>GranuleID</code>
+<ul>
+<li>This field can be used to join with <a href="VIIRS-footprint">VIIRS footprint table</a> and <a href="VIIRS-cloud-mask">VIIRS cloud mask</a>.</li>
+<li>A + Year (2017) + Day_of_the_year(001 ~ 365) + hour (00~24) + minutes (00 ~ 60)</li>
+<li>Each <code>GranuleID</code> is corresponding to 6 minutes time window. for example <code>GranuleID = 'A2017001.0024'</code> contains VIIRS detection from <code>2017-01-01 00:24</code> to <code>2017-01-01 00:30</code>.</li>
+<li><code>CONCAT("A", CAST(extract(YEAR from Date_Mscan) as STRING), LPAD(CAST(extract(DAYOFYEAR from Date_Mscan) as STRING), 3, "0"), ".", LPAD(CAST(extract(HOUR from Date_Mscan) as STRING), 2, "0"), LPAD(CAST(DIV(extract(MINUTE from Date_Mscan), 6)*6 as STRING), 2, "0") ) as GranuleID</code></li>
+</ul></li>
 </ul>
 </section>
-<section id="links" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="links"><span class="header-section-number">10.5</span> Links</h2>
+<section id="caveats-known-issues" class="level2" data-number="26.3">
+<h2 data-number="26.3" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">26.3</span> Caveats &amp; Known Issues</h2>
+<section id="eezfmzmpa" class="level3" data-number="26.3.1">
+<h3 data-number="26.3.1" class="anchored" data-anchor-id="eezfmzmpa"><span class="header-section-number">26.3.1</span> EEZ/FMZ/MPA</h3>
+<p>The EEZ/FMZ/MPA values in the VBD data are not modified by GFW and may differ from the AIS/VMS data (<strong>Verify this is the case</strong>).</p>
+</section>
+<section id="the-south-atlantic-anomaly" class="level3" data-number="26.3.2">
+<h3 data-number="26.3.2" class="anchored" data-anchor-id="the-south-atlantic-anomaly"><span class="header-section-number">26.3.2</span> The South Atlantic Anomaly</h3>
+<p>The VIIRS contains a lot of false detection around South America, which is caused by the South Atlantic Anomaly (SAA). The SAA is an area where the Earth’s inner Van Allen radiation belt is at its lowest altitude, allowing more energetic particles from space to penetrate. When such a particle hits the sensors on board the satellite, it creates a false signal which might cause the VBD algorithm to recognize it as a boat detection.</p>
+<p>To avoid false positives due to the South Atlantic Anomaly, we’ve developed a <a href="VIIRS-noise-filter">VIIRS noise filter</a>.</p>
+</section>
+<section id="overlapping-detection" class="level3" data-number="26.3.3">
+<h3 data-number="26.3.3" class="anchored" data-anchor-id="overlapping-detection"><span class="header-section-number">26.3.3</span> Overlapping detection</h3>
+<p>VIIRS satellite may scan the same area twice a night, thus VIIRS may double count the same vessel. To avoid double-counting, you can select a single scan for each 1-degree grid for a night. <a href="Excluding-overlapping-detection-of-VIIRS">See example query</a>.</p>
+</section>
+<section id="known-data-disruptions" class="level3" data-number="26.3.4">
+<h3 data-number="26.3.4" class="anchored" data-anchor-id="known-data-disruptions"><span class="header-section-number">26.3.4</span> Known data disruptions</h3>
 <ul>
-<li><p><a href="https://docs.google.com/presentation/d/1Eu3vVM2w2bhnbDYRgdNqV6fEMcC5AWX_5nnm6YRWqDw/edit?usp=sharing">Vessel info training slides</a></p></li>
-<li><p><a href="https://docs.google.com/document/d/1HCQbP_gU79CYjSL1qpSkS5q-W0Guw0W40q6rUL39GoQ/edit?usp=sharing">Vessel class definitions</a></p></li>
+<li><strong>June 28 to July 7, 2022</strong>: The Suomi NPP satellite experienced <a href="https://www.ospo.noaa.gov/data/messages/2022/07/MSG_20220707_2318.html">issues</a> on June 28, 2022 that resulted in excessive edge noise in the day / night band. There’s an unusually high number of VBD in some regions (e.g., within Gabon, Pakistan, India, Myanmar, Taiwan, China, and a few other places in Africa, Mediterranean Sea, and Asia), on June 28 and 29 and significantly fewer detections (globally) after, until July 7th.</li>
+<li><strong>July 26 to August 20, 2022</strong>: VIIRS Boat Detection data are not available from July 26 to August 20, 2022. The Suomi NPP satellite entered a non-nominal state during this period (<a href="https://lpdaac.usgs.gov/news/suomi-npp-recovers-from-safe-mode2/">announcement</a>).</li>
+</ul>
+</section>
+</section>
+<section id="example-queries" class="level2" data-number="26.4">
+<h2 data-number="26.4" class="anchored" data-anchor-id="example-queries"><span class="header-section-number">26.4</span> Example queries</h2>
+<ul>
+<li><p><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_points_date_area.sql">How to extract VBDs from specific dates and areas?</a></p></li>
+<li><p><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/viirs_get_daily_count_without_double_counting.sql">How to eliminate double-counting from VIIRS?</a></p></li>
+<li><p>Get VIIRS detection in the squid fishing area</p></li>
+<li><p>Join with VIIRS footprint</p></li>
+<li><p>Join with VIIRS-AIS matching</p></li>
+</ul>
+</section>
+<section id="related-tables" class="level2" data-number="26.5">
+<h2 data-number="26.5" class="anchored" data-anchor-id="related-tables"><span class="header-section-number">26.5</span> Related tables</h2>
+<ul>
+<li><a href="VIIRS-AIS-matching">VIIRS AIS matching</a></li>
+<li><a href="VIIRS-cloud-mask">VIIRS cloud mask</a></li>
+<li><a href="VIIRS-footprint">VIIRS footprint</a></li>
+<li><a href="VIIRS-noise-filter">Logic of VIIRS noise filter</a>: eliminate VIIRS noise especially the South Atlantic Anomaly.</li>
+</ul>
+</section>
+<section id="updates" class="level2" data-number="26.6">
+<h2 data-number="26.6" class="anchored" data-anchor-id="updates"><span class="header-section-number">26.6</span> Updates</h2>
+<ul>
+<li><code>pipe_viirs_production_v20220112.raw_vbd_global</code>
+<ul>
+<li>Missing VBD issue in the previous version is solved for the dates after <code>2020-01-07</code>. There may be still issues before the date.</li>
+</ul></li>
+<li><code>pipe_viirs_production_v20180723.raw_vbd_global</code>
+<ul>
+<li>It turns out that this table is missing some detections in the Asian region for some period.</li>
+</ul></li>
 </ul>
 
 
@@ -1027,13 +1082,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../files/vessel-database.html" class="pagination-link" aria-label="Vessel Database">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Vessel Database</span></span>
+      <a href="../files/viirs-ais-matching.html" class="pagination-link" aria-label="VIIRS AIS matching">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../files/product-vessel-info-summary-pvis.html" class="pagination-link" aria-label="Product Vessel Info Summary (PVIS)">
-        <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Product Vessel Info Summary (PVIS)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files/viirs-cloud-mask.html" class="pagination-link" aria-label="VIIRS cloud mask">
+        <span class="nav-page-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

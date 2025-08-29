@@ -1,7 +1,10 @@
+---
+date-modified: 2025-07-11
+author: "Zihan Wei"
+---
+
 # Sentinel-2 Vessel Detections
 
-**Created by**: Zihan Wei
-**Date**: 2025-07-11
 
 This document provides the guidelines for properly using the published Sentinel-2 vessel detections, some examples of use cases, and some data caveats. This document is based on tables in the `global-fishing-watch.pipe_sentinel2_v1_published` dataset in BigQuery and is thus suitable for GFW internal users and research partners with access to the dataset. For other types of users, refer to the documentation in the Data Download Portal page.
 
@@ -46,7 +49,7 @@ All the tables are partitioned daily by the `date` field, except `s2_overpass` w
 
 The figure below illustrates the structure of and relationship between different key fields shared by the tables. Understanding how they are connected is the key to correctly join these table for any analysis.
 
-![image.png](Sentinel-2%20Vessel%20Detection%20Data%20User%20Guide%20for%20In%2022d740e47d9180868ce1da236a3b809a/image.png)
+![](../figures/s2-key-fields-relationship.png)
 
 **The two rules for joining two tables are:**
 
@@ -112,7 +115,7 @@ Our S2 vessel detections provide inferred vessel length (`length_m_inferred`), s
 
 The inferred vessel length is less accurate for smaller vessels, and the length of under-30m vessels are likely overestimated, as shown in the figure below. This limitation is the result of the 10-m image resolution, with which small vessels appear as just dots, making it difficult to infer accurate vessel lengths.
 
-![image.png](Sentinel-2%20Vessel%20Detection%20Data%20User%20Guide%20for%20In%2022d740e47d9180868ce1da236a3b809a/image%201.png)
+![](../figures/s2-caveats-inferred-properties.png)
 
 The inferred vessel speed shouldn’t be used an accurate measurement like the speed reported in the AIS data. The inferred speed is only a rough estimation based on what appear in the image, such as wakes. It’s probably good enough to tell whether a vessel is stationary, moving slowly, or moving fast, but certain not capable of telling for sure whether its speed is 2.6 knots or 3.7 knots.
 
@@ -180,15 +183,15 @@ GROUP BY
 
 If we plot `detections_count` from the query results, which is the naive count of detections, we get:
 
-![image.png](Sentinel-2%20Vessel%20Detection%20Data%20User%20Guide%20for%20In%2022d740e47d9180868ce1da236a3b809a/image%202.png)
+![](../figures/s2-detections-count-plot.png)
 
 Note the vertical bands on the map, which is clearly not the pattern of vessel presence. Instead, it is caused by the different number satellite overpasses (`overpasses_cloud_under_20`) in different region:
 
-![image.png](Sentinel-2%20Vessel%20Detection%20Data%20User%20Guide%20for%20In%2022d740e47d9180868ce1da236a3b809a/image%203.png)
+![](../figures/s2-overpasses-cloud-under-20-plot.png)
 
 The correct way to visualize the vessel presence is to plot `vessels_per_overpass`, which is the number of detections normalized by the number of overpasses:
 
-![image.png](Sentinel-2%20Vessel%20Detection%20Data%20User%20Guide%20for%20In%2022d740e47d9180868ce1da236a3b809a/image%204.png)
+![](../figures/s2-vessels-per-overpass-plot.png)
 
 # Detection-AIS matching
 
@@ -228,7 +231,7 @@ The method is explained in more detail in the *SAR and AIS integration* section 
 
 Neighboring Sentinel-2 scenes overlap with each other, as shown by the figure below. As a result, vessels in the overlapping area got imaged twice or more in a short period of time (mostly a few seconds). Currently, our pipeline processes all the Sentinel-2 images without pre-cropping them to account for the overlapping parts. Therefore, the raw vessel detections (`detect_scene_raw`) contains essentially duplicate detections of the same vessel with different `scene_id` and probably slightly different inferred values. 
 
-![image (43).png](Sentinel-2%20Vessel%20Detection%20Data%20User%20Guide%20for%20In%2022d740e47d9180868ce1da236a3b809a/image_(43).png)
+![](../figures/s2-duplicate-detections-plot.png)
 
 In the data processing pipeline, we identify these duplicates by clustering spatially close detections with similar inferred length, speed, and heading directions under each satellite overpass swath. In each cluster, we only keep one detection and flag the others as duplicates.
 

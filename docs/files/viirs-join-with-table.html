@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>38&nbsp; GFW Data Training Materials – Global Fishing Watch documentation</title>
+<title>31&nbsp; Join with VIIRS table – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -29,7 +63,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files/data-products-page-template.html" rel="prev">
+<link href="../files/viirs-noise-filter.html" rel="next">
+<link href="../files/viirs-footprint.html" rel="prev">
 <link href="../figures/GFW_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -80,7 +115,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/wiki-documentation-standards.html">Resources</a></li><li class="breadcrumb-item"><a href="../files/gfw-data-training-materials.html"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">GFW Data Training Materials</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/viirs-join-with-table.html"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -206,7 +241,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">SECTION TITLE??</span></a>
+ <span class="menu-text">GFW Data?</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -295,6 +330,60 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-ais-matching.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-boat-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-cloud-mask.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-excluding-overlapping-detection-to-AIS-matching-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">VIIRS - excluding overlappint detections</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-excluding-overlapping-detection.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">VIIRS excluding overlapping detection</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-footprint.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">VIIRS footprint</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-join-with-table.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/viirs-noise-filter.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">VIIRS noise filter</span></span></a>
+  </div>
+</li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
@@ -309,67 +398,67 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
+ <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
+ <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+ <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
   </div>
 </li>
       </ul>
@@ -386,25 +475,19 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/helpful-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/gfw-data-training-materials.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">GFW Data Training Materials</span></span></a>
+ <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
   </div>
 </li>
       </ul>
@@ -420,9 +503,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/wiki-documentation-standards.html">Resources</a></li><li class="breadcrumb-item"><a href="../files/gfw-data-training-materials.html"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">GFW Data Training Materials</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/viirs-join-with-table.html"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">GFW Data Training Materials</span></h1>
+<h1 class="title"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></h1>
 </div>
 
 
@@ -439,95 +522,53 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>https://docs.google.com/document/d/1mvpQa01gRTvEKKCcrqCwinapJ_NKB66MlLmxa1RGQrM/edit?tab=t.0</p>
-<p><strong>Purpose:</strong> The <a href="https://drive.google.com/drive/u/0/folders/0AIfysivHdyTgUk9PVA"><strong>GFW Data Training</strong></a> Shared Drive contains training materials for using GFW data.</p>
-<p><strong>Uses:</strong></p>
-<ul>
-<li>Reference for current GFW staff and partners<br>
-</li>
-<li>Onboarding for new GFW staff and partners<br>
-</li>
-<li>Periodic training meetings and workshops</li>
-</ul>
-<p><strong>Contents:</strong></p>
-<ul>
-<li><p><a href="https://drive.google.com/drive/u/0/folders/117s4rmWngMdB3BqySBkrpdYA04MZk5lY"><strong>Training Slide Decks</strong></a>: This folder contains numerous slide decks focused on different GFW datasets. The most up-to-date training slide decks are in <a href="https://drive.google.com/drive/u/0/folders/1X_bzgvN4WzNRIWl_slUsXVpjkmgvJprg"><strong>training_slides_current</strong></a>. Quarterly versions of the complete training slide deck set are saved in <a href="https://drive.google.com/drive/u/0/folders/1v8euqxFUTVM6PIoPEEG_ey7Fe3UPpnoK"><strong>training_slides_archive</strong></a> following the naming convention <strong>training_slides_YYYY_Q</strong></p></li>
-<li><p><a href="https://drive.google.com/drive/u/0/folders/1hLvvUpCRVTQa-ZPqqY3DJfGIyijwc9zg"><strong>Example Queries</strong></a>: This folder contains a Google Doc with descriptions and links to the most current example queries for working with GFW data.</p>
-<ul>
-<li>All queries are saved as SQL files on GitHub in the queries/examples/current folder in the <strong>bigquery-documentation-wf827</strong> repo.<br>
-</li>
-<li>Old versions of example queries are stored in the queries/examples/archive folder<br>
-</li>
-</ul></li>
-<li><p><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/wiki/BigQuery-Table-Reference"><strong>BigQuery Table Reference</strong></a>: Table containing current best list of datasets and tables to use for analysis</p></li>
-<li><p><a href="https://drive.google.com/drive/u/0/folders/1cZMaSkVSJcAlEm3qKg5Gj-JvEn6_xmbj"><strong>Training Workshops</strong></a>: This folder contains various admin materials for planning GFW training workshops</p></li>
-</ul>
-<p><strong>Updating</strong>: As new versions of datasets and tables are produced, GFW staff should periodically update the GFW data training materials for their assigned datasets (see <strong>Assignments</strong>) accordingly. This process includes the following:</p>
-<ol type="1">
-<li>GFW staff add/update example queries.
-<ol type="1">
-<li>The old versions of the queries should be moved to the queries/examples/archive folder in the <a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827"><strong>bigquery-documentation-wf827</strong></a> repo.<br>
-</li>
-<li>The new versions of the queries should be added to the queries/examples/current folder using the options below. Queries should be clearly named according to what they do and be date-versioned with the <strong>vYYYYMMDD</strong> format (e.g.&nbsp;<strong>vessel_track_with_fishing_hours_vYYYYMMDD.sql</strong>).</li>
-</ol></li>
-</ol>
-<ul>
-<li>Option A: Clone the <strong>bigquery-documentation-wf827</strong> repo and push new queries to the correct folder (make sure to pull first if not cloning for the first time!)<br>
-</li>
-<li>Option B: Upload files to the <strong>bigquery-documentation-wf827</strong> repo
-<ul>
-<li>Step 1: Save example query locally as a .sql file<br>
-</li>
-<li>Step 2: Navigate to the current example query folder <strong>bigquery-documentation-wf827/queries/examples/current</strong><br>
-</li>
-<li>Step 3: Click <strong>Upload files</strong><br>
-</li>
-<li>Step 4: Drag/drop file, add a commit message, and press <strong>Commit</strong><br>
-</li>
-</ul></li>
-<li>Option C: Create a new file directly in the <strong>bigquery-documentation-wf827</strong> repo on github.com
-<ul>
-<li>Step 1: Navigate to the example query folder for the current quarter in <strong>bigquery-documentation-wf827/queries/examples/current</strong><br>
-</li>
-<li>Step 2: Click <strong>Create new file</strong><br>
-</li>
-<li>Step 3: Name query in the <strong>Name your file…</strong> box (make sure to use .sql suffix)<br>
-</li>
-<li>Step 4: Copy/paste query into the <strong>&lt;&gt;Edit new file</strong> window<br>
-</li>
-<li>Step 5: Add a commit message and press <strong>Commit</strong></li>
-</ul></li>
-</ul>
-<ol start="2" type="1">
-<li><p>GFW staff update their assigned slide decks in <a href="https://drive.google.com/drive/u/0/folders/1X_bzgvN4WzNRIWl_slUsXVpjkmgvJprg"><strong>training_slides_current</strong></a>. Links to example queries should be updated to reference the correct version of the query stored in <a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827"><strong>bigquery-documentation-wf827</strong></a>.</p></li>
-<li><p>All slide decks are combined into a single, versioned slide deck and saved in <a href="https://drive.google.com/drive/u/0/folders/1v8euqxFUTVM6PIoPEEG_ey7Fe3UPpnoK"><strong>training_slides_archive</strong></a> (Tyler).</p></li>
-</ol>
-<p><strong>Assignments</strong>: GFW staff are responsible for updating the training materials for certain datasets. These assignments are generally based on that staff member’s expertise in the subject/dataset.</p>
-<ul>
-<li><strong>BigQuery</strong>: Tyler, David<br>
-</li>
-<li><strong>Intro to AIS</strong>: David<br>
-</li>
-<li><strong>Pipeline</strong>: Enrique, Andres, Matias, Tim<br>
-</li>
-<li><strong>Research tables</strong>: Tyler<br>
-</li>
-<li><strong>Fishing effort</strong>: Tyler<br>
-</li>
-<li><strong>Vessel database</strong>: Jaeyoon<br>
-</li>
-<li><strong>Vessel info tables</strong>: Tyler<br>
-</li>
-<li><strong>Ports and voyages</strong>: Nate, Tim<br>
-</li>
-<li><strong>Transshipment</strong>: Hannah, Nate<br>
-</li>
-<li><strong>VIIRS</strong>: Masaki<br>
-</li>
-<li><strong>SAR</strong>: Fernando, David<br>
-</li>
-<li><strong>VMS</strong>: Bjorn, Tim W</li>
-</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> TEMP <span class="kw">FUNCTION</span> start_date() <span class="kw">AS</span> (<span class="dt">DATE</span>(<span class="st">'2020-01-01'</span>));</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> TEMP <span class="kw">FUNCTION</span> end_date() <span class="kw">AS</span> (<span class="dt">DATE</span>(<span class="st">'2020-01-02'</span>));</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a># <span class="kw">Add</span> VIIRS information <span class="kw">to</span> <span class="kw">the</span> VIIRS<span class="op">-</span>AIS matching <span class="kw">table</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a># VIIRS<span class="op">-</span>AIS matching <span class="kw">table</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>viirs_matching <span class="kw">AS</span> (</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span>  </span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    `world<span class="op">-</span>fishing<span class="op">-</span><span class="fl">827.</span>pipe_production_v20201001.proto_matches_raw_vbd_global_3top_v20210514`</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>      <span class="dt">DATE</span>(_PARTITIONTIME) <span class="kw">BETWEEN</span> start_date() <span class="kw">AND</span> end_date()</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a># VIIRS <span class="kw">table</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>viirs <span class="kw">AS</span> (</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">concat</span>(<span class="fu">cast</span>(Date_Mscan <span class="kw">as</span> string),<span class="fu">concat</span>(<span class="fu">cast</span>(Lat_DNB <span class="kw">as</span> string),<span class="fu">cast</span>(Lon_DNB <span class="kw">as</span> string))) <span class="kw">as</span> detect_id,</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">*</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    `world<span class="op">-</span>fishing<span class="op">-</span><span class="fl">827.</span>pipe_viirs_production_v20220112.raw_vbd_global`</span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>      QF_Detect <span class="kw">IN</span> (<span class="dv">1</span>,<span class="dv">2</span>,<span class="dv">3</span>,<span class="dv">5</span>,<span class="dv">7</span>,<span class="dv">10</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>      <span class="kw">AND</span> <span class="dt">DATE</span>(Date_Mscan) <span class="kw">BETWEEN</span> start_date() <span class="kw">AND</span> end_date()</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a># <span class="fu">Extract</span> detection <span class="kw">only</span> <span class="kw">from</span> smallest zenith orbits <span class="cf">for</span> <span class="kw">each</span> grid <span class="kw">and</span> <span class="dt">day</span></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a><span class="kw">select</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>  <span class="op">*</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a><span class="kw">from</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>  viirs_matching a</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>  <span class="kw">left</span> <span class="kw">join</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>  viirs b</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="kw">using</span>(detect_id)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a><span class="kw">limit</span> <span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
 
@@ -954,11 +995,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../files/data-products-page-template.html" class="pagination-link" aria-label="Data Products Page Template">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span>
+      <a href="../files/viirs-footprint.html" class="pagination-link" aria-label="VIIRS footprint">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">VIIRS footprint</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../files/viirs-noise-filter.html" class="pagination-link" aria-label="VIIRS noise filter">
+        <span class="nav-page-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">VIIRS noise filter</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
