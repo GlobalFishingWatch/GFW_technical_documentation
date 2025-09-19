@@ -1,8 +1,11 @@
-# `vi_ssvid` tables
+# Aggregated vessel info tables: `vi_ssvid_v` and `vi_ssvid_byyear_v`
 
-An intermediate step of the vessel identity pipeline combines AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.) to produce summary information by vessel. In their current form, these tables treat `ssvid` as the unit of a vessel and are thus commonly referred to as the `vi_ssvid` tables.
+An intermediate step of the vessel identity pipeline combines AIS activity (positions, hours, fishing hours, etc.), registry info (when available), and neural net outputs (vessel class, length, tonnage, etc.) to produce summary information by vessel.
+In their current form, these tables treat `ssvid` as the unit of a vessel and are thus commonly referred to as the `vi_ssvid` tables.
 
-A key purpose of the `vi_ssvid` tables is to evaluate these multiple and potentially conflicting sources of information to determine the "best" values for various fields (e.g. vessel class, flag, dimensions) to be used by GFW. The vessel info tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.
+A key purpose of the `vi_ssvid` tables is to evaluate these multiple and potentially conflicting sources of information to determine the "best" values for various fields (e.g. vessel class, flag, dimensions) to be used by GFW.
+
+The `vi_ssvid` tables are also used to identify active fishing vessels and those vessels that are spoofing or offsetting their position, as well as quickly summarizing fleet activity.
 
 >Note: Ongoing work is adding a new step, referred to as the secondary classifier, to the `vi_ssvid` tables. This step improves upon our previous rule-based approach to combining information from multiple sources by using a Random Forest model. When this process is completed and integrated into production we will update the information below accordingly. 
 
@@ -18,23 +21,22 @@ A key purpose of the `vi_ssvid` tables is to evaluate these multiple and potenti
 The information in the main vessel info tables (`vi_ssvid_vYYYYMMDD`; `vi_ssvid_byyear_vYYYYMMDD`) is organized into multiple `STRUCT` that summarize the MMSI's `activity`, `ais_identity`, `inferred` characteristics, `registry_info`, and `best` info to be used by GFW.
 
 + `activity`: Fields summarizing the amount and location of the MMSI’s AIS activity - positions, hours, fishing_hours, spoofing etc.
-  + > `eez`: Helpful summary of the MMSI's activity (`hours`, `fishing_hours`) by EEZ. Useful for quick, non-spatial summaries of activity by EEZ 
-  + > `offsetting`: Whether the MMSI offsetting its position
-  + > `overlap_hours_multinames`: Spoofing flag. Indicates how many hours the MMSI has overlapping segments with multiple identities. MMSI with `overlap_hours_multinames > 24` in a given year are considered to be spoofed.
+  + `eez`: Helpful summary of the MMSI's activity (`hours`, `fishing_hours`) by EEZ. Useful for quick, non-spatial summaries of activity by EEZ 
+  + `offsetting`: Whether the MMSI offsetting its position
+  + `overlap_hours_multinames`: Spoofing flag. Indicates how many hours the MMSI has overlapping segments with multiple identities. MMSI with `overlap_hours_multinames > 24` in a given year are considered to be spoofed.
 
 + `ais_identity`: Fields summarizing the identities (ship name, callsign, IMO, flag, etc.) broadcast by that MMSI in AIS messages. Each identity type includes a `mostcommon` field providing the most-common value for that identity type.
-  + > Fields prefixed with `n_` are normalized versions of the original values. 
-  + > `likely_gear`: Whether the MMSI's most common shipname (`n_shipname_mostcommon`) suggests the MMSI is attached to fishing gear (e.g. `BUOY16`).
-
+  + Fields prefixed with `n_` are normalized versions of the original values. 
+  + `likely_gear`: Whether the MMSI's most common shipname (`n_shipname_mostcommon`) suggests the MMSI is attached to fishing gear (e.g. `BUOY16`).
 + `inferred`: Fields summarizing vessel characteristics (length, tonnage, geartype) inferred by the neural net for the MMSI. 
-  + > GFW uses a nested vessel class hierarchy and only "leaf" classes are scored by the neural net, which are recorded in `inferred.inferred_vessel_class`. However, the final inferred vessel class assigned to an MMSI is recorded in `inferred.inferred_vessel_class_ag` and corresponds to the lowest level vessel class with a cumulative neural net score > 0.5.
+  + `Note:` GFW uses a nested vessel class hierarchy and only "leaf" classes are scored by the neural net, which are recorded in `inferred.inferred_vessel_class`. However, the final inferred vessel class assigned to an MMSI is recorded in `inferred.inferred_vessel_class_ag` and corresponds to the lowest level vessel class with a cumulative neural net score > 0.5.
 
 + `registry_info`: The identity information associated with the MMSI sourced from vessel registries
-  + > Values correspond to the `feature` `STRUCT` in the vessel database.
+  + Values correspond to the `feature` `STRUCT` in the vessel database.
 
 + `best`: GFW’s assigned “best” vessel characteristics after considering all info from AIS, the neural
 net, and vessel registries
-  + > `registry_net_disagreement`: Do the neural net (`inferred.inferred_vessel_class_ag`) and vessel registries (`registry_info.best_known_vessel_class`) disagree about the vessel class of the MMSI
+  + `registry_net_disagreement`: Do the neural net (`inferred.inferred_vessel_class_ag`) and vessel registries (`registry_info.best_known_vessel_class`) disagree about the vessel class of the MMSI
 
 #### `on_fishing_list_` fields
 
