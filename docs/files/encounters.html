@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>14&nbsp; Encounters – Global Fishing Watch documentation</title>
+<title>15&nbsp; Encounters – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../files/loitering.html" rel="next">
-<link href="../files/fishing-events.html" rel="prev">
+<link href="../files/vms-data-sources.html" rel="prev">
 <link href="../figures/GFW_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/fishing-effort-and-vessel-presence.html">GFW Data?</a></li><li class="breadcrumb-item"><a href="../files/encounters.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/encounters.html">Events</a></li><li class="breadcrumb-item"><a href="../files/encounters.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Encounters</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Data Reference</span></a>
+ <span class="menu-text">Data Overview</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -127,26 +127,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/data-updates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span></a>
+  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
+  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">GFW Data?</span></a>
+ <span class="menu-text">Vessel Tracking and Behavior</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -221,56 +221,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
+  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
   </div>
 </li>
       </ul>
@@ -278,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Imagery</span></a>
+ <span class="menu-text">Events</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -286,68 +244,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
+  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
+  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
+  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-ais-matching.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
+  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-boat-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-cloud-mask.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-excluding-overlapping-detection-to-AIS-matching-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">VIIRS - excluding overlappint detections</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-excluding-overlapping-detection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">VIIRS excluding overlapping detection</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-footprint.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">VIIRS footprint</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-join-with-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-noise-filter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">VIIRS noise filter</span></span></a>
+  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
   </div>
 </li>
       </ul>
@@ -355,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Reference Layers</span></a>
+ <span class="menu-text">Object Detection</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -363,68 +285,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+  <a href="../files/viirs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
   </div>
 </li>
       </ul>
@@ -432,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Resources</span></a>
+ <span class="menu-text">Reference Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -440,20 +320,103 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/helpful-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
   </div>
 </li>
       </ul>
@@ -468,23 +431,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#key-tables" id="toc-key-tables" class="nav-link active" data-scroll-target="#key-tables"><span class="header-section-number">14.1</span> Key Tables</a>
+  <li><a href="#key-tables" id="toc-key-tables" class="nav-link active" data-scroll-target="#key-tables"><span class="header-section-number">15.1</span> Key Tables</a>
   <ul class="collapse">
-  <li><a href="#source-tables" id="toc-source-tables" class="nav-link" data-scroll-target="#source-tables"><span class="header-section-number">14.1.1</span> Source Tables</a></li>
+  <li><a href="#source-tables" id="toc-source-tables" class="nav-link" data-scroll-target="#source-tables"><span class="header-section-number">15.1.1</span> Source Tables</a></li>
   </ul></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">14.2</span> Data Description</a></li>
-  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">14.3</span> Caveats &amp; Known Issues</a></li>
-  <li><a href="#example-queries" id="toc-example-queries" class="nav-link" data-scroll-target="#example-queries"><span class="header-section-number">14.4</span> Example queries</a></li>
-  <li><a href="#related-content" id="toc-related-content" class="nav-link" data-scroll-target="#related-content"><span class="header-section-number">14.5</span> Related Content</a></li>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">15.2</span> Data Description</a></li>
+  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">15.3</span> Caveats &amp; Known Issues</a></li>
+  <li><a href="#example-queries" id="toc-example-queries" class="nav-link" data-scroll-target="#example-queries"><span class="header-section-number">15.4</span> Example queries</a></li>
+  <li><a href="#related-content" id="toc-related-content" class="nav-link" data-scroll-target="#related-content"><span class="header-section-number">15.5</span> Related Content</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/fishing-effort-and-vessel-presence.html">GFW Data?</a></li><li class="breadcrumb-item"><a href="../files/encounters.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/encounters.html">Events</a></li><li class="breadcrumb-item"><a href="../files/encounters.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Encounters</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></h1>
+<h1 class="title"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Encounters</span></h1>
 </div>
 
 
@@ -502,32 +465,32 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Vessels meet at sea for a variety of reasons, including transshipment (transferring catch, crew, fuel, etc.), and these encounters between vessels are of interest for monitoring illegal behavior.</p>
-<section id="key-tables" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">14.1</span> Key Tables</h2>
+<section id="key-tables" class="level2" data-number="15.1">
+<h2 data-number="15.1" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">15.1</span> Key Tables</h2>
 <ul>
 <li><code>pipe_ais_v3_published.product_events_encounter</code> - Same as the <code>encounters</code> table but with a schema intended for use in products and consumed by the APIs. This means that there is one row for each of the two vessels in an encounter and the two rows must be joined together to have the information associated with both vessels on the same row (see query examples). This is a view of <code>product_events_encounter_vYYYYMMDD</code> that always provides data from the latest version (<code>vYYYYMMDD</code>) of the table but using the underlying table is deprecated and will be removed in a future pipeline release. Instead, the <code>product_events_encounter</code> view should be used.</li>
 <li><code>pipe_ais_v3_published.product_events_encounter_vYYYYMMDD</code> (deprecated) - This is the underlying table that <code>pipe_ais_v3_published.product_events_encounter</code> is based on. The <code>YYYYMMDD</code> suffix indicates the date of the version of the table. Usage of this table is deprecated and will be removed in a future pipeline release. Instead, the <code>product_events_encounter</code> view should be used.</li>
 <li><code>pipe_ais_v3_published.encounters</code> - Source table for the <code>product_events_encounter_vYYYYMMDD</code> table. This is not filtered by speed and has one row per encounter.</li>
 </ul>
-<section id="source-tables" class="level3" data-number="14.1.1">
-<h3 data-number="14.1.1" class="anchored" data-anchor-id="source-tables"><span class="header-section-number">14.1.1</span> Source Tables</h3>
+<section id="source-tables" class="level3" data-number="15.1.1">
+<h3 data-number="15.1.1" class="anchored" data-anchor-id="source-tables"><span class="header-section-number">15.1.1</span> Source Tables</h3>
 </section>
 </section>
-<section id="data-description" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">14.2</span> Data Description</h2>
+<section id="data-description" class="level2" data-number="15.2">
+<h2 data-number="15.2" class="anchored" data-anchor-id="data-description"><span class="header-section-number">15.2</span> Data Description</h2>
 <p>When two vessels are observed in close proximity for an extended period of time it is considered an <strong>encounter</strong>. <code>product_events_encounters</code> applies the additional constraint that both vessels must be moving very slowly. Encounters occur when:</p>
 <p>2 vessels within 500 meters of each other Minimum duration of 2 hours 10 kilometers from a coastal anchorage traveling &lt;2 knots [<code>product_events_encounters</code> only]</p>
 <p>For more information, see data training slides on encounter and loitering events <a href="https://docs.google.com/presentation/d/17ZSpH0F5sW0R7sTiNoDAm_pyUhHJeSd4fyyBFDHiAtw/edit?usp=sharing">HERE</a>.</p>
-<section id="definitions-used-in-rfmo-transshipment-reports" class="level4" data-number="14.2.0.1">
-<h4 data-number="14.2.0.1" class="anchored" data-anchor-id="definitions-used-in-rfmo-transshipment-reports"><span class="header-section-number">14.2.0.1</span> Definitions used in RFMO Transshipment Reports</h4>
+<section id="definitions-used-in-rfmo-transshipment-reports" class="level4" data-number="15.2.0.1">
+<h4 data-number="15.2.0.1" class="anchored" data-anchor-id="definitions-used-in-rfmo-transshipment-reports"><span class="header-section-number">15.2.0.1</span> Definitions used in RFMO Transshipment Reports</h4>
 <p>GFW, in partnership with The Pew Charitable Trusts, has produced annual reports covering the years of 2017-2019 on transshipment activity in the the five major tuna RFMOs. These reports compare reported activity to potential transshipment, fishing, and port activity detected on AIS. The definitions of encounter and loitering events used for these reports are as follows.</p>
 <ul>
 <li><code>Encounters</code>: when two vessels are within 500 meters of each other for at least 2 hours and traveling at &lt; 2 knots, while at least 10 kilometers from a coastal anchorage (<a href="https://www.frontiersin.org/articles/10.3389/fmars.2018.00240/full">Miller et al.&nbsp;2018</a>).</li>
 </ul>
 </section>
 </section>
-<section id="caveats-known-issues" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">14.3</span> Caveats &amp; Known Issues</h2>
+<section id="caveats-known-issues" class="level2" data-number="15.3">
+<h2 data-number="15.3" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">15.3</span> Caveats &amp; Known Issues</h2>
 <ul>
 <li>GFW has never created encounters for short events on either side of the UTC day boundary - specifically those that start between 10pm and 12am or end between 12am and 2am. This is a known issue that will be fixed in the future, for more information see <a href="https://globalfishingwatch.atlassian.net/browse/PIPELINE-2137">PIPELINE-2137</a> and <a href="https://globalfishingwatch.slack.com/archives/CHBNB2JAE/p1737127108538739?thread_ts=1737046100.552259&amp;cid=CHBNB2JAE">this Slack thread</a></li>
 <li>Point nature of events; if ais transmission is poor, the average location can be inconsistent with full location of tracks during time period. In addition, due to the way events are combined across days, average event parameters are approximate.</li>
@@ -536,8 +499,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Vessels may encounter more than one vessel at a time, an issue that comes up frequently in the presence of gear, but also occasionally with multiple vessels meeting.</li>
 </ul>
 </section>
-<section id="example-queries" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="example-queries"><span class="header-section-number">14.4</span> Example queries</h2>
+<section id="example-queries" class="level2" data-number="15.4">
+<h2 data-number="15.4" class="anchored" data-anchor-id="example-queries"><span class="header-section-number">15.4</span> Example queries</h2>
 <blockquote class="blockquote">
 <p>Needs updating. Removed links until queries are updated/removed.</p>
 </blockquote>
@@ -554,8 +517,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="">analysis-pew-ts-reports/rfmo/rfmo-yyyy</a>: see <code>queries</code> folder for BQ data pull and <code>analysis</code> folder for data cleaning and analysis</li>
 </ul>
 </section>
-<section id="related-content" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="related-content"><span class="header-section-number">14.5</span> Related Content</h2>
+<section id="related-content" class="level2" data-number="15.5">
+<h2 data-number="15.5" class="anchored" data-anchor-id="related-content"><span class="header-section-number">15.5</span> Related Content</h2>
 <ul>
 <li><a href="https://globalfishingwatch.org/carrier-vessel-portal/">Carrier Vessel Portal (CVP)</a></li>
 </ul>
@@ -986,13 +949,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../files/fishing-events.html" class="pagination-link" aria-label="Fishing Events">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Fishing Events</span></span>
+      <a href="../files/vms-data-sources.html" class="pagination-link" aria-label="VMS Data Sources">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../files/loitering.html" class="pagination-link" aria-label="Loitering">
-        <span class="nav-page-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Loitering</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Loitering</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

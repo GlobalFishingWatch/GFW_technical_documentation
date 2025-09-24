@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>22&nbsp; SAR Object Detections – Global Fishing Watch documentation</title>
+<title>20&nbsp; SAR Object Detections – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../files/satellite-timing-offset-table.html" rel="next">
-<link href="../files/pipeline.html" rel="prev">
+<link href="../files/fishing-events.html" rel="prev">
 <link href="../figures/GFW_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/sar-object-detections.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Object Detection</a></li><li class="breadcrumb-item"><a href="../files/sar-object-detections.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -119,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Data Reference</span></a>
+ <span class="menu-text">Data Overview</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -127,26 +127,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/data-updates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span></a>
+  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
+  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -207,7 +207,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">GFW Data?</span></a>
+ <span class="menu-text">Vessel Tracking and Behavior</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -221,56 +221,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
+  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
   </div>
 </li>
       </ul>
@@ -278,7 +236,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Imagery</span></a>
+ <span class="menu-text">Events</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -286,68 +244,32 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
+  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
+  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
+  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-ais-matching.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
+  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-boat-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-cloud-mask.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-excluding-overlapping-detection-to-AIS-matching-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">VIIRS - excluding overlappint detections</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-excluding-overlapping-detection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">VIIRS excluding overlapping detection</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-footprint.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">VIIRS footprint</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-join-with-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-noise-filter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">VIIRS noise filter</span></span></a>
+  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
   </div>
 </li>
       </ul>
@@ -355,7 +277,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Reference Layers</span></a>
+ <span class="menu-text">Object Detection</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -363,68 +285,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+  <a href="../files/viirs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
   </div>
 </li>
       </ul>
@@ -432,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Resources</span></a>
+ <span class="menu-text">Reference Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -440,20 +320,103 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/helpful-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
   </div>
 </li>
       </ul>
@@ -468,24 +431,24 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#st-release-2022-06-08" id="toc-st-release-2022-06-08" class="nav-link active" data-scroll-target="#st-release-2022-06-08"><span class="header-section-number">22.1</span> 1st Release (2022-06-08)</a></li>
-  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts"><span class="header-section-number">22.2</span> Key Concepts</a></li>
-  <li><a href="#key-tables" id="toc-key-tables" class="nav-link" data-scroll-target="#key-tables"><span class="header-section-number">22.3</span> Key Tables</a></li>
-  <li><a href="#key-fields" id="toc-key-fields" class="nav-link" data-scroll-target="#key-fields"><span class="header-section-number">22.4</span> Key Fields</a></li>
-  <li><a href="#key-buckets" id="toc-key-buckets" class="nav-link" data-scroll-target="#key-buckets"><span class="header-section-number">22.5</span> Key Buckets</a></li>
-  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">22.6</span> Data Description</a></li>
-  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">22.7</span> Caveats &amp; Known Issues:</a></li>
-  <li><a href="#example-queries" id="toc-example-queries" class="nav-link" data-scroll-target="#example-queries"><span class="header-section-number">22.8</span> Example Queries</a></li>
-  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><span class="header-section-number">22.9</span> Additional Information</a></li>
+  <li><a href="#st-release-2022-06-08" id="toc-st-release-2022-06-08" class="nav-link active" data-scroll-target="#st-release-2022-06-08"><span class="header-section-number">20.1</span> 1st Release (2022-06-08)</a></li>
+  <li><a href="#key-concepts" id="toc-key-concepts" class="nav-link" data-scroll-target="#key-concepts"><span class="header-section-number">20.2</span> Key Concepts</a></li>
+  <li><a href="#key-tables" id="toc-key-tables" class="nav-link" data-scroll-target="#key-tables"><span class="header-section-number">20.3</span> Key Tables</a></li>
+  <li><a href="#key-fields" id="toc-key-fields" class="nav-link" data-scroll-target="#key-fields"><span class="header-section-number">20.4</span> Key Fields</a></li>
+  <li><a href="#key-buckets" id="toc-key-buckets" class="nav-link" data-scroll-target="#key-buckets"><span class="header-section-number">20.5</span> Key Buckets</a></li>
+  <li><a href="#data-description" id="toc-data-description" class="nav-link" data-scroll-target="#data-description"><span class="header-section-number">20.6</span> Data Description</a></li>
+  <li><a href="#caveats-known-issues" id="toc-caveats-known-issues" class="nav-link" data-scroll-target="#caveats-known-issues"><span class="header-section-number">20.7</span> Caveats &amp; Known Issues:</a></li>
+  <li><a href="#example-queries" id="toc-example-queries" class="nav-link" data-scroll-target="#example-queries"><span class="header-section-number">20.8</span> Example Queries</a></li>
+  <li><a href="#additional-information" id="toc-additional-information" class="nav-link" data-scroll-target="#additional-information"><span class="header-section-number">20.9</span> Additional Information</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/sar-object-detections.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Object Detection</a></li><li class="breadcrumb-item"><a href="../files/sar-object-detections.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></h1>
+<h1 class="title"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></h1>
 </div>
 
 
@@ -503,8 +466,8 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Synthetic Aperture Radar (SAR) object detections consist of vessels and offshore infrastructure detected, classified, and matched to AIS/VMS (when available) from satellite radar images taken by ESA’s Sentinel-1 mission.</p>
-<section id="st-release-2022-06-08" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="st-release-2022-06-08"><span class="header-section-number">22.1</span> 1st Release (2022-06-08)</h2>
+<section id="st-release-2022-06-08" class="level2" data-number="20.1">
+<h2 data-number="20.1" class="anchored" data-anchor-id="st-release-2022-06-08"><span class="header-section-number">20.1</span> 1st Release (2022-06-08)</h2>
 <p>What to know regarding this preliminary release:</p>
 <ul>
 <li>Fixed objects like infrastructure have been removed, so only vessels <sup>1</sup></li>
@@ -522,16 +485,16 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://#">Link to Map</a></p>
 <p><a href="https://#">Link to Data</a></p>
 </section>
-<section id="key-concepts" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">22.2</span> Key Concepts</h2>
+<section id="key-concepts" class="level2" data-number="20.2">
+<h2 data-number="20.2" class="anchored" data-anchor-id="key-concepts"><span class="header-section-number">20.2</span> Key Concepts</h2>
 <ul>
 <li>Data point: individual detection of maritime object from a single SAR scene</li>
 <li>Polygon: outline of the valid area within the SAR scene used for detection</li>
 <li>Matched: individual detection has been paired with a specific AIS message</li>
 </ul>
 </section>
-<section id="key-tables" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">22.3</span> Key Tables</h2>
+<section id="key-tables" class="level2" data-number="20.3">
+<h2 data-number="20.3" class="anchored" data-anchor-id="key-tables"><span class="header-section-number">20.3</span> Key Tables</h2>
 <p>BQ: <code>world-fishing-827.proj_sentinel1_v20210924</code></p>
 <ul>
 <li><code>detect_scene_raw_YYYYMMDD</code> - id, lon, lat, time from Earth Engine detections</li>
@@ -540,8 +503,8 @@ ul.task-list li input[type="checkbox"] {
 <li><code>detect_scene_match</code> - id, matching-info, vessel-info from matching algorithm</li>
 </ul>
 </section>
-<section id="key-fields" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="key-fields"><span class="header-section-number">22.4</span> Key Fields</h2>
+<section id="key-fields" class="level2" data-number="20.4">
+<h2 data-number="20.4" class="anchored" data-anchor-id="key-fields"><span class="header-section-number">20.4</span> Key Fields</h2>
 <ul>
 <li><code>scene_id</code> - ID of Sentinel-1 scene from where detections were extracted</li>
 <li><code>detect_id</code> - ID unique to every detection, composed as <code>scene_id;lon;lat</code></li>
@@ -557,19 +520,19 @@ ul.task-list li input[type="checkbox"] {
 <li><code>var1/var2</code> - vessel info before and after the SAR image used for matching</li>
 </ul>
 </section>
-<section id="key-buckets" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="key-buckets"><span class="header-section-number">22.5</span> Key Buckets</h2>
+<section id="key-buckets" class="level2" data-number="20.5">
+<h2 data-number="20.5" class="anchored" data-anchor-id="key-buckets"><span class="header-section-number">20.5</span> Key Buckets</h2>
 <p>GCS: Data output from Earth Engine used to produce the BQ Tables:</p>
 <p>Detections: <code>gs://gfw-production-sentinel1-detection-gee/v20210924/&lt;date&gt;</code><br>
 Footprints: <code>gs://gfw-production-sentinel1-detection-footprints/v20210924/&lt;date&gt;</code><br>
 Thumbnails: <code>gs://gfw-production-sentinel1-detection-thumbnails/v20210924/&lt;date&gt;</code></p>
 </section>
-<section id="data-description" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="data-description"><span class="header-section-number">22.6</span> Data Description</h2>
+<section id="data-description" class="level2" data-number="20.6">
+<h2 data-number="20.6" class="anchored" data-anchor-id="data-description"><span class="header-section-number">20.6</span> Data Description</h2>
 <p>The data tables contain all detections from 2017-01-01 to present, updated intermittently. Imagery availability increases along data acquisition timeframe, especially from mid-2016 on. Vessels are extracted from single scenes while fixed infrastructure is extracted from 6-month median composites, constructed every month with a moving window. Detection was performed on Google Earth Engine with a Constant False Alarm Rate (CFAR) algorithm using the GRD product, Interferometric Wide Mode, VH band at 20 m resolution. Vessel classification to identify noise and regression to estimate length was performed with a Convolutional Neural Network using both the VH and VV bands.</p>
 </section>
-<section id="caveats-known-issues" class="level2" data-number="22.7">
-<h2 data-number="22.7" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">22.7</span> Caveats &amp; Known Issues:</h2>
+<section id="caveats-known-issues" class="level2" data-number="20.7">
+<h2 data-number="20.7" class="anchored" data-anchor-id="caveats-known-issues"><span class="header-section-number">20.7</span> Caveats &amp; Known Issues:</h2>
 <ul>
 <li>Sentinel-1 does not take images over the open ocean, mostly near coastal waters</li>
 <li>spatial coverage is not homogeneous, e.g.&nbsp;European waters are imaged more frequently</li>
@@ -580,16 +543,16 @@ Thumbnails: <code>gs://gfw-production-sentinel1-detection-thumbnails/v20210924/&
 <li>images prior 2018 are of lower quality, introducing potential false positives</li>
 </ul>
 </section>
-<section id="example-queries" class="level2" data-number="22.8">
-<h2 data-number="22.8" class="anchored" data-anchor-id="example-queries"><span class="header-section-number">22.8</span> Example Queries</h2>
+<section id="example-queries" class="level2" data-number="20.8">
+<h2 data-number="20.8" class="anchored" data-anchor-id="example-queries"><span class="header-section-number">20.8</span> Example Queries</h2>
 <ul>
 <li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/SAR_dark_vessel_locations.sql">SAR_dark_vessel_locations.sql</a></li>
 <li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/SAR_dark_vessels_eezs.sql">SAR_dark_vessels_eezs.sql</a></li>
 <li><a href="https://github.com/GlobalFishingWatch/bigquery-documentation-wf827/blob/master/queries/SAR_matched_vessels.sql">SAR_matched_vessels.sql</a></li>
 </ul>
 </section>
-<section id="additional-information" class="level2" data-number="22.9">
-<h2 data-number="22.9" class="anchored" data-anchor-id="additional-information"><span class="header-section-number">22.9</span> Additional Information</h2>
+<section id="additional-information" class="level2" data-number="20.9">
+<h2 data-number="20.9" class="anchored" data-anchor-id="additional-information"><span class="header-section-number">20.9</span> Additional Information</h2>
 <ul>
 <li><a href="https://docs.google.com/presentation/d/1Rzsz6roQU-QfEdGTq33fApBTkZwsBelzKBHBKWrSALM/edit?usp=sharing">SAR Detection Slides</a></li>
 <li><a href="https://#">Technology Video</a></li>
@@ -1025,13 +988,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../files/pipeline.html" class="pagination-link" aria-label="GFW Pipelines">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span>
+      <a href="../files/fishing-events.html" class="pagination-link" aria-label="Fishing Events">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fishing Events</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../files/satellite-timing-offset-table.html" class="pagination-link" aria-label="Satellite Timing Offset">
-        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

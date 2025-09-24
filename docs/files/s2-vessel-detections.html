@@ -8,7 +8,7 @@
 
 <meta name="author" content="Zihan Wei">
 
-<title>24&nbsp; Sentinel-2 Vessel Detections – Global Fishing Watch documentation</title>
+<title>22&nbsp; Sentinel-2 Vessel Detections – Global Fishing Watch documentation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../files/viirs-ais-matching.html" rel="next">
+<link href="../files/viirs.html" rel="next">
 <link href="../files/satellite-timing-offset-table.html" rel="prev">
 <link href="../figures/GFW_logo.png" rel="icon" type="image/png">
 <script src="../site_libs/quarto-html/quarto.js"></script>
@@ -116,7 +116,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/s2-vessel-detections.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Object Detection</a></li><li class="breadcrumb-item"><a href="../files/s2-vessel-detections.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -154,7 +154,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">Data Reference</span></a>
+ <span class="menu-text">Data Overview</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -162,26 +162,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/data-updates.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Data Updates</span></span></a>
+  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/bigquery-datasets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">BigQuery Datasets</span></span></a>
+  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/bigquery-pipe3-table-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table Reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">BigQuery Pipe 3 Table</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/bigquery-pipe2.5-table-reference.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table Reference</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">BigQuery Pipe 2.5 Table</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -242,7 +242,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">GFW Data?</span></a>
+ <span class="menu-text">Vessel Tracking and Behavior</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -256,56 +256,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
+  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/vms-data-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/coverage.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Coverage</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/pipeline.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">GFW Pipelines</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">VMS Data Sources</span></span></a>
   </div>
 </li>
       </ul>
@@ -313,7 +271,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true">
- <span class="menu-text">Imagery</span></a>
+ <span class="menu-text">Events</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -321,68 +279,32 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
+  <a href="../files/encounters.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Encounters</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
+  <a href="../files/loitering.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Loitering</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
+  <a href="../files/gaps.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Gaps</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-ais-matching.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
+  <a href="../files/anchorages-voyages-port-visits.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Anchorages, Voyages and Port Visits</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/viirs-boat-detections.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">VIIRS boat detections</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-cloud-mask.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">VIIRS cloud mask</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-excluding-overlapping-detection-to-AIS-matching-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">VIIRS - excluding overlappint detections</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-excluding-overlapping-detection.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">VIIRS excluding overlapping detection</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-footprint.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">VIIRS footprint</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-join-with-table.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">Join with VIIRS table</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/viirs-noise-filter.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">VIIRS noise filter</span></span></a>
+  <a href="../files/fishing-events.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Fishing Events</span></span></a>
   </div>
 </li>
       </ul>
@@ -390,7 +312,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true">
- <span class="menu-text">Reference Layers</span></a>
+ <span class="menu-text">Object Detection</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -398,68 +320,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+  <a href="../files/sar-object-detections.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">SAR Object Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+  <a href="../files/satellite-timing-offset-table.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+  <a href="../files/s2-vessel-detections.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">39</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">40</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">41</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">42</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">43</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+  <a href="../files/viirs.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span></a>
   </div>
 </li>
       </ul>
@@ -467,7 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
- <span class="menu-text">Resources</span></a>
+ <span class="menu-text">Reference Data</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -475,20 +355,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../files/country-codes.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Country Codes</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-spatial-region-sources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">Spatial Region Sources</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-eez-boundaries.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">26</span>&nbsp; <span class="chapter-title">EEZ Boundaries</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-12-nm-boundary.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">27</span>&nbsp; <span class="chapter-title">12 NM Boundary</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-rfmos.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">28</span>&nbsp; <span class="chapter-title">RFMOs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-fao-areas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">29</span>&nbsp; <span class="chapter-title">FAO Areas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-high-seas-pockets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">30</span>&nbsp; <span class="chapter-title">High Seas Pockets</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-high-seas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">31</span>&nbsp; <span class="chapter-title">High Seas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-protected-seas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">32</span>&nbsp; <span class="chapter-title">Protected Seas</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-wdpa-marine-mpas.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">33</span>&nbsp; <span class="chapter-title">WDPA Marine MPAs</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-point-in-polygon-test-using-regions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">34</span>&nbsp; <span class="chapter-title">Point-in-polygon Test Using Regions</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../files/areas-updating-layers-in-pipe_regions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">35</span>&nbsp; <span class="chapter-title">Updating Layers in pipe_regions</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../files/wiki-documentation-standards.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">44</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
+ <span class="menu-text"><span class="chapter-number">36</span>&nbsp; <span class="chapter-title">Wiki Documentation Standard</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/helpful-resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">45</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
+ <span class="menu-text"><span class="chapter-number">37</span>&nbsp; <span class="chapter-title">Helpful Resources</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../files/data-products-page-template.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">46</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
+ <span class="menu-text"><span class="chapter-number">38</span>&nbsp; <span class="chapter-title">Data Products Page Template</span></span></a>
   </div>
 </li>
       </ul>
@@ -503,26 +466,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#about-sentinel-2-vessel-detections" id="toc-about-sentinel-2-vessel-detections" class="nav-link active" data-scroll-target="#about-sentinel-2-vessel-detections"><span class="header-section-number">25</span> About Sentinel-2 vessel detections</a></li>
-  <li><a href="#table-overview" id="toc-table-overview" class="nav-link" data-scroll-target="#table-overview"><span class="header-section-number">26</span> Table overview</a>
+  <li><a href="#about-sentinel-2-vessel-detections" id="toc-about-sentinel-2-vessel-detections" class="nav-link active" data-scroll-target="#about-sentinel-2-vessel-detections"><span class="header-section-number">23</span> About Sentinel-2 vessel detections</a></li>
+  <li><a href="#table-overview" id="toc-table-overview" class="nav-link" data-scroll-target="#table-overview"><span class="header-section-number">24</span> Table overview</a>
   <ul class="collapse">
-  <li><a href="#description-of-tables" id="toc-description-of-tables" class="nav-link" data-scroll-target="#description-of-tables"><span class="header-section-number">26.1</span> Description of tables</a></li>
-  <li><a href="#understanding-the-key-fields-to-correctly-join-the-tables" id="toc-understanding-the-key-fields-to-correctly-join-the-tables" class="nav-link" data-scroll-target="#understanding-the-key-fields-to-correctly-join-the-tables"><span class="header-section-number">26.2</span> Understanding the key fields to correctly join the tables</a></li>
+  <li><a href="#description-of-tables" id="toc-description-of-tables" class="nav-link" data-scroll-target="#description-of-tables"><span class="header-section-number">24.1</span> Description of tables</a></li>
+  <li><a href="#understanding-the-key-fields-to-correctly-join-the-tables" id="toc-understanding-the-key-fields-to-correctly-join-the-tables" class="nav-link" data-scroll-target="#understanding-the-key-fields-to-correctly-join-the-tables"><span class="header-section-number">24.2</span> Understanding the key fields to correctly join the tables</a></li>
   </ul></li>
-  <li><a href="#data-filteringcleaning" id="toc-data-filteringcleaning" class="nav-link" data-scroll-target="#data-filteringcleaning"><span class="header-section-number">27</span> Data filtering/cleaning</a>
+  <li><a href="#data-filteringcleaning" id="toc-data-filteringcleaning" class="nav-link" data-scroll-target="#data-filteringcleaning"><span class="header-section-number">25</span> Data filtering/cleaning</a>
   <ul class="collapse">
-  <li><a href="#noise-removal" id="toc-noise-removal" class="nav-link" data-scroll-target="#noise-removal"><span class="header-section-number">27.1</span> Noise removal</a></li>
-  <li><a href="#fishingnon-fishing-classification" id="toc-fishingnon-fishing-classification" class="nav-link" data-scroll-target="#fishingnon-fishing-classification"><span class="header-section-number">27.2</span> Fishing/non-fishing classification</a></li>
-  <li><a href="#caveats-of-inferred-properties" id="toc-caveats-of-inferred-properties" class="nav-link" data-scroll-target="#caveats-of-inferred-properties"><span class="header-section-number">27.3</span> Caveats of inferred properties</a></li>
+  <li><a href="#noise-removal" id="toc-noise-removal" class="nav-link" data-scroll-target="#noise-removal"><span class="header-section-number">25.1</span> Noise removal</a></li>
+  <li><a href="#fishingnon-fishing-classification" id="toc-fishingnon-fishing-classification" class="nav-link" data-scroll-target="#fishingnon-fishing-classification"><span class="header-section-number">25.2</span> Fishing/non-fishing classification</a></li>
+  <li><a href="#caveats-of-inferred-properties" id="toc-caveats-of-inferred-properties" class="nav-link" data-scroll-target="#caveats-of-inferred-properties"><span class="header-section-number">25.3</span> Caveats of inferred properties</a></li>
   </ul></li>
-  <li><a href="#data-normalization" id="toc-data-normalization" class="nav-link" data-scroll-target="#data-normalization"><span class="header-section-number">28</span> Data normalization</a>
+  <li><a href="#data-normalization" id="toc-data-normalization" class="nav-link" data-scroll-target="#data-normalization"><span class="header-section-number">26</span> Data normalization</a>
   <ul class="collapse">
-  <li><a href="#example-gridded-vessel-density-plot" id="toc-example-gridded-vessel-density-plot" class="nav-link" data-scroll-target="#example-gridded-vessel-density-plot"><span class="header-section-number">28.0.1</span> Example: Gridded vessel density plot</a></li>
+  <li><a href="#example-gridded-vessel-density-plot" id="toc-example-gridded-vessel-density-plot" class="nav-link" data-scroll-target="#example-gridded-vessel-density-plot"><span class="header-section-number">26.0.1</span> Example: Gridded vessel density plot</a></li>
   </ul></li>
-  <li><a href="#detection-ais-matching" id="toc-detection-ais-matching" class="nav-link" data-scroll-target="#detection-ais-matching"><span class="header-section-number">29</span> Detection-AIS matching</a></li>
-  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">30</span> Appendix</a>
+  <li><a href="#detection-ais-matching" id="toc-detection-ais-matching" class="nav-link" data-scroll-target="#detection-ais-matching"><span class="header-section-number">27</span> Detection-AIS matching</a></li>
+  <li><a href="#appendix" id="toc-appendix" class="nav-link" data-scroll-target="#appendix"><span class="header-section-number">28</span> Appendix</a>
   <ul class="collapse">
-  <li><a href="#duplicate-detections" id="toc-duplicate-detections" class="nav-link" data-scroll-target="#duplicate-detections"><span class="header-section-number">30.1</span> Duplicate detections</a></li>
+  <li><a href="#duplicate-detections" id="toc-duplicate-detections" class="nav-link" data-scroll-target="#duplicate-detections"><span class="header-section-number">28.1</span> Duplicate detections</a></li>
   </ul></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/GlobalFishingWatch/GFW_technical_documentation/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
@@ -530,9 +493,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Imagery</a></li><li class="breadcrumb-item"><a href="../files/s2-vessel-detections.html"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../files/sar-object-detections.html">Object Detection</a></li><li class="breadcrumb-item"><a href="../files/s2-vessel-detections.html"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">24</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></h1>
+<h1 class="title"><span class="chapter-number">22</span>&nbsp; <span class="chapter-title">Sentinel-2 Vessel Detections</span></h1>
 </div>
 
 
@@ -562,15 +525,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>This document provides the guidelines for properly using the published Sentinel-2 vessel detections, some examples of use cases, and some data caveats. This document is based on tables in the <code>global-fishing-watch.pipe_sentinel2_v1_published</code> dataset in BigQuery and is thus suitable for GFW internal users and research partners with access to the dataset. For other types of users, refer to the documentation in the Data Download Portal page.</p>
-<section id="about-sentinel-2-vessel-detections" class="level1" data-number="25">
-<h1 data-number="25"><span class="header-section-number">25</span> About Sentinel-2 vessel detections</h1>
+<section id="about-sentinel-2-vessel-detections" class="level1" data-number="23">
+<h1 data-number="23"><span class="header-section-number">23</span> About Sentinel-2 vessel detections</h1>
 <p>Sentinel-2 images are taken globally by satellites in the Copernicus Sentinel-2 mission of the European Space Agency (ESA), mostly covering coastal regions with a 5-day revisit frequency. The image resolution is 10 meters. The satellites operate in a sun-synchronous orbit, which means they always revisit the same area around at same time (around Mean Local Solar Time of 10:30 am). Our vessel detection model uses the RGB and Near Infra-Red bands of the imagery. Currently the data in <code>global-fishing-watch.pipe_sentinel2_v1_published</code> ranges from 2019-01-01 to present, and will be backfilled to 2017 in the near future.</p>
 </section>
-<section id="table-overview" class="level1" data-number="26">
-<h1 data-number="26"><span class="header-section-number">26</span> Table overview</h1>
+<section id="table-overview" class="level1" data-number="24">
+<h1 data-number="24"><span class="header-section-number">24</span> Table overview</h1>
 <p>(Please refer to the column descriptions in BigQuery for explanations of individual fields)</p>
-<section id="description-of-tables" class="level2" data-number="26.1">
-<h2 data-number="26.1" class="anchored" data-anchor-id="description-of-tables"><span class="header-section-number">26.1</span> Description of tables</h2>
+<section id="description-of-tables" class="level2" data-number="24.1">
+<h2 data-number="24.1" class="anchored" data-anchor-id="description-of-tables"><span class="header-section-number">24.1</span> Description of tables</h2>
 <ul>
 <li><p><code>detect_scene_match_pipe_v3</code>: The “clean” table that contains all the detections except the identified duplicates (<a href="https://www.notion.so/Sentinel-2-Vessel-Detection-Data-User-Guide-for-Internal-Users-and-Research-Partners-22d740e47d9180868ce1da236a3b809a?pvs=21">read more</a>), their inferred properties like vessel length and speed, their matching results with AIS data, and other context or inferred properties that can be useful for further data filtering (<a href="https://www.notion.so/Sentinel-2-Vessel-Detection-Data-User-Guide-for-Internal-Users-and-Research-Partners-22d740e47d9180868ce1da236a3b809a?pvs=21">read more</a>).</p>
 <p><strong>Key fields to join other tables</strong>: <code>detect_id</code>, <code>scene_id</code>, <code>(detect_lat, detect_lon)</code>, <code>detect_timestamp</code>, <code>date</code></p></li>
@@ -587,8 +550,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 <p>All the tables are partitioned daily by the <code>date</code> field, except <code>s2_overpass</code> which is a monthly summary and partitioned by the <code>month</code> field.</p>
 </section>
-<section id="understanding-the-key-fields-to-correctly-join-the-tables" class="level2" data-number="26.2">
-<h2 data-number="26.2" class="anchored" data-anchor-id="understanding-the-key-fields-to-correctly-join-the-tables"><span class="header-section-number">26.2</span> Understanding the key fields to correctly join the tables</h2>
+<section id="understanding-the-key-fields-to-correctly-join-the-tables" class="level2" data-number="24.2">
+<h2 data-number="24.2" class="anchored" data-anchor-id="understanding-the-key-fields-to-correctly-join-the-tables"><span class="header-section-number">24.2</span> Understanding the key fields to correctly join the tables</h2>
 <p>The figure below illustrates the structure of and relationship between different key fields shared by the tables. Understanding how they are connected is the key to correctly join these table for any analysis.</p>
 <p><img src="../figures/s2-key-fields-relationship.png" class="img-fluid"></p>
 <p><strong>The two rules for joining two tables are:</strong></p>
@@ -605,10 +568,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ul>
 </section>
 </section>
-<section id="data-filteringcleaning" class="level1" data-number="27">
-<h1 data-number="27"><span class="header-section-number">27</span> Data filtering/cleaning</h1>
-<section id="noise-removal" class="level2" data-number="27.1">
-<h2 data-number="27.1" class="anchored" data-anchor-id="noise-removal"><span class="header-section-number">27.1</span> Noise removal</h2>
+<section id="data-filteringcleaning" class="level1" data-number="25">
+<h1 data-number="25"><span class="header-section-number">25</span> Data filtering/cleaning</h1>
+<section id="noise-removal" class="level2" data-number="25.1">
+<h2 data-number="25.1" class="anchored" data-anchor-id="noise-removal"><span class="header-section-number">25.1</span> Noise removal</h2>
 <p>For most use cases, additional data filtering and cleaning is required. The filter for getting rid of likely non-vessel noises from <code>detect_scene_match_pipe_v3</code>, which is used for displaying detections on GFW Map, is</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>other_score_nn <span class="op">&lt;</span> <span class="fl">0.2</span> <span class="co">-- likely non-vessel according to the secondary classifier</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">AND</span> <span class="kw">NOT</span> potential_ice <span class="co">-- in a region and time with significant sea ice presence</span></span>
@@ -620,16 +583,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>One way to further remove noises missed by the <code>other_score_nn</code> filter is to use the inferred vessel speed. While the Sentinel-2 detector can pick lots of vessel-like noises like white caps, near-shore structures, and rocks, most of these noises don’t appear to be moving with visible wakes. Therefore, if a detection is predicted to have substantial speed, it’s likely showing some signature of movement and thus likely a real vessel. Filtering the inferred speed is thus an effective way of reducing false positives, e.g.,</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>speed_kn_inferred <span class="op">&gt;</span> <span class="dv">2</span> <span class="co">-- inferred speed &gt; 2 knots</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="fishingnon-fishing-classification" class="level2" data-number="27.2">
-<h2 data-number="27.2" class="anchored" data-anchor-id="fishingnon-fishing-classification"><span class="header-section-number">27.2</span> Fishing/non-fishing classification</h2>
+<section id="fishingnon-fishing-classification" class="level2" data-number="25.2">
+<h2 data-number="25.2" class="anchored" data-anchor-id="fishingnon-fishing-classification"><span class="header-section-number">25.2</span> Fishing/non-fishing classification</h2>
 <p>For the 1km2 thumbnails of each individual detection, a secondary classifier is applied to classify the detection as <code>fishing</code>, <code>nonfishing</code>, or <code>other</code>. Each class is assigned with a score, and the scores of the three classes sum to 1. The classification results are stored in table <code>fishing_classification</code>. You can join the table with <code>detect_scene_match_pipe_v3</code> using <code>detect_id</code>. The <code>other_score_nn</code> in <code>detect_scene_match_pipe_v3</code> is equivalent to <code>other</code> in <code>fishing_classification</code>.</p>
 <p>As discussed above, we typically use <code>other_score_nn&lt;0.2</code> as a noise filter. Therefore, to get detections of likely fishing vessels, you can use</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>other <span class="op">&lt;</span> <span class="fl">0.2</span> <span class="kw">AND</span> fishing <span class="op">&gt;</span> nonfishing</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>in addition to any other noise filters mentioned above. You can also use stricter filters to get more confident results, e.g., <code>fishing &gt; 0.9</code>.</p>
 <p><strong>Again, please note that the current classification results are preliminary and there is ongoing improvement work for the classifier.</strong></p>
 </section>
-<section id="caveats-of-inferred-properties" class="level2" data-number="27.3">
-<h2 data-number="27.3" class="anchored" data-anchor-id="caveats-of-inferred-properties"><span class="header-section-number">27.3</span> Caveats of inferred properties</h2>
+<section id="caveats-of-inferred-properties" class="level2" data-number="25.3">
+<h2 data-number="25.3" class="anchored" data-anchor-id="caveats-of-inferred-properties"><span class="header-section-number">25.3</span> Caveats of inferred properties</h2>
 <p>Our S2 vessel detections provide inferred vessel length (<code>length_m_inferred</code>), speed (<code>speed_kn_inferred</code>), and heading direction (<code>heading_deg_inferred</code>). While they can be very useful for various analysis, it is important to keep in mind their limitations.</p>
 <p>The inferred vessel length is less accurate for smaller vessels, and the length of under-30m vessels are likely overestimated, as shown in the figure below. This limitation is the result of the 10-m image resolution, with which small vessels appear as just dots, making it difficult to infer accurate vessel lengths.</p>
 <p><img src="../figures/s2-caveats-inferred-properties.png" class="img-fluid"></p>
@@ -637,12 +600,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>The inferred heading direction has two major limitations. Small vessels without moving signatures appear as just dots and are thus difficult to infer heading directions. For larger vessels without moving signatures, it’s difficult to tell which end is the head. As a result, the inferred heading direction may be wrong by ~180 degrees.</p>
 </section>
 </section>
-<section id="data-normalization" class="level1" data-number="28">
-<h1 data-number="28"><span class="header-section-number">28</span> Data normalization</h1>
+<section id="data-normalization" class="level1" data-number="26">
+<h1 data-number="26"><span class="header-section-number">26</span> Data normalization</h1>
 <p>If you just want to thoroughly review what were detected in a region in a given time, you can simply query the <code>detect_scene_match_pipe_v3</code> table and inspect the individual detections. However, if your analysis requires any higher-level summary, the key to correctly interpret the amount of detections is to consider the spatiotemporally varied satellite overpass. Because of this heterogeneity, normalizing the detections is necessary when the answering questions that involve vessel density - e.g., in some given season, on average how many vessels operate in a given region? Does place A have higher average vessel density than place B?</p>
 <p>To normalize the data, join the <code>detect_scene_match_pipe_v3</code> table with the <code>s2_overpass</code> table and aggregate the results to desired spatiotemporally resolution. Below are two examples.</p>
-<section id="example-gridded-vessel-density-plot" class="level3" data-number="28.0.1">
-<h3 data-number="28.0.1" class="anchored" data-anchor-id="example-gridded-vessel-density-plot"><span class="header-section-number">28.0.1</span> Example: Gridded vessel density plot</h3>
+<section id="example-gridded-vessel-density-plot" class="level3" data-number="26.0.1">
+<h3 data-number="26.0.1" class="anchored" data-anchor-id="example-gridded-vessel-density-plot"><span class="header-section-number">26.0.1</span> Example: Gridded vessel density plot</h3>
 <p>In this example, we illustrate the importance of normalizing the data by comparing the naive count of detections during 2019-2024 in the Mediterranean Sea with the normalized vessel density.</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span></span>
@@ -698,8 +661,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="../figures/s2-vessels-per-overpass-plot.png" class="img-fluid"></p>
 </section>
 </section>
-<section id="detection-ais-matching" class="level1" data-number="29">
-<h1 data-number="29"><span class="header-section-number">29</span> Detection-AIS matching</h1>
+<section id="detection-ais-matching" class="level1" data-number="27">
+<h1 data-number="27"><span class="header-section-number">27</span> Detection-AIS matching</h1>
 <p>The <code>detect_scene_match_pipe_v3</code> table stores the results of matching each detection with AIS (based on <code>ssvid</code>). For each detection, its “best” AIS match is reported. Keep in mind that these “best” matches may not be the correct matches. Non-broadcasting vessels detected by S2 can be matched to AIS data from other undeteced vessels. Filtering the matching results is necessary.</p>
 <p>The quality of the detection-AIS matching is represented by three metrics in the table:</p>
 <ol type="1">
@@ -720,10 +683,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>The method is explained in more detail in the <em>SAR and AIS integration</em> section of our <a href="https://www.nature.com/articles/s41586-023-06825-8">SAR paper</a>. The same method will be applied to our Sentinel-2 data in the near future.</p>
 </section>
-<section id="appendix" class="level1" data-number="30">
-<h1 data-number="30"><span class="header-section-number">30</span> Appendix</h1>
-<section id="duplicate-detections" class="level2" data-number="30.1">
-<h2 data-number="30.1" class="anchored" data-anchor-id="duplicate-detections"><span class="header-section-number">30.1</span> Duplicate detections</h2>
+<section id="appendix" class="level1" data-number="28">
+<h1 data-number="28"><span class="header-section-number">28</span> Appendix</h1>
+<section id="duplicate-detections" class="level2" data-number="28.1">
+<h2 data-number="28.1" class="anchored" data-anchor-id="duplicate-detections"><span class="header-section-number">28.1</span> Duplicate detections</h2>
 <p>Neighboring Sentinel-2 scenes overlap with each other, as shown by the figure below. As a result, vessels in the overlapping area got imaged twice or more in a short period of time (mostly a few seconds). Currently, our pipeline processes all the Sentinel-2 images without pre-cropping them to account for the overlapping parts. Therefore, the raw vessel detections (<code>detect_scene_raw</code>) contains essentially duplicate detections of the same vessel with different <code>scene_id</code> and probably slightly different inferred values.</p>
 <p><img src="../figures/s2-duplicate-detections-plot.png" class="img-fluid"></p>
 <p>In the data processing pipeline, we identify these duplicates by clustering spatially close detections with similar inferred length, speed, and heading directions under each satellite overpass swath. In each cluster, we only keep one detection and flag the others as duplicates.</p>
@@ -1157,12 +1120,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../files/satellite-timing-offset-table.html" class="pagination-link" aria-label="Satellite Timing Offset">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Satellite Timing Offset</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../files/viirs-ais-matching.html" class="pagination-link" aria-label="VIIRS AIS matching">
-        <span class="nav-page-text"><span class="chapter-number">25</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../files/viirs.html" class="pagination-link" aria-label="VIIRS AIS matching">
+        <span class="nav-page-text"><span class="chapter-number">23</span>&nbsp; <span class="chapter-title">VIIRS AIS matching</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
