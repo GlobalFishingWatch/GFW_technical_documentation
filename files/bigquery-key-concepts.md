@@ -25,12 +25,10 @@ Working in BigQuery requires two forms of access:
 
 1. [Google Cloud billing project](https://cloud.google.com/billing/docs/concepts#projects): Using BigQuery incurs costs and BigQuery requires users be connected to a GCP billing project before running queries.
    + The enabled billing project will be listed in the top menu bar of the BigQuery console
-   + The billing project for GFW staff is `gfw-google` 
-   + Research partners cannot be added to `gfw-google` and must create their own GCP billing project. GFW can help with this process and partners can generally receive ~$5,000 in free Google Credits through the Google for Good program. Contact Tyler (tyler@globalfishingwatch.org) or Andrea (andreasancheztapia@globalfishingwatch.org) for details
 
 2. **[BigQuery project](https://cloud.google.com/resource-manager/docs/creating-managing-projects)**: Data in BigQuery is organized in projects, which in turn contain datasets and tables. To access GFW data, users must be granted access to the GFW BigQuery project.
     + GFW data lives in two primary BigQuery projects:
-      + `world-fishing-827`: GFW project containing all internal GFW datasets related to research and development. 
+      + `world-fishing-827`: GFW project containing internal GFW datasets related to research and development. 
       + `global-fishing-watch`: GFW project containing the output of automated GFW pipelines, as well as GFW public datasets.
     + The project will appear in the left menu bar of the BigQuery console and clicking on the project name will expand to show the list of datasets the user can access. 
       + If you don't see a BigQuery project in your console: Click on `+ ADD` -> `Search for and star a project / STAR a project by name` -> `Enter project name` -> type `world-fishing-827` -> select `STAR`    
@@ -39,7 +37,6 @@ Working in BigQuery requires two forms of access:
 
 BigQuery costs are incurred in two ways - storing and querying data. 
     + Queries cost $6.25 per terabyte of data scanned
-    + GFW staff can use the `gfw-google` billing project. Queries using this project are "free" for GFW staff, but we need to be careful.
 
 #### The BigQuery validator
 
