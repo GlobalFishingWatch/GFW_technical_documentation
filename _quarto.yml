@@ -26,10 +26,11 @@ book:
   chapters:
     - index.md # intorduction
     
-    - part: "Data Reference"
+    - part: "Data Overview"
       chapters: 
-        - files/data-updates.md
+        # - files/data-updates.md
         - files/bigquery-datasets.md
+        - files/pipeline.md
         - files/bigquery-pipe3-table-reference.md
         - files/bigquery-pipe2.5-table-reference.md
         - files/bigquery-key-concepts.md
@@ -43,20 +44,22 @@ book:
         - files/vessel-info-tables.md
         - files/product-vessel-info-summary-pvis.md
         
-    - part: "GFW Data?"
+    - part: "Vessel Tracking and Behavior"
       chapters: 
       - files/fishing-effort-and-vessel-presence.md
-      - files/fishing-events.md
+      - files/coverage.md
+      - files/vms-data-sources.md
+      
+    - part: "Events"
+      chapters:
       - files/encounters.md
       - files/loitering.md
       - files/gaps.md
-      - files/anchorages-voyages-port-visits.md 
-      - files/vms-data-sources.md
-      - files/country-codes.md
-      - files/coverage.md
-      - files/pipeline.md
+      - files/anchorages-voyages-port-visits.md
+      - files/fishing-events.md
+      
         
-    - part: "Imagery"
+    - part: "Object Detection"
       chapters: 
       - files/sar-object-detections.md
       - files/satellite-timing-offset-table.md
@@ -64,8 +67,9 @@ book:
       - files/viirs.md
       
   
-    - part: "Reference Layers"
+    - part: "Reference Data"
       chapters:
+      - files/country-codes.md
       - files/areas-spatial-region-sources.md
       # - files/spatial-region-sources-and-methodology.md
       - files/areas-eez-boundaries.md

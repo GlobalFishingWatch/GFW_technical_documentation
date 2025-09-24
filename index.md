@@ -13,8 +13,11 @@ This book includes the primary documentation of Global Fishing Watch's data and 
 
 GFW uses data from various sources, including AIS, VMS, vessel registries, SAR, and VIIRS. These data are processed by GFW's automated [pipelines](files/pipeline.md). These raw and processed data are stored as tables and organized in a handful of [key BigQuery datasets](files/bigquery-datasets.md). 
 
+<!--- MISSING: Description abut this Wiki (content) and how to use -->
+
+
 ## Data Updates
-Check the [Data updates](files/data-updates.md) for new changes to GFW data.
+Check the [Data updates]<!--(NEED TO ADD LINK)--> for new changes to GFW data.
 
 See the [BigQuery Table Reference](files/bigquery-pipe3-table-reference.md) for checking the latest version of key tables to use.
 
