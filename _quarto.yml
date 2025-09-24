@@ -61,14 +61,8 @@ book:
       - files/sar-object-detections.md
       - files/satellite-timing-offset-table.md
       - files/s2-vessel-detections.md
-      - files/viirs-ais-matching.md
-      - files/viirs-boat-detections.md
-      - files/viirs-cloud-mask.md
-      - files/viirs-excluding-overlapping-detection-to-AIS-matching-table.md
-      - files/viirs-excluding-overlapping-detection.md
-      - files/viirs-footprint.md
-      - files/viirs-join-with-table.md
-      - files/viirs-noise-filter.md
+      - files/viirs.md
+      
   
     - part: "Reference Layers"
       chapters:
