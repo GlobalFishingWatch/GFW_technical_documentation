@@ -34,8 +34,7 @@ To expose data from **BigQuery (BQ)** in our products, we organize it into **API
 
 **API query logic** is maintained in this [API datasets hub](https://datasets.globalfishingwatch.org/). The API datasets hub returns the list of API Datasets that are used in our API.
 
-- Username = `gfw_doc`
-- Password = `datasets`
+To access this hub you need a username and a password. Please contact the Engineering Team to get the necessary credentials.
 
 #### How to Use the API Datasets Hub
 
