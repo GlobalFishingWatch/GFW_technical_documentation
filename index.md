@@ -7,7 +7,7 @@ We are currently working on improving this document.
 
 **INTERNAL USE ONLY**
 
-Do not share out side GFW! Share only with GFW Staff.
+Do not share outside GFW! At this time, this document is intended solely for the use of GFW staff.
 
 :::
 
