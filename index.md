@@ -1,9 +1,16 @@
 
-::: {.callout-warning}
+::: {.payattention}
 
-**WORK IN PROGRESS**. Information on this book is not up to date. We are currently working on improving GFW documentation.
+**WORK IN PROGRESS**
+
+We are currently working on improving this document.
+
+**INTERNAL USE ONLY**
+
+Do not share out side GFW! Share only with GFW Staff.
 
 :::
+
 
 <br>
 

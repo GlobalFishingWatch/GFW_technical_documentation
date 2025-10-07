@@ -1,0 +1,9 @@
+/* Custom "pay attention" box */
+.callout.custom-payattention {
+  background-color: #fff9ec;  /* soft cream background */
+  border-left: 6px solid #e3b341;  /* golden-yellow stripe */
+}
+
+callout.custom-payattention .callout-icon {
+  color: #e3b341; /* yellow icon color */
+}
